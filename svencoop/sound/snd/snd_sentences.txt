@@ -1,0 +1,8 @@
+TICKS10 vox/buzwarn, warning ten remaining
+TICKS5 vox/buzwarn, warning five remaining
+TICKS3 vox/buzwarn, warning three remaining
+TICKS2 vox/buzwarn, warning two remaining
+TICKS1 vox/buzwarn, warning one remaining
+TICKS0 vox/buzwarn, warning zero remaining
+SECTORCAP snd/doop, sector secured
+SECTORLOST snd/doop, enemy captured sector

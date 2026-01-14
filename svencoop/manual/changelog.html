@@ -1,0 +1,1747 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sven Co-op Manual :: Change log</title>
+
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="icon" href="../game.ico" type="image/x-icon"/>
+
+		<meta name="resource-type" content="document">
+		<meta name="description" content="Sven Co-op Manual">
+		<meta name="author" content="Sven Co-op Team">
+		<meta name="distribution" content="global">
+	</head>
+
+	<body>
+		<div id="header"><a id="top"></a><a href="index.html"><img src="images/header.png" alt="Sven Co-op Manual - Click here to jump to the index page"></a></div>
+		<div id="navbar">Navigation &raquo; <a href="index.html">Index</a> &raquo; <a href="changelog.html">Change log</a></div>
+		<div id="content">
+			<h1>Change log</h1>
+
+			<p>This change log is for product version <em>5.0</em>. All future updates will be posted to the <a target="_blank" href="http://www.svencoop.com/">website</a> and our <a target="_blank" href="https://steamcommunity.com/app/225840">Steam game hub</a> instead.
+			<!-- Last updated 17th January 2015 (revision 9090) -->
+
+			<h2>Contents</h2>
+
+			<ol>
+				<li><a href="#new">Notable features</a></li>
+				<li>
+					<a href="#code">Code changes</a>
+					<ol>
+						<li><a href="#code-core">Game core</a></li>
+						<li><a href="#code-engine">Game engine</a></li>
+						<li><a href="#code-sound">Sound engine</a></li>
+						<li><a href="#code-npc">Non-playable characters</a></li>
+						<li><a href="#code-weapons-equipment">Weapons and equipment</a></li>
+						<li><a href="#code-maptools">Mapping tools</a></li>
+					</ol>
+				</li>
+				<li><a href="#maps">Map changes</a></li>
+				<li><a href="#extramaps">Map pack changes</a></li>
+				<li>
+					<a href="#model">Model changes</a>
+					<ol>
+						<li><a href="#model-player">Player</a></li>
+						<li><a href="#model-npc">Non-playable characters</a></li>
+						<li><a href="#model-weapons-equipment">Weapons and equipment</a></li>
+					</ol>
+				</li>
+				<li><a href="#sound">Sound changes</a></li>
+				<li><a href="#hammer">Hammer editor changes</a></li>
+				<li><a href="#other">Other changes</a></li>
+			</ol>
+
+			<h2><a id="new"></a>Notable features</h2>
+
+			<ul>
+				<li>Sven Co-op is now its own independent game distributed on Steam, free of charge.
+					<ul>
+						<li>Includes 3 packages: A game package for players, a tool package for dedicated server operators, and an SDK package for content developers.</li>
+						<li>Includes use of the Steam game hub platform and community features. <em>(workshop functionality to be included in a future release)</em></li>
+					</ul>
+				</li>
+				<li>Sven Co-op now uses a customized GoldSrc engine under licence from Valve.
+					<ul>
+						<li>Gives us the opportunity to improve upon common limitations in the GoldSrc engine.</li>
+						<li>Maps can now be up to ~1,000x larger! (131,072 units away from position zero instead of just 4,096)</li>
+						<li>Mappers: See the <a href="#code-engine">engine changes</a> section for more details and technical information.</li>
+					</ul>
+				</li>
+				<li>New build of all Half-Life maps for co-operative play.
+					<ul>
+						<li>All maps re-ported from scratch for Sven Co-op from Half-Life: Source.</li>
+						<li>Enabled cross-map inventory.</li>
+						<li>Enabled survival game play mode with checkpoints, so players have to be more careful about staying alive and reviving fallen allies.</li>
+						<li>Many maps have been merged into a single map on a per-chapter basis to reduce map changes.</li>
+						<li>The game play is now much more pure, with no "kill monsters to proceed" gates.</li>
+					</ul>
+				</li>
+				<li><a href="https://www.youtube.com/watch?v=UV1KH0SrvDA">New inventory system</a> by using the new entity <em><a href="#code-item-inventory">item_inventory</a></em>, which is an item that a player holds on to for trigger rules and/or side-effects. Some example possibilities:
+					<ul>
+						<li>A key item must be carried by a player to a locked door, rather than it instantly becoming unlocked for rushers to wait by.</li>
+						<li>A bomb defuse kit has to be brought to a bomb to defuse it, or it explodes and you all die.</li>
+						<li>A gas mask can protect a player from nerve gas, but only lasts 2 minutes.</li>
+						<li>Did someone say Capture the Flag??</li>
+					</ul>
+				</li>
+				<li>New maps:
+					<ul>
+						<li>Black Mesa: Special Tactics Sector.</li>
+						<li>Desert Circle.</li>
+						<li>Fortified.</li>
+						<li>Stadium 4.</li>
+						<li>Turret Fortress: Reverse.</li>
+					</ul>
+				</li>
+				<li>Updated maps:
+					<ul>
+						<li>Toon Run: Added extensive new areas, and reworked some of the old areas.</li>
+						<li>Momma Mesa: Added six new possible endings, a new final boss battle, and new music.
+						<li>Another Unit: Added survival mode with checkpoints.</li>
+						<li>YABMA: Added survival mode with checkpoints.</li>
+					</ul>
+				<li><a href="#model">New models</a> for many weapons, ammo, and NPCs.</li>
+				<li>New modifiers/effects that can be applied/removed on players and NPCs via inventory items, and scripts, and custom (scripted) entities:
+					<ul>
+						<li>Block use of weapons.</li>
+						<li>Damage modifier.</li>
+						<li>Extra / less time before starting to drown.</li>
+						<li>Friction modifier.</li>
+						<li>Ghost / non-solid.</li>
+						<li>Glow shell.</li>
+						<li>Gravity modifier.</li>
+						<li>Invisibility.</li>
+						<li>Invulnerability.</li>
+						<li>Speed modifier.</li>
+					</ul>
+				</li>
+				<li>New observer mode:
+					<ul>
+						<li>Standard mode: If no spawn points are available for a player to use they become an observer until a spawn point becomes available.</li>
+						<li>Cyclic mode: Players can only respawn out of observer mode when the map explicitly requests so.</li>
+						<li>Survival game mode places dead players into observer mode until a live player reaches a checkpoint.</li>
+					</ul>
+				</li>
+				<li>New preliminary A.I. pathing entities for better control on where NPCs move around a map.</li>
+				<li>New scripting engine using <a href="http://www.angelcode.com/angelscript/">AngelScript</a>:
+					<ul>
+						<li>Version 2.30.2 implemented.</li>
+						<li>New entity: <em>trigger_script</em></li>
+						<li>A map script can be loaded by specifying a file in the map's configuration using key <em>map_script</em>.</li>
+						<li>Scripts can be triggered one off or periodically (thinking).</li>
+						<li>Alternative script files can be used, and shared across maps.</li>
+						<li>New survival game play mode driven by a shared script.</li>
+						<li>Watch out in future change logs as <em>many more updates</em> will come with this!</li>
+					</ul>
+				</li>
+				<li>New weapon: Displacer from Opposing Force.</li>
+				<li>Player weapons/ammunition can now be <a href="#code-carry-stuff-across-maps">carried across map changes</a>. (if a map wants to do this)</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<h2><a id="code"></a>Code changes</h2>
+
+			<h3><a id="code-core"></a>Game core</h3>
+
+			<ul>
+				<li>Added a more graceful way to close servers when an error occurs, most notably listen servers will return the host player to the main menu rather than terminate the process.</li>
+				<li>Added a spawn flag to <em>func_clip</em> so it can <a href="https://www.youtube.com/watch?v=OX1GFNGsIaA">block players from throwing an inventory item through them</a>.</li>
+				<li>Added a spawn flag to <em>trigger_hurt</em> to hurt non-moving NPCs.</li>
+				<li>Added a spawn flag to <em>trigger_respawn</em> only respawn dead players.</li>
+				<li>Added a spawn flag to <em>trigger_track_goal</em> to prevent the train moving backwards if it can't find a path to direct the train to.</li>
+				<li>Added an optional sound to <em>trigger_track_goal</em> if it can't find a path to direct the train to.</li>
+				<li>Added announcement when a player joins a server (as they enter the world after connecting, not when they start connecting) to match the message when players leave.</li>
+				<li>Added custom amount, recharge time, sounds, and trigger properties to health/HEV chargers.</li>
+				<li>Added custom HUD sprite configurations for weapons.</li>
+				<li>Added custom sound file and sentence properties to buttons, doors, platforms, trains, and track trains.</li>
+				<li>Added custom text options for the buttons via <em>trigger_vote</em>.</li>
+				<li>Added fall-back to the studio model renderer sequence group loader so it can find the sequence group by using the actual model name, instead of the embedded (and frequently incorrect) names.</li>
+				<li>Added <em>IsNotAmmoItem</em> to weapons so they aren't taken (and removed from the map) for ammo when <em>mp_weaponstay</em> is disabled.</li>
+				<li>Added key to <em>monster_generic</em>: "disableai", disables all monster and AI behaviour. (Effectively turns it into a prop)</li>
+				<li>Added key to <em>trigger_teleport</em>: "teleport_if_blocked", when enabled the teleporter will send the source entity even if the teleporter exit is blocked.</li>
+				<li>Added key to <em>trigger_teleport</em>: "teleport_ignore_delay", when enabled the teleporter ignores all delays (implicitly sets flag 8,192).</li>
+				<li>Added key to <em>trigger_teleport</em>: "teleport_start_inactive", when enabled the teleporter starts inactive (implicitly sets flag 4,096).</li>
+				<li>Added map configuration and text files to the pre-cache list if they exist, so they will be transferred to clients (this excludes those with the <em>CFG</em> extension as that is a security restriction).</li>
+				<li>Added message box support for non-Windows platforms using SDL, mimicking the Windows button sets and response/event codes.</li>
+				<li>Added missing calls to entity destructor functions for Baby Gargantuas and alien slaves so their effect entities can be cleaned up from an unexpected destruction.</li>
+				<li>Added opaque character drawing to <em>game_text</em> by specifying an alpha value of 1 or higher in either colour keys.</li>
+				<li>Added parameter <em>use type</em> (on/off/set/toggle/kill) and <em>value</em> to cheat command <em>trigger</em>.</li>
+				<li>Added player percentage requirement to <em>trigger_changelevel</em>.</li>
+				<li>Added <em>show HUD info</em> to any entity.</li>
+				<li>Added support to <em>trigger_respawn</em> for "!activator" and "!caller" as targets. (Only works for players right now)</li>
+				<li>Allied NPCs can now not be given a weapon by the map.</li>
+				<li>Changed chat messages from the server console to show the source as <em>Server Console</em> and in orange rather than printing the entire server name.</li>
+				<li>Changed cheat command <em>impulse 101</em> (<em>giveall</em>) to provide 5 spores instead of 1.</li>
+				<li>Changed command <em>time</em> and <em>timelimit</em> to specify if there is no time limit for the map, and checks map CVAR <em>mp_notimelimit</em>.</li>
+				<li>Changed default map to <em>svencoop1</em> instead of <em>hldm1</em> if a map cycle map (or a map cycle file) isn't found.</li>
+				<li>Changed <em>env_sound</em> so that they can be used with brush triggers:
+					<ul>
+						<li>Added a spawn flag <em>use only</em> (1) will disable automatic activation based on proximity.</li>
+						<li>When triggered if the radius setting is 0, no radius check will happen and the effect is applied.</li>
+						<li>When triggered if the radius setting is not 0, a radius check will happen so the effect is applied only if the player is within radius.</li>
+					</ul>
+				</li>
+				<li>Changed <em>func_tank</em> so it will return to its original orientation when it no longer has any enemies around to fire at.</li>
+				<li>Changed <em>trigger_cdaudio</em> to use an MP3 file rather than try and look for a physical CD.</li>
+				<li>Changed game version mismatch to create a pop-up message and disconnect rather than force the game to quit.</li>
+				<li>Changed how <em>func_train</em> handles being blocked so it doesn't stop moving for 0.5 seconds every time it gets blocked. Instead, damage is applied every 0.5 seconds to compensate for the otherwise per-frame damage.</li>
+				<li>Changed maps with player model enforcement to write the player choice model in "cl_model" instead of "team" in the client info string.</li>
+				<li>Changed word <em>executing</em> for <em>parsing</em> when loading skill and static configurations, as these files are not directly executed.</li>
+				<li>Cheat commands that are blocked are now denoted that they were a cheat command in the server log.</li>
+				<li>Completely refactored the in game Media Player, including many fixes for crashes, glitches, and memory leaks.</li>
+				<li>Disabled map restart when a player respawns whilst CVAR's <em>coop</em> and <em>deathmatch</em> are both disabled.</li>
+				<li>Disabled "&lt;monster&gt; has no view_ofs!" debug message.</li>
+				<li>Dropped items will now only bounce up to 15 times on the ground, then stop moving. (Fixes insane network traffic from dropped items stuck in steep wedges)</li>
+				<li>Expanded command <em>myinfo</em> to show your health, maximum health, armor, maximum armor, player state (alive/dead/observer), score, deaths, network defined entity name, game extras level (and optional title), server administrator level, and a count/list of enabled cheats.</li>
+				<li>Expanded command <em>mapinfo</em> to show you the number of entities currently in existence and the number of pre-cached models/sprites (along with their respective limits).</li>
+				<li>Fixed 1 round of ammo inexplicably getting lost when dropping a weapon with an odd amount of reserve ammo.</li>
+				<li>Fixed a crash when a map has no configuration file in some cases.</li>
+				<li>Fixed a crash when a player has more than 999 health.</li>
+				<li>Fixed a crash when an empty string is pre-cached. If done by an entity, information about that entity is shown.</li>
+				<li>Fixed a crash when attempting to delete the world entity.</li>
+				<li>Fixed a crash when receiving damage from a non-existent entity.</li>
+				<li>Fixed a crash when the map changes while a player was controlling a <em>func_tank</em>.</li>
+				<li>Fixed a crash when kill-targeting a weapon held by a player.</li>
+				<li>Fixed a few cases where files opened via the engine's file handle function weren't freed via the engine's free file handle function.</li>
+				<li>Fixed a memory leak at the end of a map caused by the map cycle and global custom key values.</li>
+				<li>Fixed a memory leak when a teleporter in random target mode has no targets to use.</li>
+				<li>Fixed a memory leak when finished checking the on-line donors list.</li>
+				<li>Fixed a memory leak when removing an entity without running its destructor.</li>
+				<li>Fixed a race condition causing players to become semi-dead (or un-dead).</li>
+				<li>Fixed a range of possible crashes by converting many entity class pointers to our safer <em>EHANDLE</em> pointers.</li>
+				<li>Fixed a rare crash when trying to pack items for dead players when only weapons should be packed.</li>
+				<li>Fixed a rare crash when trying to read beyond the end of the donors list.</li>
+				<li>Fixed a rare glitch where a player can be killed again when already dead.</li>
+				<li>Fixed an exploit where weapon ammo would refill after dropping a weapon then picking up the same weapon from elsewhere.</li>
+				<li>Fixed bad check causing the wrong message to be shown when a vote for something other than a map change declines.</li>
+				<li>Fixed bullets fired underwater causing a splash effect as if the bullet entered the water from above.</li>
+				<li>Fixed chat message colour being overridden by a large HUD message (such as those from <em>game_text</em>).</li>
+				<li>Fixed chat messages to your team not being logged as a team only message server-side.</li>
+				<li>Fixed client disconnect function being called when a map ends in some cases.</li>
+				<li>Fixed client-side Xen beam not marking itself for removal when it has finished playing.</li>
+				<li>Fixed closing a pop-up window (like a vote) sometimes keeping the mouse cursor active.</li>
+				<li>Fixed console spam due to the node graph queue being full.</li>
+				<li>Fixed CVAR <em>crosshair</em> not doing anything.</li>
+				<li>Fixed CVAR <em>sv_log_monster_deaths</em> not doing anything.</li>
+				<li>Fixed damage not being rounded to whole numbers causing players to become semi-dead (or undead).</li>
+				<li>Fixed entities <em>game_counter</em>, <em>game_counter_set</em>, <em>game_end</em>, <em>game_player_counter</em>, <em>game_player_equip</em>, <em>game_player_hurt</em>, <em>game_player_respawn_zone</em>, <em>game_player_team</em>, <em>game_player_zone</em>, <em>game_score</em>, <em>game_slot_counter</em>, <em>game_team_master</em>, <em>game_team_set</em>, <em>game_text</em>, and <em>trigger_createentity</em> from not being able to make use of the <em>delay</em> and <em>killtarget</em> keys.</li>
+				<li>Fixed <em>env_beam</em> and <em>env_lightning</em> not accepting explicit on/off inputs.</li>
+				<li>Fixed <em>env_glow</em> sometimes becoming invisible when it shouldn't.</li>
+				<li>Fixed <em>env_sprite</em> not playing its last frame.</li>
+				<li>Fixed <em>env_spritetrain</em> sprite not being deleted when the entity is killed.</li>
+				<li>Fixed <em>func_breakable</em> being able to trigger its targets multiple times if it took any damage while already in the process of being destroyed. (This can happen if the breakable creates an explosion, explosion magnitude > 0)</li>
+				<li>Fixed <em>func_button</em>, <em>func_rot_button</em>, <em>func_door</em>, <em>momentary_door</em>, and <em>momentary_rot_button</em> not stopping their move sound when killed.</li>
+				<li>Fixed <em>func_door</em> always trying to change linked door movement direction when they aren't moving.</li>
+				<li>Fixed <em>func_door</em> always trying to trigger its on open and on close targets even if unset.</li>
+				<li>Fixed <em>func_door</em> and <em>func_train</em> not causing crush damage if they are player allied.</li>
+				<li>Fixed <em>func_plat</em> and <em>func_platrot</em> not causing crush damage.</li>
+				<li>Fixed <em>func_rotating</em> not accepting a toggle if it's currently spinning up or down.</li>
+				<li>Fixed <em>func_rotating</em> sound not stopping when the entity is killed.</li>
+				<li>Fixed <em>func_tank</em> attempting to target enemies closer than the end of its barrel.</li>
+				<li>Fixed <em>func_tank</em> not always targeting enemies within its maximum range until they're very close.</li>
+				<li>Fixed <em>func_tank</em> not returning control to the player if it's killed.</li>
+				<li>Fixed <em>func_tanklaser</em> causing a client-side crash with the laser sight.</li>
+				<li>Fixed <em>func_trackchange</em> preventing a train from moving whilst the train was moving on a changing track.</li>
+				<li>Fixed <em>func_tracktrain</em> causing an infinite loop when processing a looping set of <em>path_track</em> points.</li>
+				<li>Fixed <em>func_tracktrain</em> not being able to kill players blocking it even when the damage property says it should do.</li>
+				<li>Fixed <em>func_tracktrain</em> updating its sound every frame -- now only updates its sound when the speed is changed.</li>
+				<li>Fixed <em>func_train</em> sound not stopping when the entity is killed.</li>
+				<li>Fixed HUD info flickering when staring at something that produces it for more than a few seconds.</li>
+				<li>Fixed HUD messages (including those from <em>game_text</em>) being missed when 2+ are written on the same channel, and it's time for the first message to disappear.</li>
+				<li>Fixed HUD not resizing properly when the game window is resized.</li>
+				<li>Fixed HUD not updating player HEV charge correctly when using a HEV charger in 3rd person view.</li>
+				<li>Fixed HUD notify text being cut off a line too short, particularly common on very high resolutions.</li>
+				<li>Fixed HUD notify text overlapping on the developer message output.</li>
+				<li>Fixed inconsistent behaviour of weapon holstering, particularly when being caught by a Barnacle.</li>
+				<li>Fixed key <em>monstertype</em> in entity <em>squadmaker</em> not being accessible by other entities.</li>
+				<li>Fixed majority of crashes when handling strings (be it leaks, buffer overruns, etc).</li>
+				<li>Fixed map configuration not loading on Linux servers if the configuration file is in a different case to the map file.</li>
+				<li>Fixed map configuration option <em>ammo_crossbow</em> not supplying bolts if the player already has 5 or more.</li>
+				<li>Fixed maps with no sky defined using the sky from the previous map, now the default sky <em>2desert</em> will be used instead.</li>
+				<li>Fixed many unsafe string operations in older code.</li>
+				<li>Fixed <em>monster_tripmine</em> laser not removing when the entity is killed.</li>
+				<li>Fixed MOTD data being sent/received in inconsistent chunk sizes.</li>
+				<li>Fixed MOTD window being shown too early.</li>
+				<li>Fixed old menus appearing when they shouldn't.</li>
+				<li>Fixed player death animation stopping before the animation is finished.</li>
+				<li>Fixed player health and HEV not being reduced if they are beyond a single precision floating point value (roughly 100 million).</li>
+				<li>Fixed player HEV sounds not playing while on Linux servers.</li>
+				<li>Fixed player models not having a preview image.</li>
+				<li>Fixed player name length limit being inconsistent across various classes.</li>
+				<li>Fixed player scores and deaths being limited to <em>+/-32,768</em> in the score board (now ~2.1 billion).</li>
+				<li>Fixed player speed clash with the Minigun and other entities, these now adjust the player's top speed via a modifier.</li>
+				<li>Fixed players being able to use weapons while grabbed by a Barnacle if you collect the weapon after you're caught.</li>
+				<li>Fixed players gaining an unexpectedly high amount of health after being revived whilst underwater.</li>
+				<li>Fixed players having fast leg movement when walking or running on moving platforms.</li>
+				<li>Fixed players having their rendering properties changed at the start of a revival.</li>
+				<li>Fixed players unable to vote more than once during a map.</li>
+				<li>Fixed regression that caused Player mouth controllers to be ignored.</li>
+				<li>Fixed some rare cases of dead players becoming ghosts.</li>
+				<li>Fixed Steam Pipe file searches/openings being spammed in the developer console (now requires developer level 2).</li>
+				<li>Fixed server CVAR's <em>mp_allowmonsterinfo</em> and <em>mp_footsteps</em> not being applied when creating a listen server.</li>
+				<li>Fixed sniper damage type not always creating a blood decal when it should.</li>
+				<li>Fixed time based poison damage causing a death claiming a player committed suicide rather than claiming they were poisoned.</li>
+				<li>Fixed <em>trigger_camera</em> behaving incorrectly when the mouse pointer is enabled.</li>
+				<li>Fixed <em>trigger_camera</em> not resetting the player's camera index when the camera is disabled.</li>
+				<li>Fixed <em>trigger_camera</em> setting player properties every frame causing a lot of network messages, when only one was needed.</li>
+				<li>Fixed <em>trigger_changevalue</em> not inverting constants correctly.
+				<li>Fixed <em>trigger_counter</em> causing a crash when reaching its target with a null activator.</li>
+				<li>Fixed <em>trigger_gravity</em> being able to adjust the gravity of other brush entities which shouldn't listen.</li>
+				<li>Fixed <em>trigger_hurt</em> not damaging non-player entities whilst not moving inside the brush.</li>
+				<li>Fixed <em>trigger_hurt</em> not with radiation damage type not always causing player Geiger counters to click.</li>
+				<li>Fixed <em>trigger_hurt_remote</em> always gibing targets when instant kill is enabled.</li>
+				<li>Fixed <em>trigger_hurt_remote</em> not skipping dead targets properly.</li>
+				<li>Fixed <em>trigger_setorigin</em> in constant mode forgetting the copy/source entity when activated more than once.</li>
+				<li>Fixed <em>trigger_setorigin</em> not accepting explicit off input in constant mode.</li>
+				<li>Fixed <em>trigger_teleport</em> always becoming inactive when a toggle input is given.</li>
+				<li>Fixed <em>trigger_teleport</em> spawn flag <em>Ignore Delays</em> removing the teleporter -- flag moved to <em>8192</em> from 2048 (the engine reserves 2048 for <em>remove on deathmatch</em>).</li>
+				<li>Fixed <em>trigger_track_goal</em> causing a crash if the target entity isn't a <em>func_tracktrain</em>.</li>
+				<li>Fixed turrets not always firing their on death trigger condition target.</li>
+				<li>Fixed turrets spawned via a <em>squadmaker</em> always spawning in the floor orientation when they should be ceiling orientated (or a custom angle).</li>
+				<li>Fixed view bobbing being used while in third person view.</li>
+				<li>Fixed vote prompts staying open after the poll has finished.</li>
+				<li>Integrated the file system interface from the Steamworks SDK into the game library for safer multi-platform file handling.</li>
+				<li>Maps are no longer allowed to change server CVAR <em>mapcyclefile</em>.</li>
+				<li>Map CVAR <em>mp_timelimit</em> is now 60 (1 hour) by default (if unset).</li>
+				<li>Muting a player will also hide their text chat.</li>
+				<li>Players are no longer implicitly choosing <em>no</em> during votes if they are idle or choose not to vote, but are excluded from the player count when calculating the result.</li>
+				<li>New animation for a player while caught by a Barnacle.</li>
+				<li>New animation for a player while walking unarmed.</li>
+				<li>New bindings for analogue joystick axes:
+					<ul>
+						<li><em>joy_*pos</em> / <em>joy_*neg</em>: Two bindings for each axis on both positive and negative directions.</li>
+						<li>Replace the asterisk with one of the axis letters: <em>X</em>, <em>Y</em>, <em>Z</em>, <em>R</em>, <em>U</em>, or <em>B</em>.</li>
+					</ul>
+				</li>
+				<li>New cheat command <em>ent_name_ahead</em> to show you the class, target, and model names of the entity directly ahead of you.</li>
+				<li>New cheat command <em>ent_trigger_ahead</em> to trigger (toggle) the entity directly ahead of you.</li>
+				<li>New cheat command <em>gibme</em> to simulate dying and being gibed.</li>
+				<li>New cheat command <em>givepoints</em> to directly add or subtract your score.</li>
+				<li>New client CVAR <em>joy_bindthreshold</em> to control a deadzone for axis bindings to commands.</li>
+				<li>New client CVAR <em>hud_weaponautoswitch</em> to control automatic weapon switching:
+					<ul>
+						<li><em>0</em>: Never switch.</li>
+						<li><em>1</em>: Only if better <em>(default)</em></li>
+						<li><em>2</em>: Always switch.</li>
+					</ul>
+				</li>
+				<li>New command <em>cl_precachecount</em> to show the number of pre-cached models and the limit for this from the engine.</li>
+				<li>New entity flag <em>FL_NOWEAPONS</em> (1&lt;&lt;27) to deny the use of player weapons.</li>
+				<li>New entity <em>trigger_changemaxammo</em> to change the maximum amount of ammo variants players can carry.</li>
+				<li>New entity <em>trigger_cyclicobserver</em> to change the cyclic observer mode at runtime.</li>
+				<li>New entity <em>trigger_numericdisplay</em> to display a number on a set of brush entities.</li>
+				<li>New map CVAR <em>mp_hevsuit_voice</em> to enable/disable HEV suit voice feedback.</li>
+				<li>New map CVAR <em>mp_weaponfadedelay</em> to set how long weapons will stay before disappearing.</li>
+				<li>New map CVAR <em>npc_dropweapons</em> to allow all NPCs to drop their weapons on death.</li>
+				<li>New server CVAR <em>gamebuild</em> to side with <em>gamename</em> and <em>gameversion</em>, so plug-ins can retrieve the build number of the game binaries.</li>
+				<li>New server CVAR <em>mp_timelimit_empty</em> so a map will not run for so long when the server is empty:
+					<ul>
+						<li>Default is 10 minutes, value 0 will disable this feature.</li>
+						<li>Player count is checked whenever a player connects/disconnects.</li>
+						<li>Timer is disabled/reset when a player connects.</li>
+						<li>Timer is enabled when the last player disconnects (including if kicked).</li>
+						<li>Prevents a ridiculous/infinite <em>mp_timelimit</em> causing a map to run on an empty server forever.</li>
+					</ul>
+				</li>
+				<li>Player command menu now renders on top of all other VGUI containers.</li>
+				<li>Player fall damage can be disabled completely by setting map CVAR <em>mp_falldamage</em> to -1.</li>
+				<li>Player time based damage is now forgotten on revive (drown, poison, etc).</li>
+				<li>Players and NPCs with god mode will now show <em>Invincible</em> instead of some silly health figure.</li>
+				<li>Reduced <em>trigger_copyvalue</em> interval to limit memory/crash issues.</li>
+				<li>Re-factored <em>trigger_setorigin</em> with a new EndFrame() engine call for more accurate synchronisation.</li>
+				<li>Remapped usage of HUD text message channels in accordance with the <a href="#hud-msg-channels">raised channel count</a> from the engine:
+					<ul>
+						<li><em>1</em>: Spare, should be used by plug-ins -- particularly those that want to produce constant on-screen text.</li>
+						<li><em>2</em>: Identification message from game staff.</li>
+						<li><em>3</em>: Banana attack!!</li>
+						<li><em>4</em>: Monster/NPC on-screen information.</li>
+						<li><em>5-8</em>: Virtual channel slots 1-4 for map messages (<em>game_text</em>), should never be used by plug-ins!</li>
+					</ul>
+				</li>
+				<li>Removed 3-tier skill system, along with a huge range of skill settings for that (two thirds).</li>
+				<li>Removed border-less window option as SDL handles this now.</li>
+				<li>Removed landmark entity.</li>
+				<li>Removed outdated NOVODEX functionality causing clients to freeze for a while after loading a map.</li>
+				<li>Removed server static configuration file option as this was only ever used to stop maps setting ridiculous time limits. A change to how CVAR <em>mp_timelimit</em> works will come with a future update.</li>
+				<li>Removed sound events in <em>func_tracktrain</em> so they can be replaced with a global sound replacement.</li>
+				<li>Renamed game library to <em>server</em> instead of <em>hl</em>.</li>
+				<li>Separate ammo drop models are now shown for the 9mm pistol, MP5, M16, and Uzi.</li>
+				<li>Sprites can now have their view port draw type overridden by using key <em>vp_type</em>:
+					<ul>
+						<li>0: Default (don't override)</li>
+						<li>1: Parallel Upright.</li>
+						<li>2: Facing Upright.</li>
+						<li>3: Parallel.</li>
+						<li>4: Orientated.</li>
+						<li>5: Parallel Orientated.</li>
+					</ul>
+				</li>
+				<li>Updated all code so the banning code is properly handled when kicking.</li>
+			</ul>
+
+			<h3><a id="code-engine"></a>Game engine</h3>
+
+			<ul>
+				<li>Independent engine branch based on Valve's GoldSrc/Half-Life engine (version 1.1.2.2 build 6027) with SteamPipe. Modified under licence from Valve Corporation.</li>
+				<li>New launchers:
+					<ul>
+						<li><em>svencoop.exe</em>: Game launcher.</li>
+						<li><em>svends.exe</em> / <em>svends_run</em>: Dedicated server launcher.</li>
+						<li>Default game folder is now <em>"svencoop"</em> from "valve".</li>
+						<li>Improved detail to many of the obscure error messages, for example when Steam isn't running but needs to be, or you haven't subscribed to the game via Steam.</li>
+					</ul>
+				</li>
+				<li>New limits (engine core):
+					<ul>
+						<li><em>Maximum base decals</em>: Raised to <em>1,024</em> from 256.</li>
+						<li><em>Maximum beams</em>: Raised to <em>256</em> from 64.</li>
+						<li><em>Maximum dynamic/entity lights</em>: Raised to <em>256</em> from 64.</li>
+						<li><em>Maximum edicts</em>: Raised to <em>8,192</em> from 900 (though the engine may become unstable beyond ~2,500).</li>
+						<li><em>Maximum frame rate</em>: Raised to <em>200</em> from 100 (for 120Hz/144Hz monitors). You can still get up to 1,000 frames/second with developer mode enabled.</li>
+						<li><em>Maximum heap memory size</em>: Raised to <em>512MB</em> from 128MB.</li>
+						<li><em>Minimum heap memory size</em>: Raised to <em>64MB</em> from 14MB.</li>
+						<li><em>Maximum models</em>: Raised to <em>8,192</em> from 512.</li>
+						<li><em>Maximum sounds</em>: Raised to <em>4,096</em> from 512.</li>
+						<li><em>Maximum weapon count</em>: Raised to <em>64</em> from 32.</li>
+						<li><em>Zone/hunk memory</em>: Raised to <em>32MB</em> from 2MB.</li>
+					</ul>
+				</li>
+				<li>New limits (for maps):
+					<ul>
+						<li><em>Maximum brushes</em>: Raised to <em>32,767</em> from 8,192.</li>
+						<!--<li><em>Maximum clip nodes</em>: Raised to <em>65,536</em> from 32,767.</li>-->
+						<li><em>Maximum edicts</em>: Raised to <em>8,192</em> from 1,024 (though the engine may become unstable beyond ~2,500).</li>
+						<li><em>Maximum entity key size</em>: Raised to <em>256</em> from 32.</li>
+						<li><em>Maximum entity value size</em>: Raised to <em>4096</em> from 1024.</li>
+						<li><em>Maximum entity data size</em>: Raised to <em>1MB</em> from 128kB.</li>
+						<li><em>Maximum leafs</em>: Raised to <em>65,536</em> from 8,192.</li>
+						<li><em>Maximum light data</em>: Raised to <em>64MB</em> from 16MB.</li>
+						<li><em>Maximum light maps</em>: Raised to <em>512</em> from 64.</li>
+						<li><em>Maximum light styles</em>: Raised to <em>256</em> from 32.</li>
+						<li><em>Maximum models</em>: Raised to <em>4,096</em> from 400.</li>
+						<li><em>Maximum nodes</em>: Raised to <em>65,536</em> from 32,767.</li>
+						<li><em>Maximum planes</em>: Raised to <em>65,536</em> from 32,767.</li>
+						<li><em>Maximum textures</em>: Raised to <em>2,048</em> from 512.</li>
+						<li><em>Maximum visibility data</em>: Raised to <em>64MB</em> from 16MB.</li>
+						<li><em>Maximum world size</em>: Raised to <em>+/-131,072</em> from +/-4,096: Only enabled if the game's liblist contains <em>largemap_aware</em>, as the game will need to be built use different data types for handling co-ordinates.</li>
+					</ul>
+				</li>
+				<li>Networking changes:
+					<ul>
+						<li>All datagrams now leave enough room for IPv6 headers.</li>
+						<li><em>Default maximum network rate</em>: Raised to <em>20,000 bytes/second</em> instead of 2,500.</li>
+						<li><em>Maximum datagram length</em>: Raised to <em>65,536 bytes</em> from 1,400.</li>
+						<li><em>Maximum entities per packet</em>: Raised to <em>512</em> from from 256.</li>
+						<li><em>Maximum sign-on data length</em>: Raised to double the datagram length.</li>
+						<li><em>Maximum user (mod) message size</em>: Raised to <em>512 bytes</em> from 192 bytes.</li>
+						<li><em>Message sequence size</em>: Raised to <em>2 bytes</em> from 1 byte.</li>
+						<li>Fixed an unexpected disconnect if a custom network message couldn't be found. Instead a warning is printed to their console.</li>
+						<li>Mod-level network messages are now loaded directly after the server has activated to prevent some missing message issues.</li>
+					</ul>
+				</li>
+				<li>Smarter heap memory allocation mechanism:
+					<ul>
+						<li>Default heap memory size is now half of all available virtually addressable memory but only up to <em>512MB</em> from 40MB (for clients) or 32MB (for servers).</li>
+						<li>Default heap memory size will step down by 16MB decrements until enough memory can be allocated by the host system.</li>
+						<li>If the engine can't obtain the minimum required memory from the host system it will refuse to start.</li>
+						<li>Compiled launchers with the <em>large address aware</em> flag so that up to 3GB of memory can be consumed on 32-bit Windows systems (if the /3GB boot switch is used), and up to 4GB on 64-bit Windows systems. Both up from their previous 2GB limit.</li>
+						<li>Launch parameter <em>-heapsize</em> can now be written in MB/GB (i.e. -heapsize 256M or -heapsize 1G).</li>
+						<li>Launch parameter <em>-maxmemory</em> will force the engine to take as much memory as it can from the host system.</li>
+						<li>Launch parameter <em>-minmemory</em> will force the engine to take as little memory as it can from the host system.</li>
+						<li>Launch parameter <em>-showheap</em> will notify you how much memory was successfully allocated from the host system.</li>
+						<li>Stack size increased to <em>8MB</em> from 1MB.</li>
+					</ul>
+				</li>
+				<li>Added <em>addons</em> SteamPipe folder to the default resource search list. Use parameter <em>-noaddons</em> to disable this.</li>
+				<li>Added callback function so the engine can inform the game when a player disconnects.</li>
+				<li>Added graceful shutdown if a BSP failed to load properly.</li>
+				<li>Added interface functions to retrieve the number of pre-cached models and the limit for this for the game library to use.</li>
+				<li>Added mono-spaced font support to the console via CVAR <em>con_mono</em>, enabled by default.</li>
+				<li>Added new key mappings for joystick axis (so analogue L/R triggers can be bound to a command).</li>
+				<li>Added referral address for content downloads over HTTP so web servers can prevent leeching.</li>
+				<li>Added server command <em>logaddress_list</em> to list all current log forwarders (useful for external log managers).</li>
+				<li>Added server CVAR <em>listipcfgfile</em> as a pointer to file <em>listip.cfg</em>, works the same as CVAR <em>bannedcfgfile</em>.</li>
+				<li>Added server CVAR <em>sv_log_daily</em> to enable daily rotation of server log files rather than a new file for every map played.</li>
+				<li>Added support for raw mouse input provided by SDL2.</li>
+				<li>Added wild-card search functionality for entity targets.</li>
+				<li>Changed host error message backwards mins/maxs to include the entity origin and the offending values.</li>
+				<li>Changed the default console position and size so it consumes the right side of the screen with a slight border, similar to that of the Source engine.</li>
+				<li>Changed the <em>snapshot</em> command:
+					<ul>
+						<li>Screen shots are now saved in a sub-folder <em>screenshots</em>.</li>
+						<li>File names now include a date stamp <em>YYYY-MM-DD</em>.</li>
+						<li>File names now indexed from <em>1-9999</em> instead of 0-1000.</li>
+						<li>Added success message to the console showing you what file name the screen shot got saved as.</li>
+					</ul>
+				</li>
+				<li>Cheat and debugging commands/CVAR's (such as <em>gl_wireframe</em>) provided by the engine can now be used in multi-player games if the server is running CVAR "<em>sv_cheats</em>" at level 255.</li>
+				<li>Console command auto-complete now shows up to 20 entries, and will pop out to the side if it's too long to show below.</li>
+				<li>Console debug log (<em>-condebug</em>) file name is now rotated daily.</li>
+				<li>EndFrame() is called directly after a physics loop if the game (mod) chooses to implement it.</li>
+				<li>Fixed a crash if a brush model index is higher than 999 (due to a 4 character limit).</li>
+				<li>Fixed a crash if a camera/viewport is accessed when a player retries connecting to the server.</li>
+				<li>Fixed a crash if an entity doesn't exist while trying to find an attachment point on it.</li>
+				<li>Fixed a crash if an external model/sprite file is missing by replacing it for an <em>ERROR</em> variant with an error about the missing resource written in the console, though a crash will occur if the error replacement is also missing.</li>
+				<li>Fixed a crash if map entity data has a comment between two entities.</li>
+				<li>Fixed a crash when reading a setting from the Windows registry overflows.</li>
+				<li>Fixed a crash when a memory allocation fails (and no indication was given to why the engine crashed).</li>
+				<li>Fixed additive textures on models always rendering with flat shading (causing a low quality look).</li>
+				<li>Fixed alert messages being shown on the client when developer mode is disabled.</li>
+				<li>Fixed an issue with "force retouch" not being applied correctly to all NPCs (mainly used by monster_tentacle), depending on when force retouch is enabled in the main physics/entity processing loop. (Force retouch now works for the next available frame, so that it can be applied consistently to all entities.)</li>
+				<li>Fixed chrome textures not scaling up correctly with models, particularly NPCs.</li>
+				<li>Fixed entity collision detection stopping immediately as soon as it finds an entity that should not collide, instead of processing other entities wanting to collide.</li>
+				<li>Fixed entity parser discarding an entity where the class name and target name are both the same.</li>
+				<li>Fixed empty player authentication ID strings returned whilst the server is shutting down.</li>
+				<li>Fixed model hit boxes not scaling along with a model's physical size.</li>
+				<li>Fixed PAS/PVS not using the player's view origin causing effects/sounds in cameras to not play.</li>
+				<li>Fixed rendering issues when resizing the game window.</li>
+				<li>Fixed servers being able to ban steam ID's <em>VALVE_ID_PENDING</em> and <em>STEAM_ID_PENDING</em> by accident.</li>
+				<li>Fixed voice chat being cut off or stuck on due to a view port position being changed. (When entering/exiting camera views)</li>
+				<li>HUD messages can now be drawn opaquely instead of additive only.</li>
+				<li><a id="hud-msg-channels"></a>Raised HUD text message channels to <em>8</em> from 4.
+					<ul>
+						<li>The new 4 channels are reserved for map use (via <em>game_text</em>). All existing maps will automatically use these, no updates to maps needed.</li>
+						<li>The first (original) 4 are for internal use by the game engine/library.</li>
+						<li>This means that messages produced by mappers will never be missed/overwritten by a message produced by the game or a plug-in.</li>
+						<li>Channel 1 is unused by any of the game and should be the primary choice for plug-ins.</li>
+					</ul>
+				</li>
+				<li>Mipmap support is now properly implemented for studio models.</li>
+				<li>Moved all settings stored in the user registry away from Half-Life's registry store.</li>
+				<li>New flags for entity effects:
+					<ul>
+						<li><em>EF_NOANIMTEXTURES</em> (256): Never animate a texture on given brush.</li>
+						<li><em>EF_FRAMEANIMTEXTURES</em> (512): If the brush has a "frame" value, the corresponding animating texture index is used.</li>
+						<li><em>EF_SPRITE_CUSTOM_VP</em> (1024): If the entity is a sprite it should override the viewport draw mode with the type specified in key "sequence".</li>
+					</ul>
+				</li>
+				<li>Re-added client DLL CRC checking so that mods using our engine branch can still enforce client consistency (controlled by Liblist entry <em>crcclientdll</em>).</li>
+				<li>Removed <em>gl_clear</em> from list of cheat variables to disable.
+					<ul>
+						<li>This is now on by default.</li>
+						<li>Default colour is now black instead of red.</li>
+					</ul>
+				</li>
+				<li>Removed some redundant network code to improve its reliability greatly.</li>
+				<li>Server will now flush the log file buffer every minute rather than when the handle is closed to minimize how much log data is lost when a server crashes.</li>
+			</ul>
+
+			<h3><a id="code-sound"></a>Sound engine</h3>
+
+			<ul>
+				<li>Added material definitions for textures from Blue Shift, Opposing Force, Opposing Force CTF, and Team Fortress Classic.</li>
+				<li>Improved reliability of sounds playing from an origin outside a player's PAS/PVS.</li>
+				<li>Changed CODEC order when looking for sentence sound files, so that lossless and higher quality CODEC's are used first.</li>
+				<li>Custom materials can now be transported to players:
+					<ul>
+						<li>Materials file defined by <em>materials_file</em> either in the map properties or configuration file.</li>
+						<li>Standard relative path is <em>/sound/&lt;bspname&gt;/&lt;filename&gt;</em>.</li>
+						<li>Custom material definitions will replace default material definitions.</li>
+					</ul>
+				</li>
+				<li>Fixed a crash when parsing sentence directories.</li>
+				<li>Fixed a memory leak when parsing sentences.</li>
+				<li>Fixed a memory leak when looking up a sound if the number of sounds exceeded the list limit.</li>
+				<li>Fixed entity sounds not following their owner if the sound started outside of the player's visible entity set.</li>
+				<li>Fixed incorrect material sound playing when players jump.</li>
+				<li>Fixed incorrect material sound playing when underwater.</li>
+				<li>Fixed room type environment FX not being reset after disconnecting or during a map change.</li>
+				<li>Fixed sound cache files not being flushed from alternative game folders (such as <em>_downloads</em> or <em>_french</em>).</li>
+				<li>Fixed sound files not being loaded from Steam Pipe folders.</li>
+				<li>Fixed sounds still playing after disconnecting or during a map change.</li>
+				<li>Improved handling when sound devices are connected/disconnected.</li>
+				<li>New client CVAR <em>s_force_dsound</em> to force FMOD to use DirectSound instead of WASAPI (applies to Windows Vista and later, XP and earlier always uses DirectSound).</li>
+				<li>Output is now muted whilst the game window is not in focus (Windows only).</li>
+				<li>Overhauled lip sync by using a better wave dataset to work with.</li>
+				<li>Reduced memory consumption with the sound replacement feature.</li>
+				<li>Removed entity <em>trigger_midi</em>.</li>
+				<li>Updated FMODEx to version <em>4.44.56</em>.</li>
+			</ul>
+
+			<h3><a id="code-npc"></a>Non-playable characters</h3>
+
+			<ul>
+				<li>Added monster event <em>2003</em> to specify a material specific footstep sound should be used.</li>
+				<li>Added <em>is_not_revivable</em> to all NPCs so a mapper can choose if they are revive-able or not.</li>
+
+				<li>Added <em>npc_dropweapons</em> support for more NPCs:
+					<ul>
+						<li>Alien grunts.</li>
+						<li>Assassins (male and female).</li>
+						<li>Barney / Barnabus.</li>
+						<li>Bodyguards.</li>
+						<li>Military grunts.</li>
+						<li>Opposing Force grunts (including medics and engineers).</li>
+						<li>Otis / Otto.</li>
+					</ul>
+				</li>
+				<li>Disabled running and shooting for grunts and male assassins.</li>
+				<li>Fixed a rare case where NPCs will fail to make a ranged attack because they are facing the wrong way, NPCs will now face their target if they fail to chase it.</li>
+				<li>Fixed NPCs being killable during a scripted sequence because of health value rounding.</li>
+				<li>Fixed NPCs dropping multiple weapons (if enabled to drop their weapon on death) when they are shot while dying.</li>
+				<li>Fixed NPCs not always getting the correct player ally status when created with a monster maker or squad maker.</li>
+				<li>Fixed NPCs sometimes showing their health at 50% when they die.</li>
+				<li>Fixed rappelling grunts and assassins not getting the correct class specified by the map.</li>
+				<li>Fixed temporary effect entities being left behind after being deleted at runtime for alien controllers, alien slaves, Baby Gargantuas, Gargantuas, Kingpins, and Tors.</li>
+				<li>Fixed NPCs not attacking anything when no players are close enough, controllable with map configuration option <em>sv_ai_enemy_detection_mode</em>:
+					<ul>
+						<li><em>0</em>: Only scan for enemies when inside a player PVS (default Half-Life behaviour).</li>
+						<li><em>1</em>: Always scan for enemies.</li>
+					</ul>
+				</li>
+				<li>Fixed relationship with other classes when using a custom class for alien grunts, human grunts, male assassins, robot grunts, and shock troopers.</li>
+				<li>Improved NPC A.I. when faced with grenades or rockets:
+					<ul>
+						<li>The NPC will look at the grenade/rocket first before reacting to it, rather than (impossibly) knowing of the threat instantaneously.</li>
+						<li>Reaction time is based on the grenade/rocket being visible and in the NPC's view cone.</li>
+					</ul>
+				</li>
+				<li>Preliminary version of new A.I. pathing entities: <em>path_waypoint</em>, <em>path_condition</em>, and <em>path_condition_controller</em>.</li>
+				<li>Removed "madwhack" knock back effect when hit by a SAW or sniper rifle projectile.</li>
+				<li>Removed old frame rate and ground speed adjustment code.</li>
+				<li>Removed old <em>path_monster</em> code.</li>
+				<li><em>Alien Grunt</em>: Custom models can disable throwing Snark nests by not having animation 14 (ACT_RANGE_ATTACK2).</li>
+				<li><em>Alien Grunt</em>: Fixed a crash when their hornets hit a target but the alien grunt has been gibed.</li>
+				<li><em>Alien slave</em>: Fixed a crash when the monster is removed without being killed.</li>
+				<li><em>Alien Slave</em>: Fixed a crash when the monster tries to adjust their beam effects when they no longer exist.</li>
+				<li><em>Alien Slave</em>: Fixed skin being changed while charging up the electric attack.</li>
+				<li><em>Apache</em>: Fixed rockets flying backwards.</li>
+				<li><em>Apache</em>: Fixed rockets not being fire-able outside world boundaries.</li>
+				<li><em>Apache</em>, <em>Osprey</em>: Fixed rotor sound still being audible if the NPC is removed at runtime.</li>
+				<li><em>Baby headcrab</em>: Fixed becoming enemy when revived if they were player allied.</li>
+				<li><em>Barnacle</em>: Fixed Barnacles moving if they are killed with blast or launch type damage.</li>
+				<li><em>Barnacle</em>: Fixed trigger on death condition not working.</li>
+				<li><em>Barnacle</em>: Fixed shock glow effect never disappearing.</li>
+				<li><em>Barney</em>: Fixed bad aiming angles when triggered by scripts (i.e. Blue Shift's firing range).</li>
+				<li><em>Barney</em>: Fixed incorrect sub-model causing Barney to lose/gain a helmet when getting out his gun.</li>
+				<li><em>Bullsquid</em>: Reduced hull size height to 40 units from 64 units.</li>
+				<li><em>Chumtoad</em>: Fixed toxic cloud often being invisible due to missing origin in the network message.</li>
+				<li><em>Flyer</em>: Fixed some sounds not being pre-cached.</li>
+				<li><em>Flyer flock</em>: Fixed some sounds not being pre-cached.</li>
+				<li><em>Gargantua</em>: Restored default turn rate speeds.</li>
+				<li><em>Gargantua</em>: Scale is accounted for in attacks, effects, and hull size.</li>
+				<li><em>Gargantua</em>: Stomp interval decreased to 0.025 from 0.05.</li>
+				<li><em>Grunts</em>: Fixed rappelling grunts firing at dead enemies.</li>
+				<li><em>Headcrab</em>: Fixed damage being applied in irrelevant directions if touched whilst in flight.</li>
+				<li><em>Heavy weapons grunt</em>: Added key <em>disable_minigun_drop</em> to stop the grunt dropping his minigun on death.</li>
+				<li><em>Heavy weapons grunt</em>: Adjusted look distance to use default NPC value instead of 4096 units.</li>
+				<li><em>Heavy weapons grunt</em>: Adjusted the minigun pitch to update in real-time during firing.</li>
+				<li><em>Heavy weapons grunt</em>: Fixed body and sub-model being incorrect in rare instances, usually after being revived.</li>
+				<li><em>Heavy weapons grunt</em>: Fixed several issues involving target selection which prevented him from picking the best/nearest NPC while the minigun was firing.</li>
+
+				<li><em>Heavy weapons grunt</em>: Fixed visual issue with barrel aim while his Minigun is spinning up.</li>
+				<li><em>Heavy weapons grunt</em>: Now uses suppressing fire at the last known location of an enemy.</li>
+				<li><em>Heavy weapons grunt</em>: Raised likelihood of running to grab his Minigun if his enemy is hiding.</li>
+				<li><em>Hornet</em>: Fixed console spam if they've hit their target already.</li>
+				<li><em>Houndeye</em>: Fixed allied NPCs always taking damage from the sonic blast.</li>
+				<li><em>Houndeye</em>: Fixed allied and enemy houndeyes not being able to hurt each other.</li>
+				<li><em>Kingpin</em>: Fixed a crash when they cause a map change.</li>
+				<li><em>Kingpin</em>: Fixed lighting attack effect not always attaching to the model correctly.</li>
+				<li><em>Medic</em>/<em>Scientist</em>: Fixed trying to heal dead players, causing their view to change.</li>
+				<li><em>Medic</em>/<em>Scientist</em>: Fixed reviving gibed players in certain cases.</li>
+				<li><em>Osprey</em>: Fixed improper sub-monster pre-caching.</li>
+				<li><em>Osprey</em>: Fixed no grunts being dropped for friendly Ospreys if the grunt type is random.</li>
+				<li><em>Osprey</em>: Fixed skill valve for health being ignored.</li>
+				<li><em>Osprey</em>: NPCs spawning from the Osprey now have the same classification as the Osprey.</li>
+				<li><em>Otis</em>: Raised framerate for <em>ACT_RUN</em> sequence.</li>
+				<li><em>Roach</em>: Fixed roaches standing still forever.</li>
+
+				<li><em>Sentry turret</em>: Fixed becoming non-solid for no reason.</li>
+				<li><em>Sentry turret</em>: Fixed bounding boxes being incorrectly changed when deploying/retracting.</li>
+				<li><em>Sentry turret</em>: Fixed bounding boxes not being correctly set in some cases.</li>
+				<li><em>Sentry turret</em>: Fixed continuously being deployed/reset when constantly touched.</li>
+				<li><em>Shock Trooper</em>: Fixed invisible shock roach after being revived.</li>
+				<li><em>Snarks</em>: Fixed snarks spawning from friendly nests appearing as enemy.</li>
+				<li><em>Snarks</em>: Nests now show as friendly if they are player allies.</li>
+				<li><em>Snarks</em>: Reworked how their owner is tracked so kill-targeting them still works properly with a <em>squadmaker</em> or <em>monstermaker</em>.</li>
+				<li><em>Snarks</em>: They now use their owner as the attacker if they have one.</li>
+				<li><em>Tentacle</em>: Fixed improper check of trigger conditions.</li>
+				<li><em>Turrets</em> (all): Fixed improper check if they can take damage from players.</li>
+				<li><em>Voltigore</em>: It will now gib instantly if killed with a heavy weapon.</li>
+				<li><em>Zombies</em>: Attacks now account for the NPC's scale setting.</li>
+			</ul>
+
+			<h3><a id="code-weapons-equipment"></a>Weapons and equipment</h3>
+
+			<ul>
+				<li><a id="code-carry-stuff-across-maps"></a>Added ability for <em>trigger_changelevel</em> to make players carry weapons/ammo across maps by setting key <em>keep_inventory</em> to 1.
+					<ul>
+						<li>Consists of health, armor/battery, weapons, ammunition, ammunition inside weapons, which weapon is selected, have HEV suit, and have long jump module. Does not consist of any <em>item_inventory</em> entities as these may not be present on the next map.</li>
+						<li>Inventory only carries to the map specified in the entity.</li>
+						<li>Inventory will remain available for 1 minute after it is first redeemed so maps prone to spawn fragging won't mean players have lost their inventory.</li>
+						<li>Players are always granted the equipment in the next map's configuration as standard, then their carried inventory is merged into it.</li>
+						<li>Existing maps will not be effected until modified to enable this feature, though new maps will have this enabled by default.</li>
+					</ul>
+				</li>
+				<li>Added entity alias <em>weapon_9mmar</em> to entity <em>weapon_mp5</em> for case-sensitive compatibility.</li>
+				<li>Added missing HEV suit sounds to the default sentences.</li>
+				<li>All weapon, ammo, and item entities can now have a custom respawn delay -- either per-entity, or adjust the default time globally via a map configuration option.</li>
+				<li>Fixed a crash when creating an <em>item_medkit</em> via a command when one wasn't present in the map. (not pre-cached)</li>
+				<li>Fixed Barnacle grapple constantly humming while idle.</li>
+				<li>Fixed certain weapons not playing their reload sounds whilst playing on a dedicated server.</li>
+				<li>Fixed crowbars causing damage to allied NPCs when the crowbar is thrown at them, even when the map specifies friendly NPC damage is disabled.</li>
+				<li>Fixed desert eagle laser sound not always audible to the player holding the gun.</li>
+				<li>Fixed effects produced by player weapons still being present if the player dies.</li>
+				<li>Fixed electric crowbar being usable in water.</li>
+				<li>Fixed electric crowbar effect being copied across map changes.</li>
+				<li>Fixed electric crowbar effect not visible when other players use it.</li>
+				<li>Fixed electric crowbar not costing any HEV charge when hitting machine type NPCs.</li>
+				<li>Fixed exploit allowing players to change weapon whilst holding a Minigun or shock rifle.</li>
+				<li>Fixed Gauss gun beam not being visible when shooting another player.</li>
+				<li>Fixed M16 instructing the model to use Akimbo Uzi animations.</li>
+				<li>Fixed pipewrench secondary attack not doing any damage if secondary attack is let go of instantly.</li>
+				<li>Fixed player Minigun spin sound not being heard by other players.</li>
+				<li>Fixed player model not using the correct angle whilst looking at it through a camera.</li>
+				<li>Fixed player weapon becoming invisible if the player dies whilst holding a weapon that isn't usually dropped on death.</li>
+				<li>Fixed players being able to throw their crowbar away even if the map has disabled weapon dropping.</li>
+				<li>Fixed players being given multiple medkits if the map configuration specified <em>weapon_medkit</em>.</li>
+				<li>Fixed players unable to collect a long jump when given to them directly.</li>
+				<li>Fixed players unable to fire a SAW for a few seconds if they pick one up that was dropped half way through reloading.</li>
+				<li>Fixed SAW continuing a reload animation if it was picked up after being dropped half way through reloading.</li>
+				<li>Fixed shock rifle getting stuck in an infinite self-destruct loop.</li>
+				<li>Fixed sniper rifle zoom sound cutting out the firing sound.</li>
+				<li>Fixed third person weapon models not being able to override their attachment.</li>
+				<li>Fixed VGUI not obtaining the information of the last player correctly.</li>
+				<li>Fixed <em>weaponbox</em> ignoring spawn flags, such as disable respawn.</li>
+				<li>Fixed weapons becoming invisible when dropped multiple times.</li>
+				<li>Fixed weapons with a custom world model reverting to the original world model when dropped.</li>
+				<li>Improved weapon alignment on upward sloped surfaces so the weapon won't clip into the ground.</li>
+				<li><a id="code-item-inventory"></a>New entity <em>item_inventory</em>, an item that is held on to / carried by a player. Similar to Team Fortress Classic's <em>item_tfgoal</em> but with many improvements:
+					<ul>
+						<li>Future release will allow NPCs to collect and use items too.</li>
+						<li>Can be collected by touching the item, using it, or given to you by the map directly.</li>
+						<li>Can be used against various triggers/entities according to inventory rules.</li>
+						<li>Optional basic properties:
+							<ul>
+								<li>Item name.</li>
+								<li>Item group name.</li>
+								<li>Display name (client).</li>
+								<li>Description (client).</li>
+								<li>Collection limit (item is destroyed once surpassed).</li>
+								<li>Weight (players can carry up to 100 weight).</li>
+								<li>Delay before returning to origin after dropped.</li>
+								<li>Delay respawn after returning (weapon/ammo style).</li>
+							</ul>
+						</li>
+						<li>Optional rules to filter collection:
+							<ul>
+								<li>Filter by player target name(s).</li>
+								<li>Must have / must not have item(s).</li>
+								<li>Must have / must not have number of items from group(s).</li>
+								<li>Item(s) must have / must not have moved from their origin.</li>
+								<li>Multiple target/item names in rules can be defined by splitting them with a semi-colon.</li>
+							</ul>
+						</li>
+						<li>Optional properties when carried:
+							<ul>
+								<li>Visible in third person.</li>
+								<li>Alternative model skin/body/sequence.</li>
+								<li>Maximum time the item can be held on for.</li>
+								<li>Item can be dropped by choice.</li>
+								<li>Item is kept on holder death.</li>
+								<li>Item is kept on holder respawn.</li>
+							</ul>
+						</li>
+						<li>Optional event triggers:
+							<ul>
+								<li>On collection.</li>
+								<li>On can't collect (filter rules).</li>
+								<li>On dropped.</li>
+								<li>On can't drop (not allowed).</li>
+								<li>On use (by a trigger).</li>
+								<li>On return.</li>
+							</ul>
+						</li>
+						<li>Can provide a range of optional modifiers/effects to the player carrying the item, and have them persist after the item has been dropped.</li>
+						<li>Items can be remotely collected/dropped/destoryed by a trigger:
+							<ul>
+								<li><em>On/activate</em>: Remotely collect for !activator.</li>
+								<li><em>Off/deactivate</em>: Remotely force drop for !activator requested by !caller.</li>
+								<li><em>Toggle</em>: Does on/off depending on if the item is currently idle or held.</li>
+								<li><em>Kill</em>: Remotely force drop for !activator requested by !caller, then destroy the item immediately.</li>
+							</ul>
+						</li>
+						<li>New client command <em>inventory</em> will print the player's inventory in their console (a fancy UI will be added in a future release).</li>
+						<li>New client command <em>dropitem &lt;item&gt;</em> will throw an item away depending on the parameter:
+							<ul>
+								<li><em>*</em>: Throw away all items possible.</li>
+								<li><em>name</em>: Throw away an item by its name.</li>
+								<li><em>#number</em>: Throw away an item by its entity index (if it has no name).</li>
+							</ul>
+						</li>
+						<li>Functionality for processing inventory rules attached to various entities:
+							<ul>
+								<li>All defined rules must pass in order for a pass to be given to the entity in question.</li>
+								<li>Rule: Need item(s).</li>
+								<li>Rule: Need number of item(s) from group(s).</li>
+								<li>Rule: Must not have item(s).</li>
+								<li>Rule: Must not have number of item(s) from group(s).</li>
+								<li>Force drop/return/destroy item name(s)/group(s) on rules pass.</li>
+								<li>Trigger if the activator failed against the inventory rules.</li>
+							</ul>
+						</li>
+						<li>Entities enabled for inventory rule processing and what you can do with them:
+							<ul>
+								<li><em>func_button</em>: Prevent button being used.</li>
+								<li><em>func_rot_button</em>: Prevent button being used.</li>
+								<li><em>func_door</em>: Prevent door being used.</li>
+								<li><em>func_door_rotating</em>: Prevent door being used.</li>
+								<li><em>func_tankcontrols</em>: Prevent tank being controlled.</li>
+								<li><em>func_traincontrols</em>: Prevent train being controlled.</li>
+								<li><em>func_water</em>: Prevent water rising/falling (as water is just a clone of door).</li>
+								<li><em>trigger_changelevel</em>: Prevent level from changing.</li>
+								<li><em>trigger_once</em>: Prevent trigger being used.</li>
+								<li><em>trigger_hurt</em>: Defend player from damage.</li>
+								<li><em>trigger_multiple</em>: Prevent trigger being used.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>New entity <em>weapon_displacer</em>.</li>
+				<li>New map CVAR's <em>maxhealth</em> and <em>maxarmor</em> to manually define the player health/battery limits.</li>
+				<li>New spawn flags for all collectable equipment:
+					<ul>
+						<li><em>Touch only</em> (128): When set the entity can only be collected by touching it.</li>
+						<li><em>Use only</em> (256): When set the entity can only be collected by using (+use) it.</li>
+						<li><em>Can use w/o LoS</em> (512): When set the entity can be collected by using (+use) it even if you don't have line of sight to the entity. By default line of sight is required in order to collect a pick-up by using (+use) it.</li>
+						<li>If both <em>touch only</em> or <em>use only</em> are set the entity can only be collected via a trigger.</li>
+						<li>If neither <em>touch only</em> or <em>use only</em> are set the entity can be collected via touch, use, or trigger.</li>
+					</ul>
+				</li>
+				<li>Player speed while holding a minigun is now a percentage of the player's maximum speed rather than a static value:
+					<ul>
+						<li>Holding: 33% reduction.</li>
+						<li>Spinning: 67% reduction.</li>
+						<li>Firing: 99% reduction (next to no movement)</li>
+					</ul>
+				</li>
+				<li>Re-implemented Uzis:
+					<ul>
+						<li>Merged single and akimbo (dual) Uzis into a single class and weapon entry.</li>
+						<li>Fixed akimbo Uzis not both reloading in all cases when doing so automatically.</li>
+						<li>Fixed being able to fire a single Uzi forever if you have akimbo on your person.</li>
+						<li>Fixed picking up an Uzi with no ammo in it giving the player a full clip.</li>
+						<li>Fixed players picking up a dropped Uzi not getting it as a 2nd Uzi if they already had one (<em>weaponbox</em>).</li>
+						<li>Fixed reload animation playing twice.</li>
+						<li>Fixed reload exploit with free ammo when dropping your 2nd Uzi and collecting it again.</li>
+						<li>Fixed reload not working correctly if you have a single empty Uzi then pick up another.</li>
+						<li>Fixed swapping magazines when the player still has spare ammo.</li>
+						<li>Players can no longer switch from a single Uzi to dual Uzis if the 2nd Uzi doesn't have any ammo to make use of.</li>
+					</ul>
+				</li>
+				<li>Removed mod-level feature combining all weapon pick-up models into a single model to save on model slots, this is no longer needed.</li>
+				<li>Removed SAW client-side punch back.</li>
+				<li>SAW accuracy increased slightly.</li>
+				<li>SAW fire rate reduced slightly.</li>
+				<li>Trip mine beams will no longer pass through the side of a brush based entity they are attached to.</li>
+				<li>Trip mines will look for anything of interest intersecting with it on activation, and detonate if anything is found.</li>
+				<li>Updates to weapon drop on player death behaviour:
+					<ul>
+						<li>Dropped weapons due to death can't be touched by other players for 30 seconds.</li>
+						<li>They can be stolen explicitly with +use though!</li>
+						<li>30 seconds must pass before a touch is accepted by another player.</li>
+						<li>If the player got gibed, anyone can touch the dropped weapon. (Because the player isn't revive-able)</li>
+					</ul>
+				</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<h3><a id="code-maptools"></a>Mapping tools</h3>
+
+			<ul>
+				<li>Custom fork of ZHLT 3.4 map compiler tools especially for our customized engine.
+					<ul>
+						<li>Based of Vluzacn's fork, build 34.</li>
+						<li>Available in our SDK package on Steam.</li>
+						<li>Available for 32-bit and 64-bit platforms.</li>
+					</ul>
+				</li>
+				<li><em>Maximum light names</em>: Raised to <em>256</em> from 64.</li>
+				<li><em>Maximum light styles</em>: Raised to <em>256</em> from 32.</li>
+				<li><em>Maximum texture info</em>: Raised to <em>32,737</em> from 8,192.</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<h2><a id="maps"></a>Map changes</h2>
+
+			<ul>
+				<li>Included map <em>_server_start</em> intended for servers with plug-ins to prepare/load their external data on SvenDS launch.
+					<ul>
+						<li>Automatically ends after 1 minute, the server map cycle will then begin.</li>
+						<li>Should it not end automatically a player spawning can press a button to end it.</li>
+					</ul>
+				</li>
+				<li>New maps:
+					<ul>
+						<li>Black Mesa: Special Tactics Sector.</li>
+						<li>Desert Circle.</li>
+						<li>Fortified.</li>
+						<li>Stadium 4.</li>
+						<li>Turret Fortress: Reverse.</li>
+					</ul>
+				</li>
+				<li>Removed deprecated CVAR <em>sv_airmove</em> from all map configurations.</li>
+				<li>Single player campaign portal map renamed to <em>-sp_campaign_portal</em> from <em>-HL_OpFor_SP_Portal</em>.</li>
+				<li>Single player campaign scripts updated:
+					<ul>
+						<li>Added <em>-noinfo</em> switch to all RIPENT commands so they consume a lot less lines.</li>
+						<li>Added support for cross-account map searching so that a game installed to the Steam account space (in Steamapps) will be able to find maps in the common user space.</li>
+						<li>Lots of cleaning and standardisation.</li>
+					</ul>
+				</li>
+				<li>The following maps are no longer official and have been moved to a <em>4.0 map pack</em>:
+					<ul>
+						<li>Abandoned.</li>
+						<li>Activist.</li>
+						<li>Afrika Korps.</li>
+						<li>Auspices.</li>
+						<li>Escape Series.</li>
+						<li>Hammerhead.</li>
+						<li>It Has Leaks.</li>
+						<li>Jumpers.</li>
+						<li>Murks.</li>
+						<li>Reflux.</li>
+						<li>Robination.</li>
+						<li>Royals.</li>
+						<li>Shattered.</li>
+						<li>Stadium 3.</li>
+						<li>VGER.</li>
+						<li>Zero.</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h3>Another Unit</h3>
+
+			<ul>
+				<li>Enabled survival mode game play with checkpoints.</li>
+			</ul>
+
+			<h3>Black Mesa EPF</h3>
+
+			<ul>
+				<li>Changed monster 'monster_human_medic_ally_repel' to 'monster_medic_ally_repel'.</li>
+			</ul>
+
+			<h3>Crystal</h3>
+
+			<ul>
+				<li><em>Part 2</em>: Fixed the boss music not always looping.</li>
+				<li><em>Part 2</em>: Moved secret area further away to prevent other parts of the map being seen through the sky.</li>
+			</ul>
+
+			<h3>Dead Simple Neo 2</h3>
+
+			<ul>
+				<li>Fixed exploit that let you grab weapons without lowering platforms.</li>
+				<li>Made objective text easier to read.</li>
+				<li>Raised music volume slightly.</li>
+				<li>Reduced glow effect on medics.</li>
+				<li>Removed long briefing cut-scene for a briefing room you can read the objectives from.</li>
+			</ul>
+
+			<h3>Half-Life campaign</h3>
+
+			<ul>
+				<li>Removed installation/un-installation scripts: All maps included with permission.</li>
+				<li>HEV suit voice feedback is now enabled.</li>
+			</ul>
+
+			<h3>Half-Life: Blue Shift campaign</h3>
+
+			<ul>
+				<li><em>All</em>: Enabled cross-map inventory.</li>
+				<li><em>BA_Yard3</em>: Fixed a battery falling through the floor.</li>
+				<li><em>BA_Yard3</em>: Fixed a medkit falling through a shelf.</li>
+				<li><em>BA_Yard4A</em>: Fixed Alien Slaves in the freezer not becoming alive when the ice is broken.</li>
+				<li><em>BA_Xen3</em>: Changed 3 <em>weapon_medkit</em> entities into <em>item_healthkit</em> in the very deep water.</li>
+				<li><em>BA_Xen3</em>: Fixed incorrect gravity.</li>
+				<li><em>BA_Xen6</em>: Fixed some sounds not playing.</li>
+			</ul>
+
+			<h3>Half-Life: Opposing Force campaign</h3>
+
+			<ul>
+				<li><em>All</em>: Removed Gauss gun.</li>
+				<li><em>All</em>: Enabled cross-map inventory.</li>
+				<li><em>OF0A0</em>: Fixed grunts not talking during the intro.</li>
+				<li><em>OF1A1</em>: Dead grunt on the stretcher now has no weapon.</li>
+				<li><em>OF1A1</em>: Fixed being able to revive a dead clean-suit scientist.</li>
+				<li><em>OF1A1</em>: Fixed a pair of sliding doors making no sound when moving.</li>
+				<li><em>OF1A2</em>: Fixed a crate being nearly unbreakable.</li>
+				<li><em>OF1A4B</em>: Fixed elevator being blocked.</li>
+				<li><em>OF1A4B, OF2A5</em>: Fixed huge wooden gobs.</li>
+				<li><em>OF1A5B</em>: Fixed elevator being stopped midway.</li>
+				<li><em>OF1A5B</em>: Fixed Shock Trooper teleporting in too late.</li>
+				<li><em>OF1A3</em>: Fixed being able to skip a sequence by climbing a ladder.</li>
+				<li><em>OF1A3</em>: Fixed players getting trapped in the acid room.</li>
+				<li><em>OF2A2</em>, <em>OF3A2</em>: Fixed allied NPCs being damageable by players.</li>
+				<li><em>OF3A3</em>, <em>OF3A4</em>, <em>OF3A5</em>, <em>OF3A6</em>, <em>OF4A1</em>, <em>OF4A2</em>, <em>OF4A3</em>, <em>OF4A4</em>, <em>OF4A5</em>, <em>OF5A1</em>, <em>OF5A2</em>, <em>OF5A3</em>, <em>OF5A4</em>, <em>OF6A1</em>, <em>OF6A2</em>, <em>OF6A3</em>, <em>OF6A4</em>, <em>OF6A4B</em>, <em>OF6A5</em>, : Added displacer to the starting equipment.</li>
+				<li><em>OF3A6</em>: Fixed teleporter sound being audible everywhere.</li>
+				<li><em>OF3A6</em>, <em>OF4A1</em>, <em>OF4A2</em>: Changed <em>trigger_xen_return</em> to <em>trigger_teleport</em>.</li>
+				<li><em>OF4A4</em>: Fixed a spore pod sinking into some Xen goo.</li>
+				<li><em>OF5A3</em>, <em>OF5A4</em>, <em>OF6A1</em>, <em>OF6A2</em>: Added SAW to the starting equipment.</li>
+			</ul>
+
+			<h3>Half-Life: Uplink campaign</h3>
+
+			<ul>
+				<li>Campaign re-built as a single map.</li>
+			</ul>
+
+			<h3>Incoming</h3>
+
+			<ul>
+				<li>Added clip brush to stop players getting stuck when going for the lift secret button.</li>
+				<li>Added monster clip near spawn to stop big grunt groups causing chaos.</li>
+				<li>Added monster clips on bridge and ledges to stop enemies falling off.</li>
+				<li>Added more info_nodes around the map.</li>
+				<li>Added pipe wrench and 1 clip of gauss ammo to the spawn equipment.</li>
+				<li>Added secret weapon for helping Freddy 'Fragman' Calhoun live up to his nickname.</li>
+				<li>Added Xen makers to monster spawns.</li>
+				<li>Changed cavern lower secret so that players are teleported back up rather than killed.</li>
+				<li>Changed end game_text to stop teasing Incoming 2.</li>
+				<li>Changed game message channels from 4 to 3 to stop conflict with monster/player info.</li>
+				<li>Fixed ammo room so batteries sit properly on shelving.</li>
+				<li>Lowered water and window transparency.</li>
+				<li>Made cavern finale explosion more dramatic.</li>
+				<li>Prevented Breakbeat Doc's hidden doom remix from being triggered by final explosion.</li>
+				<li>Re-arranged ammo lockers to the side of underground cavern finale tank to prevent players quickly grabbing crystal.</li>
+				<li>Reduced electric shock damage from broken lift water.</li>
+				<li>Reduced Mr Shark count in tank mission from 3 to 2.</li>
+				<li>Removed a crate in back storage to make it a little easier for players to hurriedly enter on finale.</li>
+				<li>Replaced most PCM Waveform sounds with OGG encoded versions.</li>
+				<li>Reworked lighting, added a few lights around the map, made everything generally brighter.</li>
+				<li>Reworked outdoor and test chamber secret buttons so co-operation is required to activate them.</li>
+				<li>Reworked underground cavern promo-poster secret button so co-operation is required to access it.</li>
+				<li>Rewrote many game messages.</li>
+				<li>Switched bomb secret texture from my stupid face to Stimpy's stupid face.</li>
+				<li>Switched Bullsquids to use the aqua replacement model, seeing as it's still included with SC.</li>
+				<li>Switched out 2 Headcrabs for Chumtoads in ammo room mission.</li>
+				<li>Tweaked timings of text and spawns in cavern finale.</li>
+				<li>Updated info in the map text files.</li>
+				<li>Widened walkway in test chamber mission to stop alien slaves going barmy.</li>
+			</ul>
+
+			<h3>Intruder</h3>
+
+			<ul>
+				<li>Added a monster clip brush on the windows for the guards at the start, so they can't run/fall out of the towers.</li>
+				<li>Fixed grunts being able to block a rotating door at the start of the first building.</li>
+				<li>Removed some robot grunts in the final area to ensure the monstrosity can't be killed by the robots alone.</li>
+				<li>Skill balance updates.</li>
+				<li>The minigun behind the security gate now starts inactive, and activates when the button is pressed to open the gate.</li>
+			</ul>
+
+			<h3>Last Stand</h3>
+
+			<ul>
+				<li><em>All</em>: Added some additional light brushes to account for the newer compiler settings.</li>
+				<li><em>All</em>: Changed environment light to match the setting sun in the sky map, so outdoor areas aren't so unusually dark.</li>
+				<li><em>All</em>: Recompiled all maps with tweaked clipping and lighting settings.</li>
+				<li><em>All</em>: Replaced all AAATRIGGER textures to NULL.</li>
+				<li><em>Part 1</em>: Added giant spot lights in the outdoor area that come in shortly after starting to suggest action is about to go down.</li>
+				<li><em>Part 1</em>: Changed stairwell doors to only open inwards. This will stop doors from blocking the main path to the top.</li>
+				<li><em>Part 1</em>: Covered func_tank turret at start in monsterclip to keep aliens from using it.</li>
+				<li><em>Part 1</em>: Set func_tank turret's relation of players and player allies to 'friend' in hopes that it wont damage allied NPCs and players that are in the line of fire.</li>
+				<li><em>Part 2</em>: Added red-orange light at the end of the cave to resemble the lava cave changes in part 3.</li>
+				<li><em>Part 3</em>: Changed teleporter entities in the lava cave so they don't rely on invisible walls blocking early access.</li>
+				<li><em>Part 3</em>: Improved performance in that bent corridor with the ceiling fans.</li>
+				<li><em>Part 3</em>: Replaced incorrect lava texture with one that actually looks like lava, and given it a red-orange light and bubbling sound.</li>
+				<li><em>Part 3</em>: Tweaked brushwork in the lava cave to improve performance.</li>
+			</ul>
+
+			<h3>Momma Mesa</h3>
+
+			<ul>
+				<li><em>Misc</em>: Swapped copyrighted music out for free-to-use music.</li>
+				<li><em>Misc</em>: Added loads of new ambient sounds.</li>
+				<li><em>Misc</em>: Added new ending cutscenes for each of the six possible endings, replacing the super-long credits cutscenes.</li>
+				<li><em>Misc</em>: Moved tank area down 512 units to prevent the areas above from being visible.</li>
+				<li><em>Misc</em>: Removed node graph files from the resource list.</li>
+				<li><em>Misc</em>: Skill balance updates.</li>
+				<li><em>Fish Problem Mission</em>: Altered the shape of one of the broken railings in the ichthyosaur mission to prevent players from getting stuck by walking into it.</li>
+				<li><em>Fish Problem Mission</em>: Made broken pieces of the bridge in the ichthyosaur mission <em>func_illusionary</em> to prevent players from getting stuck.</li>
+				<li><em>Fish Problem Mission</em>: Added clip brushes to door to ichthyosaur mission to prevent players from blocking it.</li>
+				<li><em>Freezer Mission</em>: Made the furnace in the freezer mission insta-kill any living thing inside of it.</li>
+				<li><em>Freezer Mission</em>: Raised hull size of the giant cockroach to help prevent it clipping through walls.</li>
+				<li><em>Freezer Mission</em>: Added the missing 'whip' attack to the cockroach model.</li>
+				<li><em>Freezer Mission</em>: Removed the huge hit boxes around the cockroach model's antennae and moved the eye position up 55 units from the origin along the Z-axis.</li>
+				<li><em>Magma Caves Mission</em>: Added a secret cloaking device to the magma caves that a single player can use to sneak through the turret trap and the self-destruct sequence unscathed.</li>
+				<li><em>Magma Caves Mission</em>: Changed weird blue env_fade in magma cave trap room to Chumtoad gas plumes</li>
+				<li><em>Magma Caves Mission</em>: Fixed machine ambience not shutting off when the hidden generators are destroyed.</li>
+				<li><em>Portal Experiment</em>: In easy mode, the time that players must protect the portal experiment is reduced from 3 minutes to 2 minutes.</li>
+				<li><em>Portal Experiment</em>: In nightmare mode, the alien slave that teleports into the control room is replaced with an alien grunt.</li>
+				<li><em>Portal Experiment</em>: Red emergency lights on the buttons in the portal lab now turn off as soon as the button is pressed, rather than waiting three seconds.</li>
+				<li><em>Prison Mission</em>: Added telefrag to the prison VIP to ensure he always spawns.</li>
+				<li><em>Prison Mission</em>: Adjusted nodes in the prison's VIP safe room so that he can escape easier.</li>
+				<li><em>Satellite Uplink Mission</em>: Added a wood plank across some of the sloped rocks outside the satellite mission.</li>
+				<li><em>Satellite Uplink Mission</em>: Changed the satellite dish from a zombie to a <em>func_breakable</em>.</li>
+				<li><em>Tank Battle</em>: Final boss has been changed from a regular old tank to a hover-tank that fires gluon guns and AR grenades.</li>
+				<li><em>Tank Battle</em>: Added a hallway inside of the shack in which players may take cover from airstrikes and explosions.</li>
+				<li><em>Tank Battle</em>: Added a wall of barricades to prevent the tank from insta-gibbing people who teleport into the perimeter arena.</li>
+			</ul>
+
+			<h3>Osprey Attack</h3>
+
+			<ul>
+				<li>Tweaked description to say "m203" grenades instead of "MP5" grenades.</li>
+			</ul>
+
+			<h3>Persia</h3>
+
+			<ul>
+				<li>Fixed spelling error in entity class name <em>func_monsterclip</em> (was called <em>ffunc_monsterclip</em>).</li>
+			</ul>
+
+			<h3>Polar Rescue</h3>
+
+			<ul>
+				<li>Added a railing around the elevator so NPCs can't fall down the shaft whilst the elevator is at a different floor.</li>
+				<li>Added difficulty levels chosen in the start room by vote:
+					<ul>
+						<li><em>Normal</em>: 20 minute execution timer, normal NPC count, weapons/ammo/items respawn as normal.</li>
+						<li><em>Hard</em>: 15 minute execution timer, high NPC count, weapons/ammo/items don't respawn.</li>
+					</ul>
+				</li>
+				<li>Added sounds to individually issued messages that may go missed.</li>
+				<li>Completely redesigned many parts of the map:
+					<ul>
+						<li>Added a chasm with a retractable bridge.</li>
+						<li>Added a checkpoint when the bridge control room is entered.</li>
+						<li>Added a ledge around the cliff-side platform (just for Solokiller).</li>
+						<li>Added a medic to accompany the allied soldier bursting into the bridge control room.</li>
+						<li>Added environment sound FX across the map.</li>
+						<li>Converted a storage cage into a bridge control room (where the portal power cabinets were).</li>
+						<li>Converted a level 1 storage room into a landing platform.</li>
+						<li>Converted a level 2 storage room into a workshop.</li>
+						<li>Converted a level 3 storage room into a radio room.</li>
+						<li>Merged main elevators so 1 spans all 3 floors with the maintenance shaft.</li>
+						<li>Moved the hostage cells across the chasm.</li>
+						<li>Redesigned the executions room to an incineration chamber.</li>
+						<li>Removed some pointless rooms.</li>
+						<li>Removed the alarm button.</li>
+						<li>Removed the ice on the cliff-side platform.</li>
+						<li>Removed the map (until it's updated).</li>
+						<li>Removed the RPG from the radio room (will be moved to the command centre in a future update).</li>
+						<li>Removed the teleporters.</li>
+					</ul>
+				</li>
+				<li>Fixed a guard appearing as a blue Otis.</li>
+				<li>Fixed a missing model "gins_sink.mdl".</li>
+				<li>New pick-up / third person model for the secret gold .357.</li>
+				<li>New textures for red doors and blue signs.</li>
+				<li>NPCs now drop their weapons on death, so players can get more ammo without having to visit storage rooms.</li>
+				<li>NPCs now scan for possible combat even when players aren't that close, so they can react to explosions heard in the distance.</li>
+				<li>Rebalancing to the NPCs and skill configuration:
+					<ul>
+						<li>Removed tier 1/2/3 skill levels.</li>
+						<li>Reduced start health/armor back to 100.</li>
+						<li>Most weapons do a little less damage so it isn't so instant kill, but still realistic enough weapons damage.</li>
+						<li>Added settings for Barney, Otis, and Robo-grunts.</li>
+						<li>Head shots now do 10x damage.</li>
+						<li>Chest shots now do 1.5x damage.</li>
+						<li>Stomach shots now do 3x damage.</li>
+						<li>Arm shots now to 0.5x damage.</li>
+						<li>Leg shots now to 0.75x damage.</li>
+					</ul>
+				</li>
+				<li>Replaced some male assassins for other NPCs (Barnabus and Otto).</li>
+				<li>Reverted using the scientist model from Opposing Force due to bad animations.</li>
+				<li>Replaced transparent text textures for sprites.</li>
+				<li>Tweaked all ambient sounds.</li>
+			</ul>
+
+			<h3>Quarter</h3>
+
+			<ul>
+				<li>Moved difficult to reach medkit.</li>
+				<li>Changed all ammo_762 to ammo_357.</li>
+				<li>Removed trigger_changelevel entity and fixed the game_end.</li>
+			</ul>
+
+			<h3>Richard Boderman</h3>
+
+			<ul>
+				<li>Fixed boss monster being able to prevent players spawning (and living for more than half a second).</li>
+				<li>Fixed players getting stuck on the slopes of sandbags.</li>
+				<li>Fixed visible null texture border around the edges of bunkers.</li>
+				<li>Removed unused cycler entity.</li>
+			</ul>
+
+			<h3>Sandstone</h3>
+
+			<ul>
+				<li>Added combat knife from Opposing Force.</li>
+				<li>Changed most func_wall's into func_detail. (Only the 3 briefcases and sandbag brushes remain)</li>
+				<li>Enlarged enginner script brushes by objectives. (They were only 8 units tall, could be missed with a bad hit box calculation!)</li>
+				<li>Fixed bad node graphs around some narrow(ish) stairs preventing NPC's (particularly the engineer) from going up/down.</li>
+				<li>Fixed the 357 in the secret area not leaning against the wall like it is in the map source.</li>
+				<li>New NPC models.</li>
+				<li>Player arms replaced for the Opposing Force style arms.</li>
+				<li>Sandbag brushes are now slightly more detailed.</li>
+				<li>Tiny detail tweaks.</li>
+			</ul>
+
+			<h3>Tetris</h3>
+
+			<ul>
+				<li><em>All</em>: Fixed grapple texture appearing as the default texture if a subsequent map is loaded without playing the first map.</li>
+				<li><em>Part 3</em>: Fixed block near the start due to turrets not firing their death condition trigger.</li>
+				<li><em>Part 3</em>: Fixed players blocking a lift near the end by giving it massive crush damage.</li>
+				<li><em>Part 4</em>, <em>Part 5</em>: Fixed an occasional backwards mins/maxs crash on load.</li>
+				<li><em>Part 4</em>, <em>Part 5</em>: Removed unused WAD files from the map requirements.</li>
+				<li><em>Part 5</em>: Fixed low gravity effect from this area not wearing off.</li>
+				<li><em>Part 6</em>: Fixed some turrets having an assassin display name.</li>
+				<li><em>Part 6</em>: Replaced fake Kingpin boss (alien slave replacement) for the real thing.</li>
+			</ul>
+
+			<h3>Turret Fortress</h3>
+
+			<ul>
+				<li>New nomble sound to avoid copyright infringement.</li>
+			</ul>
+
+			<h3>They Hunger</h3>
+
+			<ul>
+				<li><em>All</em>: Added custom sniper rifle to human grunts.</li>
+				<li><em>All</em>: Fixed car/train sound replacements so they don't sound like Half-Life trains.</li>
+				<li><em>All</em>: Updated global model replacement to include the sniper rifle.</li>
+				<li><em>They5</em>: Fixed environment sound effect being lost when entering the tunnel.</li>
+				<li><em>They5</em>: Fixed a lighting brush blocking players.</li>
+				<li><em>They13</em>: Fixed trees disappearing at particular view angles.</li>
+				<li><em>They14</em>: Fixed a dead civilian rendering without light.</li>
+				<li><em>They16</em>: Fixed floating umbrella when the bench it's on breaks.</li>
+				<li><em>They17</em>: Removed badly placed spawn points.</li>
+				<li><em>They22</em>, <em>They22B</em>: Fixed a shovel appearing in a chest way too small to contain it.</li>
+				<li><em>They23</em>: Fixed a lift button having too short of a reset delay.</li>
+				<li><em>They23</em>: Fixed Barney rendering without light on a cliff edge.</li>
+			</ul>
+
+			<h3>Toad Snatch</h3>
+
+			<ul>
+				<li>Non-ghost players will now be shown a message telling them to wait to be revived when they die.</li>
+				<li>Players can now re-join the assaulting players when each checkpoint is reached.</li>
+				<li>Raised player respawn delay to 8 seconds.</li>
+				<li>Reduced delay before difficulty can be chosen.</li>
+				<li>Reduced glow effect on the toad carrier.</li>
+				<li>Slime points are now easier to grapple on to.</li>
+				<li>XP modifications no longer force extreme difficulty.</li>
+			</ul>
+
+			<h3>Toon Run</h3>
+
+			<ul>
+				<li><em>All</em>: Some brand new sections across all 3 maps!</li>
+				<li><em>Part 1</em>: Garg plaza: Door could be opened from inside by monster_barney -> set monsters can't flag.</li>
+				<li><em>Part 1</em>: Mine Area: Mine hounds were stuck in their cave tunnel -> used func_clip.</li>
+				<li><em>Part 2</em>: Fixed a ladder being invisible from one side by the boat.</li>
+				<li><em>Part 2</em>: Flower Area: Platforms start off too low -> changed lip value.</li>
+				<li><em>Part 2</em>: Flower Area: Walking into ladder brush freezes game -> added trigger_hurt that kills anything near the ladder.</li>
+				<li><em>Part 2</em>: Replaced the rat visible through the dock telescope with "Mr. Buttocks".</li>
+				<li><em>Part 3</em>: Mother Spleen Area: Changed Mother Spleen from monster_gonome to monster_generic to get rid of the model warnings.
+			</ul>
+
+			<h3>Turret Fortress</h3>
+
+			<ul>
+				<li>Changed copywritten music for free to use music.</li>
+				<li>Fixed asking players to destroy the credit stealer device when it has already been destroyed.</li>
+				<li>Fixed Nomble music not stopping when the map has been won or lost.</li>
+				<li>Removed unintended explosion decals from outside at sector 2.</li>
+				<li>The two central spots now give players 2 credits upon building, rather than 2 useless turrets.</li>
+				<li>The virus alert message is now more clear.</li>
+			</ul>
+
+			<h3>YABMA</h3>
+
+			<ul>
+				<li>Enabled survival mode game play with checkpoints.</li>
+				<li>Fixed extra/missing quotation marks causing RESGen to fail parsing the map correctly.</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<h2><a id="extramaps"></a>Map pack changes</h2>
+
+			<p>
+				These are fixes for the extra maps provided via content packs, and are not part of the vanilla game.
+			</p>
+
+			<h3>Activist</h3>
+
+			<ul>
+				<li><em>All</em>: Lowered re-use delay on many of the doors so they are less annoying.</li>
+				<li><em>Part 1</em>: Fixed clashing door names.</li>
+				<li><em>Part 1</em>: Fixed insane lag caused when blocking a particular door.</li>
+				<li><em>Part 1</em>: Removed a duplicated button and door causing serious lag when blocked.</li>
+			</ul>
+
+			<h3>Assault on Black Mesa 2</h3>
+
+			<ul>
+				<li><em>Part 1</em>: Fixed lab doors being open prematurely by NPCs.</li>
+				<li><em>Part 2</em>: Fixed a crate blocking a teleporter at the start when the shortcut has been unlocked.</li>
+				<li><em>Part 2</em>: Raised the large elevator speed to help players not get left behind.</li>
+			</ul>
+
+			<h3>Auspices</h3>
+
+			<ul>
+				<li>Enabled survival mode game play with checkpoints.</li>
+				<li>Slowed down the laser firing and turning rate so players don't get killed nearly every time they enter the small boss section.</li>
+			</ul>
+
+			<h3>Blackops</h3>
+
+			<p>
+				Fixes also apply to parent map <em>OPR1A6</em>.
+			</p>
+
+			<ul>
+				<li>Changed a lot of doors to stay open once opened so respawning players can catch up.</li>
+				<li>Changed some of the awkwardly placed buttons to be use based rather than touch based to prevent player confusion.</li>
+				<li>Fixed players exploiting a climbing shortcut with the plant pots in the lobby.</li>
+			</ul>
+
+			<h3>Case Closed</h3>
+
+			<ul>
+				<li><em>All</em>: Re-compiled all maps with more modern compilers (improved clipping, lighting, and visibility).</li>
+				<li><em>Part 1</em>: Added clip brush to cover an inaccessible area.</li>
+				<li><em>Part 1</em>: Added minor damage to all rotating doors, so headcrabs can't block them from opening.</li>
+				<li><em>Part 1</em>: Fixed a headcrab being stuck inside a ceiling.</li>
+				<li><em>Part 1</em>: Fixed bad texture alignment on a fire alarm.</li>
+				<li><em>Part 4</em>: Fixed a battery sinking into the floor after spawning on a shelf.</li>
+			</ul>
+
+			<h3>Castle Defence</h3>
+
+			<ul>
+				<li>Removed engine model limit workaround.</li>
+			</ul>
+
+			<h3>Crisis 2</h3>
+
+			<ul>
+				<li>Changed the class of the scientist at the end to friendly.</li>
+				<li>Changed the green goo to use slime contents instead of lava.</li>
+				<li>Fixed final elevator doors from being opened again once it has "moved".</li>
+				<li>Fixed important allied NPCs from being killed.</li>
+				<li>Fixed incorrect track pathing at the bottom of the rotating train elevator.</li>
+			</ul>
+
+			<h3>Delta Return</h3>
+
+			<ul>
+				<li>Fixed a key-padded door overlapping with the ceiling when open.</li>
+				<li>Fixed a teleporter being inactive when it should be active.</li>
+			</ul>
+
+			<h3>Durga</h3>
+
+			<ul>
+				<li>Raised health of first gargantua.</li>
+				<li>Removed some of the excessive big mommas and a gargantua.</li>
+			</ul>
+
+			<h3>Escape Series</h3>
+
+			<ul>
+				<li><em>1A</em>, <em>1B</em>: Replaced texture AAATRIGGER to NULL.</li>
+				<li><em>1A</em>: Disabled AI on the skeleton prop right outside the first spawn area.</li>
+				<li><em>1A</em>: Fixed a few bad texture alignments.</li>
+				<li><em>1A</em>: Fixed bad clip hull sometimes causing players to get stuck in the sloped vents at the start.</li>
+				<li><em>1A</em>: Fixed lasers being duplicated for no reason.</li>
+				<li><em>1A</em>: Fixed the elevator being blocked by cockroaches.</li>
+				<li><em>1A</em>: Removed noise on lasers.</li>
+				<li><em>1B</em>: Fixed boxes climbed on in the office area causing a player to become stuck inside if they were standing where the boxes end up.</li>
+				<li><em>1B</em>: Fixed textures around the destroyed walls looking too neat.</li>
+				<li><em>2A</em>, <em>3A</em>, <em>3C</em>: Removed all ambient_generics without a sound file specified -- most of which had no target name specified either.</li>
+				<li><em>2B</em>: Fixed falling floor from being blocked by baby headcrabs by giving it massive crush damage.</li>
+				<li><em>2E</em>: Fixed falling floor into the boss chamber sometimes sitting on top of respawning players due to it not moving quickly enough.</li>
+				<li><em>3A</em>: Obstructed the view of the bodyguards into the gas chamber at the end of the map to stop them trying to shoot at players through the unbreakable glass.</li>
+				<li><em>3C</em>: Fixed zombies spawning inside each other.</li>
+				<li><em>3D</em>: Added a message telling players they need to find a keycard for the first control panel when they don't have it.</li>
+				<li><em>3D/3E</em>: Re-designed how the trolley has its doors attached.</li>
+				<li><em>3D/3E</em>: Reduced crush damage from the trolley to limit how often players can kill each other by walking into them in the right direction.</li>
+			</ul>
+
+			<h3>Grey Snake</h3>
+
+			<ul>
+				<li>Fixed Chubby hologram producing blood when shot.</li>
+			</ul>
+
+			<h3>Grunt War</h3>
+
+			<ul>
+				<li>Fixed a pistol being spawned 49 times along with a spawning player.</li>
+			</ul>
+
+			<h3>Gitfest</h3>
+
+			<ul>
+				<li><em>Part 4</em>: Raised maximum view distance so the floor is visible from the top of the highest buildings.</li>
+			</ul>
+
+			<h3>Inbound</h3>
+
+			<ul>
+				<li>Removed node graph files from the resource list.</li>
+			</ul>
+
+			<h3>It Has Leaks</h3>
+
+			<ul>
+				<li>Fixed wizards being able to fall into the water.</li>
+			</ul>
+
+			<h3>Jumpers</h3>
+
+			<ul>
+				<li>Reduced glow effect on the jumper.</li>
+			</ul>
+
+			<h3>Mako</h3>
+
+			<ul>
+				<li>Fixed an unreachable medkit on some racking.</li>
+			</ul>
+
+			<h3>Project Guilty</h3>
+
+			<ul>
+				<li><em>Part 1</em>: Reduced the insane amount of monsters spawning at each area.</li>
+			</ul>
+
+			<h3>Reflux</h3>
+
+			<ul>
+				<li>Removed node graph files from the resource list.</li>
+			</ul>
+
+			<h3>Robination</h3>
+
+			<ul>
+				<li>Map now has a 4 hour time limit instead of running infinitely.</li>
+				<li>Observer mode activated for dead players so they don't just get bored in the death room.</li>
+			</ul>
+
+			<h3>Royals</h3>
+
+			<ul>
+				<li>Deleted obsolete music file.</li>
+				<li><em>All</em>: Added a neat-o background landscape.</li>
+				<li><em>All</em>: Added looping music.</li>
+				<li><em>All</em>: Added more ammunition to the start.</li>
+				<li><em>All</em>: Enabled cross-map inventory.</li>
+				<li><em>All</em>: Fixed some lighting bugs.</li>
+				<li><em>Part 1</em>: Fixed bad clipping under the spawn point.</li>
+				<li><em>Part 1</em>: Fixed players being able to jump outside the map at the outdoor grunt area.</li>
+				<li><em>Part 2</em>: Fixed bad clipping under the spawn point.</li>
+				<li><em>Part 4</em>: Added a SAW to the top of the pyramid, and changed a Uzi to Akimbo Uzis.</li>
+				<li><em>Part 4</em>: Added clip brush to prevent blocks being pushed down to the Pharaoh.</li>
+				<li><em>Part 4</em>: Added clip brushes to prevent players avoiding the Pharaoh.</li>
+				<li><em>Part 4</em>: Reduced boss hit points.</li>
+				<li><em>Part 4</em>: Reduced world polygons in the pyramid.</li>
+			</ul>
+
+			<h3>S28</h3>
+
+			<ul>
+				<li>Fixed barricades in the first room from visibly disappearing at certain angles.</li>
+				<li>Fixed teleporters being inactive when they should be active.</li>
+			</ul>
+
+			<h3>Shattered</h3>
+
+			<ul>
+				<li>Fixed crouching exploit at the 3 laser beams, these beams now turn off when the button behind them is pressed.</li>
+			</ul>
+
+			<h3>Sledge</h3>
+
+			<ul>
+				<li>Fixed a door moving the wrong direction.</li>
+			</ul>
+
+			<h3>Subway Train</h3>
+
+			<ul>
+				<li>Fixed a heavy weapons grunt being unable to see/shoot at players through a holey railing.</li>
+				<li>Fixed a heavy weapons grunt not having a monster clip flag.</li>
+				<li>Fixed Osprey rotors not moving when it takes off.</li>
+			</ul>
+
+			<h3>Surface Extension</h3>
+
+			<ul>
+				<li>Fixed a door opening above a building's wall.</li>
+				<li>Fixed rotating doors opening into a wall.</li>
+				<li>Removed an empty ambient_generic.</li>
+			</ul>
+
+			<h3>Sven Co-op RPG</h3>
+
+			<ul>
+				<li><em>All</em>: Set weapon/ammo respawn delay to 0 in the class selection area, so players always get the equipment they should.</li>
+				<li><em>Part 1</em>: Fixed the rope being turned off instead of on when the rope is dropped.</li>
+				<li><em>Part 1</em>: Now uses the custom weapon models from parts 2 and 3.</li>
+			</ul>
+
+			<h3>Tower</h3>
+
+			<ul>
+				<li><em>All</em>: Added more 9mm ammo boxes around the map.</li>
+				<li><em>All</em>: Disabled ledge climbing to stop some unintended exploits/shortcuts.</li>
+				<li><em>All</em>: Raised starting ammo as players would always run out quickly.</li>
+				<li><em>All</em>: Reduced many of the excessive enemy spawn counts.</li>
+				<li><em>Part 1</em>: Fixed a shortcut not opening properly.</li>
+				<li><em>Part 1</em>: Fixed infinitely spawning grunts in the first section of the tower.</li>
+				<li><em>Part 1</em>: Fixed trip mines from being inside the walls.</li>
+				<li><em>Part 1</em>: Made all turrets auto-start.</li>
+				<li><em>Part 1 & 2</em>: Removed some excessive turrets.</li>
+				<li><em>Part 2</em>: Stopped grunts spawning in the Apache area once the Apache has been destroyed.</li>
+				<li><em>Part 3</em>: Added trigger to open the armory from inside of it.</li>
+				<li><em>Part 3</em>: Changed a grate from a door to a breakable that breaks on a trigger.</li>
+				<li><em>Part 3</em>: Fixed enemies from spawn camping players by stopping the lower half of the door from opening.</li>
+				<li><em>Part 3</em>: Raised speed of the water rising from 3 to 10 units/second.</li>
+				<li><em>Part 3</em>: The subway gate can now be opened from the other side to create a shortcut.</li>
+				<li><em>Part 4</em>: Fixed old spawn points being activated again after new ones.</li>
+				<li><em>Part 4</em>: Reduced subway train ride time.</li>
+				<li><em>Part 4</em>: Reduced unreasonable hit points of assassins in the subway.</li>
+				<li><em>Part 5</em>: Changed turrets in the ship generator room to mini-turrets.</li>
+				<li><em>Part 5</em>: Improved the shortcut opening point.</li>
+				<li><em>Part 5</em>: Reduced hit points of some turrets and mini-turrets.</li>
+				<li><em>Part 5</em>: Reduced NPC spawn count around the outside of the ship.</li>
+			</ul>
+
+			<h3>War</h3>
+
+			<ul>
+				<li>Added <em>nextmap</em> configuration option to ensure part 2 is played in sequence.</li>
+			</ul>
+
+			<h3>Wired</h3>
+
+			<ul>
+				<li>Fixed a turret being stuck in the ceiling.</li>
+			</ul>
+
+			<h3>Why</h3>
+
+			<ul>
+				<li>Fixed doors overlapping into ceiling brushes.</li>
+				<li>Fixed being able to revive the dead grunt at the start.</li>
+				<li>Fixed grunt at the start not always dying because of the security guard as intended.</li>
+				<li>Fixed some scientists with feet sticking out through toilet cubical doors.</li>
+				<li>Fixed teleporters being inactive when it should be active.</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<h2><a id="model"></a>Model changes</h2>
+
+			<ul>
+				<li><em>Error</em>: New fall-back model and sprite.</li>
+				<li><em>Lambda</em>: New model used for checkpoints in single player campaigns.</li>
+			</ul>
+
+			<h3><a id="model-player"></a>Player</h3>
+
+			<ul>
+				<li>Fixed HEV models with glasses not having see-through lenses.</li>
+				<li>Fixed HEV models not having the proper colour changing skins.</li>
+				<li>Fixed Barnacle grapple tongue not launching from the correct position.</li>
+				<li>Fixed weapon muzzle flashes not being in the correct positions.</li>
+				<li>New animations for running/walking, barnacled, and keyboard typing.</li>
+				<li>New models:
+					<ul>
+						<li>Barney (x3)</li>
+						<li>Construction worker.</li>
+						<li>Gman.</li>
+						<li>Gus.</li>
+						<li>Male assassin (x4)</li>
+						<li>Opposing Force (x6)</li>
+						<li>Scientist (x7)</li>
+						<li>Robogrunt</li>
+					</ul>
+				</li>
+				<li>New preview images.</li>
+				<li>Including <em>human grunt</em> model with correct animations to prevent animation mismatches from Valve's version.</li>
+				<li>Removed obsolete death-match models from Valve where we already have a HD replacement.</li>
+			</ul>
+
+			<h3><a id="model-npc"></a>Non-playable characters</h3>
+
+			<ul>
+				<li><em>Apache</em>, <em>Friendly Apache</em>, <em>Barnabus</em>, <em>Blackop Osprey</em>, <em>Crashed Osprey</em> (not the same as dead_osprey), <em>Human grunt</em>, <em>Houndeye</em>, <em>Opposing Force grunts</em>, <em>Medic grunt</em>, <em>Torch grunt</em>, <em>Heavy weapons grunt</em>, <em>Osprey</em>, <em>Male assassin</em>, <em>Otis</em>, <em>Otto</em>, <em>Pit Drone</em>: New model.</li>
+				<li><em>Barney, Barnabus</em>: Added Desert Eagle, .357, and MP5 weapon sub-models/animations.</li>
+				<li><em>Barney, Barnabus, Otis, Otto, Zombie</em>: New footstep event (2003) so they all play the same set of footstep sounds based on the material they are standing on.</li>
+				<li><em>Bullsquid</em>: Fixed weird jumping animation between positions.</li>
+				<li><em>Gonome</em>: Fixed head hit box being too small.</li>
+				<li><em>Grunts</em>: Fixed animation timings for combat idle and crouching wait.</li>
+				<li><em>Heavy weapons grunt</em>: Added an attachment point for the tip of the cigar.</li>
+				<li><em>Heavy weapons grunt</em>: Added bone and bone controller for the mouth.</li>
+				<li><em>Heavy weapons grunt</em>: Added new animations for walking and running with a pistol.</li>
+				<li><em>Heavy weapons grunt</em>: Fixed incorrect attachment points for muzzle flare and shell ejection.</li>
+				<li><em>Heavy weapons grunt</em>: Improved most other animations.</li>
+				<li><em>Male assassin</em>: Added more polygons to the right arm (stretched arm still happens, but a bit less visible).</li>
+				<li><em>Male assassin</em>: Fixed transparency on the M16 sub-model.</li>
+				<li><em>Male assassin</em>: Fixed head &amp; goggle seams.</li>
+				<li><em>Male assassin</em>: Removed ~300 duplicate triangles from the mesh.</li>
+				<li><em>Male assassin</em>: Fixed animation frame rates to match those from the PS2 model.</li>
+				<li><em>Medic grunt</em>: Fixed seam across the belt.</li>
+				<li><em>Opposing Force Grunts</em>: Updated to use the green camouflage player allied grunts have.</li>
+				<li><em>Otis, Otto</em>: Replacing model for HD version by Ambient Impact.</li>
+				<li><em>Scientist</em>: All models combined into a single file.</li>
+				<li><em>Scientist</em>: Fixed "haulscientist" sequence so legs aren't hovering on the final frame.</li>
+				<li><em>Scientist</em>: Fixed seam across the face of the Einstein sub-model.</li>
+				<li><em>Voltigore</em>: Fixed incorrect order of animation names for "diesimple" and "dieforward".</li>
+				<li><em>Zombie Soldier</em>: New model.</li>
+			</ul>
+
+			<h3><a id="model-weapons-equipment"></a>Weapons and equipment</h3>
+
+			<ul>
+				<li><em>.357 box</em>, <em>5.56 mm clip</em>, <em>7.62mm clip</em>, <em>9mm large clip</em>, <em>9mm small clip</em>, <em>Crossbow bolt clip</em>, <em>Gauss charge</em>, <em>HEV battery</em>, <em>Long jump module</em>, <em>MP5 clip</em>, <em>RPG rocket</em>, <em>Shotgun shell box</em>, <em>Uzi clip</em>: New model.</li>
+				<li><em>Opposing Force Knife</em>: Fixed incorrect transparent palette.</li>
+				<li><em>Shotgun</em>: Added "shoot_double" animation to view port model.</li>
+				<li><em>Weapons</em>: New models for all weapon pick-ups and third person view models to match the high quality first person models.</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<h2><a id="sound"></a>Sound changes</h2>
+
+			<ul>
+				<li>New high quality sounds for concrete (default), dirt, and snow footsteps -- 8 sounds for each.</li>
+				<li>New opening music from <a href="http://www.moddb.com/members/goldsheep-mods">"Pavel_Perepelitsa"</a>.</li>
+				<li>Updated many vanilla textures with more appropriate material sounds.</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<h2><a id="hammer"></a>Hammer editor changes</h2>
+
+			<ul>
+				<li>Added support for exporting maps with floating-point co-ordinates.</li>
+				<li>3D draw distance limit raised to <em>40,000</em>.</li>
+				<li>Co-ordinate boundaries raised to <em>+/-131,072</em> from +/-4,096.</li>
+				<li><em>Texture chooser</em>: Added <em>192x</em> and <em>256x</em> texture display sizes.</li>
+				<li><em>Texture chooser</em>: Changed texture name font to <em>Lucida Console 14pt</em>.</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<h2><a id="other"></a>Other changes</h2>
+
+			<ul>
+				<li><em>Configuration</em>: Added keyboard entry for command <em>inventory</em> bound to <em>I</em> by default.</li>
+				<li><em>Configuration</em>: Added Xbox 360 controller configuration <em>controller-xb360.cfg</em>.</li>
+				<li><em>Configuration</em>: Multi-server configuration example provided.</li>
+				<li><em>FGD</em>: Added base class <em>Appearflags</em> to (hopefully) everything.</li>
+				<li><em>FGD</em>: Added base class <em>ZHLTbmodel</em> for all brush-based entities:
+					<ul>
+						<li>Key <em>zhlt_usemodel</em>: Template Model Target.</li>
+						<li>Key <em>zhlt_copylight</em>: Copy Lighting From Target.</li>
+					</ul>
+				</li>
+				<li><em>FGD</em>: Added flag <em>Don't move living players</em> to <em>trigger_respawn</em>.</li>
+				<li><em>FGD</em>: Added flag <em>Inventory Items</em> to <em>func_clip</em>.</li>
+				<li><em>FGD</em>: Added flag <em>Trigger on arrival</em> to <em>info_teleport_destination</em>.</li>
+				<li><em>FGD</em>: Added key <em>activity</em> and <em>hinttype</em> to <em>info_node</em> and <em>info_node_air</em>.</li>
+				<li><em>FGD</em>: Added key <em>disable_minigun_drop</em> to <em>monster_hwgrunt</em> to call a scripted function.</li>
+				<li><em>FGD</em>: Added key <em>function_name</em> to <em>squadmaker</em> to call a scripted function.</li>
+				<li><em>FGD</em>: Added key <em>is_not_revivable</em> to monsters and <em>squadmaker</em>.</li>
+				<li><em>FGD</em>: Added key <em>IsNotAmmoItem</em> to weapons.</li>
+				<li><em>FGD</em>: Added key <em>keep_inventory</em> to <em>trigger_changelevel</em> enabled by default.</li>
+				<li><em>FGD</em>: Added key <em>path_name</em> to all A.I. entities (and spawners) to make use of the new path entities.</li>
+				<li><em>FGD</em>: Added key <em>soundlist</em> to <em>func_train</em> and <em>func_tracktrain</em> for global sound replacements.</li>
+				<li><em>FGD</em>: Added key <em>teleport_if_blocked</em> to <em>trigger_teleport</em>.</li>
+				<li><em>FGD</em>: Added key <em>teleport_ignore_delay</em> to <em>trigger_teleport</em>.</li>
+				<li><em>FGD</em>: Added key <em>teleport_start_inactive</em> to <em>trigger_teleport</em>.</li>
+				<li><em>FGD</em>: Added key <em>vp_type</em> to <em>env_sprite</em>.</li>
+				<li><em>FGD</em>: Added keys <em>yes</em> and <em>no</em> to <em>trigger_vote</em> to customize the button text.</li>
+				<li><em>FGD</em>: Doors and trains are now configured to obey trigger modes by default.</li>
+				<li><em>FGD</em>: Entities <em>game_counter</em>, <em>game_counter_set</em>, <em>game_end</em>, <em>game_player_counter</em>, <em>game_player_equip</em>, <em>game_player_hurt</em>, <em>game_player_respawn_zone</em>, <em>game_player_team</em>, <em>game_player_zone</em>, <em>game_score</em>, <em>game_slot_counter</em>, <em>game_team_master</em>, <em>game_team_set</em>, and <em>game_text</em> now inherit class <em>TargetX</em>.</li>
+				<li><em>FGD</em>: Fixed <em>target</em> key appearing on some entities twice.</li>
+				<li><em>FGD</em>: New entities:
+					<ul>
+						<li><em>item_inventory</em></li>
+						<li><em>monster_blkop_apache</em> (was missing for some reason)</li>
+						<li><em>path_waypoint</em></li>
+						<li><em>path_condition</em></li>
+						<li><em>path_condition_controller</em></li>
+						<li><em>trigger_changemaxammo</em></li>
+						<li><em>trigger_cyclicobserver</em></li>
+						<li><em>trigger_numericdisplay</em></li>
+						<li><em>trigger_script</em></li>
+						<li><em>weapon_displacer</em></li>
+					</ul>
+				</li>
+				<li><em>FGD</em>: Removed duplicate base class <em>AttackObject</em> from <em>func_pushable</em>.</li>
+				<li><em>FGD</em>: Removed duplicate key <em>target</em> on entity <em>game_player_equip</em>.</li>
+				<li><em>FGD</em>: Removed entity <em>info_landmark</em>.</li>
+				<li><em>FGD</em>: Removed keys <em>path_monster</em> and <em>goal_ent</em> from all A.I. entities (and spawners).</li>
+				<li><em>Liblist</em>: Added entries <em>crcclientdll</em> and <em>largemap_aware</em>.</li>
+				<li><em>Liblist</em>: Removed entries <em>num_edicts</em> and <em>heapsize</em>.</li>
+				<li><em>Manual</em>: Added a basic guide for setting up a server.</li>
+				<li><em>Manual</em>: Added a guide on defining server administrators.</li>
+				<li><em>Manual</em>: Added a list of cheat commands.</li>
+				<li><em>Manual</em>: Added command <em>npc_moveto</em>.</li>
+				<li><em>Manual</em>: Added map CVAR <em>mp_notimelimit</em>.</li>
+				<li><em>Manual</em>: Added server CVAR <em>mp_timelimit_empty</em>.</li>
+				<li><em>Manual</em>: Fixed a spelling mistake "combat kinfe".</li>
+				<li><em>Manual</em>: Fixed a spelling mistake "npc_recurn".</li>
+				<li><em>Manual</em>: Lot of style tweaks and updates.</li>
+				<li><em>Manual</em>: Overhauled up the map configuration page.</li>
+				<li><em>Manual</em>: Removed mapping cvar <em>sv_airmove</em> as it no longer exists.</li>
+				<li><em>Manual</em>: Vastly updated guides, particularly for mapping and server installation.</li>
+				<li><em>Score board</em>: New icon <em>gold dollar sign</em> for large donors, the <em>headcrab</em> icon is now for the testing team and light content contributors.</li>
+				<li><em>Score board</em>: Replaced icon <em>gold Uzi</em> for one of the newer weapon model.</li>
+				<li><em>Score board</em>: Server owners now have a separate image from administrators, rather than just a tinted overlay.</li>
+				<li><em>Score board</em>: Tweaked appearance of the <em>electric crowbar</em> and <em>game logo</em> icons.</li>
+				<li><em>Server UI</em>: Now has the same colour scheme as the game UI.</li>
+				<li><em>Server UI</em>: Widened server name and IP address boxes.</li>
+				<li><em>Sprite</em>: New level change sprite.</li>
+				<li><em>UI</em>: Fixed gamma slider allowing you to choose a value below the engine minimum.</li>
+				<li><em>UI</em>: Fixed many model preview images from appearing smashed and not showing the colour previews.</li>
+				<li><em>UI</em>: Fixed model preview image being blank/wrong if a preview image doesn't exist for the chosen model.</li>
+				<li><em>UI</em>: Raised width of map selection listbox in the create game form.</li>
+				<li><em>UI</em>: Removed <em>Change game</em> entry in the main menu.</li>
+				<li><em>UI</em>: Tidied up various parts of the options screens, removed redundant options.</li>
+				<li>New set of stock spray images.</li>
+				<li>New tool to convert a Blue Shift BSP to Half-Life BSP.</li>
+				<li>Updated Info-Zip's <em>Unzip</em> utility to version 6.00.</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,2 @@
+// Direct CVAR "adminsfile" to this file if you wish to use a list of
+// administrators for this server profile only.

@@ -1,0 +1,4 @@
+"weapons/hks1.wav" "turretfortress/tfire1.wav"
+"weapons/hks2.wav" "turretfortress/tfire1.wav"
+"weapons/hks3.wav" "turretfortress/tfire1.wav"
+

@@ -1,0 +1,2 @@
+"hgrunt/gr_mgun1.wav" "mommamesa/gunshot/gr_mgun7.wav"
+"hgrunt/gr_mgun2.wav" "mommamesa/gunshot/gr_mgun7.wav"

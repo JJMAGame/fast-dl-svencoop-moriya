@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sven Co-op Manual :: Mapping (testing guidelines)</title>
+
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="icon" href="../game.ico" type="image/x-icon"/>
+
+		<meta name="resource-type" content="document">
+		<meta name="description" content="Sven Co-op Manual">
+		<meta name="author" content="Sven Co-op Team">
+		<meta name="distribution" content="global">
+	</head>
+
+	<body>
+		<div id="header"><a id="top"></a><a href="index.html"><img src="images/header.png" alt="Sven Co-op Manual - Click here to jump to the index page"></a></div>
+		<div id="navbar">Navigation &raquo; <a href="index.html">Index</a> &raquo; <a href="mapping-testing.html">Mapping (testing guidelines)</a></div>
+		<div id="content">
+			<h1>Mapping (testing guidelines)</h1>
+
+			<p>
+				This section will go over some instructions and tips for testing your map.
+			</p>
+
+			<h2>Contents</h2>
+
+			<ol>
+				<li><a href="#install">Installing your map to play it</a></li>
+				<li><a href="#notes">Initial notes</a></li>
+				<li><a href="#cheats">Cheat commands</a></li>
+			</ol>
+
+			<a id="install"></a><h2>Installing your map to play it</h2>
+
+			<p>
+				Your map at the very least will consist of a BSP file, but may also come with a range of configuration and resource files depending on the level of customisation you've taken with your map. Once your map is compiled and ready to be played for testing, you will need to copy various files to your game folder.
+			</p>
+
+			<ul class="notes">
+				<li><img class="note" src="images/icon-warning.png" alt="Warning"> Do not copy any unofficial resources directly into the <em>svencoop</em> folder. To help keep your game files clean, use the <em>svencoop_addons</em> folder. The game engine is perfectly capable of loading maps and their contents from this location.</li>
+			</ul>
+
+			<p>
+				This diagram shows how your map content should be laid out in your game.
+			</p>
+
+			<img class="diagram" src="images/map-file-structure.png" alt="Map file structure" />
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="notes"></a><h2>Initial notes</h2>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="cheats"></a><h2>Cheat commands</h2>
+
+			<p>
+				The cheat commands built-in to Sven Co-op can only be used under certain conditions:
+			</p>
+
+			<ul>
+				<li>If the server is for Internet players, it cannot have a maximum capacity of more than <em>3 players</em> -- LAN servers do not have this restriction.</li>
+				<li>If CVAR "<em>sv_cheats</em>" is 1 anybody can use cheat commands.</li>
+				<li>If CVAR "<em>sv_cheats</em>" is 2 only <a href="server-advanced.html#admins">server administrators</a> can use cheats, and will not be subject to the server capacity restriction.</li>
+				<li>If CVAR "<em>sv_cheats</em>" is 255 anybody can use engine diagnostic settings (such as <em>gl_wireframe</em>) even in a multi-player game.</li>
+			</ul>
+
+			<p>
+				If a cheat command is attempted and these conditions are not met the player is told why, and the server will log this event (or print it in the console if logging is disabled).
+			</p>
+
+			<p>
+				Cheat commands are useful for private testing sessions, particularly for map authors as they provide some useful controls and limited debugging capabilities. If this is for you we advise you check the provided file "<em>map_test.cfg</em>" as this contains a range of command aliases and bindings to help you do this.
+			</p>
+
+			<p>
+				Here is a list of cheat commands currently available:
+			</p>
+
+			<table>
+				<tr>
+					<th style="width: 125px;">Command</th>
+					<th style="width: 125px;">Parameters</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="tf" colspan="3">Basic modes</td>
+				</tr>
+				<tr>
+					<td class="td1">godmode</td>
+					<td class="td2"><em>0</em> = disable<br><em>1</em> = enable</td>
+					<td class="td1">Enable or disable god mode.<br>You will be immune to all damage against your health, but not HEV battery. A map entity can still forcibly kill you, and the <em>kill</em> command will still function as normal.</td>
+				</tr>
+				<tr>
+					<td class="td1">cl_noclip</td>
+					<td class="td2"><em>0</em> = disable<br><em>1</em> = enable</td>
+					<td class="td1">Enable or disable no-clipping mode.<br>You will be flying instead of walking, and can move through solid matter like a ghost. You will not be non-solid yourself though, meaning NPC's can still touch/damage you, and you will still interact with brush based triggers.</td>
+				</tr>
+				<tr>
+					<td class="td1">cl_notarget</td>
+					<td class="td2"><em>0</em> = disable<br><em>1</em> = enable</td>
+					<td class="td1">Enable or disable non-targetable mode.<br>You will be completely invisible to all NPC's, though they can still hear you (they will try to find you), and can damage you by accident.</td>
+				</tr>
+				<tr>
+					<td class="td1">cl_nonsolid</td>
+					<td class="td2"><em>0</em> = disable<br><em>1</em> = enable</td>
+					<td class="td1">Enable or disable non-solid mode.<br>You will become non-solid like a ghost, thus players, NPC's, and brushes can pass through you without touching/damaging you. If something moves inside you and stays there however, you will be unable to move away as that other object is still solid. You will also not take damage from solid type objects (bullets/blades/etc), but particle type damage (explosions/fire/freeze) will still hurt you.</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="3">Equipment &amp; status</td>
+				</tr>
+				<tr>
+					<td class="td1">give</td>
+					<td class="td2"><em>Weapon/ammo/item name</em></td>
+					<td class="td1">Give yourself some equipment (weapons, ammo, and items).<br>Names should reflect the entity name of the equipment, for example <em>weapon_shotgun</em>, <em>ammo_rpg</em>, or <em>item_longjump</em>. You cannot use this to obtain <em>item_inventory</em> based items, use the <em>trigger</em> command instead.<br>You can technically give yourself any entity (such as a monster), but be warned the effects can be anything from humorous to catastrophic.</td>
+				</tr>
+				<tr>
+					<td class="td1">giveall<br>impulse 101</td>
+					<td class="td2">N/A</td>
+					<td class="td1">Give yourself every weapon in the game with some ammo for it. The minigun and shock rifle are omitted due to their exclusive usage constraint.</td>
+				</tr>
+				<tr>
+					<td class="td1">givepoints</td>
+					<td class="td2"><em>Number</em></td>
+					<td class="td1">Give yourself score/points. You can use a negative value to deduct points.</td>
+				</tr>
+				<tr>
+					<td class="td1">reviveme</td>
+					<td class="td2">N/A</td>
+					<td class="td1">Revive yourself if you've been killed. You will be revived with half health.</td>
+				</tr>
+				<tr>
+					<td class="td1">healme</td>
+					<td class="td2">N/A</td>
+					<td class="td1">Fully restores your health.</td>
+				</tr>
+				<tr>
+					<td class="td1">chargeme</td>
+					<td class="td2">N/A</td>
+					<td class="td1">Fully charges your HEV suit battery.</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="3">Map testing/debugging</td>
+				</tr>
+				<tr>
+					<td class="td1">ent_name_ahead</td>
+					<td class="td2">N/A</td>
+					<td class="td1">Shows the class, target, and model names of the entity directly ahead of you.</td>
+				</tr>
+				<tr>
+					<td class="td1">ent_trigger_ahead</td>
+					<td class="td2">N/A</td>
+					<td class="td1">Triggers (toggle) the entity directly ahead of you.</td>
+				</tr>
+				<tr>
+					<td class="td1">teleport</td>
+					<td class="td2">Co-ordinates as <em>X Y Z</em></td>
+					<td class="td1">Teleport yourself to specific co-ordinates.</td>
+				</tr>
+				<tr>
+					<td class="td1">trigger</td>
+					<td class="td2"><em>Map entity name</em>, <em>Trigger type</em>, and <em>Entity value</em></td>
+					<td class="td1">Trigger an entity in the map by its <em>target name</em>. The trigger type and entity value are both optional.<br>Trigger type can be on, off, set, toggle, or kill. The entity value is commonly used in conjunction with the set trigger type, for example with a <em>game_counter</em> entity. The kill trigger type deletes the entity.<br>This is best avoided for all but map authors, or those with good knowledge of the map in question. You as an entity will be passed to that entity as its activating and calling entity.</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+		</div>
+		<div id="footer"><small>&copy; Copyright Sven Co-op Team 2008. All rights reserved. Manual built by Adam "Adambean" Reece, content contributed and corrected by the Sven Co-op Team. Pages validated for strict HTML 4.01 and CSS 2.0.</small></div>
+	</body>
+</html>

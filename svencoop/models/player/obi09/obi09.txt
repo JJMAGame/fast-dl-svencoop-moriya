@@ -1,0 +1,13 @@
+Model by	:Obi-Wan   (obihb@yahoo.com)
+
+Model name	:Doom Marine
+
+Face count	:636 faces
+
+Installation	:Unzip directly to your Half-Life directory. The model will show up
+		 in the model selection menu.
+
+Other notes	:Here we have it, the Doom Marine for Half-Life. I'm not sure if he's 
+		 been created for HL before, maybe a skin but here's a shiny new model
+		 aswell... :)  I enjoyed making this model so you better enjoy playing
+		 with it!!

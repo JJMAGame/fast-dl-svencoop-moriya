@@ -1,0 +1,4 @@
+DIRTTEXTURE_UL detail/descrcl/sanddetail1 8 8
+DIRTTEXTURE_UR detail/descrcl/sanddetail1 8 8
+DIRTTEXTURE_LL detail/descrcl/sanddetail1 8 8
+DIRTTEXTURE_LR detail/descrcl/sanddetail1 8 8

@@ -1,0 +1,78 @@
+//========================================
+//
+//	This file lists all plugins that are loaded by the game
+//	Plugins use Angelscript
+//
+//========================================
+"plugins"
+{
+	"plugin"
+	{
+		"name" "PlayerManagement"
+		"script" "admin/PlayerManagement"
+		"concommandns" "plrmgr"
+	}
+	"plugin"
+	{
+		"name" "ChatSounds"
+		"script" "ChatSounds"
+	}
+      "plugin"
+	{
+		"name" "RockTheVote"
+		"script" "RockTheVote"
+	}
+      "plugin"
+	{
+		"name" "Goto"
+		"script" "Goto"
+	}
+      "plugin"
+	{
+		"name" "Msg"
+		"script" "Msg"
+	}
+        "plugin"
+	{
+		"name" "Admin_custom_votes"
+		"script" "Admin_custom_votes"
+	}
+//      "plugin"
+//      {
+//	        "name" "AntiBlock"
+//	        "script" "AntiBlock"
+//      }
+//
+//	"plugin"
+//	{
+//		"name" "EntityManager"
+//		"script" "EntityManager"
+//		"adminlevel" "ADMIN_YES"
+//		"concommandns" "entmngr"
+//	}
+//
+//	"plugin"
+//	{
+//		"name" "Teleport"
+//		"script" "Teleport"
+//	}
+//
+//	"plugin"
+//	{
+//		"name" "Vox"
+//		"script" "Vox"
+//	}
+        "plugin"
+	{
+		"name"      	"Insurgency Mod"
+		"script"    	"../maps/ins2/ins2_register"
+		"concommandns" 	"ins2"
+	}
+//        "plugin"
+//      {
+//	"name"			"Counter-Strike 1.6 Mod"
+//	"script"		"../maps/cs16/cs16_register"
+//	"concommandns"	"cs16"
+//        }
+
+}

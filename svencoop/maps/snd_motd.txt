@@ -1,0 +1,14 @@
+
+                * Search 'n Destroy *
+
+             A Sven Co-op map by Hezus
+
+Mission Objectives:
+- Find, capture and hold all zones
+- Destroy enemy weapon caches with C4 charges
+- Defend the base
+
+Hints / Tips
+- Return found weapons to the base to add them to your arsenal
+- Use the radio to call in reinforcements (respawns dead players)
+- Found weapons can C4 charges are inventory items. Refer to the HUD icon and the inventory (i) to see what you are currently carrying. You can only carry one C4 charge and a limited load of found weapons.

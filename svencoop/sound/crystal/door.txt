@@ -1,0 +1,1 @@
+"doors/doormove1.wav"	"crystal/open.wav"

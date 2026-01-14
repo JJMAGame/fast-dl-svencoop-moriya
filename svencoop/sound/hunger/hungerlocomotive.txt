@@ -1,0 +1,4 @@
+"plats/train_use1.wav" "hunger/hungerplats/train_use6.wav"
+"plats/ttrain6.wav" "hunger/hungerplats/ttrain6.wav"
+"plats/ttrain_brake1.wav" "hunger/hungerplats/ttrain_brake6.wav"
+"plats/ttrain_start1.wav" "hunger/hungerplats/ttrain_start6.wav"

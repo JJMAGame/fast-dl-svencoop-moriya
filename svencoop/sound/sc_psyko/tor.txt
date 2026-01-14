@@ -1,0 +1,4 @@
+"tor/tor-foot.wav" "sc_psyko/tympani.wav"
+"tor/tor-attack1.wav" "sc_psyko/boing2.wav
+"tor/tor-attack2.wav" "sc_psyko/boing1.wav
+

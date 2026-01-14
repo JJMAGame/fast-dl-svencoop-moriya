@@ -1,0 +1,13 @@
+Incoming! [2015 Edition]
+
+Somewhere in the universe.
+
+After the residence cascade of the Black Mesa Research Facility, the superiors of the smaller research facilities have grown increasingly paranoid of their defence systems. Under the pressure of military "clean-outs" following the Black Mesa incident, they have decided to hire defence squads to further their chances of resisting attacks.
+
+You and your teammates have just clocked in for another day of defending the Yellow Mesa facility. It wouldn't be a normal day without some random alien and military invasions, so best get your glorious hand cannons at the ready!
+
+[By Ryan Heeley aka BMT]
+[Music by Breakbeat Doc - soundcloud.com/breakbeat_doc]
+[Full credits in map readme located in SC map folder]
+
+!NOTE! This map uses game_text channels for onscreen instructions, please be aware of conflict issues if using additional server plugins.

@@ -1,0 +1,61 @@
+Level of the map : MEDIUM
+Duration : LONG
+
+24 hours ago, we received a transmission from an arabic  TV channel. Terrorists said
+that they have a huge fire power and they will attack a great city in the next 48 hours.
+A squad has been sent to the presumed place of the terrorist's HQ, but we have lost
+communications for 2 hours. Spies said that the squad managed to place explosives on
+the great fire power, and told us that this power is a huge mecha with 2 turrets, 2 miniguns
+and a anti-air missile battery. The explosives are quite dangerous, so the terrorists didn't
+defused it.
+You were sent with your team for make a big boom and destroy this damn war machine. Remember,
+if you fail, a great city will be destroyed !
+
+Good luck soldier !
+
+
+Mission :
+
+- Make your way through the streets, and reach the radiopost hold by the terrorists.
+- Steal all the secret documents of the terrorist engeeners for stop the creation of
+these weapons.
+- Open the door of the fortress's entrance.
+- Enter the fortress and make your way to the mecha.
+- Press the detonator and RUN !!
+ 
+But be carefull Soldier. There're a great ammount of guys in the area !
+
+TIPS : Teamplay is very important in the map !
+       Keep the medic close to you, he can heal you in combat.
+       Be careful, there are many snipers on the roofs/balconies, use their weapons against
+       them !!
+
+Mapped by Skacky <skacky2002@yahoo.fr>
+
+Thanks goes to :
+
+Hezus
+Master-Poda
+*-+KillerMapper+-*
+spy-warrior
+Nih
+JPolito
+Stoked
+Peany
+Arcalis
+Soul
+Tuesday's Avenger
+HeadCrab57
+
+R.I.P Nadir, it'd be a stunning map, CampaignJunkie ;)
+
+
+Fixes by Adambean for SC 4.5:
+
+* Fixed players getting stuck between canopy poles and walls
+* Replaced all AAATRIGGER textures to NULL to improve rendering speed
+* Split the end message into 2 lines
+
+Fixes by Adambean for SC 4.7:
+
+* Added diagonal building brush to stop you getting stuck on the building down a cliff (just ahead of the start)

@@ -1,0 +1,67 @@
+Turret Fortress
+By Nih
+
+Server owners: For this level, please disable XP Mod and other servermods that radically alter the gameplay. Give the level a chance to be played as it was intended.
+
+Welcome to the Turret Fortress. 
+
+An emergency situation has arisen: An enemy force is planning to destroy the Turret Fortress by overrunning its defenses. 
+
+The enemy force will arrive in 11 waves of 8 men each, followed by a final wave: Their leader. 
+
+You must neutralise the attackers by constructing sentry turrets and buying Special Units. 
+
+Sentry turrets and Special Units are bought in the control room.
+
+Buying sentry turrets requires Credits: You get 1 credit automatically each wave, and 1 credit for every 4 kills.
+
+Buying Special Units requires Tokens: You get 1 token for every 10 kills.
+
+Sentry turrets are not constructed automatically.
+
+Once you have bought a turret, you must go to the Construction Room and move a turret crate to your desired location.
+
+The crate must then be pushed into the location you selected in the control room, signified by a red marker.
+
+Beware: Situations may arise that threaten your success, such as generator failures or base infiltrations. 
+
+When a generator breaks down, you must bring a replacement part from the Supply Depot to the broken generator to repair it.
+
+If X enemies reach the center, the Fortress will be destroyed. If their leader reaches the center you will lose as well.
+
+Best of luck, Sven Co-op Team. We're counting on you.
+
+
+On Easy Difficulty X=20
+On Normal Difficulty X=15
+On Hard Difficulty X=10
+
+
+
+Tips:
+
+- It is recommended to play on Easy mode the first few times in order to get a hang of the map.
+
+- At least 3 players is recommended.
+
+- The two sentry spots in the center give you 2 credits upon construction, but do not create any sentry turrets.
+
+- Be careful about teleporting more than 4 crates at the same time. If there's not enough room, the crates may be end up being pushed onto the red path.
+
+- Teamwork and communication is vital. Give players specific roles. Put one guy in the control room who will announce which sector he places turrets in. 
+Put one guy in the construction room who will then teleport the crates to the announced destination. Then have the rest move crates manually and take care of generator failures and infiltrations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

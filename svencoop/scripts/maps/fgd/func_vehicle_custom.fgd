@@ -1,0 +1,83 @@
+
+// Old baseclasses: base(Targetname, RenderFields, Angles)
+
+@SolidClass = func_vehicle_custom : "Drivable Vehicles"
+[
+	spawnflags(flags) = 
+	[
+		1 : "No default controls" : 0
+	]
+	
+	// HACK: FGDs can't share baseclasses, so I manually inserted them here.
+	targetname(target_source) : "Name"
+	renderfx(choices) : "Render FX" : 0 =
+	[
+		0: "Normal"
+		1: "Slow Pulse"
+		2: "Fast Pulse"
+		3: "Slow Wide Pulse"
+		4: "Fast Wide Pulse"
+		9: "Slow Strobe"
+		10: "Fast Strobe"
+		11: "Faster Strobe"
+		12: "Slow Flicker"
+		13: "Fast Flicker"
+		5: "Slow Fade Away"
+		6: "Fast Fade Away"
+		7: "Slow Become Solid"
+		8: "Fast Become Solid"
+		14: "Constant Glow"
+		15: "Distort"
+		16: "Hologram (Distort + fade)"
+		17: "Dead Player (DONT USE!)"
+		18: "Explode (Garg Like)"
+		19: "Glow Shell"
+		20: "ClampMinScale (Sprites)"
+	]
+		rendermode(choices) : "Render Mode" : 0 =
+	[
+		0: "Normal"
+		1: "Color"
+		2: "Texture"
+		3: "Glow"
+		4: "Solid"
+		5: "Additive"
+	]
+	renderamt(integer) : "FX Amount (1 - 255)"
+	rendercolor(color255) : "FX Color (R G B)" : "0 0 0"
+	angles(string) : "Pitch Yaw Roll (X Y Z)" : "0 0 0"
+	// END HACK.
+	
+	target(target_destination) : "First stop target"
+	sounds(choices) : "Sound" : 1 =
+	[
+		0: "None"
+		1: "Car 1"
+		2: "Car 2"
+		3: "Truck 1"
+		4: "Truck 2"
+		5: "Boat 1"
+		6: "Boat 2"
+	]
+	length(integer) : "Length of the vehicle" : 256
+	width(integer) : "Width of the vehicle" : 128
+	height(integer) : "Height above track" : 16
+	startspeed(integer) : "Initial speed" : 0
+	speed(integer) : "Speed (units per second)" : 64
+	acceleration(integer) : "Acceleration (1-10)" : 5
+	dmg(integer) : "Damage on crush" : 0
+	volume(integer) : "Volume (10 = loudest)" : 10
+	bank(string) : "Bank angle on turns" : "0"
+	_minlight(string) : "Minimum light level"
+]
+
+
+@SolidClass = func_vehiclecontrols : "Vehicle Controls"
+[
+	spawnflags(flags) =
+	[
+		1 : "RC control" : 0
+	]
+	
+	target(target_destination) : "Vehicle Name"
+]

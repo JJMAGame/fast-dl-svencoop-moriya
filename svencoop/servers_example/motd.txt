@@ -1,0 +1,1 @@
+This is a multi-configuration Sven Co-op server using a shared MOTD.

@@ -1,0 +1,135 @@
+// =============================================================================
+// kk1.wad
+// =============================================================================
+
+// C: Concrete
+C engravedwall
+C mario_rock
+C mario_stone
+C mario_wall
+C pic_beach
+C stone_wall
+C toon_bricks
+C toon_bricks2
+C toon_out_stone2
+C toon_rock
+C volcano
+C wall_green
+C wall_toon
+C wall_toon2
+C wall_toon3
+C wall_white
+
+// M: Metal
+M crate_ammo_box1
+M crate_ammo_box2
+M elev_rust
+M gen_steel
+M hammer_lin
+M hammer_rad
+M hammer_trim
+M kzk_rust_pipe
+M mario_block
+M mario_plat
+M METALTEXTURE_EL
+M METALTEXTURE_GR
+M METALTEXTURE_PN
+M METALTEXTURE_RU
+M METALTEXTURE_ST
+M mon_generator
+M rust_grid
+M sign_lag
+M sign_needle
+M sign_regretomat
+M text_c_machine
+M text_k_machine
+M toon_botleg
+M toon_stripe
+M {steel_grid
+M {toon_rail
+M {tr_spit
+
+// D: Dirt
+D DIRTTEXTURE_DUN
+D DIRTTEXTURE_GRA
+D DIRTTEXTURE_OUT
+D floor_cream
+D out_grass
+D toon_soft
+D toon_soft2
+
+// V: Vent
+
+// G: Grate
+
+// T: Tile
+T keyboard
+T TILETEXTURE_FLO
+T TILETEXTURE_FLR
+T toon_hand
+T toon_roof
+
+// S: Slosh
+S !dirty_water
+S !Pink
+S !toon_water
+S SCROLLBUBBLES
+
+// W: Wood
+W palm_leaf
+W palm_tree
+W set_block
+W set_design
+W sign_blackboard
+W sign_donotfeed
+W sign_fish
+W sign_kick
+W toilet_female
+W toilet_male
+W toilet_pirate
+W toon_bord
+W toon_canvas
+W toon_crate
+W wood_beam
+W WOODTEXTURE_WOO
+W {wood_ladder
+
+// P: Computer
+P button_fire
+P mon_generator2
+P power_shield
+P sign_instr
+P sign_pink_death
+P whack_logo
+P whack_scale
+P {teh_mario
+
+// Y: Glass
+Y +0whacklight
+Y +1whacklight
+Y +2whacklight
+Y +3whacklight
+Y blue_light
+Y ceil_light
+Y d_whack_light
+Y orange_light
+Y space_light
+Y toon_beer
+Y toon_beer_empty
+Y toon_light
+Y toon_light_fade
+Y zombie_sign
+
+// F: Flesh
+F flower
+F flower_mouth
+F flower_side
+F flower_teeth
+F flowers
+F Pink
+F toon_eye1
+F toon_eye2
+F toon_eye3
+F toon_organic
+
+// O: Snow

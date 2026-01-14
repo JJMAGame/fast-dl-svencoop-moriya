@@ -1,0 +1,234 @@
+// Sven Co-op 5.0 - Dedicated server configuration options for GUI
+// Last updated 6th March 2014 -- Adam "AdamR" Reece
+
+"GameServerConfig"
+{
+	"sv_cheats"
+	{
+		"name" "Allow cheat commands"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+			"2"	"Administrators only"
+		}
+	}
+	"mp_banana"
+	{
+		"name" "Allow banana bomb"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_flashlight"
+	{
+		"name" "Allow flash light"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_allowmonsterinfo"
+	{
+		"name" "Allow monster info"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_voteallow"
+	{
+		"name" "Allow voting"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_votekill_respawndelay"
+	{
+		"name" "-- Kill vote respawn delay"
+		"type" "string"
+	}
+	"mp_votekillrequired"
+	{
+		"name" "-- Kill vote success %"
+		"type" "string"
+	}
+	"mp_votekickrequired"
+	{
+		"name" "-- Kick vote success %"
+		"type" "string"
+	}
+	"mp_votebanrequired"
+	{
+		"name" "-- Ban vote success %"
+		"type" "string"
+	}
+	"mp_playervotedelay"
+	{
+		"name" "-- Delay between same player starting a vote"
+		"type" "string"
+	}
+	"mp_votetimebetween"
+	{
+		"name" "-- Delay between someone else starting a vote"
+		"type" "string"
+	}
+	"mp_votetimecheck"
+	{
+		"name" "-- Time given to players to cast their vote"
+		"type" "string"
+	}
+	"mp_dropweapons"
+	{
+		"name" "Allow weapon dropping"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_respawndelay"
+	{
+		"name" "Delay between player respawning"
+		"type" "string"
+	}
+	"decalfrequency"
+	{
+		"name" "Delay between player sprays"
+		"type" "string"
+	}
+	"mp_no_akimbo_uzis"
+	{
+		"name" "Deny akimbo Uzi"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_disable_autoclimb"
+	{
+		"name" "Deny auto-climb"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_disablegaussjump"
+	{
+		"name" "Deny gauss jumping"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_disable_player_rappel"
+	{
+		"name" "Deny player grappel repelling"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_disable_pcbalancing"
+	{
+		"name" "Deny skill auto-balancing"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_falldamage"
+	{
+		"name" "Fall damage type"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Simple"
+			"1"	"Realistc"
+		}
+	}
+	"mp_footsteps"
+	{
+		"name" "Footsteps"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_forcerespawn"
+	{
+		"name" "Force respawn"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+	"mp_grapple_mode"
+	{
+		"name" "Grapple on monster mode"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Silly"
+			"1"	"Realistic"
+		}
+	}
+	"mp_fraglimit"
+	{
+		"name"	"Score limit"
+		"type"	"string"
+	}
+	"skill"
+	{
+		"name" "Skill level"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Map default"
+			"1"	"Easy"
+			"2"	"Hard"
+			"3"	"Realistic"
+		}
+	}
+	"mp_timelimit"
+	{
+		"name"	"Time limit"
+		"type"	"string"
+	}
+	"mp_weaponstay"
+	{
+		"name" "Weapons stay put"
+		"type" "enumeration"
+		"list"
+		{
+			"0"	"Disabled"
+			"1"	"Enabled"
+		}
+	}
+}

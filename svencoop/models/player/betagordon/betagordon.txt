@@ -1,0 +1,5 @@
+Gordon model by valve
+Textures by valve
+Textures for the face from doctor.mdl
+Head by Pumpkin_Masher
+Reworked version has body textures by Gurluas

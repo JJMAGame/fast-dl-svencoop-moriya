@@ -1,0 +1,40 @@
+Dead Simple Neo 2
+By Nih
+
+You wake up in a mysterious room, with no recollection of what brought you here. 
+You arrive at a horrifying conclusion: It seems that this is some sort of cruel game that someone has prepared for you.
+
+
+Objectives:
+
+Choose one of the 4 game modes and follow your objective.
+
+
+Tips:
+
+General:
+
+- There are two common methods of acquiring your weapons:
+	Prioritize: Choose which weapons matter the most, and keep the platforms down throughout the game.
+	Coordinate: Do weapon runs where you kill the medics and lower all the platforms, let everyone grab the weapons, and then bring up the platforms quickly. 
+
+- Reviving fellow players allows them to preserve their weapons, potentially saving you from having to do a weapon run.
+
+Gonome Hunter Mode:
+
+- The important thing to consider in this mode is that you are only as strong as your weakest link. Once a player goes down, there is a good chance he will continue to go down at least a couple more times. This makes it important to react quickly to the death of a fellow player and help him establish a good foothold.
+
+- Using the Long Jump Module is vital to staying alive.
+
+Overload Mode:
+
+- You can lift the Doom Box by holding the use key.
+
+- If you are having trouble activating a Stabiliser, try to ensure the box is fully covered in the beam.
+
+Protection Mode:
+
+- It will be easier to heal Barney if you leave the last 1 or 2 monsters of a wave alive for a time.
+
+- The sentry turret's main advantage is the ability to repair it with the wrench. Stand behind it, repairing it, while it sucks up all the damage and fires away at the enemies.
+

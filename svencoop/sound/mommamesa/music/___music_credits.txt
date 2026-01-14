@@ -1,0 +1,99 @@
+All songs have metadata included which shows the original artist and song title. All songs used in Momma Mesa are in the public domain and are free to use.
+
+==================================
+MISSION 00 - Training
+==================================
+training.wav - Backbeat by Kevin MacLeod
+
+
+==================================
+MISSION 01 - Rogue Guard
+==================================
+hitmen.ogg - Hitman by Kevin MacLeod
+
+
+==================================
+MISSION 02 - The Fish Problem
+==================================
+fishproblem.ogg - Controlled Chaos by Kevin MacLeod
+
+
+==================================
+MISSION 03 - Tunnel Guards
+==================================
+tunnels.ogg - Rising by Kevin MacLeod
+
+
+==================================
+MISSION 04A - Satellite Uplink
+==================================
+uplink.ogg - Psychedelic Crater by Kevin MacLeod
+
+
+==================================
+MISSION 04B - Portal Experiment
+==================================
+portal_lab.ogg - The Complex by Kevin MacLeod
+
+
+==================================
+MISSION 05A - Perimeter Incident
+==================================
+perimeter_idle.ogg - Satiate Percussion by Kevin MacLeod
+
+perimeter_intro.ogg - Ringtone by Kevin MacLeod
+
+perimeter.ogg - Caretaker by Connor O.R.T. Linning
+
+
+==================================
+MISSION 05B - The Caves
+==================================
+caves.ogg - The Terror Below by Brian Boyko
+
+selfdestruct.ogg - Voice acting and editing by Josh "JPolito" Polito
+
+escape.ogg - by Brian Boyko
+
+
+==================================
+MISSION 05C - Food Poisoning
+==================================
+chords.mp3 - Sharp Fear Short by Kelly Bailey (Half-Life OST)
+
+theroach.ogg - Chase Pulse Faster by Kevin MacLeod
+
+
+==================================
+MISSION 05D - Prison Escort
+==================================
+citadel.ogg - Circuit Police by *imp*
+
+
+==================================
+OUTRO MUSIC
+==================================
+win.ogg - Phat Sketch by Kevin MacLeod
+
+lose.ogg - Organ Filler by Kevin MacLeod
+
+outro_01.ogg (Bad) - Ambush in Rattlesnake Gulch by Brian Boyko
+
+outro_02.ogg (Neutral) - Outro by boringXtreme
+
+outro_03.ogg (Good) - Epic Theme No. 1 by Steven O'Brien
+https://soundcloud.com/stevenobrien/epic-orchestral-piece
+
+
+=======================================================
+
+Music was acquired from:
+
+http://incompetech.com/music/royalty-free/
+
+http://freepd.com/
+
+http://www.sonniss.com/
+
+
+If this file needs to be updated or information is incomplete, please contact JPolito at JPolito@svencoop.com

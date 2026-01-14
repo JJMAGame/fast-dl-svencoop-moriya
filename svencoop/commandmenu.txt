@@ -1,0 +1,311 @@
+// Command Menu definition
+//
+// Basic Format:
+//		"<Bound Key>" "<Button Text>" "<Command sent to server>"
+//
+// Or you can check for a specific map:
+//		MAP <MapName> "<BoundKey>" "<Button Text>" "<Command sent to server>"
+// Where <MapName> is the name of the map, without the ".bsp".
+//
+// Buttons can also open up submenus, as follows:
+// {
+// 	"Some More Options",
+//	{
+//		...
+//	}
+// }
+//
+// Buttons preceded with "CUSTOM" are handled in special ways. They can only be moved
+// around or deleted.
+//
+//
+// Limitations:
+//		Maximum of 40 menus.
+//		Maximum of 100 buttons per menu.
+
+//--------------------------------------------------------
+// Everything below here is editable
+
+"1" "Commands"
+{
+	"1" "Drop Current Weapon" "drop"
+	"2" "Drop Primary Ammo" "dropammo"
+	"3" "Drop Secondary Ammo" "dropsecammo"
+	"4" "Grenade Warning" "grenade"
+	"5" "Call for Medic" "medic"
+	"6" "Suicide" "kill"
+	"7" "Unstuck" "unstuck"
+}
+"2" "Votes"
+{
+	"1" "Vote Menu" "votemenu"
+	"2" "Toggle Classic Mode" "voteclassicmode"
+	"3" "Toggle Survival Mode" "votesurvivalmode"
+}
+"3" "Settings"
+{
+	"1" "Performance Options"
+	{
+		"1" "OpenGL Shadows"
+		{
+			"1" "ON" "r_shadows 1"
+			"2" "OFF" "r_shadows 0"
+		}
+		"2" "Gib Count"
+		{
+			"1" "1 gib" "gibcount 1"
+			"2" "2 gibs" "gibcount 2"
+			"3" "3 gibs" "gibcount 3"
+			"4" "4 gibs" "gibcount 4"
+			"5" "5 gibs" "gibcount 5"
+			"6" "6 gibs" "gibcount 6"
+			"7" "Default" "gibcount 0"
+		}
+	}
+	"2" "Timelimit"
+	{
+		"1" "Disable Timelimits" "mp_notimelimit 1"
+		"2" "Enable Timelimits" "mp_notimelimit 0"
+	}
+	"3" "Donor Options"
+	{
+		"1" "Toggle Uzi Skin" "uzi_gilded"
+	}
+	"4" "Violence Settings"
+	{
+		"1" "Human Gore On" "violence_hblood 1;violence_hgibs 1"
+		"2" "Human Gore Off" "violence_hblood 0;violence_hgibs 0"
+		"3" "Alien Gore On" "violence_ablood 1;violence_agibs 1"
+		"4" "Alien Gore Off" "violence_ablood 0;violence_agibs 0"
+	}
+	"5" "Mouse"
+	{
+		"1" "VGUI Mouse Capture"
+		{
+			"1" "ON" "hud_capturemouse 1"
+			"2" "OFF" "hud_capturemouse 0"
+		}
+		"2" "Sensitivity 1.0" "sensitivity 1.0"
+		"3" "Sensitivity 2.0" "sensitivity 2.0"
+		"4" "Sensitivity 3.0" "sensitivity 3.0"
+		"5" "Sensitivity 4.0" "sensitivity 4.0"
+		"6" "Sensitivity 6.0" "sensitivity 6.0"
+		"7" "Sensitivity 8.0" "sensitivity 8.0"
+		"8" "Sensitivity 10.0" "sensitivity 10.0"
+		"9" "Sensitivity 12.0" "sensitivity 12.0"
+		"10" "Sensitivity 14.0" "sensitivity 14.0"
+	}
+	"6" "Fast Weapon Switching"
+	{
+		"1" "ON" "hud_fastswitch 1"
+		"2" "OFF" "hud_fastswitch 0"
+	}
+}
+"4" "Team Message"
+{
+	"1" "General"
+	{
+		"1" "Medic!" "say Medic!"
+		"2" "Need Backup!" "say Need backup!"
+		"3" "AFFIRMATIVE"	"say Affirmative"
+		"4" "NEGATIVE" "say Negative"
+	}
+	"2" "Enemy"
+	{
+		"1" "Enemy Spotted" "say Enemy spotted..."
+		"2" "Human Grunts" "say Squad of Human Grunts spotted"
+		"3" "Alien Grunts" "say Squad of Alien Grunts spotted"
+		"4" "Assasins" "say Assasins spotted"
+		"5" "Garg" "say Garg Spotted! Stock up on explosives and engage"
+		"6" "Baby Garg" "say Baby Garg in sight"
+		"7" "Apache" "say Apache Spotted in my area"
+		"8" "Osprey" "say Osprey in sight"
+		"9" "Big Momma" "say Big Momma sighted"
+		}
+	"3" "Team Mate"
+	{
+		"1" "Pull back!" "say Team mate, pull back for health and armor!"
+		"2" "Stay together team!" "say Stay together team!"
+		"3" "Follow me!" "say Follow me!"
+	}
+	"4" "State Report"
+	{
+		"1" "Going for Health/ammo" "say I'm heading back for health and ammo"
+		"2" "Low on Health!" "say I'm low on health"
+		"3" "Low on ammo!" "say I'm low on ammo"
+		"4" "Low on ammo & health" "say Need health and ammo urgently!"
+	}
+}
+"5" "Player Model"
+{
+	"1" "Hazardous Environment Team"
+	{
+		"1" "Helmet" "model helmet"
+		"2" "HEV Gordon" "model gordon"
+		"3" "HEV Gina" "model gina"
+		"4" "HEV Colette" "model colette"
+		"5" "HEV Walter" "model hevscientist"
+		"6" "HEV Einstein" "model hevscientist2"
+		"7" "HEV Luther" "model hevscientist3"
+		"8" "HEV Slick" "model hevscientist4"
+		"9" "HEV Rosenberg" "model hevscientist5"
+		"10" "HEV Barney" "model hevbarney"
+		"11" "HEV Benton" "model hevbarney2"
+	}
+	"2" "Black Mesa Science Team"
+	{
+		"1" "Gordon" "model scientist6"
+		"2" "Walter" "model scientist"
+		"3" "Einstein" "model scientist2"
+		"4" "Luther" "model scientist3"
+		"5" "Slick" "model scientist4"
+		"6" "Rosenberg" "model scientist5"
+		"7" "Cleansuit" "model cl_suit"
+	}
+	"3" "Black Mesa Support Staff"
+	{
+		"1" "Barney" "model barney"
+		"2" "Benton" "model barney2"
+		"3" "Unarmored Barney" "model BS_Unarmored_Barney_1"
+		"4" "Unarmored Benton" "model BS_Unarmored_Barney_2"
+		"5" "Barniel" "model barniel"
+		"6" "Kate" "model kate"
+		"7" "Otis" "model otis"
+		"8" "Construction" "model HL_Construction"
+		"9" "Gus" "Model HL_Gus"
+	}
+	"4" "Sven Co-op"
+	{
+		"1" "Beta Gordon" "model betagordon"
+		"2" "Doom Marine" "model obi09"
+		"3" "Epsilon Tactical" "model etac"
+		"4" "ASWAT" "model aswat"
+		"5" "Boris Grishenko" "model boris"
+		"6" "Mad Scientist" "model madscientist"
+		"7" "RoboGrunt" "model DGF_robogrunt"
+		"8" "Male Assassin" "model massn"
+		"9" "Female Assassin" "model fassn"
+	}
+	"5" "Half-Life Deathmatch"
+	{
+		"1" "G-Man" "model gman"
+		"2" "Zombie" "model zombie"
+		"3" "Robo" "model robo"
+		"4" "Cannibal" "model cannibal"
+	}
+	"6" "Military"
+	{
+		"1" "Grunt" "model OP4_Grunt"
+		"2" "Grunt 2" "model OP4_Grunt2"
+		"3" "Tower" "model OP4_Tower"
+		"4" "Tower 2" "model OP4_Tower2"
+		"5" "Recon" "model OP4_Recon"
+		"6" "Recon 2" "model OP4_Recon2"
+		"7" "Shephard" "model OP4_Shephard"
+		"8" "Lance" "model OP4_Lance"
+		"9" "Cigar" "model OP4_Cigar"
+		"10" "Robot" "model OP4_Robot"
+		"11" "Soldier Einstein" "model OP4_Scientist_Einstein"
+		"12" "Soldier Luther" "model OP4_Scientist_Luther"
+		"13" "Soldier Slick" "model OP4_Scientist_Slick"
+		"14" "Soldier Walter" "model OP4_Scientist_Walter"
+	}
+	"7" "Military 2"
+	{
+		"1" "Shotgun" "model OP4_Shotgun"
+		"2" "Shotgun 2" "model OP4_Shotgun2"
+		"3" "Medic" "model OP4_Medic"
+		"4" "Medic 2" "model OP4_Medic2"
+		"5" "Military Police" "model OP4_MP"
+		"6" "Military Police 2" "model OP4_MP2"
+		"7" "Rocket Grunt" "model OP4_Rocket"
+		"8" "Rocket Grunt 2" "model OP4_Rocket2"
+		"9" "Sniper" "model OP4_Sniper"
+		"10" "Sniper 2" "model OP4_Sniper2"
+		"11" "Torch Grunt" "model OP4_Torch"
+		"12" "Torch Grunt 2" "model OP4_Torch2"
+	}
+	"8" "They Hunger"
+	{
+		"1" "Cleansuit" "model th_cl_suit"
+		"2" "Dave" "model th_dave"
+		"3" "Einar" "model th_einar"
+		"4" "Gangster" "model th_gangster"
+		"5" "Jack" "model th_jack"
+		"6" "Neil" "model th_neil"
+		"7" "Nurse" "model th_nurse"
+		"8" "NYPD Cop" "model th_nypdcop"
+		"9" "Orderly" "model th_orderly"
+		"10" "Patient" "model th_patient"
+		"11" "Paul" "model th_paul"
+		"12" "Worker" "model th_worker"
+	}
+}
+"6" "Camera"
+{
+	"1" "Chasecam"
+	{
+		"1" "ON" "thirdperson"
+		"2" "OFF" "firstperson"
+	}
+	"2" "Camera Settings"
+	{
+		"1" "Look at Crosshairs"
+		{
+			"1" "ON" "cam_followaim 1"
+			"2" "OFF" "cam_followaim 0"
+		}
+		"2" "View Smoothing"
+		{
+			"1" "ON" "cam_snapto 0"
+			"2" "OFF" "cam_snapto 1"
+		}
+	}
+	"3" "Presets"
+	{
+		"1" "Normal" "cam_idealpitch 0;cam_idealdist 128;cam_idealyaw 0;cam_snapto 0;cam_followaim 0"
+		"2" "Right Side Aim" "cam_idealpitch 0;cam_idealdist 45; cam_idealyaw 15;cam_snapto 1;cam_followaim 1"
+		"3" "Left Side Aim" "cam_idealpitch 0;cam_idealdist 45; cam_idealyaw -15;cam_snapto 1;cam_followaim 1"
+		"4" "Eagle Eye Far" "cam_idealpitch 90;cam_idealdist 1000;cam_idealyaw 0"
+		"5" "Eagle Eye Med" "cam_idealpitch 90;cam_idealdist 500;cam_idealyaw 0"
+		"6" "Beauty Shot" "cam_idealpitch 11;cam_idealdist 90;cam_idealyaw 135"
+		"7" "Beauty Shot2" "cam_idealpitch 11;cam_idealdist 90;cam_idealyaw 225"
+		"8" "Close Up" "cam_idealpitch 0;cam_idealdist 50;cam_idealyaw 225"
+		"9" "Upside Down" "cam_idealpitch 180;cam_idealdist 0;cam_idealyaw 180"
+	}
+	"4" "Distance"
+	{
+		"1" "0" "cam_idealdist 0"
+		"2" "45" "cam_idealdist 45"
+		"3" "64" "cam_idealdist 64"
+		"4" "90" "cam_idealdist 90"
+		"5" "128" "cam_idealdist 128"
+		"6" "256" "cam_idealdist 256"
+		"7" "512" "cam_idealdist 512"
+		"8" "1024" "cam_idealdist 1024"
+	}
+	"5" "Rotation"
+	{
+		"1" "0" "cam_idealyaw 0"
+		"2" "15" "cam_idealyaw 20"
+		"3" "45" "cam_idealyaw 45"
+		"4" "90" "cam_idealyaw 90"
+		"5" "135" "cam_idealyaw 135"
+		"6" "180" "cam_idealyaw 180"
+		"7" "225" "cam_idealyaw 225"
+		"8" "270" "cam_idealyaw 270"
+		"9" "315" "cam_idealyaw 315"
+	}
+}
+"7" "Media Player"
+{
+	"1" "Open Media Player" "MediaPlayer"
+	"2" "Forwards" "NextSong"
+	"3" "Backwards" "LastSong"
+	"4" "Random" "RandomSong"
+	"5" "Play" "NextSong"
+	"6" "Stop" "StopSong"
+}
+"8" "Mission Briefing" "missionbriefing"
+"9" "Show Inventory" "inventory"
+//"10" "Change Class" "classmenu"

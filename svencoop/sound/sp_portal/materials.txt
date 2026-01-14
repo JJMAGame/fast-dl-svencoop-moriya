@@ -1,0 +1,34 @@
+D bs_out_01
+D bs_out_02
+D bs_out_03
+D bs_out_04
+D bs_out_05
+D bs_out_06
+D bs_out_07
+D bs_out_08
+D bs_out_09
+
+D THrOUT_01
+D THrOUT_02
+D THrOUT_03
+D THrOUT_04
+D THrOUT_05
+D THrOUT_06
+D THrOUT_07
+D THrOUT_08
+D THrOUT_09
+D THrOUT_10
+D THrOUT_11
+D THrOUT_12
+D THrOUT_13
+D THrOUT_14
+D THrOUT_15
+D THrOUT_16
+D THrOUT_17
+D THrOUT_18
+D THrOUT_19
+D THrOUT_20
+D THrOUT_21
+
+W greenscreen
+W trmplr_drwall

@@ -1,0 +1,608 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sven Co-op Manual :: Running a server (configuration guide)</title>
+
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="icon" href="../game.ico" type="image/x-icon"/>
+
+		<meta name="resource-type" content="document">
+		<meta name="description" content="Sven Co-op Manual">
+		<meta name="author" content="Sven Co-op Team">
+		<meta name="distribution" content="global">
+	</head>
+
+	<body>
+		<div id="header"><a id="top"></a><a href="index.html"><img src="images/header.png" alt="Sven Co-op Manual - Click here to jump to the index page"></a></div>
+		<div id="navbar">Navigation &raquo; <a href="index.html">Index</a> &raquo; <a href="server-config.html">Running a server (configuration guide)</a></div>
+		<div id="content">
+			<h1>Running a server (configuration guide)</h1>
+
+			<p>
+				This section will go over all the settings you will need to run a dedicated (or listen) server. Please refer to the included file <em>server_example.cfg</em> (or <em>listenserver_example.cfg</em>), and I will take you through each setting in groups as already specified.
+			</p>
+
+			<p>
+				If you have not yet set up a server and need instructions to help you, please see our <a href="server-basic.html">server installation guide</a>.
+			</p>
+
+			<h2>Contents</h2>
+
+			<ol>
+				<li><a href="#start">Starting statements</a></li>
+				<li><a href="#config-files">Configuration files</a></li>
+				<li><a href="#passwords">Passwords</a></li>
+				<li><a href="#core-vars">Core variables</a></li>
+				<li><a href="#server-vars">Server variables</a></li>
+				<li><a href="#multiplayer-vars">Multi-player variables</a></li>
+				<li><a href="#config-exec">Execute configurations</a></li>
+			</ol>
+
+			<a id="start"></a><h2>Starting statements</h2>
+
+			<table>
+				<tr>
+					<th style="width: 225px;">Setting</th>
+					<th style="width: 175px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">hostname</td>
+					<td class="td2">Sven Co-op v5.0 server</td>
+					<td class="td1">The name of your server as players see it. This line comes first to minimize the chance of your server appearing as the default name <em>Sven Co-op</em>. Try to limit yourself to 40 characters on this.</td>
+				</tr>
+				<tr>
+					<td class="td1">log</td>
+					<td class="td2">on</td>
+					<td class="td1">Switch on logging of events on your server. There is little reason to turn this off unless you don't require logs. We recommend you specify this in your command parameters instead to lower the number of log files created, particularly if you have the daily rotation feature disabled.</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="config-files"></a><h2>Configuration files</h2>
+
+			<p>
+				The following only need to be changed when running multiple servers off a single installation of Sven Co-op (aka configuration profiling) where sharing of configuration files is not desired.
+			</p>
+
+			<table>
+				<tr>
+					<th style="width: 225px;">Setting</th>
+					<th style="width: 175px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">servercfgfile</td>
+					<td class="td2">server.cfg</td>
+					<td class="td1">Location of the server configuration file (for dedicated servers only). This will also need to be declared in your command line parameter as <em>+servercfgfile server.cfg</em> to be used when your server starts.</td>
+				</tr>
+				<tr>
+					<td class="td1">lservercfgfile</td>
+					<td class="td2">listenserver.cfg</td>
+					<td class="td1">Location of the server configuration file (for listen servers only). This will also need to be declared in your user configuration file (<em>userconfig.cfg</em>) for it to take effect when your game starts.</td>
+				</tr>
+				<tr>
+					<td class="td1">mapchangecfgfile</td>
+					<td class="td2"><em>Empty</em></td>
+					<td class="td1">Location of a configuration file to be executed on each map change. Not often required.</td>
+				</tr>
+				<tr>
+					<td class="td1">mapvotecfgfile</td>
+					<td class="td2">mapvote.cfg</td>
+					<td class="td1">Location of the file containing a list of maps available for voting. <em>Exceeding 200 maps may prevent players joining due to "reliable channel overflowed"!</em></td>
+				</tr>
+				<tr>
+					<td class="td1">skillcfgfile</td>
+					<td class="td2">skill.cfg</td>
+					<td class="td1">Location of the skill configuration file.</td>
+				</tr>
+				<tr>
+					<td class="td1">bannedcfgfile</td>
+					<td class="td2">banned.cfg</td>
+					<td class="td1">Location of the banned Steam ID list file.</td>
+				</tr>
+				<tr>
+					<td class="td1">listipcfgfile</td>
+					<td class="td2">listip.cfg</td>
+					<td class="td1">Location of the banned IP address list file.</td>
+				</tr>
+				<tr>
+					<td class="td1">mapcyclefile</td>
+					<td class="td2">mapcycle.txt</td>
+					<td class="td1">Location of the map cycle file.</td>
+				</tr>
+				<tr>
+					<td class="td1">motdfile</td>
+					<td class="td2">motd.txt</td>
+					<td class="td1">Location of the welcome message file (aka message of the day) to display when players join.</td>
+				</tr>
+				<tr>
+					<td class="td1">adminsfile</td>
+					<td class="td2">admins.txt</td>
+					<td class="td1">Location of the server administrators list file. <a href="server-advanced.html#admins">More details</a></td>
+				</tr>
+				<tr>
+					<td class="td1">logsdir</td>
+					<td class="td2">logs</td>
+					<td class="td1">Folder used to store server logs in.</td>
+				</tr>
+				<tr>
+					<td class="td1">plugin_list_file</td>
+					<td class="td2">default_plugins.txt</td>
+					<td class="td1">Location of the file containing the list of AngelScript plugins to load.</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="passwords"></a><h2>Passwords</h2>
+
+			<table>
+				<tr>
+					<th style="width: 225px;">Setting</th>
+					<th style="width: 175px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">rcon_password</td>
+					<td class="td2"><em>Empty</em></td>
+					<td class="td1">Password used for accessing the server console remotely. Use a <a href="http://www.passwordmeter.com/">password strength meter</a> to help you build a good password. Only your trusted server administrators should know this as it allows unlimited access to your game server. If you leave this blank, remote console access will not be available (don't worry -- it won't allow everyone to use RCON without a password).</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_password</td>
+					<td class="td2"><em>Empty</em></td>
+					<td class="td1">Password used for players to join your server. Leave blank if your server is public.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_spectator_password</td>
+					<td class="td2"><em>Empty</em></td>
+					<td class="td1">Password used for spectators to join your server. Leave it blank if your server is public. Currently obsolete in Sven Co-op.</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="core-vars"></a><h2>Core variables</h2>
+
+			<table>
+				<tr>
+					<th style="width: 225px;">Setting</th>
+					<th style="width: 175px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">sys_ticrate</td>
+					<td class="td2">100</td>
+					<td class="td1">The maximum number of frames/second your server will process.<br>Frame rates too high will (over 200) also have a negative effect on physics and NPC movement, and will cause many brush entities to cause crush damage when nothing is blocking them.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_contact</td>
+					<td class="td2"><em>Empty</em></td>
+					<td class="td1">The email address of the server manager, so players have someone to contact when there is a problem.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_downloadurl</td>
+					<td class="td2"><em>Empty</em></td>
+					<td class="td1">The HTTP address where your server's custom content can be found, so players can download it very fast. This is essential to get players onto your server while it's running non-standard maps. HTTPS is currently unsupported, but will be available in a future release.</td>
+				</tr>
+				<tr>
+					<td class="td1">allow_spectators</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to spectate the game. Currently obsolete in Sven Co-op.</td>
+				</tr>
+				<tr>
+					<td class="td1">deathmatch</td>
+					<td class="td2">1</td>
+					<td class="td1">This is essential for the intended game play of Sven Co-op. Do not change this, and do not use the <em>coop</em> setting.</td>
+				</tr>
+				<tr>
+					<td class="td1">decalfrequency</td>
+					<td class="td2">30</td>
+					<td class="td1">The time (seconds) a player must wait before making their spray again. <em>0</em> will remove this delay, but is not recommended.</td>
+				</tr>
+				<tr>
+					<td class="td1">hpk_maxsize</td>
+					<td class="td2">2</td>
+					<td class="td1">The size limit (megabytes) of the file that stores uploaded sprays. The oldest sprays are removed to make way for new sprays.</td>
+				</tr>
+				<tr>
+					<td class="td1">pausable</td>
+					<td class="td2">0</td>
+					<td class="td1">Determines whether the game on your server can be paused by anyone. This is never recommended on public servers.</td>
+				</tr>
+				<tr>
+					<td class="td1">skill</td>
+					<td class="td2">3</td>
+					<td class="td1">The default skill level your server will use. Maps can override this in their configuration.
+					<ul>
+						<li>0: Always let the map choose.</li>
+						<li>1: Easy, enemies are easy to kill, players are hard to kill.</li>
+						<li>2: Hard, enemies are hard to kill, players are easy to kill.</li>
+						<li>3: Realistic, enemies are easy to kill, players are very easy to kill - enables realistic weapon damage.</li>
+					</ul>
+					Mappers are recommended not to use this setting, but still do.</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="server-vars"></a><h2>Server variables</h2>
+
+			<p>
+				Because there are so many of these, I am only going over the ones you will have good reason to change. If a setting isn't listed then it's there to help maintain default settings, meaning you have no reason to change it.
+			</p>
+
+			<table>
+				<tr>
+					<th style="width: 225px;">Setting</th>
+					<th style="width: 175px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">sv_allowdownload</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to download custom content from your server.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_allowupload</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to send custom sprays to your server.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_alltalk</td>
+					<td class="td2">1</td>
+					<td class="td1">Voice communication is sent to all teams. Currently obsolete in Sven Co-op.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_cheats</td>
+					<td class="td2">0</td>
+					<td class="td1">Allow players to use cheat commands. If the server is for Internet use the player slots must be 3 or less for players (non-administrators) to use cheats.
+					<ul>
+						<li>0: Nobody can use cheats.</li>
+						<li>1: Everyone can use cheats.</li>
+						<li>2: Administrators can use cheats, players can't use cheats.</li>
+					</ul>
+					This is primarily intended for a map author to run a controlled test session. LAN servers are not subject to the player slots limit. <a href="server-advanced.html#cheats">More info</a></td>
+				</tr>
+				<tr>
+					<td class="td1">sv_filetransfercompression</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow custom content to be compressed on the fly for faster delivery.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_lan</td>
+					<td class="td2">0</td>
+					<td class="td1">Server is only for a local area network. When enabled players authenticate with their IP address, and can only join if they are within the same subnet as the server.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_lan_rate</td>
+					<td class="td2">100000</td>
+					<td class="td1">Rate (bytes/second) that the clients are forced to talk to the server at when in LAN mode. 100000 (100 kBtyes/sec) is more than enough for 32 players and sustainable on any modern LAN.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_maxrate</td>
+					<td class="td2">20000</td>
+					<td class="td1">The maximum rate (bytes/second) that clients can talk to the server at when in Internet mode. 20,000 (20 kBytes/sec) is enough for 16 players, though intense maps with lots of server-to-client traffic will likely need to be raised up to the maximum of 100,000 (100 kBytes/sec).</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_maxupdaterate</td>
+					<td class="td2">50</td>
+					<td class="td1">The maximum number of events/second the server can send to a client. 50 is enough for 16 players. If you're running a server on a home broadband connection, consider lowering this to 15 or 20.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_minrate</td>
+					<td class="td2">0</td>
+					<td class="td1">The minimum rate (bytes/second) that clients can talk to the server at when in Internet mode. Please do not change this so dial-up users can still enjoy your server.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_minupdaterate</td>
+					<td class="td2">10</td>
+					<td class="td1">The maximum number of events/second the server can send to a client. Please do not change this so dial-up users can still enjoy your server.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_proxies</td>
+					<td class="td2">0</td>
+					<td class="td1">Allow spectator proxies (HLTV) to connect to your server.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_region</td>
+					<td class="td2">255</td>
+					<td class="td1">The region your server is in. This is used in Steam's server browser, so players can look for servers near by.
+					<ul>
+						<li>-1: Do not list server in the server browser.</li>
+						<li>0: USA east coast.</li>
+						<li>1: USA west coast.</li>
+						<li>2: South America (continent)</li>
+						<li>3: Europe.</li>
+						<li>4: Asia.</li>
+						<li>5: Australia (continent, aka Oceania)</li>
+						<li>6: Middle East.</li>
+						<li>7: Africa.</li>
+						<li>255: International.</li>
+					</ul>
+					This does not restrict players from connecting to your server! Please be honest about your server location rather than just use International, which should only be used for countries/continents not already included such as:
+					<ul>
+						<li>Other USA zones (mountain/central/Alaska/Hawaii)</li>
+						<li>Canada.</li>
+						<li>Mexico.</li>
+						<li>Central America (continent)</li>
+						<li>Caribbean.</li>
+						<li>Greenland.</li>
+						<li>Other non-continental territories.</li>
+						<li>Antarctica (lol)</li>
+						<li>Anywhere else not mentioned here.</li>
+					</ul>
+					Please also bare in mind that if you choose a region other than International, your server will appear on both International and the region you have selected.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_spectalk</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow spectators to use chat. Currently obsolete in Sven Co-op.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_timeout</td>
+					<td class="td2">60</td>
+					<td class="td1">The time (second) a client stops responding before the server considers the client to have completely lost connectivity.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_voiceenable</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to use voice communication.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_zmax</td>
+					<td class="td2">16000</td>
+					<td class="td1">The radius based distance from players of which the sky map will be rendered at, causing anything further than this to not be drawn. (Only mappers should ever worry about this.)</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="multiplayer-vars"></a><h2>Multi-player variables</h2>
+
+			<p>
+				Because there are so many of these, I am only going over the ones you will have good reason to change. If a setting isn't listed then it's there to help maintain default settings, meaning you have no reason to change it.
+			</p>
+
+			<table>
+				<tr>
+					<th style="width: 225px;">Setting</th>
+					<th style="width: 175px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">mp_allowmonsterinfo</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to see information about monsters they see. Disabling this will cause confusion over who is allied and who are enemies.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_banana</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to throw banana bombs.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_classic_mode</td>
+					<td class="td2">-1</td>
+					<td class="td1">Allow/Deny Classic Mode, on maps that support it.
+					<ul>
+						<li>-1: Players can vote to enable/disable Classic Mode through the command menu.</li>
+						<li>0: Classic Mode is disabled.</li>
+						<li>1: Classis Mode is enabled.</li>
+					</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_decals</td>
+					<td class="td2">2048</td>
+					<td class="td1">The maximum number of decals the server will render. This should never be higher than the value used for <em>num_edicts</em>, which is typically 4096.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disable_autoclimb</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny players to use the auto-climb feature.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disable_pcbalancing</td>
+					<td class="td2">0</td>
+					<td class="td1">Disable skill auto-balancing.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disable_player_rappel</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny players to use the Barnacle grapple on each other.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disablegaussjump</td>
+					<td class="td2">0</td>
+					<td class="td1">Disable vertical knock back caused by the gauss cannon's charge up shot. This can sometimes be used to exploit maps or get places players aren't meant to go. This is a direct copy of <em>mp_allowgaussjump</em>, which for some reason was inverted in Sven Co-op 3.0 and previous versions.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_dropweapons</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to drop weapons and ammo. Miniguns and shock rifles can always be dropped.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_falldamage</td>
+					<td class="td2">1</td>
+					<td class="td1">Use realistic fall damage. If disabled, when players get hurt from falling they will always lose 10 health points.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_flashlight</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to use their flashlight.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_footsteps</td>
+					<td class="td2">1</td>
+					<td class="td1">Players generate footstep sounds while running fast enough.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_forcerespawn</td>
+					<td class="td2">0</td>
+					<td class="td1">Force players to respawn after they die. Disabling this allows players to respawn when they are ready to (recommended).</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_fraglimit</td>
+					<td class="td2">0</td>
+					<td class="td1">Map changes after someone obtains this many frags. Currently obsolete in Sven Co-op.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_grapple_mode</td>
+					<td class="td2">1</td>
+					<td class="td1">Players are pulled to monsters bigger than headcrabs when grappled rather than the monster being pulled to a player.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_modelselection</td>
+					<td class="td2">1</td>
+					<td class="td1">Players are able to change their model. Set to 0 to disallow players to change their model.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_multiplespawn</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to use more than 1 spawn point. Disabling this would be epic fail on your behalf.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_no_akimbo_uzis</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny players to have akimbo uzis. This may help balance power on some maps or large player capacities.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_noblastgibs</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny monsters to be gibed (ripped apart) when killed with explosives.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_notimelimit</td>
+					<td class="td2">0</td>
+					<td class="td1">Disable a map's time limit (<em>mp_timelimit</em>).</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_npckill</td>
+					<td class="td2">1</td>
+					<td class="td1">Set the behaviour of killing allied NPCs. This replaces the old <em>killnpc</em> setting.
+					<ul>
+						<li>0: Disallows allied NPCs to be killed.</li>
+						<li>1: Allows allied NPCs to be killed.</li>
+						<li>2: Allows allied NPCs to be killed by anything other than players, allied NPCs, and human passive class.</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td class="td1">mp_playervotedelay</td>
+					<td class="td2">300</td>
+					<td class="td1">The time (seconds) a player must wait before starting another poll.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_respawndelay</td>
+					<td class="td2">6</td>
+					<td class="td1">The time (seconds) a player must wait before respawning. This is 6 seconds by default to help encourage use of the new reviving feature.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_telefrag</td>
+					<td class="td2">1</td>
+					<td class="td1">Players will kill someone if they are teleported inside them. Disabling this will result in players piling up inside each other unable to move.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_timelimit</td>
+					<td class="td2">60</td>
+					<td class="td1">Map changes after this amount of time (minutes) if the map hasn't been completed already. Time limit is infinite if set to 0, but <em>mp_timelimit_empty</em> can prevent a map keeping your server empty forever..</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_timelimit_empty</td>
+					<td class="td2">10</td>
+					<td class="td1">Map changes after this amount of time (minutes) when the server is empty, regardless if the map's own time limit has been reached. Set to 0 to disable this feature.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_voteallow</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to use the built in voting system. Consider disabling this if you run plug-in packs such as AdminMod or AMX mod X.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_votebanrequired</td>
+					<td class="td2">-1</td>
+					<td class="td1">Percentage of players that must say yes for a ban vote to succeed. Set to -1 to disable this type of vote. (We recommend leaving this off so bans are left up to the server administrators.)</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_votekickrequired</td>
+					<td class="td2">66</td>
+					<td class="td1">Percentage of players that must say yes for a kick vote to succeed. Set to -1 to disable this type of vote.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_votekill_respawndelay</td>
+					<td class="td2">15</td>
+					<td class="td1">The time (seconds) a player must wait before respawning after being successfully killed by a vote.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_votekillrequired</td>
+					<td class="td2">51</td>
+					<td class="td1">Percentage of players that must say yes for a kill (aka slay) vote to succeed. Set to -1 to disable this type of vote.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_votemaprequired</td>
+					<td class="td2">66</td>
+					<td class="td1">Percentage of players that must say yes for a map vote to succeed. Set to -1 to disable this type of vote.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_voteclassicmoderequired</td>
+					<td class="td2">51</td>
+					<td class="td1">Percentage of players that must say yes for a Classic Mode vote to succeed. Set to -1 to disable this type of vote.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_votetimebetween</td>
+					<td class="td2">60</td>
+					<td class="td1">The time (seconds) a player other than the previous poll starter can start a new poll.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_votetimecheck</td>
+					<td class="td2">20</td>
+					<td class="td1">The time (seconds) players have to cast their vote. Players who don't answer in time will be assumed as inactive and not included in the result.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_weaponstay</td>
+					<td class="td2">1</td>
+					<td class="td1">Weapons can be picked up multiple times, with the exception of miniguns. Disabling this will result in a couple of players taking all the weapons leaving others with nothing.</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="config-exec"></a><h2>Execute configurations</h2>
+
+			<table>
+				<tr>
+					<th style="width: 225px;">Command</th>
+					<th style="width: 175px;">Parameter</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">exec</td>
+					<td class="td2">banned.cfg</td>
+					<td class="td1">Loads the list of banned Steam IDs. This should match the <em>bannedcfgfile</em> value.</td>
+				</tr>
+				<tr>
+					<td class="td1">exec</td>
+					<td class="td2">listip.cfg</td>
+					<td class="td1">Loads the list of banned IP addresses. This should match the <em>listipcfgfile</em> value.</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+		</div>
+		<div id="footer"><small>&copy; Copyright Sven Co-op Team 2008. All rights reserved. Manual built by Adam "Adambean" Reece, content contributed and corrected by the Sven Co-op Team. Pages validated for strict HTML 4.01 and CSS 2.0.</small></div>
+	</body>
+</html>

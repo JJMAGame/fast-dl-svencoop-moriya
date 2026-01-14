@@ -1,0 +1,632 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sven Co-op Manual :: Mapping (configuration guide)</title>
+
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="icon" href="../game.ico" type="image/x-icon"/>
+
+		<meta name="resource-type" content="document">
+		<meta name="description" content="Sven Co-op Manual">
+		<meta name="author" content="Sven Co-op Team">
+		<meta name="distribution" content="global">
+	</head>
+
+	<body>
+		<div id="header"><a id="top"></a><a href="index.html"><img src="images/header.png" alt="Sven Co-op Manual - Click here to jump to the index page"></a></div>
+		<div id="navbar">Navigation &raquo; <a href="index.html">Index</a> &raquo; <a href="mapping-config.html">Mapping (configuration guide)</a></div>
+		<div id="content">
+			<h1>Mapping (configuration guide)</h1>
+
+			<p>
+				This section will go over all the settings you can use to configure how your map runs.
+			</p>
+
+			<p>
+				You do not need any of this to create and play a map, but the configuration options provided can greatly help fine tune your map how you want it to be played.
+			</p>
+
+			<p>
+				See file <em>default_map_settings.cfg</em> if you want a template you can make a copy of for your own map.
+			</p>
+
+			<p>
+				<big>Note: If a game_player_equip in give mode exists in the map, the map cfg is <em>ignored</em> for per-player settings!</big>
+			</p>
+
+			<h2>Contents</h2>
+
+			<ol>
+				<li><a href="#config-files">Configuration files</a></li>
+				<li><a href="#equipment">Equipment, weapons, and ammo</a></li>
+				<li><a href="#vars">Variables</a></li>
+			</ol>
+
+			<a id="config-files"></a><h2>Configuration files</h2>
+
+			<p>
+				The following files go in the <em>maps</em> folder along with your BSP to configure it. <em>map-name</em> must match your BSP map name to work. For example, if your map was <em>volcano.bsp</em>, your configuration file would be <em>volcano.cfg</em> in the same folder.
+			</p>
+
+			<table style="width: 99%;">
+				<tr>
+					<th style="width: 225px;">File</th>
+					<th>Purpose</th>
+				</tr>
+				<tr>
+					<td class="td1"><em>map-name</em>.cfg</td>
+					<td class="td2">Contains the equipment, weapons, ammo, and variables for your map.</td>
+				</tr>
+				<tr>
+					<td class="td1"><em>map-name</em>_motd.txt</td>
+					<td class="td2">Contains a message to show players when they join the map. Good place to put mission briefings or an objective list.</td>
+				</tr>
+				<tr>
+					<td class="td1"><em>map-name</em>_skl.cfg</td>
+					<td class="td2">Contains any modifications of the default skill configuration, found in <em>skill.cfg</em>. Simply copy things from the default skill configuration that you want to modify.</td>
+				</tr>
+				<tr>
+					<td class="td1"><em>map-name</em>_detail.txt</td>
+					<td class="td2">Contains any texture high-definition overlays. For more details on this, please see <a href="http://www.twhl.co.za/tutorial.php?id=159">this article at TWHL</a>.</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="equipment"></a><h2>Equipment, weapons, and ammo</h2>
+
+			<p>
+				In your <em>map-name</em>.cfg file you can put these statements inside to provide various weapons, equipment, and ammo to be provided when players spawn.
+			</p>
+
+			<p>
+				<big>It is important that each statement is used <em>once</em> and <em>once only!</em></big>
+			</p>
+
+			<p>
+				Providing a weapon will also provide a small amount of the associated ammo with it, but not much. You should favour providing a fair amount of ammo in your configuration rather than supply rooms at the start of your map to ensure all players get an equal and fair amount of ammo. The exception to this tip is if your map is not the first in part of a series where you have cross-map inventories, in which case you should only provide a simple set of equipment.
+			</p>
+
+			<table style="width: 99%;">
+				<tr>
+					<th style="width: 200px;">Setting</th>
+					<th style="width: 150px;">Values</th>
+					<th style="width: 125px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="tf" colspan="4">Health &amp; armor/battery</td>
+				</tr>
+				<tr>
+					<td class="td1">starthealth</td>
+					<td class="td2">1 to 999</td>
+					<td class="td1">100</td>
+					<td class="td2">Amount of health to provide. This also becomes the maximum you can obtain from health kits, wall health kits, and being healed.</td>
+				</tr>
+				<tr>
+					<td class="td1">startarmor</td>
+					<td class="td2">0 to 999</td>
+					<td class="td1">0</td>
+					<td class="td2">Amount of HEV battery power (armour) to provide. This also becomes the maximum you can obtained from batteries and HEV chargers.</td>
+				</tr>
+				<tr>
+					<td class="td1">maxhealth</td>
+					<td class="td2">1 to 999</td>
+					<td class="td1">100</td>
+					<td class="td2">Maximum amount of health a player can have. This will override the <em>starthealth</em> setting.</td>
+				</tr>
+				<tr>
+					<td class="td1">maxarmor</td>
+					<td class="td2">0 to 999</td>
+					<td class="td1">100</td>
+					<td class="td2">Maximum amount of HEV battery power (armor) a player can have. This will override the <em>starthealth</em> setting.</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="4">Equipment</td>
+				</tr>
+				<tr>
+					<td class="td1">nomedkit</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2"><em>Do not</em> provide a medkit.</td>
+				</tr>
+				<tr>
+					<td class="td1">nosuit</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2"><em>Do not</em> provide a hazard suit (will disable the entire HEV and flashlight), not recommended!</td>
+				</tr>
+				<tr>
+					<td class="td1">item_longjump</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a long jump module.</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="4">Weapons</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_crowbar</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Present</i></td>
+					<td class="td2">Provide a crowbar.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_pipewrench</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a pipe wrench.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_grapple</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a barnacle grapple.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_glock</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Present</i></td>
+					<td class="td2">Provide a 9mm pistol.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_357</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a .357 magnum.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_uzi</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide an uzi.<br><em>DO NOT USE WITH WEAPON_UZIAKIMBO! Use one or the other.</em></td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_uziakimbo</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide two uzis.<br><em>DO NOT USE WITH WEAPON_UZI! Use one or the other.</em></td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_eagle</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a desert eagle.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_shotgun</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a SPAS-12 shotgun.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_mp5</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide an MP5a3 sub-machine gun.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_m16</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide an M16 assault rifle with the M203 grenade launcher.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_crossbow</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a crossbow.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_rpg</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a rocket propelled grenade launcher.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_gauss</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a gauss gun.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_egon</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a gluon gun.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_hornetgun</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a hornet gun.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_handgrenade</td>
+					<td class="td2">No value to provide 1, or specify the number of hand grenade packs to provide (value x5).</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide 5 hand grenades.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_satchel</td>
+					<td class="td2">No value to provide 1, or specify the number of satchel charges to provide.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a satchel charge.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_tripmine</td>
+					<td class="td2">No value to provide 1, or specify the number of tripmines to provide.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a tripmine.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_snark</td>
+					<td class="td2">No value to provide 1, or specify the number of snark nests to provide (value x5).</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide 5 snarks (1 snark nest).</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_sniperrifle</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a M40a1 sniper rifle.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_saw</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a M249 SAW.</td>
+				</tr>
+				<tr>
+					<td class="td1">weapon_sporelauncher</td>
+					<td class="td2"><em>No value for this</em></td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a spore launcher.</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="4">Ammo</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_9mm</td>
+					<td class="td2">Number of clips.</td>
+					<td class="td1">2</td>
+					<td class="td2">Provide 9mm ammo clips (17 rounds). Used by the 9mm pistol, uzis, and MP5 submachine gun.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_357</td>
+					<td class="td2">Number of clips.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide .357 ammo clips (6 rounds). Used by the .357 magnum and desert eagle.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_buckshot</td>
+					<td class="td2">Number of boxes.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide shell boxes (12 rounds). Used by the shotgun.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_556</td>
+					<td class="td2">Number of clips.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide 5.56 mm ammo clips (200 rounds). Used by the M16 assault rifle, SAW, and minigun.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_ARgrenades</td>
+					<td class="td2">Number of assault rifle grenade pairs.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide two assault rifle grenades. Used by the M16's M203 grenade launcher.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_crossbow</td>
+					<td class="td2">Number of clips.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide bolt clips (5 bolts). Used by the crossbow.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_gaussclip</td>
+					<td class="td2">Number of modular batteries.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide gauss/gluon battery modules (20 charge units). Used by the gauss gun and gluon gun.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_rpgclip</td>
+					<td class="td2">Number of rocket pairs.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide rocket packs (2 rockets). Used by the RPG.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_762</td>
+					<td class="td2">Number of clips.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide 7.62mm ammo clips (5 rounds). Used by the sniper rifle.</td>
+				</tr>
+				<tr>
+					<td class="td1">ammo_sporeclip</td>
+					<td class="td2">Number of spores.</td>
+					<td class="td1"><i>Not present</i></td>
+					<td class="td2">Provide a spore. Used by the spore launcher.</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="4">Alternative weapon modes</td>
+				</tr>
+				<tr>
+					<td class="td1">weaponmode_9mmhandgun</td>
+					<td class="td2">0 or 1</td>
+					<td class="td1">0</td>
+					<td class="td2">Enable this for the secondary function to add/remove a silencer</td>
+				</tr>
+				<tr>
+					<td class="td1">weaponmode_eagle</td>
+					<td class="td2">0 or 1</td>
+					<td class="td1">0</td>
+					<td class="td2">Enable this to remove the laser sight</td>
+				</tr>
+				<tr>
+					<td class="td1">weaponmode_mp5</td>
+					<td class="td2">0 or 1</td>
+					<td class="td1">0</td>
+					<td class="td2">Enable this to remove the scope</td>
+				</tr>
+				<tr>
+					<td class="td1">weaponmode_shotgun</td>
+					<td class="td2">0 or 1</td>
+					<td class="td1">0</td>
+					<td class="td2">Enable this for the secondary function to be a classic double blast (as in HLDM)</td>
+				</tr>
+				<tr>
+					<td class="td1">weaponmode_crossbow</td>
+					<td class="td2">0 or 1</td>
+					<td class="td1">0</td>
+					<td class="td2">Enable this to remove explosive bolts</td>
+				</tr>
+				<tr>
+					<td class="td1">weaponmode_rpg</td>
+					<td class="td2">0 or 1</td>
+					<td class="td1">0</td>
+					<td class="td2">Enable this to remove the laser sight</td>
+				</tr>
+			</table>
+
+			<ul class="notes">
+				<li><img class="note" src="images/icon-note.png" alt="Note"> Feature <em>weaponmode_357</em>, to toggle the 357's scope, has been removed.</li>
+			</ul>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="vars"></a><h2>Variables</h2>
+
+			<table style="width: 99%;">
+				<tr>
+					<th style="width: 200px;">Setting</th>
+					<th style="width: 150px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="tf" colspan="4">Physics</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_accelerate</td>
+					<td class="td2">10</td>
+					<td class="td1">The speed players accelerate while on ground.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_airaccelerate</td>
+					<td class="td2">10</td>
+					<td class="td1">The speed players accelerate while in the air.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_friction</td>
+					<td class="td2">4</td>
+					<td class="td1">The amount of friction created by the ground.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_gravity</td>
+					<td class="td2">800</td>
+					<td class="td1">The amount of gravity (maximum units/second).</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_maxspeed</td>
+					<td class="td2">270</td>
+					<td class="td1">The speed players can run on ground -- exluding aid from various triggers and effects (explosions etc) that can allow players to move faster.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_maxvelocity</td>
+					<td class="td2">4096</td>
+					<td class="td1">The speed players can be moved by force (trigger_push, explosions, etc).</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_wateraccelerate</td>
+					<td class="td2">10</td>
+					<td class="td1">The speed players accelerate while underwater.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_waterfriction</td>
+					<td class="td2">1</td>
+					<td class="td1">Whether friction also applies to water.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_zmax</td>
+					<td class="td2">16000</td>
+					<td class="td1">The radius based distance from players of which the sky map will be rendered at, causing anything further than this to not be drawn. Only large maps will ever need to increase this.</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="4">Game play</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_allowmonsterinfo</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow monster information HUD messages.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_banana</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to throw banana bombs.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_barnacle_paralyze</td>
+					<td class="td2">1</td>
+					<td class="td1">Deny players to use weapons whilst caught by a Barnacle.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disable_autoclimb</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny players to use the auto-climb feature.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disable_medkit_points</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny players to receive points for using their medkit.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disable_player_rappel</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny players to use the Barnacle grapple on each other.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disable_pcbalancing</td>
+					<td class="td2">0</td>
+					<td class="td1">Disable player weapon damage balancing according to the <em>mp_pcbalancing_factorlist</em> setting.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_disablegaussjump</td>
+					<td class="td2">0</td>
+					<td class="td1">Disable vertical knock back caused by the gauss cannon's charge up shot. This can sometimes be used to exploit maps or get places players aren't meant to go. This is a direct copy of <em>mp_allowgaussjump</em>, which for some reason got inverted in Sven Co-op 3.0.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_dropweapons</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to drop weapons and ammo. Miniguns and shock rifles can always be dropped.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_falldamage</td>
+					<td class="td2">1</td>
+					<td class="td1">Specify how players receive damage from falling.<ul>
+						<li>-1: None, players never receive damage from falling.</li>
+						<li>0: Simple, a maximum of 10 points of damage is dealt.</li>
+						<li>1: Realistic, the speed and distance of the fall defines how much damage is dealt.</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td class="td1">mp_flashlight</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to use their flash light. Requires a HEV suit (provided by default).</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_fraglimit</td>
+					<td class="td2">0</td>
+					<td class="td1">Map changes after someone obtains this many points. Not recommended in most cases.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_grapple_mode</td>
+					<td class="td2">1</td>
+					<td class="td1">Players are pulled to monsters bigger than headcrabs when grappled rather than the monster being pulled to a player.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_modelselection</td>
+					<td class="td2">1</td>
+					<td class="td1">Players are able to change their model. Set to 0 to disallow players to change their model.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_multiplespawn</td>
+					<td class="td2">1</td>
+					<td class="td1">Map always has multiple spawn points for players to use. If you switch this off the actual player respawn position will be shifted up to <em>92 units</em> away from where the respawn point actually is, to help prevent spawn-fragging or players getting stuck in each other.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_no_akimbo_uzis</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny players to have akimbo uzis. This may help balance power on some maps or large player capacities.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_noblastgibs</td>
+					<td class="td2">0</td>
+					<td class="td1">Deny monsters to be gibed (ripped apart) when killed with explosives.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_npckill</td>
+					<td class="td2">2</td>
+					<td class="td1">Set the behaviour of killing allied NPCs. This replaces the old <em>killnpc</em> setting.
+					<ul>
+						<li>0: Disallows allied NPCs to be killed.</li>
+						<li>1: Allows allied NPCs to be killed.</li>
+						<li>2: Allows allied NPCs to be killed by anything other than players, allied NPCs, and human passive class.</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td class="td1">mp_observer_mode</td>
+					<td class="td2">0</td>
+					<td class="td1">Enable observer mode for dead/connecting players.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_observer_cyclic</td>
+					<td class="td2">0</td>
+					<td class="td1">Set the behaviour of observer mode. Setting <em>mp_observer_mode</em> must be enabled for this to have any effect.
+					<ul>
+						<li>0: Players will become observers until there is a respawn point available for use.</li>
+						<li>1: Players will become observers until the map explicitly decides they can respawn as a player.</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td class="td1">mp_pcbalancing_factorlist</td>
+					<td class="td2">1.0;1.8;1.4;1.2;1.1;1.0</td>
+					<td class="td1">Balance player weapon damage based on the amount of players present based on a sequence of multipliers. The default value means damage multipliers of 1x for 1 player, 1.8x for 2 players, 1.4x for 3 players, 1.2x for 4 players, 1.5x for 5 players, and 1x for 6 or more players.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_respawndelay</td>
+					<td class="td2">5</td>
+					<td class="td1">The time (seconds) a player must wait before respawning. This is 5 seconds by default to help encourage use of the new reviving feature.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_telefrag</td>
+					<td class="td2">1</td>
+					<td class="td1">Players will tele-frag other players if they are teleported inside another player. If you switch this off players may become stuck inside each other, become non-solid, or push each other aside when teleported to the same position.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_timelimit</td>
+					<td class="td2">60</td>
+					<td class="td1">Map changes after this amount of time (minutes) if the map hasn't been completed already. Time limit is infinite if set to 0, but the server's <em>mp_timelimit_empty</em> will end your map early if there are no players present.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_weapon_respawndelay<br>mp_ammo_respawndelay<br>mp_item_respawndelay</td>
+					<td class="td2">-2</td>
+					<td class="td1">Set a custom respawning delay for weapons, ammo, and items (i.e. long jump).
+					<ul>
+						<li>-2: Use game default delay.</li>
+						<li>-1: Never respawn.</li>
+						<li>0: Instantly respawn.</li>
+						<li>>0: Respawn after this many seconds.</li>
+					</ul>
+					Individual entities within the map can override this global setting.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_weaponstay</td>
+					<td class="td2">1</td>
+					<td class="td1">Weapons can be picked up multiple times, with the exception of miniguns. Disabling this will result in a couple of players taking all the weapons leaving others with nothing.</td>
+				</tr>
+				<tr>
+					<td class="td1">npc_dropweapons</td>
+					<td class="td2">0</td>
+					<td class="td1">NPC's will drop their weapon upon death.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_ai_enemy_detection_mode</td>
+					<td class="td2">0</td>
+					<td class="td1">Allow NPC's to scan for enemies and fight even while no players are near enough.</td>
+				</tr>
+			</table>
+
+			<p>
+				For security reasons map configurations can only use settings for altering physics and game play. For example, you can't modify the server or RCON password from your map configuration, but you can modify the gravity or maximum running speed.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+		</div>
+		<div id="footer"><small>&copy; Copyright Sven Co-op Team 2008. All rights reserved. Manual built by Adam "Adambean" Reece, content contributed and corrected by the Sven Co-op Team. Pages validated for strict HTML 4.01 and CSS 2.0.</small></div>
+	</body>
+</html>

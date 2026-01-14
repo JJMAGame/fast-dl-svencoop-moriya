@@ -1,0 +1,63 @@
+@PointClass base(Targetname, Targetx) color(138 140 138) = game_monstercounter : "Counts number of monsters and stores the value"
+[
+	monsterclass(string) : "Monster Classname"
+	
+	alive_or_dead(choices) : "Filter Vital Signs" : 0 =
+	[
+		0: "Ignore"
+		1: "Living only"
+		2: "Dead only"
+	]
+	
+	is_player_ally(choices) : "Filter Enemies" : 0 =
+	[
+		0: "Ignore"
+		1: "Player Allies only"
+		2: "Player Enemies only"
+	]
+	
+	classification(choices) : "Filter by Classification" : 0 =
+	[
+		-1 : "None"
+		0 : "Ignore"
+		1 : "Machine"
+		2 : "Player"
+		3 : "Human Passive"
+		4 : "Human Military"
+		5 : "Alien Military"
+		6 : "Alien Passive"
+		7 : "Alien Monster"
+		8 : "Alien Prey"
+		9 : "Alien Predator"
+		10 : "Insect"
+		11 : "Player Ally"
+		12 : "Player Hornet/Snark"
+		13 : "Alien Hornet/Snark"
+		14 : "X-Race"
+		15 : "X-Race: Shocktrooper/Voltigore"
+		16 : "Team 1"
+		17 : "Team 2"
+		18 : "Team 3"
+		19 : "Team 4"
+	]
+	
+	restartdelay(string) : "Delay Before Restart" : "1.0"
+	weaponfilter(string) : "Weapon Filter"
+	
+]
+
+@PointClass base(Targetname) color(200 50 0) = trigger_random_position : "Sets a random origin on a target entity"
+[
+	xtolerance(string) : "X Tolerance" : "0"
+	ytolerance(string) : "Y Tolerance" : "0"
+	ztolerance(string) : "Z Tolerance" : "0"
+	random_angles(choices) : "Random Angles?" : 0 =
+	[
+		0: "No"
+		1: "Yes"
+	]
+	targetent(string) : "Target Entity"
+	trigger_after_move(string) : "Trigger After Move"
+]
+
+@PointClass base(Targetname) size(-8 -8 -8, 8 8 8) color(255 255 255) = env_te_teleport : "Quake 1 Teleport Splash Effect" []

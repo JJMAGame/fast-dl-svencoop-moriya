@@ -1,0 +1,71 @@
+//=====================================================
+// Sven Co-op HUD sprites
+//=====================================================
+
+52 // number of sprites
+
+//-----------------------------------------------------
+// name				640		filename	x	y	w	h
+//-----------------------------------------------------
+
+selection			640		640hud3		0	180	170	45
+
+bucket1				640		640hud7		0	108	20	20
+bucket2				640		640hud7		20	108	20	20
+bucket3				640		640hud7		40	108	20	20
+bucket4				640		640hud7		60	108	20	20
+bucket5				640		640hud7		80	108	20	20
+bucket6				640		640hud7		100	108	20	20
+bucket7				640		640hud7		120	108	20	20
+bucket8				640		640hud7		140	108	20	20
+bucket9				640		640hud7		160	108	20	20
+bucket0				640		640hud7		180	108	20	20
+
+number_0			640		640hud7		0	0	20	20
+number_1			640		640hud7		20	0	20	20
+number_2			640		640hud7		40	0	20	20
+number_3			640		640hud7		60	0	20	20
+number_4			640		640hud7		80	0	20	20
+number_5			640		640hud7		100	0	20	20
+number_6			640		640hud7		120	0	20	20
+number_7			640		640hud7		140	0	20	20
+number_8			640		640hud7		160	0	20	20
+number_9			640		640hud7		180	0	20	20
+
+colon				640		640hud7		200	0	14	20
+dot					640		640hud7		214	0	14	20
+minus				640		640hud7		236	20	16	16
+plus				640		640hud7		236	34	16	16
+stopwatch			640		640hud7		204	20	28	30
+
+cross				640		640hud7		74	24	34	35
+suit_full			640		640hud7		0	20	32	38
+suit_empty			640		640hud7		36	20	32	38
+
+flash_full			640		640hud7		164	20	32	32
+flash_empty			640		640hud7		116	20	32	32
+flash_beam			640		640hud7		148	20	14	32
+
+dmg_bio				640		640hud8		128	0	64	64
+dmg_poison			640		640hud8		128	0	64	64
+dmg_chem			640		640hud8		0	0	64	64
+dmg_cold			640		640hud9		64	0	64	64
+dmg_drown			640		640hud8		64	0	64	64
+dmg_heat			640		640hud9		128	0	64	64
+dmg_gas				640		640hud9		0	0	64	64
+dmg_rad				640		640hud9		192	0	64	64
+dmg_shock			640		640hud8		192	0	64	64
+
+train_back			640		640hud5		170	0	72	72
+train_stop			640		640hud5		170	72	72	72
+train_forward1		640		640hud5		170	144	72	72
+train_forward2		640		640hud6		170	0	72	72
+train_forward3		640		640hud6		170	72	72	72
+
+item_battery		640		640hud2		176	0	44	44
+item_healthkit		640		640hud2		176	48	44	44
+item_longjump		640		640hud2		176	96	44	44
+item_inventory		640		640hud2		176	144	72	72
+
+title_half			640		640hud4		0	226	256	30
+title_life			640		640hud5		0	226	220	30

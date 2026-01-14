@@ -1,0 +1,71 @@
+# Virtual Host Configuration
+
+NameVirtualHost *:80
+
+
+# Main website
+
+<VirtualHost *:80>
+	ServerAlias	{ list.of.website.addresses split.up.by.spaces }
+	ServerName	{ main.website.address }
+	ServerAdmin	{ your@email.address }
+
+	DocumentRoot	"C:/Websites/Main/public_html"
+
+	CustomLog	"C:/Websites/Main/logs/access.log" combined
+	ErrorLog	"C:/Websites/Main/logs/error.log"
+
+	<Directory "C:/Websites/Main/public_html">
+		Options Includes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ScriptAlias /cgi-bin	"C:/Websites/Main/cgi-bin"
+
+	<Directory "C:/Websites/Main/cgi-bin">
+		AllowOverride None
+		Options ExecCGI
+		Order allow,deny
+		Allow from all
+
+		AddHandler cgi-script .cgi .pl .py
+		AddHandler asp.net asax ascx ashx asmx aspx axd config cs csproj licx rem resources resx soap vb vbproj vsdisco webinfo
+	</Directory>
+</VirtualHost>
+
+
+# HLDS
+
+<VirtualHost *:80>
+	ServerAlias	{ list.of.website.addresses split.up.by.spaces }
+	ServerName	{ main.website.address }
+	ServerAdmin	{ your@email.address }
+
+	DocumentRoot	"C:/HLDS"
+
+	CustomLog	"C:/HLDS/logs/httpd/access.log" combined
+	ErrorLog	"C:/HLDS/logs/httpd/error.log"
+
+	<Directory "C:/HLDS">
+		Options FollowSymLinks MultiViews
+		AllowOverride none
+
+		Order allow,deny
+		Allow from none
+		Deny from all
+	</Directory>
+
+	<DirectoryMatch "^C:/HLDS/.*/(gfx|maps|models|recommended_sounds|sound|sounds|sprites)/">
+		Order allow,deny
+		Allow from all
+		Deny from none
+	</DirectoryMatch>
+
+	<FilesMatch "\.wad$">
+		Order allow,deny
+		Allow from all
+		Deny from none
+	</FilesMatch>
+</VirtualHost>

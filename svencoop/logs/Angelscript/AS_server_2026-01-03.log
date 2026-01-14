@@ -1,0 +1,8 @@
+Angelscript log opened
+Server started logging Angelscript on map 'hl_c01_a1' at: 2026-01-03 00:02:48
+CCustomEntityFuncs::RegisterCustomEntity: Cannot register entity 'point_checkpoint'; a custom entity by that name already exists!
+Server stopped logging Angelscript at: 2026-01-03 00:03:12
+Angelscript log opened
+Server started logging Angelscript on map 'hl_c01_a1' at: 2026-01-03 14:00:46
+CCustomEntityFuncs::RegisterCustomEntity: Cannot register entity 'point_checkpoint'; a custom entity by that name already exists!
+Server stopped logging Angelscript at: 2026-01-03 14:08:40

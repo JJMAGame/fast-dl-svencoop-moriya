@@ -1,0 +1,5 @@
+
+
+"models/kingpin.mdl"		"models/fortified/immortal.mdl"
+
+

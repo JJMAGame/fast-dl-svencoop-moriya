@@ -1,0 +1,17 @@
+decals.wad
+gfx/env/desnoonbk.bmp
+gfx/env/desnoonbk.tga
+gfx/env/desnoondn.bmp
+gfx/env/desnoondn.tga
+gfx/env/desnoonft.bmp
+gfx/env/desnoonft.tga
+gfx/env/desnoonlf.bmp
+gfx/env/desnoonlf.tga
+gfx/env/desnoonrt.bmp
+gfx/env/desnoonrt.tga
+gfx/env/desnoonup.bmp
+gfx/env/desnoonup.tga
+halflife.wad
+liquids.wad
+sandstone.wad
+xeno.wad

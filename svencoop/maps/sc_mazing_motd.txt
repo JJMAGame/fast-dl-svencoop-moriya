@@ -1,0 +1,25 @@
+mapname: sc_mazing
+author: A1win
+version: 1.1
+
+Suggested players: 3 to 5
+Estimated time required to finish: 30 minutes to one hour
+
+Objectives:
+1) Find and activate four altars inside the labyrinth to awake an ancient entity.
+2) Reach the exit door and destroy the entity who is waiting for you.
+
+Tips:
+- Staying together helps you to survive longer.
+- Spreading out helps you to find the objectives faster.
+- The Servants of Ra (mummies) keep respawning. Keep your shotgun reloaded.
+- Armor is effective against Gargantua's flamethrower attack. There are lots of armor batteries hidden inside the labyrinth.
+- Reach the exit room with a friend to open all the random walls inside the labyrinth by pushing two buttons.
+- Some walls can be opened as secret doors by using the +use key on them.
+
+Credits:
+- Map and model reskins by A1win
+- New textures by DiCola and JJ45
+- New models and the APC by JJ45
+- Drum sounds by Phatency
+- Beta testers: Chorium, DiCola, eewo, Killari, Phatency, Robootto, sooru

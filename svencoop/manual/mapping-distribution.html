@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sven Co-op Manual :: Mapping (distribution guidelines)</title>
+
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="icon" href="../game.ico" type="image/x-icon"/>
+
+		<meta name="resource-type" content="document">
+		<meta name="description" content="Sven Co-op Manual">
+		<meta name="author" content="Sven Co-op Team">
+		<meta name="distribution" content="global">
+	</head>
+
+	<body>
+		<div id="header"><a id="top"></a><a href="index.html"><img src="images/header.png" alt="Sven Co-op Manual - Click here to jump to the index page"></a></div>
+		<div id="navbar">Navigation &raquo; <a href="index.html">Index</a> &raquo; <a href="mapping-distribution.html">Mapping (distribution guidelines)</a></div>
+		<div id="content">
+			<h1>Mapping (distribution guidelines)</h1>
+
+			<p>
+				This section will go over some instructions on how to pack your map for distribution.
+			</p>
+
+			<h2>Contents</h2>
+
+			<ol>
+				<li><a href="#preparation">Preparation</a></li>
+				<li><a href="#packing">Packing</a></li>
+				<li><a href="#sharing">Sharing</a></li>
+			</ol>
+
+			<a id="preparation"></a><h2>Preparation</h2>
+
+			<p>
+				The first thing you must to is consolidate your map and its resources into a single location. This makes packaging the map much easier, and you're less likely to miss something out.
+			</p>
+
+			<p>
+				<em>It is very important that you follow these guidelines. Failures or common mistakes can get your map removed or barred from various websites and the Steam workshop.</em> If in doubt please ask first at the <a href="http://forums.svencoop.com/forumdisplay.php/44-Mapping" target="_blank">mapping message board</a> <img class="icon" src="images/link-external.png" alt="External Link" />.
+			</p>
+
+			<ul class="notes">
+				<li><img class="note" src="images/icon-warning.png" alt="Warning"> Do not create a <em>svencoop</em> or <em>svencoop_addons</em> folder. This is very important for the correct automatic placement of your map resources on installation, both manually and through the Steam workshop.</li>
+				<li><img class="note" src="images/icon-warning.png" alt="Warning"> Do not include any scripts outside the <em>maps</em> folder. These will be treated as suspicious and could get your map banned from sharing on web sites and the Steam workshop.</li>
+				<li><img class="note" src="images/icon-note.png" alt="Note"> If your map only has a single <em>BSP</em> and perhaps a couple of <em>TXT</em>/<em>CFG</em> files you must still create the correct folder structure.</li>
+			</ul>
+
+			<p>
+				This diagram shows how your map content should be laid out in preparation for distribution.
+			</p>
+
+			<img class="diagram" src="images/map-distribution-file-structure.png" alt="Map distribution file structure" />
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="packing"></a><h2>Packing</h2>
+
+			<p>
+				To distribute your map you should first pack it up as a single archive file. This makes it easier to hand out and reduces its size. You can use a free utility such as <a href="http://www.7-zip.org" target="_blank">7-Zip</a> <img class="icon" src="images/link-external.png" alt="External Link" /> to create an archive. This runs on both Windows and Linux and is provided for free of charge.
+			</p>
+
+			<h3>Graphical instructions for Windows</h3>
+
+			<p>
+				If you've followed the preparation instructions, you should have a folder looking a bit like this. (in this example the map name is <em>secretbean</em>)
+			</p>
+
+			<img src="images/map-example-file-structure.png" alt="Map example file structure" />
+
+			<ol>
+				<li>Select all of the contents of this folder then right click anything that is highlighted.</li>
+				<li>Select <em>7-Zip</em> then <em>Add to archive...</em> from the context menu.</li>
+				<li>Copy the settings from the screen shot below.</li>
+				<li>If your map is private you may want to protect the archive with a password.</li>
+				<li>Click <em>OK</em> to create your archive.</li>
+			</ol>
+
+			<img src="images/map-7z-settings.png" alt="Map 7-Zip settings" />
+
+			<p>
+				You should now have a <em>7z</em> file you can share.
+			</p>
+
+			<h3>Command line instructions for Windows and Linux</h3>
+
+			<p>
+				If you've followed the preparation instructions, you should have a folder looking a bit like this. (in this example the map name is <em>secretbean</em>)
+			</p>
+
+<pre> Directory of ............\distribution\secretbean
+
+08/10/2015  17:40    &lt;DIR&gt;          .
+08/10/2015  17:40    &lt;DIR&gt;          ..
+08/10/2015  17:40    &lt;DIR&gt;          gfx
+08/10/2015  17:40    &lt;DIR&gt;          maps
+08/10/2015  17:40    &lt;DIR&gt;          models
+08/10/2015  17:40    &lt;DIR&gt;          scripts
+08/10/2015  17:40           529,848 secretbean.wad
+08/10/2015  17:40    &lt;DIR&gt;          sound
+08/10/2015  17:40    &lt;DIR&gt;          sprites</pre>
+
+			<p>
+				<i>Yes, this will look different on Linux with the <em>ls</em> command.</i>
+			</p>
+
+			<p>
+				While your command prompt or terminal has its working directory set to this folder, you can create a 7z archive with this command:
+			</p>
+
+			<p class="code">
+				7z a -t7z -mx9 &lt;mapname&gt;.7z *
+			</p>
+
+			<p>
+				If you want to protect your archive with a password, use this command instead. Put your password inside the quotes to ensure it's used exactly as written.
+			</p>
+
+			<p class="code">
+				7z a -t7z -mx9 -mhe -p"Password Here" &lt;mapname&gt;.7z *
+			</p>
+
+			<p>
+				You should now have a <em>7z</em> file you can share.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="sharing"></a><h2>Sharing</h2>
+
+			<p>
+				Once you have verified your map's 7z archive is ready for distribution (including making sure you've followed all the guidelines here), you should share it on a few websites to get it out there.
+			</p>
+
+			<ul>
+				<li><a href="http://forums.svencoop.com/forumdisplay.php/84-Work-in-Progress" target="_blank">Message board: Work in progress</a> <img class="icon" src="images/link-external.png" alt="External Link" />: This message board should be used to post your map if it's still a work in progress or a non-final release (i.e. beta or release candidate).</li>
+				<li><a href="http://forums.svencoop.com/forumdisplay.php/11-Map-Showcase" target="_blank">Message board: Map showcase</a> <img class="icon" src="images/link-external.png" alt="External Link" />: This message board should be used to post your map if it's gone passed all testing and pre-release states (beta, release candidate, etc.) and you're ready for serious reviews. As this message board is for final versions of your map you should make your post attractive, using a good description, screen shots, and maybe a video.</li>
+				<li><a href="http://www.scmapdb.com" target="_blank">Sven Co-op maps database</a> <img class="icon" src="images/link-external.png" alt="External Link" />: This community run Wiki is a great source of maps, including descriptions, file hosting, screen shots, reviews, and more. This is not an official website, so please check the rules before posting your map. They accept work in progress and completed projects.</li>
+				<li>A Steam workshop for Sven Co-op is in progress, but will be available in a future release.</li>
+			</ul>
+
+			<p>
+				In order to get your map as available as possible you should ensure your 7z file is hosted well. Here are a few places you can host your map's 7z file for free of charge.
+			</p>
+
+			<ul>
+				<li><a href="https://www.dropbox.com" target="_blank">DropBox</a> <img class="icon" src="images/link-external.png" alt="External Link" />: 2GB of storage for free, or 1TB of storage for pro users. Be sure to place your map within your <em>Public</em> folder.</li>
+				<li><a href="https://drive.google.com" target="_blank">Google Drive</a> <img class="icon" src="images/link-external.png" alt="External Link" />: 15GB of storage for free, or up to 30TB for pro users. Be sure to allow public access to your map 7z files.</li>
+				<li><a href="https://onedrive.live.com" target="_blank">Microsoft OneDrive</a> <img class="icon" src="images/link-external.png" alt="External Link" />: 15GB of storage for free, or up to 200GB of storage for pro users. 1TB available for Office 365 subscribers. Be sure to place your map within your <em>Public</em> folder.</li>
+				<li><a href="http://www.scmapdb.com" target="_blank">Sven Co-op maps database</a> <img class="icon" src="images/link-external.png" alt="External Link" />: You are currently allowed to upload files with your map page.</li>
+			</ul>
+
+			<p>
+				Please avoid using websites of which place users into a download queue, inflict a wait timer, or advert gateway. These will only annoy people, and someone will just re-host your map somewhere less annoying.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+		</div>
+		<div id="footer"><small>&copy; Copyright Sven Co-op Team 2008. All rights reserved. Manual built by Adam "Adambean" Reece, content contributed and corrected by the Sven Co-op Team. Pages validated for strict HTML 4.01 and CSS 2.0.</small></div>
+	</body>
+</html>

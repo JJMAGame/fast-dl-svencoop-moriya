@@ -1,0 +1,135 @@
+WARFORTS - by Tuesday's Avenger
+ctf_warforts.bsp - Update 1.4 
+
+
+
+== HOW TO PLAY ==
+
+WARFORTS is a player-versus-player (PvP) map in which two megacorporations (the Yellow and Blue teams) send agents to capture each other's flags while defending their own bases. 
+
+MAIN OBJECTIVE:
+
+Capture the enemy flag & return it to your base! You can capture the flag by carrying it up to your own flag post; capture is possible even if your flag is misssing. You will be able to tell a flag carrier by the glow effect matching the color of the flag he carries. 
+
+The first team to reach 5 captures is victorious.
+
+
+SUB-OBJECTIVES:
+
+In addition to the enemy flag, players can attack a number of secondary targets during play.
+
+Each base includes four destroyable structures, which will take damage only from explosives:
+
+- Left & right shield generators, which power the lasers that prevent enemies from scaling the side walls.
+- A signal jammer, which will cause the enemy to spawn rocket & HW grunts if lost.
+- A door control unit which, if destroyed, will leave the front gate open & vulnerable.
+
+Additionally, occupying the side bunker will bring its defenses under your team's control.
+
+The Mortar in the center of the map can be controlled by either team; it is very useful for smashing enemy defenses.
+
+
+
+
+== CLASSES ==
+
+Seven classes are available on WARFORTS. Make sure to read up on their unique abilities to get the most out of them:
+(If you want to change your class, hold the USE key as you respawn.)
+
+---
+Flanker
+HP: 55
+Armor: 10
+Weapons: Uzi, Desert Eagle
+Special ability: Second Wind (Passive, on flag grab)
+
+Fast and fragile, the Flanker specializes in hit and run combat. His passive ability will heal him to full when picking up the enemy flag, allowing him to survive the escape run. His increased base speed and reduced gravity allow him to clear obstacles that would stop other classes.
+
+
+---
+Tank
+HP: 225
+Armor: 50
+Weapons: SAW M249
+Special ability: Upgrade (Passive, on 3 kill streak)
+
+The Tank spews bullets and doesn't afraid of anything. Slower than the other classes, the Tank can be worn down in the open or while reloading.
+
+If a Tank kills 3 players in a single life, he will receive an upgrade to HP, armor and speed, as well as adding the deadly Gluon Gun to his arsenal.
+
+
+---
+Support
+HP: 75
+Armor: 20
+Weapons: 357, Wrench, Satchel Charge x2
+Special ability: Sentry Gun (Active, hold USE)
+
+The Support is the backbone of a team's defense. She can deploy a sentry gun by holding the USE key for a few seconds; Supports are limited to one gun at a time, and after a gun is lost, there is a delay before another can be placed. On death, a sentry will transfer the frags it has earned to its owner.
+
+The Support is also the only class capable of repairing base structures & turrets by using the wrench.
+
+
+---
+Operative
+HP: 60
+Armor: 5
+Weapons: Knife, Crossbow, Tripmine x2
+Special Ability: Cloak (Active, hold CROUCH)
+
+If everyone hates you, you're playing Operative correctly. Holding CROUCH for a few seconds will render the Operative invisible to NPCs and almost impossible for players to see; use this to line up kills with your one-shot-kill knife or long range crossbow.
+
+Note that attacking or standing up will remove your cloak; only tripmines can be placed while remaining stealthy.
+
+
+---
+Research
+HP: 95
+Armor: 5
+Weapons: Barnacle, Spore Launcher, Medkit
+Special Ability: Healing Aura (Active, hold USE)
+
+The Research class has spent too much time in the lab, and gained some strange abilities. His barnacle weapon allows him to fly around the map to grapple points, and his active ability will heal all friendly players within a certain radius as long as the USE key is held. Enemy players caught within the healing field will be poisoned.
+
+Research is the only class capable of reviving dead players.
+
+
+---
+Assault
+HP: 150
+Armor: 30
+Weapons: Shotgun, MP5, Grenade x5
+Special Ability: Invincibility (Passive, on player kill)
+
+The Assault class mixes survivability with an adaptable loadout, making him suitable for any role and a threat to any class. When the Assault kills an enemy player, he will glow red and become immune to all damage for several seconds.
+
+
+---
+Marine
+HP: 70
+Armor: 10
+Weapons: RPG x3, M16/M203 x2, Glock
+Special Ability: Artillery Retaliation (Passive, on death)
+
+The Marine dishes out lots of damage at range, with very limited ammo; he fares more poorly at close quarters where he is at risk from his own explosives. A Marine's rockets can be the difference between preventing a capture and losing the flag!
+
+On death, the Marine's allies off-screen will retaliate with an artillery strike at his final position. The Marine receives full points for enemies killed in the strike.
+
+
+
+
+== ADDITIONAL CREDITS ==
+
+Textures:
+Firearms mod & PVK mod teams
+
+Testing & Moral Support:
+JPolito, Aurora, Trempler, Keen, A Ninja, Chaos Wake, prolix, Strave, x3ro, the Sven Co-op & joe.to communities
+
+Being a tripmining bastard:
+Tokengekko
+
+
+
+Thanks for reading; I hope you enjoy playing this map as much as I enjoyed making it!
+   - tu3sday

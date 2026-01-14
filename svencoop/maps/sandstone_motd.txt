@@ -1,0 +1,24 @@
+                    ** SandStone **
+
+By tdw & Hezus
+
+A group of mercenaries have acquired bio-hazardous material
+and took shelter in a small town. Overhead surveillance 
+of the area has confirmed nine targets for demolition. 
+
+Your mission is to escort the Engineer to all of these targets.
+Your team will need to hold back any incoming forces and 
+give the Engineer cover fire while he plants the explosives.
+
+Move Out!
+
+
+
+
+
+
+
+
+
+Tip: Use the "Follow" command (npc_return) to keep the engineer
+moving through hostile territory.

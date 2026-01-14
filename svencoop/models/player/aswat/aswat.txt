@@ -1,0 +1,152 @@
+Type:		Half-life Multiplayer Plug-in Model
+
+Name:		ASWAT ( Automated Special Weapons And Tactics)
+
+Release Date:	18th June 1999
+
+Author:		Ian Waugh    
+
+E-Mail:		gundam@btinternet.com or ian.waugh@virgin.net
+
+Homepage:	No (I've got a design and its on the things to do list)
+
+Files:		ASwat.mdl, ASwat.bmp, Aswat.txt 			
+
+Instructions:	Create a folder  Half-life\valve\models\player\ASwat
+                and just unzip the entire file into there.
+
+This model can be freely distributed as long as this text file is included, unmodified.
+If you wish to  include it in a compilation, Mod or commercial product, please email me first.
+If you want to do a skin for this model and are a good skinner ( i.e. better than me ) then email me, and I'll help you out with smd files and base skins.
+
+Description:	The Black Mesa Research complex is best know for its High Energy Physics research, its Space program and its advanced weapons work. But its research is very diversified, it has got a small but nether the less highly successful robotics division. The division's four legged cargo loaders (often they can seen from the tram and the way to the material lab) are one of its notable successes, but they are mere toys compare to its latest development, the Automated Special Weapons and Tactics Unit, ASWAT A self contained close combat robot with multiple sensors, heavy amour, vast strength and the most advanced goal seeking artificial intelligence system so yet developed.
+
+Dr Matthews was most proud of his creation, this was his masterpiece, his magnum opus, a machine that can do a humans job far better that any human could, even in the most extreme environments. ASWAT based police and military units could now go into action with no possibility of human casualties, just as the cruise missile and smart bomb had revolutionized the public's perception of Air Warfare, Automated Special Weapons and Tactics units would do the same for infantry and cops. With no politically dangerous friendly casualties, ASWATs could go be sent any ware too risky (i.e. area with high levels of media coverage) for humans.
+
+And do a better job too, thought Doctor Matthews, as he was calibrating the digit manipulators on his prototype in his lab in the Prometheus section of the base on that fateful day.
+                
+'Here is your coffee Doctor' said Yoshitsune the rather nervous lab assistant, edging is way into the lab past the mounds of tools, parts and paperwork, desperately trying not to spill the hot drink.
+
+‘Yes Yes put it down, er' the doctors head span round looking for a spot in the chaotic lab. He failed.
+
+'Oh put it over there somewhere, can't you see I'm busy, get me a number two Philips screwdriver, ready the firing range and then boot up the high level decision module, we have some weapon tests to run. Did you remember 3 sugars for my coffee?' 
+
+'Yes doctor, sorry I mean no doctor, of course doctor' mumbled Yoshi, his head spinning and still balancing the hot drink.
+
+Yoshi, knowing we would never find the screwdriver in the messy lab in time for the doc, decided the boot up about the easiest task, after finding a spare couple of inches on doctors desk for the coffee, he hit the key on the pc with his elbow.
+
+After a moment the blue robot in the corner started gently humming to itself, its head started panning around the room, the  red unblinking cyclopean eye surveying the scene.
+
+Yoshi looked toward the doc, but he was ignoring him as he was now deeply engrossed in examimining some small detail of the droid's underside, and taking small sips from his drink.
+’He hasn't even noticed there is not sugar in it' thought a relived Yoshi, 'Right Ok firing range next, That security guard Barney has the keys, so .. go find him ' planned Yoshi 'Yeah get keys, he'll be doing his rounds about now, then oh yes ask him if he has a screwdriver as well'
+'You guys seen a Dog?' said Barney sticking his head around the door of the lab, Yoshi looked glum, 'Damm his timing, another excuse to get way from Matthews dashed'
+'No, No dogs here' replied the dejected assistant.
+'Guard, this is a robotics lab, what could of possibly got into your tiny little brain that we might have animal in here' snapped Dr Mathews, rubbing his head. He had got up suddenly when the guard came in, and hit his head on the robots amour plated servo.
+'Take it easy Doc, Its just that I glimpsed this little guy from the corner of my eye on my round, some kind of fat little pug dog, running down the corridor, I tried to follow him, but he bolted, and I'm sure I saw him duck in here.'
+'Defiantly  no dogs here, try those clowns down in chemical weapons or genetic research, they use animals, I’m sure it ....' a rustling in from under a pile of CAD drawings stopped Doctor Matthews mid sentence.
+It emerged. 
+‘That’s er, that’s not a er ... dog,  dogs have like.... four legs'  Yoshi just about managed to mumble. Everyone else was silent, as the small faceless three-legged creature shuffled out from under the papers.
+Only momentarily shocked, he had seen stranger in these labs before, Matthews took charge 'Well don't just stand there go 'GET it' he barked to the others.
+'Er ok' replied Barney, laying down his sub machine gun to free up his hands ' I’m going to try and grab it, Yosh, with me.'
+The creature was ignoring them it seemed to be 'sniffing', if indeed it had a nose to sniff with, they weren't sure a power socket. Barney and Yoshi silently inched forwards to within a good lunges distance from the dog like thing, gave each a worried glance, and then dived for it.
+It may have had short legs but it still could move dam fast. To fast for the lab assistant and guard who carried into some welding equipment, missing the creature by about a meter.
+'Idiots' tutted the doctor, they got themselves up brushed them selves down and turned to see where the dog has gone. It wasn't hiding.
+In just stood in one a the few clear spots on the floor.
+'It's making a humming nose,  getting louder' announced Yoshi, a little of his fear being replaced by curiosity 'Shaking to, is it hurt or something ?' answered Barney the harmonic blast from the hound eye answered the question, flinging people, parts and paper into the corners of the room.
+The robot barely flinched though, well it took a lot more than that blast to move its 203-kilogram bulk. But it did register the damage. 0.02 seconds later the goal-seeking algorithm had come to the following conclusions and paths of action to the resolve the problem.
+
+        
+                        Event : Self has taken damage 
+                             Goal : Self preservation
+                             Path : Eliminate source of damage
+
+                        Event  : Multiple targets in local vicinity 
+                        Search : No friendly target profiles loaded into database
+                             Hence : All targets are possibly hostile
+                         
+                        Conclude : No data available on actual source of hostile action        
+                             Hence : Assume all targets hostile
+
+                        Action : Initialize Defensive mode 
+                              Goal   : Defend self with force
+                              Path   : Neutralize hostile targets           
+                              Fact    : No internal weapons loaded
+                                  Sub goal : Search for nearest weapon
+                                  Action   : Located weapon in immediate vicinity 
+                                  Event    : Weapon HK MP5 sub machine gun acquired
+
+                       Action : Targets locked 
+                       Action : Safety off
+
+                       BRRRRTTTTT   BRRTTT BRRTT   BRRRTTTTTT BRRRTTTT   BRRTTT BRRTT BBBBRRTT  BRRRTTTTTT
+     
+                       Event  : Local targets neutralized
+                       Event  : Distant targets located
+                       Fact   : All targets are hostile
+
+                       New Goal Created 
+                            Goal : Neutralize all targets
+                            Path : Seek and destroy
+
+                       Action : Initialize Seek and Destroy mode 
+
+
+The AWSAT unit started its engine up and stomped out of the lab, its heavy feet crushing the scattered paper work, brass shell casings and human and alien remains.
+   
+
+                 
+Influences:	It's mainly influenced by Masamune Shirow's (My hero) landmate designs for his masterpiece of manga AppleSeed. Also in there though is a bit of Kenichi Sonada's Bubble Gum Crisis designs and Headgears PatLabour work. Plus the tail and exhaust pipes off a Ducati 916. Not sure how that got there. 
+
+                
+Model Info:	vertices   	:470 
+		Polygons      	:775 tris
+		Skins       	:2  ABody.bmp     256x256
+                                    ADetail.bmp   256x256
+                                    No Team Colors
+                Skeleton     	: Valves Standard Biped
+		Animation      	: Mostly Valve, some from my last model Etac and some tweaked standard ones
+                  	 	  look_idle           : From ETac with slightly altered hand movements
+				  idle                : As above
+                                  crawl		      : From ETac
+                                  run                 : Put a little more lift and crash into the run so he bobs up
+                                                        and down more, and added movement for the toes
+                                  run2                : As above
+                                  Swin                : Legs paddle instead if kick and the shield arms stay outstretched
+				  ref_aim_crowbar     : From ETac 
+				  ref_shoot_crowbar   : From ETac
+				  ref_aim_onehanded   : Holds pistol very low with bent arm, shield raised
+				  ref_shot_onehanded  : Fire pistol from above position with body twist and recoil
+				  ref_aim_shotgun     : Holds shotgun one handed away from the body, shield down
+     			 	  ref_shoot_shotgun   : Fire from above position, with some recoil 
+                                  ref_aim_mp5         : fires one handed with arm bent at a slight angle, shield down and back
+     			 	  ref_shoot_mp5       : Fire from above position, little recoil.
+                                  ref_aim_python      : Same anim as pistol
+                                  ref_shoot_python    : Similar to pistol but more recoil and movement
+
+Model Notes:	Model numbers three. Very different from the last two, highly segmented. No joints bend visibly, so it looks robotic, jointed and solid. I've tried to avoid collisions and clipping of the segments but there still is a fair bit of it, although this isn't really noticeable in play. The shoulders are a problem area, they can be raised as high as I would like without cutting into the body, the changed anims help conceal some of this.
+
+                The skin mapping has the fewest errors so far, Yes Two 256x256 maps is a little greedy, but the model has got a LOT of surface are to cover, the detail skin could be 128x128 but then it would loose so much, so I left it big. The skins come to 132K, still under valves recommended 150k limit (and still half the size of the ones Unreal Tournament is going to use). The mesh is totally original, but was designed to fit the valve biped, it just doesn't look like it should. Unfortunately to fit the biped it came out a bit shorter and narrower than I would of liked, pity. But to make it bigger would entail doing a new biped and reanimating that is far too much like hard work for a lazy sod like myself.
+	        
+		High polygon counts, but there a lot of detail there, and to be honest, most peoples machines nowadays can easily deal with models this big. It is still under the Q2PMP recommended 800-poly limit.
+Animation is still a week area for me, I try, but oh well. One problem with Half life is that you animate the biped not the model, and then the game engine goes and blends the different anims together and applies them to your mesh, so until you watch it in third person mode in game, you are not sure how things are going to turn out. Still can you have animations in a Quake 2 model for running, strafing and shooting an individual weapon simultaneously ?  Though not.
+
+Tools used:  	Mesh			: Inspire 3D 1.0  (Actually model in Max? NEVER I say ;) )
+		Mapping and boning 	: 3D Studio Max R2.5 and Character Studio 2.0 
+					  ( Cause I have to. Although, I must say that Character studio has got a few good
+                                          points, and Proper UV mapping is very useful, just wait till L[6] though ;) )
+		Skins			: Corel Photopaint 8.0 ( because its better than photoshop ( I'm trying to be controversial here ) )
+		Compiling		: StudioMDL	
+		Viewing			: Half-Life Model Viewer v1.1
+
+Other:  	I sometimes can be found as "Gundam", late at night on Wireplay, Barry's world and other UK servers, playing Half Life, TFC, or even Action Quake2.
+		Nowadays I can be more often be found as "Katsumi" the Wood Elf Ranger on the EverQuest sever Erollisi Marr, My corpses litter Crushbone Castle, so be careful not to trip up on them ;)
+
+Thanks:		Valve Software, For Half Life of course
+		Wavelength modeling tutorials, absolutely essential, couldn't of done with out ya.
+		Scarecrow for reviewing my last models Etac & MajorK on Cold Fusion.
+                Cold Fusion, The Q2PMP and 3D the bodyshop for posting my last models and saying nice things about them.
+                Everybody who emailed me about Etac and MajorK. many thanks for the words of encouragement.
+Every one who has done a Player model before, thanks for the inspiration and now I really appreciate the work you put in to bring them to life.
+                Norman Cook for his Fat boy slim CD "You've come a long way baby", this was played repeatedly during the creation of this model, track 10 "Love island" is ASWAT's personal theme tune.
+
+No Thanks to:   Sony, Verant and 989 Studios. If it wasn't for Bloody Everquest being SO addictive this model would of been released two weeks ago.

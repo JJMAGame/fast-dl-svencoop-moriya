@@ -1,0 +1,17 @@
+Sven Co-op: Robination (maps/sc_robination_revised.bsp)
+by
+Silencer
+
+Players: 2 - 8 (Ideally 4)
+
+In the chaos of the battle against zombies you lose your way and are now stuck up in some underground sewer.
+Survive the madness!
+
+Hints:
+- You only have one life, but there are checkpoints which respawn everyone.
+- Items that do not respawn have a glowing shell.
+- Ledge-climbing is disabled.
+- It is sometimes better to avoid enemies than to try and kill all of them.
+- Value your armor. It is very durable against all sorts of attacks.
+- The 9mm handgun and the crowbar actually pack a punch.
+- Are you an experienced player? Then try to find the special collectibles! They will be of use in the sequel.

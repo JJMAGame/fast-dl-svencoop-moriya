@@ -1,0 +1,194 @@
+Sven Co-op 4.5 - Global Model Replacement File Instructions
+Last updated 12th Match 2009, Adam "AdamR" Reece.
+
+
+Purpose:
+
+   Global model replacements allows you to replace a model with something else
+   on a global basis. This is useful for well themed maps to easily use
+   alternative models for weapons, without having to define the model for each
+   weapon/ammo entity you put in your maps.
+
+   It can also be used to strip out default weapon models for maps that have the
+   "512 model limit exceeded" crash upon loading. You can take out weapon models
+   that aren't used in the map to free up some model precache slots.
+
+
+Instructions:
+
+1: Create a gmr file in the "maps" directory matching a map name (eg. cave.gmr).
+
+2: Copy and paste groups of weapon models from below into the file and save it.
+
+3: Open or create the map cfg (eg. cave.cfg) in the "maps" directory and add
+   this line to the end for your map:
+
+   globalmodellist ../../maps/cave.gmr
+
+   "../../" is important, as the working directory doesn't start at "svencoop".
+
+4: That should be it, try and run the map.
+
+
+THERE IS CURRENTLY NO METHOD OF COMMENTING IN GLOBAL MODEL REPLACEMENT FILES SO
+DO NOT COPY COMMENTS FROM BELOW.
+
+DO NOT COPY THE WEAPON/ITEM NAME ON IT'S OWN EITHER. JUST THE REPLACEMENT LINES.
+
+Finally, be aware that you should not take out remove donor specific models just
+because you don't expect any donors to be joining your server.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+## Crowbar
+"models/p_crowbar.mdl" "models/not_precached.mdl"
+"models/v_crowbar.mdl" "models/not_precached.mdl"
+"models/w_crowbar.mdl" "models/not_precached.mdl"
+
+## Pipe Wrench
+"models/p_pipe_wrench.mdl" "models/not_precached.mdl"
+"models/v_pipe_wrench.mdl" "models/not_precached.mdl"
+"models/w_pipe_wrench.mdl" "models/not_precached.mdl"
+
+## Medkit
+"models/p_medkit.mdl" "models/not_precached.mdl"
+"models/v_medkit.mdl" "models/not_precached.mdl"
+"models/w_pmedkit.mdl" "models/not_precached.mdl"
+
+## Barnacle Grapple
+"models/p_bgrap.mdl" "models/not_precached.mdl"
+"models/v_bgrap.mdl" "models/not_precached.mdl"
+"models/w_bgrap.mdl" "models/not_precached.mdl"
+
+## 9mm Pistol
+"models/p_9mmhandgun.mdl" "models/not_precached.mdl"
+"models/v_9mmhandgun.mdl" "models/not_precached.mdl"
+"models/w_9mmhandgun.mdl" "models/not_precached.mdl"
+"models/w_9mmhandgun.mdl" "models/not_precached.mdl"
+
+## .357 Magnum
+"models/p_357.mdl" "models/not_precached.mdl"
+"models/v_357.mdl" "models/not_precached.mdl"
+"models/w_357.mdl" "models/not_precached.mdl"
+"models/w_357ammo.mdl" "models/not_precached.mdl"
+"models/w_357ammobox.mdl" "models/not_precached.mdl"
+
+## Uzi
+"models/p_uzi.mdl" "models/not_precached.mdl"
+"models/v_uzi.mdl" "models/not_precached.mdl"
+"models/w_uzi.mdl" "models/not_precached.mdl"
+
+## Uzi - Gold
+"models/p_uzi_gold.mdl" "models/not_precached.mdl"
+"models/v_uzi_gold.mdl" "models/not_precached.mdl"
+"models/w_uzi_gold.mdl" "models/not_precached.mdl"
+
+## Uzi Akimbo
+"models/p_2uzis.mdl" "models/not_precached.mdl"
+"models/v_2uzis.mdl" "models/not_precached.mdl"
+"models/w_2uzis.mdl" "models/not_precached.mdl"
+
+## Uzi Akimbo - Gold
+"models/p_2uzis_gold.mdl" "models/not_precached.mdl"
+"models/v_2uzis_gold.mdl" "models/not_precached.mdl"
+"models/w_2uzis_gold.mdl" "models/not_precached.mdl"
+
+## Desert Eagle
+"models/p_desert_eagle.mdl"  "models/not_precached.mdl"
+"models/v_desert_eagle.mdl"  "models/not_precached.mdl"
+"models/w_desert_eagle.mdl"  "models/not_precached.mdl"
+
+## MP5
+"models/p_9mmar.mdl" "models/not_precached.mdl"
+"models/p_mp5.mdl" "models/not_precached.mdl"
+"models/v_9mmar.mdl" "models/not_precached.mdl"
+"models/w_9mmar.mdl" "models/not_precached.mdl"
+"models/w_mp5.mdl" "models/not_precached.mdl"
+"models/w_9mmarclip.mdl.mdl" "models/not_precached.mdl"
+"models/w_chainammo" "models/not_precached.mdl"
+
+## Shotgun
+"models/p_shotgun.mdl" "models/not_precached.mdl"
+"models/v_shotgun.mdl" "models/not_precached.mdl"
+"models/w_shotgun.mdl" "models/not_precached.mdl"
+"models/w_shotbox.mdl" "models/not_precached.mdl"
+
+## Crossbow
+"models/p_crossbow.mdl" "models/not_precached.mdl"
+"models/v_crossbow.mdl" "models/not_precached.mdl"
+"models/w_crossbow.mdl" "models/not_precached.mdl"
+"models/w_crossbow_clip.mdl" "models/not_precached.mdl"
+
+## M16
+"models/p_m16.mdl" "models/not_precached.mdl"
+"models/v_m16a2.mdl" "models/not_precached.mdl"
+"models/w_m16.mdl" "models/not_precached.mdl"
+"models/w_argrenade.mdl" "models/not_precached.mdl"
+
+## RPG
+"models/p_rpg.mdl" "models/not_precached.mdl"
+"models/v_rpg.mdl" "models/not_precached.mdl"
+"models/w_rpg.mdl" "models/not_precached.mdl"
+"models/p_rpg_r.mdl" "models/not_precached.mdl"
+"models/w_rpgammo.mdl" "models/not_precached.mdl"
+
+## Hornet Gun
+"models/p_hgun.mdl" "models/not_precached.mdl"
+"models/v_hgun.mdl" "models/not_precached.mdl"
+"models/w_hgun.mdl" "models/not_precached.mdl"
+
+## Gauss Gun
+"models/p_gauss.mdl" "models/not_precached.mdl"
+"models/v_gauss.mdl" "models/not_precached.mdl"
+"models/w_gauss.mdl" "models/not_precached.mdl"
+"models/w_gaussammo.mdl" "models/not_precached.mdl"
+
+## Gluon Gun
+"models/p_egon.mdl" "models/not_precached.mdl"
+"models/v_egon.mdl" "models/not_precached.mdl"
+"models/w_egon.mdl" "models/not_precached.mdl"
+
+## Hand Grenade
+"models/p_grenade.mdl" "models/not_precached.mdl"
+"models/v_grenade.mdl" "models/not_precached.mdl"
+"models/w_grenade.mdl" "models/not_precached.mdl"
+
+## Satchel
+"models/p_satchel.mdl" "models/not_precached.mdl"
+"models/p_satchel_radio.mdl" "models/not_precached.mdl"
+"models/v_satchel.mdl" "models/not_precached.mdl"
+"models/v_satchel_radio.mdl" "models/not_precached.mdl"
+"models/w_satchel.mdl" "models/not_precached.mdl"
+
+## Tripmine
+"models/p_tripmine.mdl" "models/not_precached.mdl"
+"models/v_tripmine.mdl" "models/not_precached.mdl"
+"models/w_tripmine.mdl" "models/not_precached.mdl"
+
+## Snark
+"models/p_squeak.mdl" "models/not_precached.mdl"
+"models/v_squeak.mdl" "models/not_precached.mdl"
+"models/w_squeak.mdl" "models/not_precached.mdl"
+"models/w_sqknest.mdl" "models/not_precached.mdl"
+
+## Chumtoad Bonus from Snark
+"models/chubby.mdl" "models/not_precached.mdl"
+
+## Sniper Rifle
+"models/p_m40a1.mdl" "models/not_precached.mdl"
+"models/v_m40a1.mdl" "models/not_precached.mdl"
+"models/w_m40a1.mdl" "models/not_precached.mdl"
+"models/w_m40a1clip.mdl" "models/not_precached.mdl"
+
+## Saw
+"models/p_saw.mdl" "models/not_precached.mdl"
+"models/v_saw.mdl" "models/not_precached.mdl"
+"models/w_saw.mdl" "models/not_precached.mdl"
+
+## Minigun
+"models/p_minigunidle.mdl" "models/not_precached.mdl"
+"models/p_minigunspin.mdl" "models/not_precached.mdl"
+"models/v_minigun.mdl" "models/not_precached.mdl"
+"models/w_minigun.mdl" "models/not_precached.mdl"

@@ -1,0 +1,3 @@
+"plats/squeekmove.wav"		"doors/doormove3.wav"
+"plats/squeekstop.wav"		"doors/doorstop6.wav"
+"buttons/lever3.wav"		"buttons/button8.wav"

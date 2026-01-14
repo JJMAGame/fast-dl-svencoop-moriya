@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Sven Co-op Manual :: Running a server (basic installation)</title>
+
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="icon" href="../game.ico" type="image/x-icon"/>
+
+		<meta name="resource-type" content="document">
+		<meta name="description" content="Sven Co-op Manual">
+		<meta name="author" content="Sven Co-op Team">
+		<meta name="distribution" content="global">
+	</head>
+
+	<body>
+		<div id="header"><a id="top"></a><a href="index.html"><img src="images/header.png" alt="Sven Co-op Manual - Click here to jump to the index page"></a></div>
+		<div id="navbar">Navigation &raquo; <a href="index.html">Index</a> &raquo; <a href="server-basic.html">Running a server (basic installation)</a></div>
+		<div id="content">
+			<h1>Running a server (basic installation)</h1>
+
+			<p>
+				This section will guide you through the basic installation of Sven Co-op's dedicated server.</em>
+			</p>
+
+			<h2>Contents</h2>
+
+			<ol>
+				<li><a href="#select-package">Which package is right for me?</a></li>
+				<li><a href="#install-steam">Installation: Steam tool</a></li>
+				<li><a href="#install-steamcmd">Installation: Standalone application</a></li>
+				<li><a href="#start-gui">Starting a server: Graphical</a></li>
+				<li><a href="#start-cmd">Starting a server: Console</a></li>
+				<li><a href="#config">Configuration</a></li>
+				<li><a href="#connectivity">Connectivity</a></li>
+				<li><a href="#custom-maps">Installing custom maps</a></li>
+				<li><a href="#advanced">Advanced topics</a></li>
+			</ol>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="select-package"></a><h2>Which package is right for me?</h2>
+
+			<p>
+				Our dedicated server package comes in two forms both with different benefits. One is distributed to you through your Steam client (the same application you use to launch games in Steam) as a tool, and the other is distributed through Steam's console client (<a target="_blank" href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a> <img class="icon" src="images/link-external.png" alt="External Link" />) as a standalone application.
+			</p>
+
+			<p>
+				Here are the basic differences and benefits of them both:
+			</p>
+
+			<table>
+				<tr>
+					<th style="min-width: 300px;">Steam tool</th>
+					<th style="min-width: 300px;">Standalone application</th>
+				</tr>
+				<tr>
+					<td class="tf" colspan="2">Distribution</td>
+				</tr>
+				<tr>
+					<td class="td2">
+						<ul>
+							<li>Install through Steam.</li>
+							<li>Appears as a tool in your Steam account's library.</li>
+							<li>Ideal for temporary/observed servers.</li>
+						</ul>
+					</td>
+					<td class="td1">
+						<ul>
+							<li>Install through <a target="_blank" href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a> <img class="icon" src="images/link-external.png" alt="External Link" />.</li>
+							<li>Downloads as a standalone application.</li>
+							<li>Ideal for permanent/unattended servers.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="2">Benefits</td>
+				</tr>
+				<tr>
+					<td class="td2">
+						<ul>
+							<li>Installation is fast and easy.</li>
+							<li>Start a server quickly through Steam.</li>
+							<li>Easy graphical interface to set options, see statistics, players, and manage bans.</li>
+							<li>Server will automatically update like with any other Steam package.</li>
+						</ul>
+					</td>
+					<td class="td1">
+						<ul>
+							<li>No Steam account required.</li>
+							<li>No Steam client installation required.</li>
+							<li>Can play on your server at the same time.</li>
+							<li>Can be launched in graphical and console modes.</li>
+							<li>Can be launched as a regular application or system service.</li>
+							<li>Can run multiple servers with a single set of application files.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="tf" colspan="2">Drawbacks</td>
+				</tr>
+				<tr>
+					<td class="td2">
+						<ul>
+							<li>Requires a Steam account.</li>
+							<li>Requires the Steam client to be running.</li>
+							<li>Can't play the game at the same time.</li>
+							<li>Can't be launched in console mode.</li>
+							<li>Can't be launched as a system service.</li>
+							<li>Can't run multiple servers.</li>
+						</ul>
+					</td>
+					<td class="td1">
+						<ul>
+							<li>Installation requires knowledge of a command line / terminal environment.</li>
+							<li>Starting a server requires a custom shortcut or command.</li>
+							<li>More complicated console/command interface to manage the server.</li>
+							<li>Updates must be downloaded manually or through a defined schedule.</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+			<p>
+				Once you have chosen a package follow the instructions for the <a href="#install-steam">Steam tool</a> or <a href="#install-steamcmd">standalone application</a>.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="install-steam"></a><h2>Installation: Steam tool</h2>
+
+			<p>
+				Our dedicated server package in Steam will allow you to effortlessly install a server attached to your Steam account. It's quick, easy, and should be up and running as fast as you can download it. This is an ideal approach for temporary / part-time servers. You will require a valid installation of Sven Co-op to continue.
+			</p>
+
+			<p>
+				Instructions are as follows:
+			</p>
+
+			<ol>
+				<li>Launch Steam and log in.</li>
+				<li>In the main Steam screen hover over <em>Library</em> and click <em>Tools</em>.</li>
+				<li>Scroll down the list of available tools until you see <em>Sven Co-op Dedicated Server</em>.</li>
+				<li>Double-click the package to install it.</li>
+				<li>Follow the on-screen installation.</li>
+			</ol>
+
+			<p>
+				That is it. You should now have the dedicated server tool ready to launch. Double-click the tool in the library and select <em>Play Sven Co-op Dedicated Server</em> to launch a server with a <a href="#start-gui">graphical interface</a>.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="install-steamcmd"></a><h2>Installation: Standalone application</h2>
+
+			<p>
+				Our dedicated server package is also available as a standalone package available via the <a target="_blank" href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a> <img class="icon" src="images/link-external.png" alt="External Link" /> tool. Though it requires further knowledge to install and use you will benefit from a server that doesn't depend on your Steam client, can be run as a console application, and even be run as an unattended system service. Permanent / full-time servers should opt for this approach. You will also NOT require an existing Sven Co-op installation to continue.
+			</p>
+
+			<ul class="notes">
+				<li><img class="note" src="images/icon-warning.png" alt="Warning"> Do not use this method of installation if you are unfamiliar with some basic server administration concepts such as using a command prompt or terminal environment, and reading/writing configuration files.</li>
+			</ul>
+
+			<p>
+				Instructions are as follows:
+			</p>
+
+			<ol>
+				<li>Open a command prompt or terminal environment on your system.</li>
+				<li>Download and install <a target="_blank" href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a> <img class="icon" src="images/link-external.png" alt="External Link" />.</li>
+				<li>Download our dedicated server package with the following command:<br><tt>steamcmd +login anonymous +force_install_dir "<em>C:\SvenDS</em>" +app_update 276060 validate +exit</tt><br>Replace the path <em>C:\SvenDS</em> with a location to your preference.</li>
+				<li>Wait for the package to download and validate.</li>
+			</ol>
+
+			<p>
+				Once it has finished you can use the <em>SvenDS.exe</em> executable to launch a server. Launching without any arguments will start it with a <a href="#start-gui">graphical interface</a>, or if you specify the <em>-console</em> argument it will start with a <a href="#start-cmd">console interface</a>.
+			</p>
+
+			<p>
+				The same command is used to update the server application too, however be sure you have no server instances running or the update will fail.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="start-gui"></a><h2>Starting a server: Graphical</h2>
+
+			<p>
+				To start a server with a graphical interface simply launch the <em>Sven Co-op Dedicated Server</em> tool in your Steam tools library (for Steam tool installations) or launch the <em>SvenDS.exe</em> executable (for standalone application installations). You will be presented with a small form asking for some options.
+			</p>
+
+			<ul>
+				<li><em>Game</em>: This will always be <em>Sven Co-op</em>, unless you're running a mod on our engine.</li>
+				<li><em>Server Name</em>: This is the name of your server as shown in the game server list and on the score board in game.</li>
+				<li><em>Map</em>: Choose a map to run immediately with your server. <em>Osprey</em> is a good choice if you want to get players in quickly, or <em>Stadium4</em> for a gathering place for a group of friends.</li>
+				<li><em>Network</em>: <em>Internet</em> means your server will be available to anyone with a valid Steam subscription, and players authenticate with their Steam ID number. <em>LAN</em> means your server will be available only to your local network, and players authenticate with their IP address.</li>
+				<li><em>Max. players</em>: The maximum number of players that can be on your server at a time (2-32). Most maps become overcrowded with more than 12 players.</li>
+				<li><em>UDP port</em>: The network port number for your server to listen on. If unsure leave as default (<em>27015</em>).</li>
+				<li><em>RCON password</em>: The password used to remotely access the command console for your server. You should not tell anyone this password as it allows them to control your game server. It must be at least 3 characters consisting of only alpha-numeric characters. If you don't want to use this feature, just do a keyboard mash to input any random string.</li>
+				<li><em>Secure (Valve Anti-Cheat)</em>: Players will be scanned for game cheat applications as they join your server. Players caught and blacklisted by <a target="_blank" href="https://support.steampowered.com/kb_article.php?ref=7849-Radz-6869">Valve's Anti-Cheat system</a> <img class="icon" src="images/link-external.png" alt="External Link" /> will not be allowed to play on your server. You should leave this enabled in most situations.</li>
+			</ul>
+
+			<p>
+				Once you're ready click <em>Start Server</em>, it will take a moment to begin. All of these options will be remembered for the next time you start a server.
+			</p>
+
+			<p>
+				You will then (hopefully) be presented with a larger form depicting a tabbed management interface for your game server.
+			</p>
+
+			<ul>
+				<li>The <em>Main</em> tab tells you a bit about your server (which game, how many players are on, how long it's been running) along with changing some basic settings:
+				<ul>
+					<li><em>Server Name</em>, <em>Network</em>, and <em>RCON Password</em> As in the launch options form.</li>
+					<li><em>Map</em>: Immediately change to a new map from a list.</li>
+					<li><em>Player Password</em>: Allows you to set (or unset) a password required for players to join your server (making your server private).</li>
+					<li><em>Map Cycle</em>: A graphical tool to build a map cycle to run on your server.</li>
+				</ul>
+				</li>
+				<li>The <em>Configure</em> tab allows you to change a broader set of options. Not all of these will be saved after you start a new server.</li>
+				<li>The <em>Statistics</em> tab shows you a graph about how well your server is performing such as CPU load, frame rate (tick rate), and network data.</li>
+				<li>The <em>Players</em> tab shows you a list of players currently connected, some information about them, and the ability to kick/ban players.</li>
+				<li>The <em>Bans</em> tab shows you a list of currently banned players and IP addresses, editing the bans list, and importing/exporting the list to a file for backup.</li>
+				<li>The <em>Console</em> tab shows you a simple textual representation what is happening on your server, along with the ability to submit commands to your server. You will need to look at this output if you need to find out why something has gone wrong. Avoid entering any commands you aren't sure of what they will do, particularly those given to you by other people you don't fully trust.</li>
+			</ul>
+
+			<p>
+				There is really little more I can tell you about running a server in graphical mode. You can close it down any time you like, then any players connected will be returned to the main menu with a message that the server is shutting down.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="start-cmd"></a><h2>Starting a server: Console</h2>
+
+			<p>
+				This option is only available to the standalone application. You will need to open a command prompt or terminal environment on your system then change the working directory to your Sven Co-op dedicated server installtion (usually <em>C:\SvenDS</em>).
+			</p>
+
+			<p>
+				Next you need to build a command to launch your server. The following list of arguments and parameters will determine how your server starts. Be sure to split them up with a space. Pay attention to those beginning with a hyphen (arguments) and those beginning with a plus (parameter), as they will not work with the wrong symbol. Sections <em>highlighted</em> before the colon are the parts you type, and <u>underlined</u> sections are parts you change.
+			</p>
+
+			<ul>
+				<li><em>SvenDS</em>: The name of the application, does not need to have ".exe" on the end.</li>
+				<li><em>-console</em>: Required, or your server will start in <a href="#start-gui">graphical mode</a>.</li>
+				<li><em>-game <u>modname</u></em>: Only needed if you are running a mod on our engine, otherwise ignore this.</li>
+				<li><em>+ip <u>ipaddress</u></em>: Only needed if your computer has more than one IP address assigned to it, and you need to specify which address to listen on.</li>
+				<li><em>-port <u>27015</u></em>: Chooses the network port to listen on, usually 27015 unless you're running more than one server on the same IP address.</li>
+				<li><em>+maxplayers <u>12</u></em>: The maximum number of players that can be on your server at one time (2-32). It will be 12 if you do not specify this.</li>
+				<li><em>+map <u>_server_start</u></em>: Specify which map to launch the server on. If you do not specify this your server will remain stuck in an un-connectible state!</li>
+				<li><em>+log <u>on</u></em>: Start a log file for the server console (recommended).</li>
+			</ul>
+
+			<p>
+				Here is a simple example to start an 8-player server on map stadium4 listening on port 27015 with logging enabled:
+			</p>
+
+			<pre>SvenDS -console -port 27015 +maxplayers 8 +map stadium4 +log on</pre>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="config"></a><h2>Configuration</h2>
+
+			<p>
+				Once you have got your first server running you will likely want to change the configuration of it in a way that it's saved permanently, and across map changes.
+			</p>
+
+			<p>
+				We will focus on just the basic configuration options here found in the default <em>server.cfg</em> file. Edit this file with a plain text editor (like Notepad or nano). You can modify this file while your server is running, then any saved changes will take effect on the next map.
+			</p>
+
+			<table>
+				<tr>
+					<th style="width: 225px;">Setting</th>
+					<th style="width: 175px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">hostname</td>
+					<td class="td2">Sven Co-op v5.0 server</td>
+					<td class="td1">The name of your server as players see it. This line comes first to minimize the chance of your server appearing as the default name <em>Sven Co-op</em>. Try to limit yourself to 40 characters on this.</td>
+				</tr>
+				<tr>
+					<td class="td1">log</td>
+					<td class="td2">on</td>
+					<td class="td1">Switch on logging of events on your server. There is little reason to turn this off unless you don't require logs. <em>I recommend you specify this in your command parameters instead to lower the number of log files created.</em></td>
+				</tr>
+				<tr>
+					<td class="td1">rcon_password</td>
+					<td class="td2"><em>Empty</em></td>
+					<td class="td1">Password used for accessing the server console remotely. Use a <a href="http://www.passwordmeter.com/">password strength meter</a> to help you build a good password. Only your trusted server administrators should know this as it allows unlimited access to your game server. If you leave this blank, remote console access will not be available (don't worry -- it won't allow everyone to use RCON without a password).</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_password</td>
+					<td class="td2"><em>Empty</em></td>
+					<td class="td1">Password used for players to join your server. Leave blank if your server is public.</td>
+				</tr>
+				<tr>
+					<td class="td1">sys_ticrate</td>
+					<td class="td2">128</td>
+					<td class="td1">The maximum number of frames/second your server will process.<br>We have discovered that setting this using base 16 increments (64, 128, 256, etc) provides a smoother base 10 tick rate (50, 100, 200, etc) than setting the number at base 10 directly.<br>Setting this above roughly 250 is ridiculously stupid, and your players will just complain about lag when your server fills up. Frame rates too high will also have a negative effect on physics and NPC movement, and extreme frame rates (over 500) will cause many brush entities to cause crush damage when nothing is blocking them.</td>
+				</tr>
+				<tr>
+					<td class="td1">deathmatch</td>
+					<td class="td2">1</td>
+					<td class="td1">This is essential for the intended game play of Sven Co-op. Do not change this, and do not use the <em>coop</em> setting.</td>
+				</tr>
+				<tr>
+					<td class="td1">decalfrequency</td>
+					<td class="td2">30</td>
+					<td class="td1">The time (seconds) a player must wait before making their spray again. <em>0</em> will remove this delay, but is not recommended.</td>
+				</tr>
+				<tr>
+					<td class="td1">hpk_maxsize</td>
+					<td class="td2">2</td>
+					<td class="td1">The size limit (megabytes) of the file that stores uploaded sprays. The oldest sprays are removed to make way for new sprays.</td>
+				</tr>
+				<tr>
+					<td class="td1">pausable</td>
+					<td class="td2">0</td>
+					<td class="td1">Determines whether the game on your server can be paused by anyone. This is never recommended on public servers.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_allowdownload</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to download custom content from your server.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_allowupload</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to send custom sprays to your server.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_region</td>
+					<td class="td2">255</td>
+					<td class="td1">The region your server is in. This is used in Steam's server browser, so players can look for servers near by.
+					<ul>
+						<li>-1: Do not list server in the server browser.</li>
+						<li>0: USA east coast (includes central zone)</li>
+						<li>1: USA west coast (includes mountain zone)</li>
+						<li>2: South/Latin America.</li>
+						<li>3: Europe.</li>
+						<li>4: Asia.</li>
+						<li>5: Australia/Oceania.</li>
+						<li>6: Middle East.</li>
+						<li>7: Africa.</li>
+						<li>255: International/Other.</li>
+					</ul>
+					This does not restrict players from connecting to your server. Please be honest about your server location rather than just use International, which should only be used for countries/continents not already included such as:
+					<ul>
+						<li>Other USA zones (mountain/central/Alaska/Hawaii)</li>
+						<li>Canada.</li>
+						<li>Mexico.</li>
+						<li>Central America (continent)</li>
+						<li>Caribbean.</li>
+						<li>Greenland.</li>
+						<li>Other non-continental territories.</li>
+						<li>Antarctica (lol)</li>
+						<li>Anywhere else not mentioned here.</li>
+					</ul>
+					Please also bare in mind that if you choose a region other than International your server will appear on both International and the region you have selected. This is why you should pick the correct zone if your server lives in one of them.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_voicecodec</td>
+					<td class="td2">voice_speex</td>
+					<td class="td1">The voice codec to use. Currently only <em>voice_miles</em> and <em>voice_speex</em> are available. There is no reason to revert to <em>voice_miles</em> as the quality is terrible, and throughput consumption is more than double used by <em>voice_speex</em>.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_voicequality</td>
+					<td class="td2">5</td>
+					<td class="td1">The voice quality for <em>voice_speex</em>.
+					<ol>
+						<li>Bad quality, 2.4 kBytes/sec of throughput used (7.5% of what <em>voice_miles</em> uses)</li>
+						<li>Adequate quality, 6 kBytes/sec of throughput used (18.75% of what <em>voice_miles</em> uses)</li>
+						<li>Good quality, 8 kBytes/sec of throughput used (25% of what <em>voice_miles</em> uses)</li>
+						<li>Very good quality, 11.2 kBytes/sec of throughput used (35% of what <em>voice_miles</em> uses)</li>
+						<li>Brilliant quality, 15.2 kBytes/sec of throughput used (47.5% of what <em>voice_miles</em> uses)</li>
+					</ol>
+					Even servers on home broadband connections can sustain the highest quality offered by <em>voice_speex</em>, there is very little reason to change this.</td>
+				</tr>
+				<tr>
+					<td class="td1">sv_voiceenable</td>
+					<td class="td2">1</td>
+					<td class="td1">Allow players to use voice communication.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_notimelimit</td>
+					<td class="td2">0</td>
+					<td class="td1">Disable a map's <em>mp_timelimit</em> setting allowing it to run indefinitely. The map can still end on empty servers due to <em>mp_timelimit_empty</em>.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_telefrag</td>
+					<td class="td2">1</td>
+					<td class="td1">Players will kill someone if they are teleported inside them. Disabling this will result in players piling up inside each other unable to move.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_timelimit</td>
+					<td class="td2">60</td>
+					<td class="td1">Map changes after this amount of time (minutes) if the map hasn't been completed already.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_timelimit_empty</td>
+					<td class="td2">10</td>
+					<td class="td1">Automatically end the map and move on to the next if the server has been empty for this many minutes (stops maps setting infinite time limits on empty servers). Set to <em>0</em> to disable this feature.</td>
+				</tr>
+				<tr>
+					<td class="td1">mp_weaponstay</td>
+					<td class="td2">1</td>
+					<td class="td1">Weapons can be picked up multiple times, with the exception of miniguns. Disabling this will result in a couple of players taking all the weapons leaving others with nothing.</td>
+				</tr>
+				<tr>
+					<td class="td1">exec</td>
+					<td class="td2">banned.cfg</td>
+					<td class="td1">Loads the list of banned Steam IDs.</td>
+				</tr>
+				<tr>
+					<td class="td1">exec</td>
+					<td class="td2">listip.cfg</td>
+					<td class="td1">Loads the list of banned IP addresses.</td>
+				</tr>
+			</table>
+
+			<p>
+				If you wish to see a vastly more complete set of configuration options, please see the extended <a href="server-config.html">server configuration guide</a>.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="connectivity"></a><h2>Connectivity</h2>
+
+			<p>
+				Once you have got your server up and running and you want players to connect to it over the Internet it is likely that your server will be behind a firewall, a router with a firewall, or a router using network address translation (NAT). This is likely to mean you will require some additional configuration of one or more of these in order to make your server world visible.
+			</p>
+
+			<p>
+				The most likely scenario particularly for game servers at residential properties is a router using network address translation. This is where one public IP address is assigned to a NAT router at home, of which is then shared between one or more computers/devices using a private address network. The easiest way to determine if this is the case for you is to do the following:
+			</p>
+
+			<ol>
+				<li>Open a command prompt or terminal environment on your system.</li>
+				<li>Submit command: <em>ipconfig</em> (on Windows) or <em>ifconfig</em> (on Linux).</li>
+				<li>Take note of the numbers to the right of the <em>IPv4 Address</em> row.</li>
+			</ol>
+
+			<p>
+				Ignore any network device that shows one of these address ranges, because they are not connected to the Internet anyway:
+			</p>
+
+			<ul>
+				<li><em>0</em>.0-255.0-255.1-254.</li>
+				<li><em>127</em>.0-255.0-255.1-254.</li>
+				<li><em>169.254</em>.0-255.1-254.</li>
+			</ul>
+
+			<p>
+				Check if your IPv4 address is within the following ranges:
+			</p>
+
+			<ul>
+				<li><em>10</em>.0-255.0-255.1-254.</li>
+				<li><em>172</em>.<em>16-31</em>.0-255.1-254.</li>
+				<li><em>192</em>.<em>168</em>.0-255.1-254.</li>
+			</ul>
+
+			<p>
+				If this is the case you are definitely behind a router using NAT. You will need to configure <em>port forwarding</em> on your router in order to make your game server world visible. Because there are literally thousands of different home router models worldwide we are not going to guide you on how to do this. Instead visit <a target="_blank" href="http://www.portforward.com/">www.portforward.com</a> <img class="icon" src="images/link-external.png" alt="External Link" /> to find a set of instructions specific to your router. You will also need administrative permission on your router in order to make this adjustment, so if it isn't yours ask for permission first.
+			</p>
+
+			<p>
+				Our server application only uses the following transport ports. You can amend these using the corresponding command line parameter.
+			</p>
+
+			<table>
+				<tr>
+					<th>Port</th>
+					<th>Protocol</th>
+					<th>Parameter</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td class="td1">27015</td>
+					<td class="td2">UDP</td>
+					<td class="td1">-port</td>
+					<td class="td2">Game &amp; content transfers traffic</td>
+				</tr>
+				<tr>
+					<td class="td1">27015</td>
+					<td class="td2">TCP</td>
+					<td class="td1">-port</td>
+					<td class="td2">Remote console (RCON) traffic</td>
+				</tr>
+				<tr>
+					<td class="td1">26900</td>
+					<td class="td2">UDP</td>
+					<td class="td1">-sport</td>
+					<td class="td2">Valve anti-cheat (VAC) service traffic (auto-increments from default if taken to the next available port)</td>
+				</tr>
+			</table>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="custom-maps"></a><h2>Installing custom maps</h2>
+
+			<p>
+				Your players will inevitably get bored with the official set of maps provided. You will almost certainly want to install some of the many <a href="http://www.scmapdb.com" target="_blank">additional maps</a> <img class="icon" src="images/link-external.png" alt="External Link" /> around to improve the experience of your game server.
+			</p>
+
+			<p>
+				Installing custom maps is a simple process providing map artists follow the <a href="mapping-distribution.html">map distribution guidelines</a>. You will have downloaded a map as a file containing the map contents typically as a <em>ZIP</em>, <em>RAR</em>, or <em>7Z</em> archive. Maps are rarely distribute maps as a standalone <em>BSP</em> file or as a bunch of unpacked files.
+			</p>
+
+			<p>
+				You can use a free utility such as <a href="http://www.7-zip.org" target="_blank">7-Zip</a> <img class="icon" src="images/link-external.png" alt="External Link" /> to open most of the archive formats around today. This runs on both Windows and Linux and is provided for free of charge.
+			</p>
+
+			<p>
+				When you open the archive you should see a set of folders that could be <em>gfx</em>, <em>maps</em>, <em>models</em>, <em>scripts</em>, <em>sound</em>, and <em>sprites</em>. It's also likely you'll see a bunch of <em>WAD</em> files here too. If this is what you see you will need to extract all of these to your server's <em>svencoop_addons</em> folder.
+			</p>
+
+			<ul class="notes">
+				<li><img class="note" src="images/icon-warning.png" alt="Warning"> Do not extract any unofficial resources directly into the <em>svencoop</em> folder. To help keep your game files clean, use the <em>svencoop_addons</em> folder. The game engine is perfectly capable of loading maps and their contents from this location.</li>
+				<li><img class="note" src="images/icon-warning.png" alt="Warning"> If there is a <em>scripts</em> folder included take a look inside before extraction. There should only ever be a <em>maps</em> folder inside this. Anything else should be treated as suspicious and not extracted, or deleted after extraction.</li>
+				<li><img class="note" src="images/icon-warning.png" alt="Warning"> If there is only a <em>svencoop</em> folder inside the archive, you need to enter this folder before extraction. This shows the map artist has not followed our current guidelines on map distribution.</li>
+				<li><img class="note" src="images/icon-note.png" alt="Note"> If there is only a <em>BSP</em> file (and maybe a couple of <em>TXT</em>/<em>CFG</em> files along side it) this means the map doesn't have much custom content. These files should be extracted to the <em>maps</em> folder within the <em>svencoop_addons</em> folder.</li>
+			</ul>
+
+			<p>
+				This diagram shows how custom map content should be laid out in your game.
+			</p>
+
+			<img class="diagram" src="images/map-file-structure.png" alt="Map file structure" />
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+
+			<a id="advanced"></a><h2>Advanced topics</h2>
+
+			<p>
+				This page only covers the basic installation and configuration of a single server. Our <a href="server-advanced.html">advanced topics guide</a> covers a range of more in-depth tasks such as configuration profiling (running multiple servers on a single installation), running a server as a system service, and setting up a fast in-game content server.
+			</p>
+
+			<p class="back-to-top">
+				<a href="#top">Back to the top...</a>
+			</p>
+		</div>
+		<div id="footer"><small>&copy; Copyright Sven Co-op Team 2008. All rights reserved. Manual built by Adam "Adambean" Reece, content contributed and corrected by the Sven Co-op Team. Pages validated for strict HTML 4.01 and CSS 2.0.</small></div>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+// Fortified Voices From Beyond
+FORT_GENERAL1 fortified/mrgeneral/main
+FORT_GENERAL2 fortified/mrgeneral/memorial1
+FORT_GENERAL3 fortified/mrgeneral/memorial2
+FORT_GENERAL4 fortified/mrgeneral/memorial3
+FORT_GENERAL5 fortified/mrgeneral/shuttlelaunch

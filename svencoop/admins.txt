@@ -1,0 +1,17 @@
+// List your server administrators in this file to mark them with an icon in the
+// scoreboard.
+//
+// This file is re-directable using server CVAR "adminsfile".
+//
+// One auth ID per line, though comments are accepted. Max ID length is 44.
+// Example: STEAM_0:1:FRIENDID	# FriendName
+// An administrator can perform a command against players (non-admins) only.
+//
+// Denote the server owner by putting an asterisk * infront of the auth ID.
+// Example: *STEAM_0:1:YOURID	# YourName
+// An owner can perform a command against a standard administrator, and will
+// have their icon tinted gold in the score board.
+//
+// The auth ID token is ended either by a new line, space, tab, #, or /
+// You do not need to enter STEAM_ID_LOOPBACK or VALVE_ID_LOOPBACK. A listen
+// server hosting player is automatically denoted as an owner.

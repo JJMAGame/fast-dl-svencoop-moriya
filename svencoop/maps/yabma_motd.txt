@@ -1,0 +1,24 @@
+============================================================
+Sven Coop: Yabma (yet another Black Mesa adventure)
+by Norsu
+============================================================
+
+You must find a vehicle to escape the Black Mesa facility.
+The base near cliffs should have one, but can you survive
+through the infested laboratories and surrounding military
+forces?
+
+============================================================
+============================================================
+
+
+
+Changes by Adambean for SC 4.7:
+
+* Fixed all kill brushes in death pits not dealing enough damage and not specified "FALL" damage type
+* Fixed being able to skip the steam with high levels on XP mod, increased its' damage massively
+* Fixed being able to survive the cave pit by the first Voltigore
+* Fixed being able to survive both of the deep pipe pit holes at the plumbing area
+* Fixed being stuck on one of the right angle pipes when you enter the plumbing area
+* Fixed powerful laser not shutting down after the wall is destroyed
+* Prevented players from climbing on the roof and into the sky when they get outside (near the end)

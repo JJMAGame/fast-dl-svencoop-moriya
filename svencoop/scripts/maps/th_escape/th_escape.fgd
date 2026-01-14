@@ -1,0 +1,16 @@
+@SolidClass base(Targetname, Target) = trigger_playercheck : "Trigger Player Check"
+[
+	spawnflags(Flags) =
+	[
+		1 : "Start Off" : 0
+	]
+	mode(choices) : "Comparator" : 0 =
+	[
+		0: "> (Greater)"
+		1: "< (Less)"
+		2: "== (Equal)"
+	]
+	threshold(integer) : "Threshold" : 0
+	master(string) : "Master"
+	interval(string) : "Check-interval (seconds)" : "0.5"
+]

@@ -1,0 +1,93 @@
+sc_robination_revised
+by
+Silencer
+
+
+
+
+Credits:
+
+
+
+sound/sc_robination/alarm001.wav made by "HardPCM",
+found at http://www.freesound.org/samplesViewSingle.php?id=32985.
+
+sound/sc_robination/arc_welder_long.wav made by "beerbelly38",
+found at https://freesound.org/people/beerbelly38/sounds/277313/.
+
+sound/sc_robination/cuboos_alien_horn2.wav made by "Syna-Max",
+found at http://www.freesound.org/samplesViewSingle.php?id=43585.
+
+sound/sc_robination/item_respawn.wav made by myself, "Silencer",
+and can be found at http://www.freesound.org/samplesViewSingle.php?id=83301.
+
+sound/sc_robination/petardo1.wav made by "insigner",
+found at http://www.freesound.org/samplesViewSingle.php?id=25474.
+
+sound/sc_robination/crash.wav made by Konami, taken from
+their game "Contra III: The Alien Wars" for Nintendo's Super Nintendo
+Entertainment System (SNES).
+
+models/sc_robination/gasmask_item.mdl recompiled from models/tfc/gasmask.mdl.
+
+models/sc_robination/keycard_centered.mdl recompiled from models/tfc/keycard.mdl.
+
+models/sc_robination/radio_part.mdl made by Rusty.
+
+Important notice: The sounds listed above have been edited, e.g.
+cut and given an earlier fade-out, resampled at lower sample
+rates and saved as mono, partially at a lower bit-rate, in order
+to give them a lower filesize and have them work with the game's
+sound engine properly. Do not judge the original sounds by the
+edited versions which shipped with this map. Follow the provided
+links above to listen to the original samples of some of the sounds.
+Many thanks to freesound.org!
+
+
+The Nightwatch textures:
+nw.wad
+nw_xeno.wad
+
+"by Adam Foster, Henning Horstmann, Mohammad Alavi, Tomislav Spejic, and Tom DiLazaro. One additional texture by Cayle George. 
+
+Includes additional textures created from bases by and/or originally authored by Randy Reddig and Kevin Roberts.
+
+All textures are the property of their authors.
+
+You may use and re-distribute these textures for any non-commercial purpose, provided you
+include credit to the original authors (please copy from the list above) and the Nightwatch team."
+
+Thank you and everyone from the Nightwatch team!
+
+
+submerged.wad by Blazeeer.
+
+
+The dead tree models were found at http://models.cs-mapping.com.ua/main.php.
+
+models/sc_robination/dead_tree02.mdl
+models/sc_robination/dead_tree08.mdl
+
+Unfortunately, no mention of the models' authors are to be found there.
+However, at this point, I'd like to thank the authors of the models very much.
+Thank you!
+
+
+
+Thanks to the beta-testers who went through the trouble of
+putting up with me and my map and helped me to improve it:
+
+Dynamite
+RetroFish
+Jolene
+RNG
+AdamR
+Nih
+amnizu
+CryoKeen
+Tuesday's Avenger
+Cocyx
+Protector
+Cyberleon
+Trempler
+Captain Scarlet

@@ -1,0 +1,11 @@
+This server is running Sven Co-op.
+
+https://www.svencoop.com/
+
+--
+
+Need help?
+
+Check out the game docs at: https://www.svencoop.com/manual/
+Talk to us on Discord at: https://discord.gg/svencoop/
+Write to us on our message boards at: https://forums.svencoop.com/

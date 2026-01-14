@@ -1,0 +1,5 @@
+barney_LJ.mdl
+		Barney with two glocks(Npc) 
+		By Gaucho
+mutant_repeater.mdl
+		ByRNG

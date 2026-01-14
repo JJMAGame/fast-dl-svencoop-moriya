@@ -1,0 +1,18 @@
+Angelscript log opened
+Server started logging Angelscript on map 'pizza_ya_san1' at: 2025-12-25 02:01:46
+Not allowed: in section 'd:/windows/steamapps/common/sven co-op/svencoop_addon/scripts/maps/ins2/buymenu.as', at (1123, 5): Function BuyMenu::EquipCallBack:
+Message: Null pointer access
+ERROR: CASBaseCallable::Call: Execution of function '::' failed!
+Server stopped logging Angelscript at: 2025-12-25 02:08:05
+Angelscript log opened
+Server started logging Angelscript on map 'ragemap2025' at: 2025-12-25 17:32:57
+ERROR: ConCommandManager::AddCommand: Command with name '.buy' already exists!
+ERROR: Attempted to get current module while outside of a script!
+ERROR: Attempted to get current module while outside of a script!
+Server stopped logging Angelscript at: 2025-12-25 17:33:50
+Angelscript log opened
+Server started logging Angelscript on map 'yabma' at: 2025-12-25 17:33:58
+ERROR: Attempted to get current module while outside of a script!
+ERROR: Attempted to get current module while outside of a script!
+ERROR: Attempted to get current module while outside of a script!
+Server stopped logging Angelscript at: 2025-12-25 17:37:13

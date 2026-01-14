@@ -1,0 +1,17 @@
+Boris Grishenko
+Level 3
+Systems Programmer
+Sevennaya Facility
+
+Model:
+Ambient.Impact
+Gearbox
+Toadie
+
+Skin:
+Toadie
+Gearbox
+Ambient.Impact
+
+Compile: 
+Toadie

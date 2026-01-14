@@ -1,0 +1,18 @@
+Danger of Collapse Part 1 (maps/sc_doc.bsp)
+by
+Silencer
+
+
+This base in the Arctic is controlled by some evil organisation. It extorted the
+worlds best scientists and forces them to do research on the xen creatures here.
+
+Periodically, groups of the xen forces teleport themselves into this base in order
+to free their friends. You will encounter those as well as enemy mercenaries.
+
+You and your team of mercenaries are here to clean up the mess.
+
+Mission Objectives:
+- Eliminate the xen creatures.
+- Eliminate the unknown organisation.
+- Transfer a copy of the research data to headquarters.
+- Set a time bomb and escape.

@@ -1,0 +1,7 @@
+"fgrunt/alert.wav" "fgrunt/bogies.wav"
+"fgrunt/alien.wav" "fgrunt/hostiles.wav"
+"!FG_ALERT0" "fgrunt/bogies.wav"
+"fgrunt/coverup.wav" "fgrunt/lost.wav"
+"!FG_QUESTION2" "fgrunt/lost.wav"
+"fgrunt/moving.wav" "fgrunt/right.wav"
+"!FG_OK2" "fgrunt/right.wav"

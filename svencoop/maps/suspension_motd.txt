@@ -1,0 +1,26 @@
+  
+                * Suspension *
+		   
+             A Sven Co-op map by Hezus
+
+Enemy forces have taken control of the bridge. Engage the enemy and retake the bridge!
+
+Select one of the 8 classes from the spawn room. A description of their loadouts can be seen at the portal. Some sections of the map require explosives, so make sure to have a few engineers on your assault team!
+
+The strenght of the enemies is determined by the amount of players currently on the server, as can be seen from the spawn room.
+
+Players can select the amount of tickets available to the team. If the tickets are depleted the game goes into survival mode. Once all players are dead, the mission is lost. Chosing less tickets increases the difficulty of the map.
+
+If a mission is succesful, you will be awarded a badge based on your teams total amount of deaths. The lobby has an overview of all available badges.
+
+Platinum - 0 deaths
+Gold - Max. 5 deaths
+Silver - Max. 10 deaths
+Bronze - Max. 20 deaths
+Stone - Max. 30 deaths
+Noob - More than 40 deaths
+
+NOTE: If you experience low FPS, try setting 'r_detailtextures 0' in the console.
+
+
+

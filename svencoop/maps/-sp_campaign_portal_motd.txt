@@ -1,0 +1,15 @@
+YOU NEED AT LEAST TWO PEOPLE IN ORDER TO CHOOSE A CHAPTER.
+
+Chapters are sub-divided by game: Ground level Opposing Force, first storey Half-Life + Uplink, Outside area Blue Shift.
+
+If an Area is not accessible, either the server admin disabled it, or the Single Player Campaign is not available on the Server.
+
+Each table with two consoles represents a chapter. You need to press both buttons on a table at once WHILE STAYING DIRECTLY IN FRONT OF THE CONSOLE.
+When you fail to open a Portal, you will hear "Access Denied".
+
+In case an Area or more are sealed, there are two possibilities:
+1) The automatic check noticed that the Area(s) are not available. In this case contact the server admin to install the SP conversion (usually OpFor and/or Blue Shift)
+2) The server admin used the custom cvars on these SP conversion and only let's you play what is open.
+
+
+For more Information, read the read me.

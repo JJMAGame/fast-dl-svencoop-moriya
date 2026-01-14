@@ -1,0 +1,36 @@
+Desert Circle - Map by the-middleman
+
+Mission: Conquer the castle and kill the King
+
+DO NOT ATTACK DIRECTLY - TOO DANGEROUS
+
+1. Conquer the outposts in the desert.
+2. Use the mortar to breach the castle walls.
+3. Enter castle through the breach
+4. Destroy the explosive crates to destroy the
+   sniper towers
+5. Open castle gates
+6. Conquer castle
+7. Kill the King
+
+
+
+Feel free to use all textures, models, sounds etc.
+that come with this map. Credits are nice but not
+mandatory.
+
+
+Thanks to all the helpers:
+Dynamite
+JPolito
+Maiten
+NiH
+Sence
+StreamFox
+TrEmPlEr
+wolf-3d
+w00tguy
+
+groundtexture from google-maps
+
+And everyone I forgot!

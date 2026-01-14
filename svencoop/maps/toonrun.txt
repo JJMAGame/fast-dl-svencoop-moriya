@@ -1,0 +1,131 @@
+:::      Toon Run Final version (3rd release) THIS time it's REALLY Final.
+:::             A map for Sven Coop
+
+:::       Made by: koelzk (koelzk@web.de)
+:::       Suitable for 3-6 players
+
+
+...........................................
+: HINTS on killing the three Giant plants :
+:.........................................:
+
+General hint:
+Just do what the big sign prohibits:
+Get some Blowtatoes (Examine the black board and the food machine).
+Then try to get a good position to feed the Blowtatoes to the Plants.
+(Another player has to help you here) 
+
+
+1) Use the food machine to order Menu C ("Blowtatoes!").
+2) As you will notice the machine will spit out some grenades.
+3) Now you will have to throw these grenades into the mouths of each plant.
+   To get a suitable position you will have to use the lifts, but another
+   player has to use the lift controls.
+4) At first you need to "feed" the left and right plant.
+   After that the middle plant will get angry and open its mouth
+   from time to time to spit out some living stomach content.
+5) This beast is a little bit tougher and will need 2 grenades.
+6) After you killed it a ladder will appear and guide you to the next passage.
+
+
+
+...................
+: MAP DESCRIPTION :
+:.................:
+
+This is my first Sven Co-Op map with a catoon based setting.
+However some parts of the level are darker and less "toony".
+
+Basicly it is a walkthrough map, but the players run through
+some short passages from one fighting place to another.
+
+
+CHANGES with the Update (3rd release):
+
+- 2 new locations: a harbour with a bar and a scene with three Giant carnivorous plants
+- Improved sky box
+- SC 3.0 weapons and monsters
+- Improved many many textures
+- env_render bugs finally fixed
+- lots of other small stuff fixed/modified/improved/tried to improve
+- The map is now split up into three BSP files.
+- Increasing frame rates by decreasing static monster placement
+
+CHANGES with the Final version:
+
+- The Toonrun custom Sounds are now saved in your 
+  svencoop/sound/toonrun directory. This means you
+  can delete the old smb.wav and piano.wav in your
+  svencoop/sound directory.
+- The map is now split up into two BSP files. Just
+  run the first one and when you are through it,
+  run the second one.
+- I added four more locations including a real end boss
+  (The Mother Spleen[tm]).
+- Heavy Bugfixing (BTW Thanks for the feedback on www.svencoop.com)
+- Increasing frame rates by decreasing level detail (in some areas)
+
+
+...................
+: MAP INFORMATION :
+...................
+
+Editors used:      Hammer 3.4, PaintShop Pro, Wally, 3D Studio Max
+New textures:      yes, 71 are new
+New sky:           yes (made with 3DSMax)
+New sounds:        yes, 5 are new
+New models:        yes, (but not from me) Thanks to Slidje, BananaBoy
+                        (masta86@gmx.de) and Banana's very good
+                        Smid/Smij model the Human Grunts now
+                        have a cool toony look.
+New skins:         yes, I reskinned the base.mdl with a toon-like
+                        (in my opinion decent) texture, which
+                        now acts as The Mother Spleen[tm]
+                        With 3rd release, I also added a female chumtoad model.
+                   
+
+Known problems:    - Sometimes one or more aliens get stuck in the volcano.
+                     This is not SO dramatic, since they get executed after
+                     a few seconds, so the tube gets free again.
+                   - The Catapultator(tm) at the beginning has been optimized,
+                     however try to stand excatly on the middle of the hand
+                     and face to the window.
+                   - You cannot defeat The Mother Spleen[tm] with normal weapons
+                     (even if you disabled its shield). To blow the beast
+                     in to another dimension of unimaginable pain you'll
+                     have to establish an electrical contact between two
+                     steel needles.
+                   - Polygon counts go up to 800 (and higher) in some areas
+                     Upgrade your machine, try to use Open GL or (more likely)
+                     flame me, if the frame rate drops ;)
+Compile Time:       2 hours and 25 minutes
+
+
+.......................
+: THANKS and RESPECTS :
+.......................
+
+- SC team for publishing TR with Sven Coop and of course for making Sven Coop itself
+- Sniper, Mad Jonesy and Ike_Brovlofski for helping me with the "out of sfx" crash
+  (which was really frustrating)
+- All other forum goers, who helped me with their replies about mapping help/fixing bugs
+
+
+
+
+MISSION OBJECIVE
+
+
+The Slimy-Sweaty-Evil-Giant-Mega-Monster-Boss-From-Outer-Space
+(called The Mother Spleen[tm]) has built an Evil Giant Cloning
+Killing machine. Originally you wanted to make holidays next to
+the domain of the Slimy-Sweaty-Evil-Giant-Mega-Monster-Boss (The
+travel brochure praised its healthy green environment), but now
+it looks as your fighting skill is needed. Just by co-incidance
+you are also a member of a local Marvel-Super-Heros club, so you
+and your heroic friends feel obligated to go on a suicide trip
+into the fortress of the Slimy-Sweaty- Evil-Giant-Mega-Monster-Boss
+From-Outer-Space to turn off the Evil Giant Cloning Killing machine,
+to destroy the Slimy-Sweaty-Evil-Giant-Mega-Monster-Boss, to
+defend the rights of humanity, to get away from your annoying
+wifes and to avert all the rest of the usual Armageddon stuff. 

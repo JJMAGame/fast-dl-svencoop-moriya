@@ -1,0 +1,84 @@
+http://scmapdb.wikidot.com/map:incoming 
+for info on secret buttons.
+
+=========================================================
+Title			: Incoming! (2015 Edition)
+Filename		: incoming.bsp
+Game			: Half-Life SvenCoop
+Author			: Ryan Heeley aka BMT
+Email Address		: ryanheely@hotmail.com
+Description		: Somewhere in the universe.
+
+After the residence cascade of the Black Mesa Research Facility, the superiors of the smaller research facilities have grown increasingly paranoid of their defence systems. Under the pressure of military "clean-outs" following the Black Mesa incident, they have decided to hire defence squads to further their chances of resisting attacks.
+
+You and your teammates have just clocked in for another day of defending the Yellow Mesa facility. It wouldn't be a normal day without some random alien and military invasions, so best get your glorious hand cannons at the ready!
+
+The 2006 build is a new tweaked version for 4.0, adjusting gameplay and difficulty in several areas. Also refines the secret mission to make it more fun.
+The 2015 build has a few tweaks, including the long awaited pipewrench because everyone's sick of shooting baby headcrabs with revolvers! New secret weapon to find, it's closer than you think. Also reworked the secret mission buttons so that they require a bit more co-op.
+
+=========================================================
+* Info *
+
+Single Player		: Not really (you'll get stuck at several places)
+Cooperative		: Yes. 3 or more players recommended.
+New Sounds		: f.ogg - Made by Breakbeat Doc
+			  w2.ogg - Made by Breakbeat Doc
+			  w.ogg - Extract from "The Mario Twins" by Group X
+			  s.wav - Graciously stolen from Quake
+			  s2.mod - "Mimi Mati Show" by Gandbox
+			  d.ogg - "Doom 2 E1M1 Remix" by Breakbeat Doc - soundcloud.com/breakbeat_doc
+			  df.wav - Emilio Estevez laugh from Young Guns (awesome 80s film)
+New Graphics		: Textures - Jungle/outdoor additions:
+					one or two from Firearms version rc1 .wad
+					a few from counterstrike
+					.wad featured with de_predator - Michael Visser aka 3D_Mike
+					One or two from the far reaches of the Internet.
+			  Models - Aqua Squid - Unknown 
+				- HEV Barney - Sushi (Now updated, new HD version - model by ambient impact, skin by water-pheonix)
+				- Sabre - 60 Megabyte File, with fixes by War_Nuker
+				- Shark - Raptor65
+				- Slime - WarpZone
+New Sky			: Nope
+
+=========================================================
+
+* Outdated 2001 Information I Can't Be Bothered Editing - Read for Instant +1 Nostalgic Effect *
+
+The Map			: Made from scratch
+Editor(s)		: Worldcraft 3.3, Valve Hammer Editor 3.4, Wally, Notepad, ZHLT, HLCC, Paintshop Pro, Sound Recorder
+Known Bugs		: Earlier test versions Jungle area caused pc to crash. This is because of Grunt models, which have been removed.
+Build Time		: Another heavy fortnight (after the initial 1.5 weeks that took the first incoming)
+Build Machine		: piii 733Mhz, 512MB Ram, 3D Prophet II MX (Geforce II spinoff)
+Compile Time		: Bout 5 hours 0_0
+
+R_speeds                : Acceptable! MIGHT be a tad slowish on a lowend (or even a highend) PC when all monsters are in the map, but I think its 			acceptable for internet play.
+
+Author's Notes          : Sorry i couldn't get -wadinclude to work, i have no f**king idea why it didn't, i used the command line, the bat file, HLCC and 		ZHLT Compile GUI, none of them worked, so screw wadinclude, the wads seperate, but still i dont see all the fuss about a 		seperate wad file.
+
+		It is advisable to defeat all enemies before proceeding to the next area. This applies mostly to the fishes 	and the grunts. Once 		the inner valve is pressed the fishes will stop respawning. (Or at least they're 	supposed to)
+
+		Oh yeah you better leave the map when first running it for a few seconds while it builds the node graph.
+
+		Thanks to Dutchtux for the Desert Eagle he converted that was used in the first version of incoming.
+
+		Thanks to Sven Viking for.. well, you guys will just have to find out eh ;) Thanks Sven :D
+
+		For those observant gits, yes, some detail has been reduced (just a few bits here and there) to account for the texture and 	entity limit, to which i drastically overshot at one point. For those who want to know some tips and stuff I first used the trick of turning 	complex detailed items into func_walls.. but after running out of entities I had to convert em back to worldspawn and use the good method 	of moving them 1 unit away from the contacting walls. Also when using this method on mostly everything and still finding i ran out of 	entities, I employed the great idea of "killing" the entities you won't see from the routes you don't take. Oh yes by the way there's 4 	different ways to go in this map ;)
+
+		Thanks to the following artists: Travis, Oasis, Blur, LTJ Bukem, Daft Punk, Fat Boy Slim, Linkin Park
+
+		Thanks to the whole of the SvenCoop community.. well the good side at least.. The following need a special 		mention:
+		- Gore - You muppet ;D
+		- Hezus - Thousands of inspirational maps by you aided me in the making of incoming ;)
+		- Mad Jonesy - Always on hand to take my whining and the supplier of alot of decent ideas and advice ^_^
+		- Sven Viking - For being "the man" and for liking "Another World" and "Flashback" =D
+		- Prod - For making an avatar that made me laugh and also providing anti-whine when my email went down -_-
+		- Nomble - For making me laugh and whooping me at HLDM
+
+=========================================================
+
+* Installation *
+
+Comes with SC!! If you need to read this part you've done something silly!
+
+=========================================================

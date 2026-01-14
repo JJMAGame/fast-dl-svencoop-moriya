@@ -1,0 +1,4 @@
+"!HG_ANSWER0" "null.wav"
+"!HG_ANSWER1" "null.wav"
+"hgrunt/roger.wav" "null.wav"
+"hgrunt/yessir.wav" "null.wav"

@@ -1,0 +1,39 @@
+"plugins"
+{
+	"plugin"
+	{
+		"name" "PlayerManagement"
+		"script" "admin/PlayerManagement"
+		"adminlevel" "ADMIN_YES"
+		"concommandns" "plrmgr"
+	}
+
+	"plugin"
+	{
+		"name" "PlayerDecalTracker"
+		"script" "admin/PlayerDecalTracker"
+		"adminlevel" "ADMIN_YES"
+	}
+
+	"plugin"
+	{
+		"name" "EntityManager"
+		"script" "EntityManager"
+		"adminlevel" "ADMIN_YES"
+		"concommandns" "entmngr"
+	}
+
+	"plugin"
+	{
+		"name" "Teleport"
+		"script" "Teleport"
+		"adminlevel" "ADMIN_YES"
+	}
+
+//	"plugin"
+//	{
+//		"name" "Vox"
+//		"script" "Vox"
+//		"adminlevel" "ADMIN_YES"
+//	}
+}

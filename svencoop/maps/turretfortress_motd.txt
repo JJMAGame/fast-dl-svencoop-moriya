@@ -1,0 +1,92 @@
+Reverse Turret Fortress Classes
+
+Server owners: For this level, please disable XP Mod and other servermods that radically alter the gameplay. Give the level a chance to be played as it was intended.
+
+Universal gear: 
+Wrench
+Pistol
+5 grenades
+
+---------------------------------------------------------------------
+
+Medic gear:
+Medkit
+Akimbo Uzis
+
+Start armor: 50
+Max armor: 50
+Normal speed.
+
+Tactics:
+- Keep allies alive by healing and reviving them.
+- Recharge your medkit at medstations.
+
+---------------------------------------------------------------------
+
+Sniper gear:
+Sniper rifle
+Crossbow
+Desert Eagle
+
+Start armor: 0
+Max armor: 50
+Normal speed.
+
+Tactics:
+- Focus on headshotting non-sentry targets.
+
+---------------------------------------------------------------------
+
+Distractor gear:
+
+Hornetgun
+25 snarks
+5 extra grenades
+
+Start armor: 50
+Max armor: 50
+Normal speed.
+
+Tactics:
+- Distract sentry turrets with hornetgun.
+- Distract mobile enemies with grenades and snarks.
+
+---------------------------------------------------------------------
+
+Heavy gear:
+MP5
+Shotgun
+.357 Revolver
+M16 with 2 AR grenades
+RPG Launcher
+
+Start armor: 100
+Max armor: 150
+Slow speed.
+
+Tactics:
+- Overwhelm enemies with high firepower.
+
+---------------------------------------------------------------------
+
+Runner gear:
+Shotgun
+.357 Revolver
+4 Tripmines
+Long Jump Module
+
+Start armor: 20
+Max armor: 20
+Fast speed using long jump.
+
+Tactics:
+- Use your long jump to move the flag forward at great speed.
+- You can run past enemies inside the fortress.
+
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+Type: 		Halflife Multiplayer Pluggin Model
+
+Name: 		Etac ( Epsilon Tactical)
+
+Release Date: 	7th May 1999
+
+Author:		Ian Waugh    
+
+E-Mail:		gundam@btinternet.com or ian.waugh@virgin.net
+
+Homepage: 	No    ( maybe later )
+
+Files:		ETac.mdl, ETac.bmp, ETac.txt 			
+
+Instructions:	Create a folder  Half-life\valve\models\player\ETac
+                and just unzip all the file into there.
+
+		This model can be freely distributed as long as this text file is included, unmodified.
+		If you wish to  include it in a compilation, Mod or commerical product, please email me first.
+		If you want to do a skin for this model and are a good skinner ( i.e. better than me ) then email me, 
+                and I'll help you out with smd files and base skins.
+
+Description: 	Tactial unit Epislon, assigned of the Black Mesa Internal security rapid resonse tactical operations
+                unit, Experimental Divison. Epislon is the only  member of this unit to have survived the 
+                Half Life incident.
+	
+		Rummors about the Experimental Tac guys can be heard all round the Black Mesa base. 
+                People say they are mutants or cyborgs or enchanced with nano technology or even some 
+                wierd medical/genetic experiment. Their armour and personal equipment is certainly unlike any thing 
+                anybody has seen, although some say their body protection system is an offshoot of HEV suit technology.
+		The only fact is that all other facts about them are classfied orange 6, strictly need to know.
+		But a few people, who have actually seen them in action, just say this one thing about them.
+                When they shoot, they never miss.    
+
+Influences:	The model isn't based on anything or one in particular, but then it is really 
+                just a fairly generic male human character, so it isn't exactly original.
+		The monnacle site is I've seen before some where, don't Apache gunship pilots
+                wear similar things, plus I used a similar idea on a Quake 2 skin I did a while a go.
+                The body is of an athletic male, faily heavily built and with a youngish face.
+                The armour was just made up.
+                
+Model Info:	vertices   	:409 
+		Polygons      	:782 tris
+		Skins       	:2  CBody.bmp   256x256
+                                    CHead.bmp   128x128
+                                    No Team Colours
+                Skeleton     	: Valves Standard Biped
+		Animation      	: Mostly Valve, but the following have been altered
+                  	 	  look_idle           : holds hands down
+				  idle                : holds hands down
+				  deep_idle           : holds hands down
+                                  crawl		      : Less clavical movement to reduce deformation 
+				  ref_aim_crowbar     : Holds bar lower, 
+				  ref_shoot_crowbar   : Holds bar lower, with more of a twist in the action
+				  ref_aim_onehanded   : Holds pistol slightly at an angle with straight arms
+				  ref_shhot_onehanded : Fire pistol from above postion with body twist and recoil
+				  ref_aim_shotgun     : Holds shotgun higher and further away from the body
+     			 	  ref_shoot_shotgun   : Fire from above postion, with lots of recoil and a pump action
+                                  ref_aim_mp5         : Holds the gun with one hand at arms length, with the left hand covering it
+     			 	  ref_shoot_mp5       : Fire from above postion, little recoil.
+
+
+Model Notes:	Model number two. better than model number one, Major K. Still has several mapping errors 
+                though, the left foot went all wrong, and the seems on the arms sould be in on the
+                inside of the arms for better line up.  The animation was changed just to see if I couild do it.
+  	        The changes made are fairly small, but do give the model a bit more of a distincive look in play.
+		The Weapon anims changed are ones I tend to see most in a deathmatch.                
+		The mesh is is totaly original, but was desinged to fit the valve biped, and turned out rather to 
+                simalar to the Gordon model. I'll Try to do something a bit more original next time.
+	        
+                The big problem is the poly count. 782 is a awful lot of polygons for a generic male with a headset.
+
+		My Excuses for High Poly count:
+
+		I used 6 sided sections for the limbs, 8 for the body, 4 sided is more common and cheaper on the polys
+		but I find it makes models look a bit to square.
+
+		Extra vertices and polys to make sure the limbs dont deform when them moved, since HL vertices are
+                rigidly attacked to bones, if you don't put extra vertices in the limbs, they will squash themselves into 
+                flat bits when they move. Much care was taken to avoid CAS (Collapsing Arse Syndrome), a common problem 
+                with HalfLife models, I haven't been 100% succesfull stopping CAS but it sort of works.
+
+                The headset takes up a few polys, I could of just drawn it one one, but it would'nt of looked half as nice.
+
+                The headset ( a couple of other bits ) have a few polys in it that will almost never be seen, but I put them
+                in anyway, cause I really don't like holes in a model, even if they would be almost invisible.
+
+                I have a PII 450 and SLI Voodoo IIs, HalfLife in 1024x768 does'nt even make it sweat. And my machine is 
+                now completly obsolete what with PIII 550's and voodoo 3's and Ultra TNT 2's about, and these much cost much 
+                LESS than what my machines orginal price :( . The Quake II engine HL uses was designed to run on machine less 
+                with less than half this spec, with 500-650 poly models.
+                Things have moved on since the relase of Q2 and half life, Moores Law is still going stronger than ever.
+
+                Quake 3 looks like it is having an 800 poly limit ( or may be even 1000) for the players. If you machine can't
+                handle this model in Half life, you 'aint going to be able to play Q3.
+
+                It is still under the Q2PMP recommened 800 poly limit.
+
+                If you think your machine cant cope with ETac don't install it.
+		
+		I just sort of got attached to all those 782 polys and did'nt want to remove anymore ;)
+		I'm going to be using an upper limit of 800 polys for my models in the future.
+		
+
+Tools used:  	Mesh			: Inspire 3D 1.0  ( So much nicer to use the 3ds Max )
+		Mapping and bonning 	: 3D Studio Max R2.5 and Character Studio 2.0
+					  ( The  Max interface is infuriating ( but getting less so ),
+                                            but it does support the intellimouse wheely thing for pan and zoom
+                                            which is nice )
+		Skins			: Corel Photopaint 8.0 ( because I'm wierd and don't really like photoshop )
+		Compiling		: StudioMDL	
+		Viewing			: Mdlviewer v2.1.0402
+					  Half-Life Model Viewer v1.0
+
+Other:  	I often can be found as "Gundam", late at night	on Wireplay, Barry's world and other UK servers, 
+                playing Half Life, TFC,  Action Quake2 or Tribes
+		( I'm the one being shot at a lot , you can't miss me )
+		
+Thanks:		Valve Software, For Half Life of course
+		Wavelength modeling tutorials, absolutely essential, couldn't of done with out ya.
+		Scarecrow for reviewing my last model MajorK on Cold Fusion.
+                Everybody who emailed me about MajorK. many thanks for the words of encouragment.
+		Every one who has done a Player model before, thanks for the inspiration and now I 
+		really appreciate the work you put in to bring them to life.
+

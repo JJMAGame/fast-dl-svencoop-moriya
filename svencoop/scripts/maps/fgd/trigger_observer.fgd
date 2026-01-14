@@ -1,0 +1,9 @@
+@SolidClass = trigger_observer : "Start observer mode" []
+
+@PointClass base(Targetname) size(-8 -8 -8, 8 8 8) = trigger_observer : "Start/stop observer mode"
+[
+	spawnflags(flags) =
+	[
+		1 : "Don't Remember Position" : 0
+	]
+]

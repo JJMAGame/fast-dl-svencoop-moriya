@@ -1,0 +1,2 @@
+"ambience/pulsemachine.wav" "mommamesa/megagauss/pulsemachine.wav"
+"weapons/gauss2.wav" "mommamesa/megagauss/gauss2.wav"

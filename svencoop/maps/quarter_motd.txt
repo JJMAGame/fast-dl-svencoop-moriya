@@ -1,0 +1,17 @@
+Quarter - Map by Hezus (2012)
+
+Black Mesa Incident + 72 hours
+
+The US Military found out we are storing some of the last remaining Xen Artifacts in Sector J. With them we could reopen the portal to Xen and escape our fate or elimination, for the gouvernement wants us dead.
+
+There is no other choice. We have to defend our facility against the incoming soldiers. We have gathered up former Black Mesa security forces and a few army deserters who refused to kill civilians. Together we must make a stand.
+
+Objective: Hold back the invading military force.
+
+There are 4 areas you will need to defend:
+- The Front Door Security panel in Area 1.
+- The Subway Train in Area 2.
+- The Main Computer in Area 3.
+- The Xen Arifacts in Area 4.
+
+Each wave of enemies will feature a boss. Killing him will end the current wave of enemies and spawn a tougher wave. Defeat all 3 bosses and the enemy forces will crumble. 

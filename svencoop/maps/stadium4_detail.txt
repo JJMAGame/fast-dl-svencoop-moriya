@@ -1,0 +1,4 @@
+OUT_GRND2			detail/stadium4/crackedmud		2.0 1.0
+dev_256_gr_256x		detail/stadium4/crackedmud		2.0 2.0
+stad_moondust2		detail/stadium4/crackedmud		2.0 2.0
+stad_moondust		detail/stadium4/crackedmud		2.0 2.0

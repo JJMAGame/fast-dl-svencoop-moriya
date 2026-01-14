@@ -1,0 +1,102 @@
+@PointClass size(-48 -48 0, 48 48 32 ) studio("models/light.mdl") = xen_plantlight_switch : "AS Custom Xen Plant Light"
+[
+	targetname(target_source) : "Name"
+	target(target_destination) : "Target"
+	HullMin(string) : "Minimum Hull Size (X Y Z)" : "-80 -80 0"
+	HullMax(string) : "Maximum Hull Size (X Y Z)" : "80 80 32"
+	htime(string) : "Hide Time" : "3"
+	triggermode(choices) : "Trigger Mode" : 0 =
+	[
+		0:"After Hiding (Default)"
+		1:"Before Hiding"
+	]
+	usetypemode(choices) : "useType Mode" : 0 =
+	[
+		0 : "Off when retracting (Default)"
+		1 : "On when retracting"
+	]
+	retractsnd(sound) : "Retracting Sound"
+	retractvol(string) : "Retract Sound Volume(0-1.0)" : "1.0"
+	deploysnd(sound) : "Deploy Sound"
+	deployvol(string) : "Deploy Sound Volume (0-1.0)" : "1.0"
+	originEnt(string) : "Sound playback target entity"
+	sndattn(string) : "Attenuation (0 - 4.0)" : "2.5"
+	model(studio) : "Model" : "models/light.mdl"
+	renderfx(choices) : "Model Render FX" : 0 =
+	[
+		0: "Normal"
+		1: "Slow Pulse"
+		2: "Fast Pulse"
+		3: "Slow Wide Pulse"
+		4: "Fast Wide Pulse"
+		9: "Slow Strobe"
+		10: "Fast Strobe"
+		11: "Faster Strobe"
+		12: "Slow Flicker"
+		13: "Fast Flicker"
+		5: "Slow Fade Away"
+		6: "Fast Fade Away"
+		7: "Slow Become Solid"
+		8: "Fast Become Solid"
+		14: "Constant Glow"
+		15: "Distort"
+		16: "Hologram (Distort + fade)"
+	]
+	rendermode(choices) : "Model Render Mode" : 0 =
+	[
+		0: "Normal"
+		1: "Color"
+		2: "Texture"
+		3: "Glow"
+		4: "Solid"
+		5: "Additive"
+	]
+	renderamt(integer) : "Model FX Amount (1 - 255)"
+	rendercolor(color255) : "Model FX Color (R G B)" : "0 0 0"
+	angles(string) : "Model Pitch Yaw Roll (X Y Z)" : "0 0 0"
+	sprite_model(sprite) : "Sprite" : "sprites/flare3.spr"
+	sprite_renderfx(choices) : "Sprite Render FX" : 0 =
+	[
+		0: "Normal"
+		1: "Slow Pulse"
+		2: "Fast Pulse"
+		3: "Slow Wide Pulse"
+		4: "Fast Wide Pulse"
+		9: "Slow Strobe"
+		10: "Fast Strobe"
+		11: "Faster Strobe"
+		12: "Slow Flicker"
+		13: "Fast Flicker"
+		5: "Slow Fade Away"
+		6: "Fast Fade Away"
+		7: "Slow Become Solid"
+		8: "Fast Become Solid"
+		14: "Constant Glow"
+		15: "Distort"
+		16: "Hologram (Distort + fade)"
+	]
+	sprite_rendermode(choices) : "Sprite Render Mode" : 3 =
+	[
+		0: "Normal"
+		1: "Color"
+		2: "Texture"
+		3: "Glow"
+		4: "Solid"
+		5: "Additive"
+	]
+	sprite_renderamt(integer) : "Sprite FX Amount (1 - 255)" : 128
+	sprite_rendercolor(color255) : "Sprite FX Color (R G B)" : "0 0 0"
+	sprite_scale(string) : "Sprite Scale" : "0.5"
+	sprite_togglemode(choices) : "Toggle Sprite off" : 0 =
+	[
+		0 : "when retracting (Default)"
+		1 : "when deploying"
+	]
+	spawnflags(flags) =
+	[
+		1: "Do not use Sprite" : 0
+		2: "Sprite is animated" : 0
+		4: "No trigger on Retract" : 0
+		8: "No trigger on Deploy" : 0
+	]
+]

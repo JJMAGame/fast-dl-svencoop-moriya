@@ -1,0 +1,14 @@
+INFESTED - by cold_blood3d
+=================================================
+
+Story: 
+Long after the incident at Black Mesa, most of the alien species has been eradicated from the planet. However, there are still many moderately sized populations of aliens scattered across the globe. Thousands of military troops have been dispatched to meet the rapid reproduction of the aliens. You are part of an elite, highly trained team, specialized in killing aliens.
+
+Your Current Mission:
+Your team has been assigned to eliminate a large population of aliens in a genetic research building. You will arrive on a truck near the building entrance. It is likely that there will also be some human resistance since many of the troops have been brainwashed by the aliens. The human opposition is the aliens' first line of defense. These are your objectives:
+
+1. Eliminate human opposition, then deactivate the security system.
+
+2. Proceed up through the building, killing anything that gets in your way.
+
+3. Secure the helipad so some backup soldiers can be flown in. Next part of map will load...

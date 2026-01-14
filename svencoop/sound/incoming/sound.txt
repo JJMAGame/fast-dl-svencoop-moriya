@@ -1,0 +1,7 @@
+"weapons/cbar_hit1.wav" "incoming/cbar_hit1.wav"
+"weapons/cbar_hit2.wav" "incoming/cbar_hit2.wav"
+"weapons/cbar_hit3.wav" "incoming/cbar_hit3.wav"
+"weapons/cbar_hitbod1.wav" "incoming/cbar_hitbod1.wav"
+"weapons/cbar_hitbod2.wav" "incoming/cbar_hitbod2.wav"
+"weapons/cbar_hitbod3.wav" "incoming/cbar_hitbod3.wav"
+"weapons/cbar_miss1.wav" "incoming/cbar_miss1.wav"

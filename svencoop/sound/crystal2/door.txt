@@ -1,0 +1,2 @@
+"doors/doormove1.wav"	"doors/aliendoor1.wav"
+"doors/doormove2.wav"	"doors/aliendoor3.wav"

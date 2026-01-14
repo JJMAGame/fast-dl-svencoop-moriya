@@ -1,0 +1,3 @@
+"controller/con_attack1.wav" "vox/_comma.wav"
+"controller/con_attack2.wav" "vox/_comma.wav"
+"controller/con_attack3.wav" "vox/_comma.wav"

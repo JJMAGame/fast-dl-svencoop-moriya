@@ -1,0 +1,4 @@
+This folder contains the UNMODIFIED HLExtract/HLLib binaries by RYAN "NEMESIS" GREGG
+
+Source code available from:
+http://nemesis.thewavelength.net/

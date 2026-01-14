@@ -1,0 +1,74 @@
+==========================================================================================
+*Story*
+
+A military base built on a distant planet has fallen under attack by local alien life forms.
+Rebel forces seize the moment and send in a group of mercenaries to disable the base and
+finish off the remaining soldiers. 
+
+The mercenaries' ship lowers into the Hostile Planet's orbit and aims it's teleporters
+onto the surface. You awaken inside the ship's barracks. You must arm yourself and assault
+the planet below. If you can destroy the base's main security terminals it will no longer
+be able to withstand the alien bombardment. You'll be beamed out afterward.
+
+***Good Luck***
+
+=========================================================================================
+
+*THANKS!!!
+
+Chalupamonk - For designing a kick-ass custom sky and being very helpful throughout the
+		process. Thanks man.
+
+Sven - For taking the time to answer all my emails at lightining speed and giving me an
+	opportunity to contribute to this awesome project.
+
+
+==========================================================================================
+
+Title			: Hostile Planet
+Author			: Tylak
+Date			: 9/26/2001, my deepest sympathy for victims of the reccent attacks
+Filename		: hplanet.bsp
+Email Address		: tylak@london.com
+Description		: Conquer the Hostile Planet!
+
+==========================================================================================
+
+*Play Information*
+
+Single Player		: Yes - but it's difficult without help.
+Deathmatch		: What's that?
+Cooperative		: SVEN COOP, FOREVER!
+Difficulty Settings	: it's fun how it is... but your welcome to edit the cfg
+New textures		: No, but it does feature a new sky by Chalupamonk!
+New sounds		: No
+Running the level	: Extract into your ../Half-Life folder
+Players			: 2-8 for the most fun.
+
+*Construction*
+
+Base			: New level
+Editor used		: Worldcraft 3.3
+Build time              : 99 years
+Known bugs		: It'll chug a bit on older machines.
+Compile time            : You wouldn't believe me if I told you
+
+=========================================================================================
+
+Notes : 
+
+* You should activate teleport destinations throughout the level so that players who
+die can beam down closer to the action.
+
+* There is an Uzi.
+
+* Send comments/suggestions to tylak@london.com
+
+=========================================================================================
+
+If you want to put this level on a CD and/or sell it, please tell me. I don't want any
+money, I'd just like to know. Thanks!
+
+-Tylak
+
+

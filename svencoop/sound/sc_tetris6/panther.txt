@@ -1,0 +1,16 @@
+"headcrab/hc_alert1.wav" "agrunt/ag_alert3.wav"
+"headcrab/hc_alert2.wav" "garg/gar_pain1.wav"
+"headcrab/hc_attack1.wav" "zombie/claw_miss1.wav"
+"headcrab/hc_attack2.wav" "zombie/claw_miss2.wav
+"headcrab/hc_attack3.wav" "zombie/claw_miss2.wav
+"headcrab/hc_die1.wav" "barnacle/bcl_chew2.wav"
+"headcrab/hc_die2.wav" "barnacle/bcl_chew1.wav"
+"headcrab/hc_headbite.wav" "ichy/ichy_bite1.wav"
+"headcrab/hc_idle1.wav" "garg/gar_idle2.wav"
+"headcrab/hc_idle2.wav" "bullchicken/bc_idle5.wav"
+"headcrab/hc_idle3.wav" "agrunt/ag_idle1.wav"
+"headcrab/hc_idle4.wav" "bullchicken/bc_die3.wav"
+"headcrab/hc_idle5.wav" "bullchicken/bc_idle3.wav"
+"headcrab/hc_pain1.wav" "garg/gar_pain2.wav"
+"headcrab/hc_pain2.wav" "agrunt/ag_attack2.wav"
+"headcrab/hc_pain3.wav" "agrunt/ag_pain2.wav"

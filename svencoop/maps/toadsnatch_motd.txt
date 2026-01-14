@@ -1,0 +1,33 @@
+Toad Snatch
+By Nih
+
+Server owners: For this level, please disable XP Mod and other servermods that radically alter the gameplay. Give the level a chance to be played as it was intended.
+
+
+
+Your mission is to infiltrate the enemy stronghold and steal the Chumtoad Deluxe. Once the chumtoad has been picked up you must return it to the Obelisk.
+
+While the heist is taking place you must also protect the Obelisk from being destroyed.
+
+Players who die and respawn become Ghosts. They will be unable to leave the Obelisk area.
+
+Ghosts can only return to the assault when the team reaches a checkpoint, which allows a single Ghost to spawn at the checkpoint by entering a teleport.
+
+
+Tips: 
+
+- You must wait 20 seconds before you can select a difficulty, so people have time to join.
+
+- If a grapple section is too difficult, try grappling on to another player. 
+
+- The Obelisk can be repaired with the wrench.
+
+- Picking up new weapons will make them available for defenders as well.
+
+- A button in each checkpoint supply room will spawn a friendly sentry turret near the Obelisk.
+
+
+
+
+
+
