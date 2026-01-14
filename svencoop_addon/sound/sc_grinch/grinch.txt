@@ -1,0 +1,61 @@
+//  'M' metal, 'V' ventilation, 'D' dirt, 'S' slosh liquid
+//  'T' tile, 'G' grate, 'W' wood, 'P' computer, 'Y' glass
+//  'F' flesh, 'O' snow. (Concrete is the default)
+// NOTE: only the first 12 characters of the texture name are used
+// NOTE: a maximum of 2048 textures may be tagged in this file
+
+
+
+// V VENTTEXTURE_
+// D DIRTTEXTURE_
+// G GRATETEXTURE
+// M METALTEXTURE
+// S SLOSHTEXTURE
+// T TILETEXTURE_
+// W WOODTEXTURE_
+// P COMPTEXTURE_
+// Y GLASSTEXTURE
+// F FLESHTEXTURE
+// O SNOWTEXTURE_
+
+
+
+//==============
+//Kill the Grinch - sc_grinch.wad
+
+// D Dirts
+
+
+// M Metals
+
+
+// T Tiles
+
+T whov_floorbigA
+
+// W Woods
+
+W whov_bldC_doorA
+W whov_bldC_doorB
+W whov_bldC_wood
+
+//Y Glasses
+
+Y whov_packedice
+
+// O Snows
+
+O -0whov_snow
+O -1whov_snow
+O -2whov_snow
+O -3whov_snow
+O -4whov_snow
+O -5whov_snow
+O -6whov_snow
+O -7whov_snow
+O -8whov_snow
+O -9whov_snow
+
+//==============
+
+

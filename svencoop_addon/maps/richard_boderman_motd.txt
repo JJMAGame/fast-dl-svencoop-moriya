@@ -1,0 +1,15 @@
+Defeat the army of Richard Boderman and take back SvenCoop.
+
+Use the Huey helicopter that is circling the map and the minigun near it to nibble away at the side mountain defenses. Try to rescue the Svencoop developers and forum members from the prisons that are located inside of the center mountain tunnels. They can help you fight.
+
+Once you and your comrades have killed 270 monsters, the end sequence will occur. Do not think that this map does not end.
+
+CREDITS:
+
+JJ45 - Built the map from scratch.
+JPolito - Fixed the map and prepared it for release.
+Puchi - Fixed a gazillion problems that occured over time. and made v1.2 for sc3.5
+hydeph - input excellent ideas and also tried finishing the map on his own.
+
+Sniper for 3.5 Beta Test :)
+Jusupov for the new Boderman replacement

@@ -1,0 +1,14 @@
+thanks for downloading "7-2 in Half-Life"!!!
+the map features plenty of changes for the sake of gameplay and being actually
+traversible. expect to find different ways to reach certain areas you'd normally use
+mobility for in UK.
+one feature you should know about is that secrets store weapons that you keep on death,
+so get as many as you can!!
+
+latest update: 
+ - fixed terrain alignment near the bomb building that caused it to slightly obstruct the railway
+ - added floating checkpoint text above the checkpoint portal at the start to make it clear what it does right away
+
+credits:
+all custom content (textures, sound effects and music) - hakita, creator of ultrakill
+making the map: me :3
