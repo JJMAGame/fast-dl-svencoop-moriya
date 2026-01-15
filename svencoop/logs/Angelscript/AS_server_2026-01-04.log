@@ -1,4 +1,0 @@
-Angelscript log opened
-Server started logging Angelscript on map '-sp_campaign_portal' at: 2026-01-04 01:02:34
-ERROR: ConCommandManager::AddCommand: Command with name '.buy' already exists!
-Server stopped logging Angelscript at: 2026-01-04 01:07:06

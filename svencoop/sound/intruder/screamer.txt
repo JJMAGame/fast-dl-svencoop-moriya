@@ -1,1 +1,0 @@
-"!SC_HAZ_OK0" "scientist/scream06.wav"

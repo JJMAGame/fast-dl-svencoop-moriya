@@ -1,6 +1,0 @@
-Angelscript log opened
-Server started logging Angelscript on map 'pizza_ya_san1' at: 2025-12-30 19:34:57
-Not allowed: in section 'd:/windows/steamapps/common/sven co-op/svencoop_addon/scripts/maps/ins2/buymenu.as', at (1123, 5): Function BuyMenu::EquipCallBack:
-Message: Null pointer access
-ERROR: CASBaseCallable::Call: Execution of function '::' failed!
-Server stopped logging Angelscript at: 2025-12-30 19:37:34

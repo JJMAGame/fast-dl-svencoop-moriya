@@ -1,2 +1,0 @@
-"items/gunpickup2.wav" "sandstone/armoron_1.wav"
-

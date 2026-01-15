@@ -1,2 +1,0 @@
-"items/gunpickup2.wav" "items/ammopickup2.wav"
-
