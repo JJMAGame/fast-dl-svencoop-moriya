@@ -95,6 +95,8 @@ yipp /chat/eua1/yipp.wav
 yippee /chat/eua1/yippee.wav
 
 trabalhar /chat/br1/trabalhar.wav
+brasil /chat/br1/brasil.wav
+rapaz /chat/br1/rapaz.wav
 
 jailson /chat/moriya/jaja/jailson1.wav
 jailson /chat/moriya/jaja/jailson2.wav
