@@ -1,0 +1,9 @@
+Problema com o áudio?, tenta 'cl_stopsound' no console.
+para ver todos os chatsounds, digite '.csmenu'.
+para tocar um áudio aleatório, digite "random" no chat.
+Para teleporta para outro jogador, digite "!goto jogador" ou apenas "!goto" no chat.
+Para iniciar um voto, digite 'rtv'.
+Para sugerir um mapa para o rtv, digite 'nominate'.
+Tente colocar 'caramel' no chat and e ver o que acontece.
+Já tentou "hammy" no chat?
+Experimenta 'speed' no chat para apostar corrida com o outro jogador :3.
