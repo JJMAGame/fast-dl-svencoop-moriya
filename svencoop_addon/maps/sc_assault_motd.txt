@@ -1,0 +1,12 @@
+Terrorists kidnap hostages. You can also save the hostages. Some of the Counter Terrorists are terrorists because it is too crowded, you'll want to help to save the hostages.
+
+Tasks:
+
+1 - Kill all terrorists
+2 - Kill Terrorist Commander
+2 - Save the hostages.
+3 - Kill Terrorist Leader.
+
+General Tasks:
+
+- Protect the satellite also.

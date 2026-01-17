@@ -1,0 +1,8 @@
+"controller/con_alert1.wav" "scientist/_comma.wav"
+"controller/con_alert3.wav" "scientist/_comma.wav"
+"controller/con_attack1.wav" "scientist/_comma.wav"
+"controller/con_attack2.wav" "scientist/_comma.wav"
+"controller/con_idle2.wav" "scientist/_comma.wav"
+"controller/con_idle3.wav" "scientist/_comma.wav"
+"controller/con_idle5.wav" "scientist/_comma.wav"
+"controller/con_pain2" "scientist/_comma.wav"

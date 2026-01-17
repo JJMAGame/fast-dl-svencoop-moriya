@@ -1,0 +1,115 @@
+
+// Idle
+HG_IDLE0 commandandconquer/hgrunt/answer4
+HG_IDLE1 commandandconquer/hgrunt/answer7
+HG_IDLE2 commandandconquer/hgrunt/answer9
+
+hgrunt/yessir commandandconquer/hgrunt/yessir
+hgrunt/yessir! commandandconquer/hgrunt/yessir!
+hgrunt/gr_die1 commandandconquer/hgrunt/gr_die1
+hgrunt/gr_die2 commandandconquer/hgrunt/gr_die2
+hgrunt/gr_die3 commandandconquer/hgrunt/gr_die3
+
+
+
+FG_GROUPYES commandandconquer/hgrunt/answer6
+FG_YES commandandconquer/hgrunt/answer7
+
+HG_QUEST0 commandandconquer/hgrunt/answer1
+HG_QUEST1 commandandconquer/hgrunt/answer2
+HG_QUEST2 commandandconquer/hgrunt/answer3
+HG_QUEST3 commandandconquer/hgrunt/answer4
+HG_QUEST4 commandandconquer/hgrunt/answer5
+HG_QUEST5 commandandconquer/hgrunt/answer6
+HG_QUEST6 commandandconquer/hgrunt/answer7
+HG_QUEST7 commandandconquer/hgrunt/answer8
+HG_QUEST8 commandandconquer/hgrunt/answer9
+HG_QUEST9 commandandconquer/hgrunt/answer10
+HG_QUEST10 commandandconquer/hgrunt/answer11
+HG_QUEST11 commandandconquer/hgrunt/answer12
+
+HG_ANSWER0 commandandconquer/hgrunt/answer1
+HG_ANSWER1 commandandconquer/hgrunt/answer6
+HG_ANSWER2 commandandconquer/hgrunt/answer8
+HG_ANSWER3 commandandconquer/hgrunt/answer10
+HG_ANSWER4 commandandconquer/hgrunt/answer11
+HG_ANSWER5 commandandconquer/hgrunt/answer12
+HG_ANSWER6 commandandconquer/hgrunt/answer3
+
+// HUMAN GRUNTS
+HG_GREN0 scientist/_comma
+HG_GREN1 scientist/_comma
+HG_GREN2 scientist/_comma
+HG_GREN3 scientist/_comma
+HG_GREN4 scientist/_comma
+HG_GREN5 scientist/_comma
+HG_GREN6 scientist/_comma
+
+// Player Alert
+HG_ALERT0 scientist/_comma
+HG_ALERT1 scientist/_comma
+HG_ALERT2 scientist/_comma
+HG_ALERT3 scientist/_comma
+HG_ALERT4 scientist/_comma
+HG_ALERT5 scientist/_comma
+HG_ALERT6 scientist/_comma
+
+// Monster Alert
+HG_MONST0 scientist/_comma
+HG_MONST1 scientist/_comma
+HG_MONST2 scientist/_comma
+HG_MONST3 scientist/_comma
+
+// Take cover
+HG_COVER0 scientist/_comma
+HG_COVER1 scientist/_comma
+HG_COVER2 scientist/_comma
+HG_COVER3 scientist/_comma
+HG_COVER4 scientist/_comma
+HG_COVER5 scientist/_comma
+HG_COVER6 scientist/_comma
+HG_COVER7 scientist/_comma
+
+// Throw grenade
+HG_THROW0 scientist/_comma
+HG_THROW1 scientist/_comma
+HG_THROW2 scientist/_comma
+HG_THROW3 scientist/_comma
+
+// Taunt
+HG_TAUNT0 scientist/_comma
+HG_TAUNT1 scientist/_comma
+HG_TAUNT2 scientist/_comma
+HG_TAUNT3 scientist/_comma
+HG_TAUNT4 scientist/_comma
+HG_TAUNT5 scientist/_comma
+
+// Charge
+HG_CHARGE0 scientist/_comma
+HG_CHARGE1 scientist/_comma
+HG_CHARGE2 scientist/_comma
+HG_CHARGE3 scientist/_comma
+
+
+HG_CLEAR0 scientist/_comma
+HG_CLEAR1 scientist/_comma
+HG_CLEAR2 scientist/_comma
+HG_CLEAR3 scientist/_comma
+HG_CLEAR4 scientist/_comma
+HG_CLEAR5 scientist/_comma
+HG_CLEAR6 scientist/_comma
+HG_CLEAR7 scientist/_comma
+HG_CLEAR8 scientist/_comma
+HG_CLEAR9 scientist/_comma
+HG_CLEAR10 scientist/_comma
+HG_CLEAR11 scientist/_comma
+HG_CLEAR12 scientist/_comma
+
+HG_CHECK0 scientist/_comma
+HG_CHECK1 scientist/_comma
+HG_CHECK2 scientist/_comma
+HG_CHECK3 scientist/_comma
+HG_CHECK4 scientist/_comma
+HG_CHECK5 scientist/_comma
+HG_CHECK6 scientist/_comma
+HG_CHECK7 scientist/_comma

@@ -1,0 +1,5 @@
+4
+weapon			320 ressya_no_tabi/weapon1	0	0	170	45
+weapon_s		320 ressya_no_tabi/weapon1	0	45	170	45
+weapon			640 ressya_no_tabi/weapon1	0	0	170	45
+weapon_s		640 ressya_no_tabi/weapon1	0	45	170	45

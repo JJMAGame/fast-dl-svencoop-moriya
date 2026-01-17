@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+dkbigoltexturepak.wad filter=lfs diff=lfs merge=lfs -text
+*.wad filter=lfs diff=lfs merge=lfs -text

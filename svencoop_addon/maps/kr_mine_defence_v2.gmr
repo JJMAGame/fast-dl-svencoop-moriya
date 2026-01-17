@@ -1,0 +1,28 @@
+// Weapon
+"models/p_pipe_wrench.mdl" "models/mc_defence/p_axe.mdl"
+"models/v_pipe_wrench.mdl" "models/mc_defence/v_axe.mdl"
+"models/w_pipe_wrench.mdl" "models/mc_defence/w_axe.mdl"
+"models/p_crowbar.mdl" "models/mc_defence/p_sword.mdl"
+"models/v_crowbar.mdl" "models/mc_defence/v_sword.mdl"
+"models/w_crowbar.mdl" "models/mc_defence/p_sword.mdl"
+"models/p_crossbow.mdl" "models/mc_defence/p_bow.mdl"
+"models/v_crossbow.mdl" "models/mc_defence/v_bow.mdl"
+"models/w_crossbow.mdl" "models/mc_defence/w_bow.mdl"
+"models/p_medkit.mdl" "models/mc_defence/p_gapple.mdl"
+"models/v_medkit.mdl" "models/mc_defence/v_gapple.mdl"
+"models/w_pmedkit.mdl" "models/mc_defence/w_gapple.mdl"
+"models/p_9mmar.mdl" "models/mc_defence/p_gun.mdl"
+"models/v_9mmar.mdl" "models/mc_defence/v_gun.mdl"
+"models/w_9mmar.mdl" "models/mc_defence/w_gun.mdl"
+
+// Item
+"models/w_battery.mdl" "models/mc_defence/item_apple.mdl"
+"models/w_crossbow_clip.mdl" "models/mc_defence/w_arrow.mdl"
+"models/w_chainammo.mdl" "models/mc_defence/item_ammobox.mdl"
+
+// Monster
+"models/zombie.mdl" "models/mc_defence/zombie.mdl"
+"models/controller.mdl" "models/mc_defence/MC_enderdragon.mdl"
+"models/pit_drone.mdl" "models/mc_defence/skeleton.mdl"
+"models/gonome.mdl" "models/mc_defence/EnderKnight.mdl"
+"models/crossbow_bolt.mdl" "models/mc_defence/bullet_arrow.mdl"

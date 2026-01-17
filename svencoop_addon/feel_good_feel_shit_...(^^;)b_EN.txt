@@ -1,0 +1,81 @@
+*** A map that trip-travel on the sleeper train  <2019/10/12>
+ 
+   列車  の  旅  - The Train Travel -
+  ressya no tabi
+ 
+ bsp name: ressya_no_tabi.bsp
+
+ players: 1-? recommended 4-?
+
+ joke parcentage: 70% ....(^^;)
+----------------------------------------------------------------------------
+** Notice **
+
+  In English?  Ugh ... Google translation is GREAT!! AWESOME!!
+  Let's translate SHITTY Japanese ver text!! Yeah!!
+  
+  英語 は わかりません
+  EIGO HA WAKARIMASEN 
+
+
+** Description **
+
+  Do you like traveling, train, and SNS?
+  This map is so peaceful map.
+  For have a relaxing and enjoy an atmosphere.
+  No violence, no gore, no massacre. (... probably)
+  
+  This is all.
+  
+  H A V E  A  G O O D  T R A V E L ..... (<@><@>;)
+
+
+  GOOD+1    SHIT+1
+  GOOD+1    SHIT+1
+  GOOD+1    SHIT+1
+  GOOD+1    SHIT+1
+            SHIT+1
+            SHIT+1
+            SHIT+1
+
+  Btw, I hate SNS.
+
+** Updates & change log ***
+ * 2019/10/12 [v1.1a]
+   - Added a small hint that know progress to temple area.
+   - Revised script comments.
+ 
+ * 2019/10/06 [v1.1]
+   - Fixed some exploits
+   - Added dice and one-cup sake. these are not weapons.
+
+ * 2018/12/31 [v1.0] (Private release)
+   - Completed.
+
+
+** Credit (resources) **
+
+ - CyroDragon's Blue Shift hands -> http://forums.svencoop.com/showthread.php/42887-Pack-Blue-Shift-hands-for-Sven-Co-op-5-0
+etc
+
+ - 50cal fun time sound (Killing Floor SDK)
+ - AK101
+ - MAGIX MUSIC MAKER sound -> https://www.magix.com/
+
+ ******************************************************************************
+ PLEASE DO NOT REDISTRIBUTE RESOURCE FILE AS MATERIAL. 
+ (Rights reserved to the resource author. in particular, sounds and musics.)
+ IF YOU WANT TO USE, VISIT AUTHORS SITE FIRST.
+ ******************************************************************************
+
+** Script (as reference) **
+
+ - https://github.com/baso88/SC_AngelScript/wiki
+ - puchi's Ragemap2018 script code
+
+
+** Special Thanks **
+ - Japanese community members (GAMESABA)
+
+....(^^;)
+by takedeppo.50cal 

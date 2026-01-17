@@ -1,0 +1,122 @@
+﻿Author's Note: **This map can be VERY resource intensive, Server OPs beware.**
+
+=========Briefing=========
+
+Discontinued GDI funding and a large scale NOD offensive
+has left GDI forces in the sector in a critical state of
+neglect.
+
+NOD forces have overrun and captured the main GDI base in
+the area leaving on a small damaged outpost the only
+remaining base under GDI control in the sector.
+
+Defend the remaining base from all attacks until an assault
+on the NOD base can be mounted. Eliminate all NOD forces.
+
+*END TRANSMISSION*
+
+=========OBJECTIVES=========
+
+* Build your Base and purchase upgrades to help fortify your position.
+* Hold out until help arrives.
+* Destroy the NOD base within the area.
+
++ Remember
+
+* If you lose your Refinery or the Barracks, they will be gone forever.
+* If your Construction Yard is destroyed, your mission will be a failure.
++ Tips
+
+* Teamwork is extremely important for an effective team on this map.
+* Wait for everyone to connect and decide a strategy at the lobby before you start the map.
+* It's good practice to give people roles for both waves and rest periods. Have designate people to collect Tiberium, others to build or repair.
+* Be very efficient with your time during the rest periods. Every second counts to recover and strengthen your defenses.
+* Getting Carry Capacity and Repair Wrench upgrades from the Barracks are a  good first priority.
+* Be careful with your credit spending, you may ran out of money when most you need it.
+
+Additional info
+
+=========Known Issues========= 
+
+**This map can be VERY resource intensive, Server OPs beware.**
+
+Due to the finicky nature of Goldsrc there may be some Janky-ness such as NPC rockets Phasing through buildings, NPC path finding and attacking being weird at times, occasional server hitching, and other weirdness that I couldn't troubleshoot. If you have any issues with the map of have any questions you can @ me on the Sven Co-op discord mappers channel.
+
+
+=========Credits=========
+
+**Map by Snarkeh**
+
+Script by Solokiller
+Script debugging and assistance by AnngaraNothing
+Models and map help by Maestro Fenix
+Nod Temple Lobby by Trempler
+
+
+**Special Thanks**
+Puchi
+Sniper
+Nero
+
+
+Additional Thanks
+Wolf-3D
+The 303
+w00tguy123
+banan2288
+JPolito
+Silencer
+AdamR
+Westwood Studios
+Electronic Arts Inc.
+Frank Klepacki
+
+
+=========Changelog=========
+1.0 - Release
+
+
+
+THANKS FOR PLAYING
+
+
+
+=============BRIEFING(Romaji for Japanese / Nihongo)============
+
+GDI no shikin sakugen to NOD no Kyoushu ni yori, 
+Area ni haizoku sareteiru GDI Force ha senryoku busoku to natteiru.
+
+NOD Force ha GDI wo shinryaku si, GDI Main Base wo senryou.
+Kore ni yori GDI no sihaiken ga nokoru area ha sonshou sita Outpost nomi de aru.
+
+Outpost wo bouei seyo. Hangeki ga dekiru youni naru made taeyo.
+NOD Force wo haijo seyo.
+
+*END TRANSMISSION*
+
+ =============OBJECTIVES(Mokuteki)=============
+
+- Base wo kentiku, Upgrade wo kounyuu site mamori wo katameyo.
+
+- Engun toutyaku made taeyo.
+
+- Area ni aru NOD Base wo hakai seyo
+
+IMPORTANT:
+
+- Refinery, Barracks, Construction Yard ga subete hakai sareru to Mission sippai
+
+=============HINT=============
+
+- Kono map ha kyouryoku(TEAM WORK) ga juuyou. Renkei site yoi senka wo ageyou.
+
+- Player no sanka(join) wo mati, map wo start suru mae ni senryaku wo kangaeyou.
+
+- Player ni sigoto wo saseyou. Resource kaisyuu, Syuuri(Repair) nado, kouritu yoku ugokou.
+
+- Jikan wo taisetu ni! Wave Interval no aida ha bougyo wo katameyou.
+
+- CARRY CAPACITY ya REPAIR WRENCH ha saisyo ni eranda houga yoi.
+  Dotira mo Barrack de upgrade kanou.
+
+- Credit no tukaisugi ni tyuui! Hituyou na toki ni nakunatteinai you kiwo tukeyou.

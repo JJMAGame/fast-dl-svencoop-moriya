@@ -1,0 +1,106 @@
+wtfboom /chat/eua1/wtf.wav
+
+tosse /chat/scientist/cough.wav
+espirro /chat/scientist/sneeze.wav
+grito /chat/scientist/scream01.wav
+grito /chat/scientist/scream1.wav
+grito /chat/scientist/scream02.wav
+grito /chat/scientist/scream2.wav
+grito /chat/scientist/scream3.wav
+grito /chat/scientist/scream04.wav
+grito /chat/scientist/scream05.wav
+grito /chat/scientist/scream06.wav
+grito /chat/scientist/scream6.wav
+grito /chat/scientist/scream07.wav
+grito /chat/scientist/scream7.wav
+grito /chat/scientist/scream08.wav
+grito /chat/scientist/scream20.wav
+grito /chat/scientist/scream22.wav
+grito /chat/scientist/scream23.wav
+grito /chat/scientist/scream24.wav
+grito /chat/scientist/scream25.wav
+scream /chat/scientist/scream01.wav
+scream /chat/scientist/scream1.wav
+scream /chat/scientist/scream02.wav
+scream /chat/scientist/scream2.wav
+scream /chat/scientist/scream3.wav
+scream /chat/scientist/scream04.wav
+scream /chat/scientist/scream05.wav
+scream /chat/scientist/scream06.wav
+scream /chat/scientist/scream6.wav
+scream /chat/scientist/scream07.wav
+scream /chat/scientist/scream7.wav
+scream /chat/scientist/scream08.wav
+scream /chat/scientist/scream20.wav
+scream /chat/scientist/scream22.wav
+scream /chat/scientist/scream23.wav
+scream /chat/scientist/scream24.wav
+scream /chat/scientist/scream25.wav
+
+ahh /chat/eua1/up5/ahh1.wav
+ahh /chat/eua1/up5/ahh2.wav
+ahh /chat/eua1/up5/ahh3.wav
+speeen /chat/eua1/up5/speeen.wav
+speen /chat/eua1/up5/speen.wav
+
+porno /chat/eua1/pornography.wav
+caramel /chat/eua1/up7/caramel.wav
+brain /chat/eua1/up7/brain.wav
+hehehe /chat/eua1/up7/hehehe.wav
+
+stalker /chat/eua1/up12/stalker1
+stalker /chat/eua1/up12/stalker2
+
+funky /chat/eua1/up9/funky1.wav
+funky /chat/eua1/up9/funky2.wav
+funky /chat/eua1/up9/funky3.wav
+
+meow /chat/eua1/up8/meow1.wav
+meow /chat/eua1/up8/meow2.wav
+meow /chat/eua1/up8/meow3.wav
+meow /chat/eua1/up8/meow4.wav
+
+gman /chat/eua1/gman/gman1.wav
+gman /chat/eua1/gman/gman2.wav
+gman /chat/eua1/gman/gman3.wav
+gman /chat/eua1/gman/gman4.wav
+gman /chat/eua1/gman/gman5.wav
+gman /chat/eua1/gman/gman6.wav
+gman /chat/eua1/gman/gman7.wav
+gman /chat/eua1/gman/gman8.wav
+gman /chat/eua1/gman/gman9.wav
+gman /chat/eua1/gman/gman10.wav
+gman /chat/eua1/gman/gman11.wav
+slay /chat/eua1/gman/slay.wav
+wellshit /chat/eua1/gman/wellshit.wav
+
+bazinga /chat/eua1/up13/bazinga1.wav
+bazinga /chat/eua1/up13/bazinga2.wav
+bazinga /chat/eua1/up13/bazinga3.wav
+
+seinfeld /chat/eua1/up13/seinfeld.wav
+seinlol /chat/eua1/up13/seinlol.wav
+
+lol1 /chat/eua1/up13/lol1.wav
+lol2 /chat/eua1/up13/lol2.wav
+lol3 /chat/eua1/up13/lol3.wav
+lol4 /chat/eua1/up13/lol4.wav
+
+scooby /chat/eua1/up13/scooby1.wav
+scooby /chat/eua1/up13/scooby2.wav
+
+woody /chat/eua1/woody.wav
+walter /chat/eua1/walter.wav
+yipp /chat/eua1/yipp.wav
+yippee /chat/eua1/yippee.wav
+
+trabalhar /chat/br1/trabalhar.wav
+brasil /chat/br1/brasil.wav
+rapaz /chat/br1/rapaz.wav
+
+jailson /chat/moriya/jaja/jailson1.wav
+jailson /chat/moriya/jaja/jailson2.wav
+jailson /chat/moriya/jaja/jailson3.wav
+jailson /chat/moriya/jaja/jailson4.wav
+jailson /chat/moriya/jaja/jailson5.wav
+jailson /chat/moriya/jaja/jailson6.wav

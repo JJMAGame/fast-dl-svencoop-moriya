@@ -1,0 +1,115 @@
+@SolidClass base(Targetname, RenderFields, Angles) = func_vehicle_custom : "Drivable Vehicles" 
+[
+	spawnflags(flags) = 
+	[
+		1 : "No default controls" : 0
+	]
+	
+	target(target_destination) : "First stop target"
+	sounds(choices) : "Sound" : 1 =
+	[
+		0: "None"
+		1: "Car 1"
+		2: "Car 2"
+		3: "Truck 1"
+		4: "Truck 2"
+		5: "Boat 1"
+		6: "Boat 2"
+	]
+	length(integer) : "Length of the vehicle" : 256
+	width(integer) : "Width of the vehicle" : 128
+	height(integer) : "Height above track" : 16
+	startspeed(integer) : "Initial speed" : 0
+	speed(integer) : "Speed (units per second)" : 64
+	acceleration(integer) : "Acceleration (1-10)" : 5
+	dmg(integer) : "Damage on crush" : 0
+	volume(integer) : "Volume (10 = loudest)" : 10
+	bank(string) : "Bank angle on turns" : "0"
+	_minlight(string) : "Minimum light level"
+]
+
+
+@SolidClass = func_vehiclecontrols : "Vehicle Controls"
+[
+	spawnflags(flags) =
+	[
+		1 : "RC control" : 0
+	]
+	
+	target(target_destination) : "Vehicle Name"
+]
+
+@PointClass base(Targetname, Target) color(255 230 0) = trigger_purchase : "Triggers a target on item bought"
+[
+	targetname(target_source) : "Name"
+	szTargetEntity(target_destination) : "Target"
+	delay(string) : "Delay Before Trigger"
+	m_cost(integer) : "Cost"	
+]
+
+@PointClass base(Targetx, Item) size(-16 -16 0, 16 16 36) color(0 200 0) = cnc_resource : "CNC Tiberium resource"
+[
+	resourcetype(choices) : "Resource Type" : 0 =
+	[
+		0 : "Regular"
+		1 : "Big"
+	]
+	
+	crystalcolor(choices) : "Crystal Color" : 0 =
+	[
+		0 : "Green"
+		1 : "Blue"
+		2 : "Yellow"
+		3 : "Red"
+	]
+]
+
+@PointClass base(Monster) size(-32 -32 -32, 32 32 32) studio("models/turret.mdl") = monster_turret_rocket : "Auto Rocket Turret"
+[
+	orientation(Choices) : "Orientation" : 0 =
+	[
+		0 : "Floor Mount"
+		1 : "Ceiling Mount"
+	]
+	spawnflags(Flags) =
+	[
+		32 : "Autostart" : 0
+		64 : "Start Inactive" : 0
+	]
+	maxsleep(string) : "Search Time (before deactivate)" : "15"
+	turnrate(integer) : "Turn Rate" : 30
+	attackrange(integer) : "Max Attack Range" : 4000
+	fireRate(integer) : "Rate of Fire (less value = less RoF)" : "1.0"
+]
+
+@PointClass base(Monster) size(-32 -32 -32, 32 32 32) studio("models/turret.mdl") = monster_turret_tankmortar : "Auto Tank Mortar Turret"
+[
+	orientation(Choices) : "Orientation" : 0 =
+	[
+		0 : "Floor Mount"
+		1 : "Ceiling Mount"
+	]
+	spawnflags(Flags) =
+	[
+		32 : "Autostart" : 0
+		64 : "Start Inactive" : 0
+	]
+	maxsleep(string) : "Search Time (before deactivate)" : "15"
+	turnrate(integer) : "Turn Rate" : 30
+	attackrange(integer) : "Max Attack Range" : 4000
+	fireRate(integer) : "Rate of Fire (less value = less RoF)" : "1.0"
+]
+
+@PointClass base(Targetname, Target) color(255 230 0) = trigger_purchase_monster : "Creates a box with a monster inside on item bought"
+[
+	targetname(target_source) : "Name"
+	szTargetEntity(target_destination) : "Target"
+	delay(string) : "Delay Before Trigger"
+	m_cost(integer) : "Cost"	
+]
+
+@PointClass base(Targetname, Target) color(255 20 0) = trigger_money : "Adds or substracts money on trigger"
+[
+	targetname(target_source) : "Name"
+	m_cost(integer) : "Cost"	
+]

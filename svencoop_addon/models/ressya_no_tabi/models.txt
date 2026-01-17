@@ -1,0 +1,6 @@
+"models/v_medkit.mdl" "models/ressya_no_tabi/v_medkit.mdl"
+"models/p_medkit.mdl" "models/ressya_no_tabi/p_medkit.mdl"
+"models/w_pmedkit.mdl" "models/ressya_no_tabi/w_pmedkit.mdl"
+
+"models/w_medkit.mdl" "models/ressya_no_tabi/katsusand.mdl"
+"models/w_battery.mdl" "models/ressya_no_tabi/superdry.mdl"
