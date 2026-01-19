@@ -31,6 +31,7 @@ Todos os itens abaixo são todos os repositorio para a construção do servidor 
 ViPPeR_666 ( Host de servidor e  Programador )<br>
 Edu 1945 ( apoio no FastDL )<br>
 Rishi_LockeD ( Dono Do Moriya )<br>
+KernCore ( Time do Sven coop e por me inspirar a programar em java e derivados )
 
 <h2>O que Contém no FastDL do Svencoop</h2>
 
