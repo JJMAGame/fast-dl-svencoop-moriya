@@ -10,13 +10,13 @@ Caso voce queira pega as conteúdos para joga em nosso servidor de sven coop aqu
 
 **Github**<br>
 
-<a href="https://github.com/JJMAGame/fast-dl-svencoop-moriya/releases/download/Atual/Sven.coop.Run.do.Garibaldo.Beta-1v.7z"> Baixar Pelo Github - Arquivo direto "Sven.coop.Run.do.Garibaldo.Beta-1v.7z" </a><br>
-<a href="https://github.com/JJMAGame/fast-dl-svencoop-moriya/releases"> Visualizar todos os releases clicando aqui </a><br>
+**<a href="https://github.com/JJMAGame/fast-dl-svencoop-moriya/releases/download/Atual/Sven.coop.Run.do.Garibaldo.Beta-1v.7z"> Baixar Pelo Github - Arquivo direto "Sven.coop.Run.do.Garibaldo.Beta-1v.7z" </a><br>**
+**<a href="https://github.com/JJMAGame/fast-dl-svencoop-moriya/releases"> Visualizar todos os releases clicando aqui </a><br>**
 
 **MediaFire**
 
-<a href="https://www.mediafire.com/file/i19bizopndz9i6i/Sven_coop_Run_do_Garibaldo_Beta-1v.7z/file"> "Sven_coop_Run_do_Garibaldo_Beta-1v.7z" No MediaFire </a><br>
-<a href="https://www.mediafire.com/file/ib9hjmicuzl1l5o/Sven_coop_Run_do_Garibaldo_Alpha-Final.7z/file"> "Sven_coop_Run_do_Garibaldo_Alpha-Final.7z" No MediaFire </a><br>
+**<a href="https://www.mediafire.com/file/i19bizopndz9i6i/Sven_coop_Run_do_Garibaldo_Beta-1v.7z/file"> "Sven_coop_Run_do_Garibaldo_Beta-1v.7z" No MediaFire </a><br>**
+**<a href="https://www.mediafire.com/file/ib9hjmicuzl1l5o/Sven_coop_Run_do_Garibaldo_Alpha-Final.7z/file"> "Sven_coop_Run_do_Garibaldo_Alpha-Final.7z" No MediaFire </a><br>**
 
 <h2>Outros plugins incluso nesse FastDL</h2>
 
