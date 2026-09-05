@@ -10,7 +10,7 @@ Caso voce queira pega as conteúdos para joga em nosso servidor de sven coop aqu
 
 **Github**<br>
 
-**<a href="https://github.com/JJMAGame/fast-dl-svencoop-moriya/releases/tag/2026"> Baixar Pelo Github - Arquivo direto "SC-Moriya-content-2v (Pre-release).7z" </a><br>**
+**<a href="https://github.com/JJMAGame/fast-dl-svencoop-moriya/releases/tag/2026"> Baixar Pelo Github - Pagina do Github "SC-Moriya-content-2v (Pre-release).7z" </a><br>**
 **<a href="https://github.com/JJMAGame/fast-dl-svencoop-moriya/releases"> Visualizar todos os releases clicando aqui </a><br>**
 
 **MediaFire**
