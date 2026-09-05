@@ -1,0 +1,850 @@
+#include "weapon_doom"
+
+class weapon_doom_pistol : weapon_doom
+{
+	void Spawn()
+	{
+		array<FrameInfo> frameInfo = {
+			FrameInfo(57, 62, 0),
+			FrameInfo(79, 102, -11),
+			FrameInfo(66, 81, -2),
+			FrameInfo(79, 82, -11),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(1, 1), TileInfo(2, 2), TileInfo(2, 2), TileInfo(2, 2), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		numFrames = 4;
+		array<int> shootFrames = {0, 1, 2, 3};
+		this.shootFrames = shootFrames;
+		this.tileInfo = tileInfo;
+		this.frameInfo = frameInfo;
+		this.pmodel = "models/hlclassic/p_9mmhandgun.mdl";
+		wepOffsetX = -5.5;
+
+		accurateFirstShot = true;
+		
+		self.m_iDefaultAmmo = 50;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 999999;
+		info.iMaxAmmo2 	= -1;
+		info.iAmmo1Drop	= 5;
+		info.iMaxClip 	= -1;
+		info.iSlot 		= 1;
+		info.iPosition 	= 10;
+		info.iFlags 	= 2;
+		info.iWeight 	= 3;
+		
+		return true;
+	}
+	
+	void Attack()
+	{
+		brighten = 8;
+		ShootBullet();
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+}
+
+class weapon_doom_shotgun : weapon_doom
+{
+	void Spawn()
+	{
+		hud_sprite = "sprites/doom/shotgun.spr";
+		shootSound = "doom/dsshotgn.wav";
+		itemFrame = 121;
+		unlockType = UNLOCK_SHOTGUN;
+		
+		array<FrameInfo> frameInfo = {
+			FrameInfo(79, 60, 0),
+			FrameInfo(79, 82, 0),
+			FrameInfo(79, 73, 0),
+			FrameInfo(119, 121, -78),
+			FrameInfo(87, 151, -91),
+			FrameInfo(113, 131, -92),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(2, 1), TileInfo(2, 2), TileInfo(2, 2), TileInfo(2, 2), TileInfo(2, 3), TileInfo(2, 3),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(2, 2), TileInfo(1, 2), TileInfo(2, 2),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 2), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		array<int> shootFrames = {0, 1, 2, 3, 4, 5, 4, 3};
+		numFrames = 6;
+		this.shootFrames = shootFrames;
+		this.tileInfo = tileInfo;
+		this.frameInfo = frameInfo;
+		wepOffsetX = -2.5;
+		
+		this.pmodel = "models/hlclassic/p_shotgun.mdl";
+		this.reloadAnimSpeed = 3;
+		
+		spread = 9.8f;
+		cooldown = 1.0f;
+		frameRate = 0.12;
+		
+		self.m_iDefaultAmmo = 12;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 999999;
+		info.iMaxAmmo2 	= -1;
+		info.iAmmo1Drop	= 4;
+		info.iMaxClip 	= -1;
+		info.iSlot 		= 2;
+		info.iPosition 	= 10;
+		info.iFlags 	= 2;
+		info.iWeight 	= 4;
+		
+		return true;
+	}
+	
+	void Attack()
+	{
+		brighten = 11;
+		
+		for (int i = 0; i < 6; i++)
+			ShootBullet(i > 0);
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+}
+
+class weapon_doom_supershot : weapon_doom
+{
+	void Spawn()
+	{
+		hud_sprite = "sprites/doom/supershot.spr";
+		shootSound = "doom/supershot.wav";
+		itemFrame = 119;
+		unlockType = UNLOCK_SUPER_SHOTGUN;
+		
+		array<FrameInfo> frameInfo = {
+			FrameInfo(59, 55, 0),
+			FrameInfo(59, 80, 0),
+			FrameInfo(65, 80, 0),
+			FrameInfo(83, 103, -34),
+			FrameInfo(121, 130, -109),
+			FrameInfo(81, 80, -16),
+			FrameInfo(201, 63, -134),
+			FrameInfo(88, 51, -29),
+			FrameInfo(77, 85, -16),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(1, 1), TileInfo(1, 2), TileInfo(2, 2), TileInfo(2, 2), TileInfo(2, 3), TileInfo(2, 2),
+			TileInfo(4, 1), TileInfo(2, 1), TileInfo(2, 2), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 2), TileInfo(2, 2), TileInfo(1, 1), TileInfo(2, 1), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(2, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		numFrames = 9;
+		array<int> shootFrames = {0, 1, 2, 3, 4, 5, 6, 7, 5, 8};
+		this.shootFrames = shootFrames;
+		this.tileInfo = tileInfo;
+		this.frameInfo = frameInfo;
+		wepOffsetX = -1;
+		
+		this.pmodel = "models/custom_weapons/cs16/p_m1887.mdl";
+		this.reloadAnimSpeed = 1.4;
+		
+		spread = 18.0f;
+		cooldown = 1.4f;
+		frameRate = 0.15;
+		ammoPerShot = 2;
+		
+		self.m_iDefaultAmmo = 8;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 999999;
+		info.iMaxAmmo2 	= -1;
+		info.iAmmo1Drop	= 4;
+		info.iMaxClip 	= -1;
+		info.iSlot 		= 2;
+		info.iPosition 	= 11;
+		info.iFlags 	= 2;
+		info.iWeight 	= 6;
+		
+		return true;
+	}
+	
+	void Attack()
+	{
+		brighten = 12;
+		
+		for (int i = 0; i < 19; i++)
+			ShootBullet(i > 0);
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+}
+
+class weapon_doom_rpg : weapon_doom
+{
+	void Spawn()
+	{
+		hud_sprite = "sprites/doom/rpg.spr";
+		shootSound = "doom/dsshotgn.wav";
+		itemFrame = 80;
+		unlockType = UNLOCK_RPG;
+		
+		array<FrameInfo> frameInfo = {
+			FrameInfo(87, 47, 0),
+			FrameInfo(87, 63, 0),
+			FrameInfo(102, 67, 0),
+			FrameInfo(102, 74, 0),
+			FrameInfo(105, 75, 1.5),
+			FrameInfo(102, 43, 0),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 2), TileInfo(2, 2), TileInfo(2, 2), TileInfo(2, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(2, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		numFrames = 6;
+		array<int> shootFrames = {0, 1, 2, 3, 4, 5};
+		this.shootFrames = shootFrames;
+		this.tileInfo = tileInfo;
+		this.frameInfo = frameInfo;
+		wepOffsetX = 0;
+		
+		this.pmodel = "models/hlclassic/p_rpg.mdl";
+		
+		spread = 9.8f;
+		cooldown = 0.5f;
+		frameRate = 0.1;
+		self.m_iDefaultAmmo = 2;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 999999;
+		info.iMaxAmmo2 	= -1;
+		info.iAmmo1Drop	= 1;
+		info.iMaxClip 	= -1;
+		info.iSlot 		= 4;
+		info.iPosition 	= 10;
+		info.iFlags 	= 2;
+		info.iWeight 	= 7;
+		
+		return true;
+	}
+	
+	void Attack()
+	{
+		brighten = 16;
+		
+		CBasePlayer@ plr = getPlayer();
+		g_EngineFuncs.MakeVectors(plr.pev.v_angle);
+		Vector vecSrc = plr.pev.origin + plr.pev.view_ofs - Vector(0,0,4);
+		Vector angles = plr.pev.v_angle;
+		
+		dictionary keys;
+		keys["origin"] = vecSrc.ToString();
+		keys["angles"] = angles.ToString();
+		keys["model"] = "sprites/doom/misl.spr";
+		keys["speed"] = "" + 700;
+		keys["moveFrameStart"] = "0";
+		keys["moveFrameEnd"] = "0";
+		keys["deathFrameStart"] = "8";
+		keys["deathFrameEnd"] = "10";
+		keys["flash_color"] = "255 128 32";
+		keys["damage_min"] = "20";
+		keys["damage_max"] = "160";
+		keys["oriented"] = "1";
+		keys["spawn_sound"] = "doom/dsrlaunc.wav";
+		keys["death_sound"] = "doom/dsbarexp.wav";
+		keys["radius_dmg"] = "128";
+		keys["trail_sprite"] = "sprites/doom/puff.spr";
+		
+		CBaseEntity@ fireball = g_EntityFuncs.CreateEntity("fireball", keys, false);
+		@fireball.pev.owner = @plr.edict();
+		g_EntityFuncs.DispatchSpawn(fireball.edict());
+		
+		int ammoLeft = plr.m_rgAmmo(self.m_iPrimaryAmmoType);
+		plr.m_rgAmmo(self.m_iPrimaryAmmoType, ammoLeft-ammoPerShot);
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+}
+
+class weapon_doom_fist : weapon_doom
+{
+	int damage_min = 2;
+	int damage_max = 20;
+	void Spawn()
+	{
+		hud_sprite = "sprites/doom/fist.spr";
+		shootSound = "doom/dspunch.wav";
+		panims = "crowbar";
+		
+		array<FrameInfo> frameInfo = {
+			FrameInfo(113, 42, 0),
+			FrameInfo(80, 41, -84),
+			FrameInfo(107, 52, -99),
+			FrameInfo(147, 76, -115),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 1), TileInfo(3, 2), TileInfo(2, 1), TileInfo(1, 1),
+			TileInfo(2, 1), TileInfo(2, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(2, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		array<int> shootFrames = {1, 2, 3, 2, 1};
+		attackFrame = 1;
+		numFrames = 4;
+		this.tileInfo = tileInfo;
+		this.shootFrames = shootFrames;
+		this.frameInfo = frameInfo;
+		wepOffsetX = 60;
+		
+		spread = 0;
+		cooldown = 0.48f;
+		frameRate = 0.1;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 999999;
+		info.iMaxAmmo2 	= -1;
+		info.iMaxClip 	= -1;
+		info.iSlot 		= 0;
+		info.iPosition 	= 10;
+		info.iFlags 	= 7;
+		info.iWeight 	= 1;
+		
+		return true;
+	}
+	
+	void Attack()
+	{
+		if (Slash(Math.RandomLong(damage_min, damage_max)))
+			g_SoundSystem.PlaySound(getPlayer().edict(), CHAN_WEAPON, shootSound, 1.0f, 0.5f, 0, 100);
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+}
+
+class weapon_doom_chainsaw : weapon_doom
+{
+	string missSound = "doom/dssawful.wav";
+	string idleSound = "doom/dssawidl.wav";
+	float nextIdleSound = 0;
+	float nextFrame = 0;
+	int idleFrame = 0;
+	
+	void Spawn()
+	{
+		hud_sprite = "sprites/doom/chainsaw.spr";
+		shootSound = "doom/dssawhit.wav";
+		deploySound = "doom/dssawup.wav";
+		itemFrame = 46;
+		unlockType = UNLOCK_CHAINSAW;
+		
+		array<FrameInfo> frameInfo = {
+			FrameInfo(153, 89, 0),
+			FrameInfo(154, 89, -2),
+			FrameInfo(140, 55, 0),
+			FrameInfo(140, 55, 0),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(3, 2), TileInfo(3, 2), TileInfo(3, 1), TileInfo(3, 1), TileInfo(2, 1), TileInfo(2, 1),
+			TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 1), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		array<int> shootFrames = {2, 3, 2};
+		attackFrame = 1;
+		numFrames = 4;
+		this.shootFrames = shootFrames;
+		this.tileInfo = tileInfo;
+		this.frameInfo = frameInfo;
+		wepOffsetX = -5;
+		
+		this.pmodel = "models/custom_weapons/cs16/p_chainsaw.mdl";
+		this.panims = "minigun";
+		
+		constantAttack = true;
+		
+		spread = 0;
+		cooldown = 0.2f;
+		frameRate = 0.1f;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 200;
+		info.iMaxAmmo2 	= -1;
+		info.iMaxClip 	= 200;
+		info.iSlot 		= 0;
+		info.iPosition 	= 11;
+		info.iFlags 	= 7;
+		info.iWeight 	= 2;
+		
+		return true;
+	}
+	
+	void Attack()
+	{
+		nextIdleSound = g_Engine.time + cooldown;
+		CBasePlayer@ plr = getPlayer();
+		if (Slash(Math.RandomLong(2,20)))
+			g_SoundSystem.PlaySound(plr.edict(), CHAN_WEAPON, shootSound, 1.0f, 0.5f, 0, 100);
+		else
+			g_SoundSystem.PlaySound(plr.edict(), CHAN_WEAPON, fixPath(missSound), 1.0f, 0.5f, 0, 100);
+		
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+	
+	void WeaponIdle()
+	{
+		if (nextIdleSound < g_Engine.time)
+		{
+			CBasePlayer@ plr = getPlayer();
+			nextIdleSound = g_Engine.time + 0.22f;
+			g_SoundSystem.PlaySound(plr.edict(), CHAN_WEAPON, fixPath(idleSound), 1.0f, 0.5f, 0, 100);
+		}
+		
+		if (!shooting and nextFrame < g_Engine.time)
+		{
+			nextFrame = g_Engine.time + frameRate*2;
+			SetFrame(idleFrame++ % 2 == 0 ? 1 : 0);
+		}
+	}
+}
+
+class weapon_doom_chaingun : weapon_doom
+{
+	void Spawn()
+	{
+		hud_sprite = "sprites/doom/chaingun.spr";
+		itemFrame = 86;
+		unlockType = UNLOCK_CHAINGUN;
+		
+		array<FrameInfo> frameInfo = {
+			FrameInfo(114, 51, 0),
+			FrameInfo(114, 70, 0),
+			FrameInfo(114, 71, 0),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(2, 1), TileInfo(2, 2), TileInfo(2, 2), TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		numFrames = 3;
+		array<int> shootFrames = {1, 2};
+		this.shootFrames = shootFrames;
+		this.tileInfo = tileInfo;
+		this.frameInfo = frameInfo;
+		wepOffsetX = -1;
+		
+		this.pmodel = "models/p_minigunidle.mdl";
+		
+		constantAttack = true;
+		frameRate = 0.12;
+		cooldown = 0.22f;
+		
+		self.m_iDefaultAmmo = 25;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 999999;
+		info.iMaxAmmo2 	= -1;
+		info.iAmmo1Drop	= 5;
+		info.iMaxClip 	= -1;
+		info.iSlot 		= 3;
+		info.iPosition 	= 10;
+		info.iFlags 	= 2;
+		info.iWeight 	= 5;
+		
+		return true;
+	}
+	
+	void Attack()
+	{
+		brighten = 5;
+		ShootBullet();
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+}
+
+class weapon_doom_plasmagun : weapon_doom
+{
+	void Spawn()
+	{
+		hud_sprite = "sprites/doom/plasmagun.spr";
+		shootSound = "doom/dsplasma.wav";
+		itemFrame = 95;
+		unlockType = UNLOCK_PLASMA;
+		
+		array<FrameInfo> frameInfo = {
+			FrameInfo(83, 61, 0),
+			FrameInfo(83, 75, 0),
+			FrameInfo(85, 73, 0),
+			FrameInfo(104, 111, 0),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(2, 1), TileInfo(2, 2), TileInfo(2, 2), TileInfo(2, 2), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(2, 2), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		numFrames = 4;
+		array<int> shootFrames = {1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+		this.shootFrames = shootFrames;
+		this.tileInfo = tileInfo;
+		attackFrame = 0;
+		this.frameInfo = frameInfo;
+		wepOffsetX = 0;
+		
+		this.pmodel = "models/hlclassic/p_egon.mdl";
+		this.panims = "egon";
+		
+		spread = 9.8f;
+		cooldown = 0.075f;
+		frameRate = 0.05f;
+		self.m_iDefaultAmmo = 40;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 999999;
+		info.iMaxAmmo2 	= -1;
+		info.iAmmo1Drop	= 20;
+		info.iMaxClip 	= -1;
+		info.iSlot 		= 5;
+		info.iPosition 	= 11;
+		info.iFlags 	= 2;
+		info.iWeight 	= 9;
+		
+		return true;
+	}
+	
+	void Attack()
+	{
+		brighten = 8;
+		
+		CBasePlayer@ plr = getPlayer();
+		g_EngineFuncs.MakeVectors(plr.pev.v_angle);
+		Vector vecSrc = plr.pev.origin + plr.pev.view_ofs - Vector(0,0,12);
+		Vector angles = plr.pev.v_angle;
+		
+		dictionary keys;
+		keys["origin"] = vecSrc.ToString();
+		keys["angles"] = angles.ToString();
+		keys["model"] = "sprites/doom/bal.spr";
+		keys["speed"] = "" + 875;
+		keys["moveFrameStart"] = "13";
+		keys["moveFrameEnd"] = "14";
+		keys["deathFrameStart"] = "15";
+		keys["deathFrameEnd"] = "19";
+		keys["flash_color"] = "64 64 255";
+		keys["damage_min"] = "5";
+		keys["damage_max"] = "40";
+		keys["spawn_sound"] = "";
+		
+		CBaseEntity@ fireball = g_EntityFuncs.CreateEntity("fireball", keys, false);
+		@fireball.pev.owner = @plr.edict();
+		g_EntityFuncs.DispatchSpawn(fireball.edict());
+		
+		int ammoLeft = plr.m_rgAmmo(self.m_iPrimaryAmmoType);
+		plr.m_rgAmmo(self.m_iPrimaryAmmoType, ammoLeft-ammoPerShot);
+		
+		g_SoundSystem.PlaySound(plr.edict(), CHAN_WEAPON, shootSound, 0.8f, 0.5f, 0, 100);
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+}
+
+class weapon_doom_bfg : weapon_doom
+{
+	void Spawn()
+	{
+		hud_sprite = "sprites/doom/bfg.spr";
+		shootSound = "doom/dsbfg.wav";
+		numFrames = 4;
+		itemFrame = 14;
+		unlockType = UNLOCK_BFG;
+		
+		array<FrameInfo> frameInfo = {
+			FrameInfo(170, 52, 0),
+			FrameInfo(170, 70, 0),
+			FrameInfo(170, 91, 0),
+			FrameInfo(170, 52, 0),
+		};
+		array<TileInfo> tileInfo = {
+			TileInfo(3, 1), TileInfo(3, 2), TileInfo(3, 2), TileInfo(3, 1), TileInfo(2, 1), TileInfo(2, 1),
+			TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 1), TileInfo(2, 1),
+			TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1), TileInfo(1, 1),
+		};
+		array<int> shootFrames = {0, 0, 0, 1, 1, 2, 3, 3, 3};
+		this.shootFrames = shootFrames;
+		this.tileInfo = tileInfo;
+		attackFrame = 5;
+		this.frameInfo = frameInfo;
+		wepOffsetX = -0.5;
+		
+		this.pmodel = "models/p_displacer.mdl";
+		
+		spread = 9.8f;
+		cooldown = 1.1f;
+		frameRate = 0.2f;
+		ammoPerShot = 40;
+		self.m_iDefaultAmmo = 0;
+		
+		DoomSpawn();
+		
+		SetThink( ThinkFunction( Think ) );
+	}
+	
+	bool GetItemInfo( ItemInfo& out info )
+	{
+		info.iMaxAmmo1 	= 999999;
+		info.iMaxAmmo2 	= -1;
+		info.iAmmo1Drop	= 20;
+		info.iMaxClip 	= -1;
+		info.iSlot 		= 5;
+		info.iPosition 	= 12;
+		info.iFlags 	= 2;
+		info.iWeight 	= 8;
+		
+		return true;
+	}
+	
+	void FrameUpdated()
+	{
+		if (frameIdx == 1)
+		{
+			CBasePlayer@ plr = getPlayer();
+			g_SoundSystem.PlaySound(plr.edict(), CHAN_WEAPON, shootSound, 0.8f, 0.5f, 0, 100);
+		}
+		if (animFrame == 1 or animFrame == 2)
+			brighten = 12;
+	}
+	
+	void Attack()
+	{
+		brighten = 8;
+		
+		CBasePlayer@ plr = getPlayer();
+		g_EngineFuncs.MakeVectors(plr.pev.v_angle);
+		Vector vecSrc = plr.pev.origin + plr.pev.view_ofs + g_Engine.v_forward*22;
+		Vector angles = plr.pev.v_angle;
+		
+		dictionary keys;
+		keys["origin"] = vecSrc.ToString();
+		keys["angles"] = angles.ToString();
+		keys["model"] = "sprites/doom/bal.spr";
+		keys["speed"] = "" + 875;
+		keys["moveFrameStart"] = "20";
+		keys["moveFrameEnd"] = "21";
+		keys["deathFrameStart"] = "22";
+		keys["deathFrameEnd"] = "27";
+		keys["flash_color"] = "64 255 64";
+		keys["damage_min"] = "100";
+		keys["damage_max"] = "800";
+		keys["bbox_size"] = "8";
+		keys["spawn_sound"] = "";
+		keys["is_bfg"] = "1";
+		keys["death_sound"] = "doom/dsrxplod.wav";
+		
+		CBaseEntity@ fireball = g_EntityFuncs.CreateEntity("fireball", keys, false);
+		@fireball.pev.owner = @plr.edict();
+		g_EntityFuncs.DispatchSpawn(fireball.edict());
+		
+		int ammoLeft = plr.m_rgAmmo(self.m_iPrimaryAmmoType);
+		plr.m_rgAmmo(self.m_iPrimaryAmmoType, ammoLeft-ammoPerShot);
+	}
+	
+	void Think()
+	{
+		WeaponThink();
+	}
+}
+
+
+class ammo_doom_bullets : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "bullets";
+		giveAmmo = 5;
+		maxAmmo = 200;
+		itemFrame = 37;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_bulletbox : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "bullets";
+		giveAmmo = 50;
+		maxAmmo = 200;
+		itemFrame = 0;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_shells : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "shells";
+		giveAmmo = 4;
+		maxAmmo = 100;
+		itemFrame = 120;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_shellbox : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "shells";
+		giveAmmo = 20;
+		maxAmmo = 100;
+		itemFrame = 118;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_rocket : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "rockets";
+		giveAmmo = 1;
+		maxAmmo = 100;
+		itemFrame = 115;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_rocketbox : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "rockets";
+		giveAmmo = 5;
+		maxAmmo = 100;
+		itemFrame = 26;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_cells : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "cells";
+		giveAmmo = 20;
+		maxAmmo = 600;
+		itemFrame = 32;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_cellbox : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "cells";
+		giveAmmo = 100;
+		maxAmmo = 600;
+		itemFrame = 33;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_shotgun : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "shells";
+		giveWeapon = "weapon_doom_shotgun";
+		giveAmmo = 4;
+		maxAmmo = 100;
+		itemFrame = 121;
+		AmmoSpawn();
+	}
+}
+
+class ammo_doom_chaingun : ammo_doom
+{
+	void Spawn()
+	{
+		ammoType = "bullets";
+		giveWeapon = "weapon_doom_chaingun";
+		giveAmmo = 10;
+		maxAmmo = 200;
+		itemFrame = 86;
+		AmmoSpawn();
+	}
+}

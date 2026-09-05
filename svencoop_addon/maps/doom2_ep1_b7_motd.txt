@@ -1,0 +1,24 @@
+Welcome to DOOM II: Hell on Earth.
+
+Music volume can be adjusted in the options menu (Audio tab).
+
+[Secondary Fire] = Toggle thirdperson view
+[Tertiary Fire] = Change HUD scale (weapons/keys)
+
+Get perfect scores (100% kills, items, and secrets) for extra ammo and armor. To get 100% items you need to collect all of the following:
+- Potion
+- Helmet
+- Light Goggles
+- Mega Sphere (white)
+- Invulnerability Sphere (green)
+- Invisibility Sphere (red)
+- Berserk (black medkit)
+
+Chat commands:
+.score = Show score for current level
+.version = Show script version
+.idkfa = Give all weapons and infinite ammo (admin only)
+.ff = Toggle friendly fire (admin only)
+
+CVars:
+as_command dmg_scale = Player damage taken (difficulty)
