@@ -1,0 +1,13 @@
+The Escape Series
+www.escape-series.com
+Made by: incy247 (incy247@blueyonder.co.uk)
+
+-----------------------
+-: Escape 2 Part E :-
+-----------------------
+
+
+
+Changes by Adambean for SC 4.7:
+
+* Replaced all AAATRIGGER textures to NULL to improve rendering speed

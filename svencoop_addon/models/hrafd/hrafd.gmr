@@ -1,0 +1,21 @@
+"models/garg.mdl"         "models/hrafd/garg.mdl"
+"models/headcrab.mdl"     "models/hrafd/headcrab.mdl"
+"models/houndeye.mdl"     "models/hrafd/houndeye.mdl"
+"models/icky.mdl"         "models/hrafd/icky.mdl"
+"models/islave.mdl"       "models/hrafd/islave.mdl"
+"models/scientist.mdl"    "models/hrafd/scientist.mdl"
+"models/zombie.mdl"       "models/hrafd/zombie.mdl"
+"models/w_battery.mdl"    "models/hrafd/w_battery.mdl"
+"models/gman.mdl"         "models/hrafd/gman.mdl"
+"models/w_medkit.mdl"     "models/hrafd/w_medkit.mdl"
+"models/w_357ammobox.mdl" "models/hrafd/w_357ammobox.mdl"
+"models/barney.mdl"       "models/hrafd/barney.mdl"
+"models/hassassin.mdl"    "models/hrafd/hassassin.mdl"
+"models/w_grenade.mdl"    "models/hrafd/w_grenade.mdl"
+
+"sprites/grenade.spr" "sprites/hrafd/hr-null.spr"
+"sprites/saveme.spr" "sprites/hrafd/hr-null.spr"
+
+
+
+

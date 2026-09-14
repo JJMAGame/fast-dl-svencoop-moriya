@@ -1,0 +1,35 @@
+The Escape Series
+www.escape-series.com
+Made by: incy247 (incy247@blueyonder.co.uk)
+
+-----------------------
+-: Escape 2 Part A :-
+-----------------------
+--------
+Prologue
+--------
+Some time ago we were captured and imprisoned in a 
+hardened underground facility, we were experimented 
+on and left to rot in a cell until one fateful day 
+something went terribly wrong in the labs and everyone 
+either got killed or transformed into one of ‘them’.
+We had to escape before it was to late and after many 
+hours we finally found the surface Access lift, but 
+however it was blocked so we had to take the stairs 
+which was no easy task and to add even more to it 
+the Self Destruct system became active and destroyed 
+any evidence of the labs and the inhuman experiments 
+that happened down there. Luckily we were able to 
+escape using one of their Osprey choppers but the 
+controls were destroyed so the osprey crashed right into
+another facility and we were captured again, What do 
+they want from us!? We have been locked up in another 
+cell and so here begins our story and our next ESCAPE!
+
+
+
+Changes by Adambean for SC 4.7:
+
+* Replaced all AAATRIGGER textures to NULL to improve rendering speed
+* Stopped players triggering the camera sequence from the code panel multiple times
+* Fixed players being able to jump through the lasers to avoid damage if enough go through at once

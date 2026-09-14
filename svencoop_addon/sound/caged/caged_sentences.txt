@@ -1,0 +1,14 @@
+SC_QUESTION19 caged/scientist/alientrick
+SC_QUESTION23 caged/scientist/announcer
+SC_IDLE8 caged/scientist/bloodsample
+SC_PQUEST9 caged/scientist/cascade
+SC_COUGH caged/scientist/cough
+SC_QUESTION18 caged/scientist/dinner
+SC_QUESTION0 caged/scientist/everseen
+SC_FREEMAN caged/scientist/of1a6_sc01
+SC_HELLO6 caged/scientist/newhevsuit
+SC_PQUEST8 caged/scientist/perfectday
+
+BA_MAD5 caged/barney/ba_dontmake
+BA_MAD3 caged/barney/ba_somuch
+BA_CLIMB caged/barney/c1a2_ba_climb

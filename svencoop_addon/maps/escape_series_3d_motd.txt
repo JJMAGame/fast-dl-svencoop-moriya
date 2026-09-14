@@ -1,0 +1,15 @@
+The Escape Series
+www.escape-series.com
+Made by: incy247 (incy247@blueyonder.co.uk)
+
+-----------------------
+-: Escape 3 Part D :-
+-----------------------
+
+
+
+Changes by Adambean for SC 4.7:
+
+* Replaced all AAATRIGGER textures to NULL to improve rendering speed
+* Fixed possibility of spawning inside a control panel down the big lift shaft
+* Normalized and tweaked Barney sentences, along with code changes to fix the lip sync

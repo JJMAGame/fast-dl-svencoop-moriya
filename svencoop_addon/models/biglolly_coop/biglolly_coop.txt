@@ -1,0 +1,26 @@
+models/zombie.mdl models/biglolly_coop/zombie.mdl
+models/w_squeak.mdl models/biglolly_coop/w_squeak.mdl
+models/w_sqknest.mdl models/biglolly_coop/w_sqknest.mdl
+models/w_weaponbox.mdl models/biglolly_coop/w_weaponbox.mdl
+models/w_medkit.mdl models/biglolly_coop/w_medkit.mdl
+models/w_grenade.mdl models/biglolly_coop/w_grenade.mdl
+models/w_crowbar.mdl models/biglolly_coop/w_crowbar.mdl
+models/w_battery.mdl models/biglolly_coop/w_battery.mdl
+models/w_9mmhandgun.mdl models/biglolly_coop/w_9mmhandgun.mdl
+models/w_9mmclip.mdl models/biglolly_coop/w_9mmclip.mdl
+models/v_squeak.mdl models/biglolly_coop/v_squeak.mdl
+models/v_grenade.mdl models/biglolly_coop/v_grenade.mdl
+models/v_crowbar.mdl models/biglolly_coop/v_crowbar.mdl
+models/v_9mmhandgun.mdl models/biglolly_coop/v_9mmhandgun.mdl
+models/shell.mdl models/biglolly_coop/shell.mdl
+models/roach.mdl models/biglolly_coop/roach.mdl
+models/p_squeak.mdl models/biglolly_coop/p_squeak.mdl
+models/p_grenade.mdl models/biglolly_coop/p_grenade.mdl
+models/p_crowbar.mdl models/biglolly_coop/p_crowbar.mdl
+models/p_9mmhandgun.mdl models/biglolly_coop/p_9mmhandgun.mdl
+models/houndeye.mdl models/biglolly_coop/houndeye.mdl
+models/headcrab.mdl models/biglolly_coop/headcrab.mdl
+models/agibs.mdl models/biglolly_coop/agibs.mdl
+models/boid.mdl models/biglolly_coop/boid.mdl
+
+

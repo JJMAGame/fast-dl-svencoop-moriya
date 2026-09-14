@@ -1,0 +1,348 @@
+HEV_DEAD0 hrafd/player/dead0(v40)
+HEV_DEAD1 hrafd/player/dead1(v40)
+
+HEV_MED0 null
+
+HEV_HEAL0 null
+
+
+
+HEV_SHOCK null
+HEV_FIRE null
+
+// power levels
+
+HEV_D00 null
+HEV_D01 null
+
+HEV_0P null
+
+
+// BARNEY
+
+BA_IDLE0 hrafd/barney/barnabyidle1
+BA_IDLE1 hrafd/barney/barnabyidle2
+
+BA_HELLO0 null
+
+BA_DIE0 hrafd/barney/ba_die1
+BA_DIE1 hrafd/barney/ba_die2
+BA_DIE2 hrafd/barney/ba_die3
+
+BA_STARE0 null
+
+BA_OK0 hrafd/barney/barnabyfollow1
+BA_OK1 hrafd/barney/barnabyfollow2
+BA_OK2 hrafd/barney/barnabyfollow3
+BA_OK3 hrafd/barney/barnabyfollow2
+BA_OK4 hrafd/barney/barnabyfollow1
+BA_OK5 hrafd/barney/barnabyfollow3
+BA_OK6 hrafd/barney/barnabyfollow2
+
+BA_WAIT0 hrafd/barney/barnabystay1
+BA_WAIT1 hrafd/barney/barnabystay2
+BA_WAIT2 hrafd/barney/barnabystay3
+BA_WAIT3 hrafd/barney/barnabystay2
+BA_WAIT4 hrafd/barney/barnabystay1
+BA_WAIT5 hrafd/barney/barnabystay2
+
+
+BA_QUESTION0 hrafd/barney/barnabyq1
+BA_QUESTION1 hrafd/barney/barnabyq2
+BA_QUESTION2 hrafd/barney/barnabyq3
+BA_QUESTION3 hrafd/barney/barnabyq4
+
+BA_ANSWER0 hrafd/barney/barnabyans1
+BA_ANSWER1 hrafd/barney/barnabyans2
+BA_ANSWER2 hrafd/barney/barnabyans3
+BA_ANSWER3 hrafd/barney/barnabyans4
+
+BA_ATTACK0 hrafd/barney/barnabyattk1
+BA_ATTACK1 hrafd/barney/barnabyattk2
+BA_ATTACK2 hrafd/barney/barnabyattk3
+
+BA_HEAR0 hrafd/barney/barnabyhear1
+BA_HEAR1 hrafd/barney/barnabyhear2
+
+BA_SMELL0 hrafd/barney/barnabysmell1
+BA_SMELL1 hrafd/barney/barnabysmell2
+
+BA_CUREA hrafd/barney/barnabycheckwound
+
+BA_SCARED0 hrafd/barney/barnabyscare1
+BA_SCARED1 hrafd/barney/barnabyang1
+
+BA_WOUND0 hrafd/barney/barnabywounded1
+BA_WOUND1 hrafd/barney/barnabywounded2
+BA_MORTAL0 hrafd/barney/barnabywounded3
+
+//If you shoot Barney:
+
+BA_SHOT0 hrafd/barney/barnabyang2
+BA_SHOT1 hrafd/barney/barnabyang3
+BA_SHOT2 hrafd/barney/barnabyang1
+
+
+//When Barney s really pissed at you:
+
+BA_MAD0 hrafd/barney/barnabypissed
+
+//When Barney s killed something
+
+BA_KILL0 hrafd/barney/barnabykill1
+BA_KILL1 hrafd/barney/barnabykill2
+BA_KILL2 hrafd/barney/barnabykill3
+BA_KILL3 hrafd/barney/barnabykill2
+BA_KILL4 hrafd/barney/barnabykill1
+
+
+//scripted_sentences
+
+BA_EMPTY0 null
+
+HR_BARN0 hrafd/barney/barnaby1
+HR_BARN1 hrafd/barney/barnaby2
+HR_BARN2 hrafd/barney/barnaby3
+HR_BARN3 hrafd/barney/barnaby4
+HR_BARN4 hrafd/barney/barnaby5
+HR_BARN5 hrafd/barney/barnaby6
+HR_BARN6 hrafd/barney/barnaby7
+HR_BARN7 hrafd/barney/barnaby8
+HR_BARN8 hrafd/barney/barnaby9
+HR_BARN9 hrafd/barney/barnaby10
+HR_BARN10 hrafd/barney/barnaby11
+HR_BARN11 hrafd/barney/barnaby12
+HR_BARN12 hrafd/barney/barnaby13
+
+HR_BCOM0 hrafd/barney/barncom1
+HR_BCOM1 hrafd/barney/barncom2
+HR_BCOM2 hrafd/barney/barncom3
+
+BSK0 hrafd/barney/bs1
+BSK1 hrafd/barney/bs2
+BSK2 hrafd/barney/bs3
+BSK3 hrafd/barney/bs4
+BSK4 hrafd/barney/bs5
+BSK5 hrafd/barney/bs6
+BSK6 hrafd/barney/bs7
+
+
+// SCIENTIST
+
+
+SC_HELLO0 null
+
+SC_FEAR0 null
+
+SC_PHELLO0 null
+
+SC_PIDLE0 null
+
+SC_PLFEAR0 null
+SC_PLFEAR1 null
+SC_PLFEAR2 null
+SC_PLFEAR3 null
+SC_PLFEAR4 null
+SC_PLFEAR5 null
+
+SC_POK0 null
+
+SC_PQUEST0 null
+
+SC_SCREAM0 null
+SC_SCREAM1 null
+SC_SCREAM2 null
+SC_SCREAM3 null
+SC_SCREAM4 null
+
+SC_STARE0 null
+
+SC_STOP0 hrafd/scientist/traskscared1
+
+
+SC_OK0 hrafd/scientist/traskfollow1
+SC_OK1 hrafd/scientist/traskfollow2
+SC_OK2 hrafd/scientist/traskfollow3
+SC_OK3 hrafd/scientist/traskfollow1
+SC_OK4 hrafd/scientist/traskfollow2
+SC_OK5 hrafd/scientist/traskfollow3
+SC_OK6 hrafd/scientist/traskfollow1
+SC_OK7 hrafd/scientist/traskfollow2
+SC_OK8 hrafd/scientist/traskfollow3
+
+SC_WAIT0 hrafd/scientist/traskstay1
+SC_WAIT1 hrafd/scientist/traskstay2
+SC_WAIT2 hrafd/scientist/traskstay3
+SC_WAIT3 hrafd/scientist/traskstay1
+SC_WAIT4 hrafd/scientist/traskstay2
+SC_WAIT5 hrafd/scientist/traskstay3
+SC_WAIT6 hrafd/scientist/traskstay1
+SC_WAIT7 hrafd/scientist/traskstay2
+
+SC_IDLE0 hrafd/scientist/traskidle1
+SC_IDLE1 hrafd/scientist/traskidle2
+SC_IDLE2 hrafd/scientist/traskidle3
+SC_IDLE3 hrafd/scientist/traskidle4
+
+SC_QUESTION0 hrafd/scientist/traskq1
+SC_QUESTION1 hrafd/scientist/traskq2
+SC_QUESTION2 hrafd/scientist/traskq3
+SC_QUESTION3 hrafd/scientist/traskq4
+
+SC_ANSWER0 hrafd/scientist/traskans1
+SC_ANSWER1 hrafd/scientist/traskans2
+SC_ANSWER2 hrafd/scientist/traskans3
+SC_ANSWER3 hrafd/scientist/traskans4
+
+
+SC_MONST0 hrafd/scientist/traskmonster1
+SC_MONST1 hrafd/scientist/traskmonster2
+
+SC_HEAR0 hrafd/scientist/traskhear1
+SC_HEAR1 hrafd/scientist/traskhear2
+SC_HEAR2 hrafd/scientist/traskhear3
+
+SC_SMELL0 hrafd/scientist/trasksmell1
+SC_SMELL1 hrafd/scientist/trasksmell2
+
+SC_WOUND0 hrafd/scientist/traskhurt1
+SC_WOUND1 hrafd/scientist/traskhurt2
+
+SC_MORTAL0 hrafd/scientist/traskhurtbad1
+SC_MORTAL1 hrafd/scientist/traskhurtbad2
+
+SC_CUREA hrafd/scientist/traskseewound1
+SC_CUREB hrafd/scientist/traskseewound2
+SC_CUREC hrafd/scientist/traskseewound3
+
+SC_HEAL0 hrafd/scientist/traskheal1
+SC_HEAL1 hrafd/scientist/traskheal2
+
+SC_SCARED0 hrafd/scientist/traskscared1
+SC_SCARED1 hrafd/scientist/traskscared2
+SC_SCARED2 hrafd/scientist/traskscared1
+SC_SCARED3 hrafd/scientist/traskscared2
+SC_SCARED4 hrafd/scientist/traskscared1
+SC_SCARED5 hrafd/scientist/traskscared2
+
+//Scripted Sentences
+
+SC_EMPTY0 null
+
+TRASK0 hrafd/scientist/traskline1
+TRASK1 hrafd/scientist/traskline2
+TRASK2 hrafd/scientist/traskline3
+TRASK3 hrafd/scientist/traskline4
+TRASK4 hrafd/scientist/traskline5
+TRASK5 hrafd/scientist/traskline6
+TRASK6 hrafd/scientist/traskline7
+TRASK7 hrafd/scientist/traskline8
+TRASK8 hrafd/scientist/traskline9
+TRASK9 hrafd/scientist/traskline10
+TRASK10 hrafd/scientist/traskline11
+TRASK11 hrafd/scientist/traskline12
+TRASK12 hrafd/scientist/traskline13
+
+HR_TCOM0 hrafd/scientist/traskcom1
+HR_TCOM1 hrafd/scientist/traskcom2
+HR_TCOM2 hrafd/scientist/traskcom3
+HR_TCOM3 hrafd/scientist/traskcom4
+
+
+
+
+
+
+// alien slave
+SLV_IDLE0 hrafd/aslave/slv_word1 slv_word2
+SLV_IDLE1 hrafd/aslave/slv_word2 slv_word3
+SLV_IDLE2 hrafd/aslave/slv_word3 slv_word4
+SLV_IDLE3 hrafd/aslave/slv_word4 slv_word5 slv_word5
+SLV_IDLE4 hrafd/aslave/slv_word2 slv_word6 slv_word7 slv_word3
+SLV_IDLE5 hrafd/aslave/slv_word6 slv_word7 slv_word2
+SLV_IDLE6 hrafd/aslave/slv_word7 slv_word8 slv_word3
+SLV_IDLE7 hrafd/aslave/slv_word8 slv_word1 slv_word8 slv_word8
+SLV_IDLE8 hrafd/aslave/slv_word1 slv_word6
+SLV_IDLE9 hrafd/aslave/slv_word3 slv_word3
+SLV_IDLE10 hrafd/aslave/slv_word7
+
+SLV_ALERT0 hrafd/aslave/slv_alert1 slv_word2
+SLV_ALERT1 hrafd/aslave/slv_word8 slv_word8 slv_word8 slv_word5
+SLV_ALERT2 hrafd/aslave/slv_alert4 slv_word4 slv_alert3
+SLV_ALERT3 hrafd/aslave/slv_alert1 slv_word5
+SLV_ALERT4 hrafd/aslave/slv_word5 slv_word8 slv_word8
+SLV_ALERT5 hrafd/aslave/slv_alert4 slv_word7 slv_alert1
+
+SLV_DIE0 hrafd/aslave/slv_die1
+SLV_DIE1 hrafd/aslave/slv_die2
+
+SLV_PAIN0 hrafd/aslave/slv_pain1
+SLV_PAIN1 hrafd/aslave/slv_pain2
+
+ZO_ALERT10 hrafd/zombie/zo_alert10
+ZO_ALERT20 hrafd/zombie/zo_alert20
+ZO_ALERT30 hrafd/zombie/zo_alert30
+ZO_ATTACK1 hrafd/zombie/zo_attack1
+ZO_ATTACK2 hrafd/zombie/zo_attack2
+ZO_IDLE1 hrafd/zombie/zo_idle1
+ZO_IDLE2 hrafd/zombie/zo_idle2
+ZO_IDLE3 hrafd/zombie/zo_idle3
+ZO_IDLE4 hrafd/zombie/zo_idle4
+ZO_PAIN1 hrafd/zombie/zo_pain1
+ZO_PAIN2 hrafd/zombie/zo_pain2
+
+
+
+// outdoor
+WILD0 ambience/(v30) quail1(p103), quail1(t10), quail1(p101)
+WILD1 ambience/bee1(v75)
+WILD2 ambience/bee2(p105)
+WILD3 ambience/hawk1(p98 v30)
+WILD4 ambience/hawk1(p105 v20)
+WILD5 ambience/(v50 p97) quail1, quail1(t15)
+WILD6 ambience/bee1(p98 v50)
+WILD7 ambience/bee1(p97)
+WILD8 ambience/quail1(v20 p98)
+WILD9 ambience/des_wind1(v50)
+WILD10 ambience/des_wind2(v50)
+WILD11 ambience/des_wind3(v50)
+WILD9 ambience/des_wind1(v40 p105)
+WILD10 ambience/des_wind2(v40 p98)
+WILD11 ambience/des_wind3(v40 p103)
+WILD12 ambience/wren1(v80)
+
+
+
+// distant war zone
+FAR_WAR0 ambience/(v50) distantmortar1
+FAR_WAR1 ambience/(v60) distantmortar2
+FAR_WAR2 ambience/(v50) distantmortar3
+FAR_WAR3 ambience/(v15) biggun3
+FAR_WAR4 ambience/(v20) rifle2
+FAR_WAR5 ambience/(v10 p120) jetflyby1
+FAR_WAR6 ambience/(v10) mgun_burst4
+FAR_WAR7 ambience/(v30) distantmortar1 distantmortar3 distantmortar2
+FAR_WAR8 ambience/(v10) biggun2 biggun2 biggun2
+FAR_WAR9 ambience/(v15) mgun_burst1
+FAR_WAR10 ambience/(v20) biggun1 rifle2
+FAR_WAR11 ambience/(v60) distantmortar1 distantmortar1, distantmortar2, distantmortar1
+FAR_WAR12 ambience/(v30) distantmortar2, distantmortar2 distantmortar2 distantmortar2, distantmortar3 distantmortar1
+FAR_WAR13 ambience/(v10) mgun_burst2
+FAR_WAR14 ambience/(v15) mgun_burst3 mgun_burst3
+FAR_WAR15 ambience/(v10) rifle1 rifle1
+FAR_WAR16 ambience/(v10) biggun2, biggun2 biggun2
+
+// near war zone
+NEAR_WAR0 ambience/(v60) mgun_burst3 mgun_burst3 mgun_burst3(v50)
+NEAR_WAR1 ambience/(v60) rifle1 rifle2 rifle2 rifle1 rifle1
+NEAR_WAR2 ambience/(v60) alienflyby1
+NEAR_WAR3 ambience/(v60) biggun3 biggun3 biggun3
+NEAR_WAR4 ambience/(v60) mgun_burst4 mgun_burst3 rifle1 mgun_burst4
+NEAR_WAR5 ambience/(v60) jetflyby1
+NEAR_WAR6 ambience/(v60) mgun_burst4 mgun_burst3
+NEAR_WAR7 ambience/distantmortar1 distantmortar3 distantmortar2
+NEAR_WAR8 ambience/(v60) biggun2 biggun2 biggun2 biggun2(v30)
+NEAR_WAR9 ambience/(v60) mgun_burst1 mgun_burst1 rifle2 mgun_burst3
+NEAR_WAR10 agrunt/(v40) ag_fire1 ag_fire2 ag_fire2 ag_fire1
+NEAR_WAR11 ambience/distantmortar1 distantmortar1, distantmortar2
+NEAR_WAR12 ambience/(v60) mgun_burst2 mgun_burst2 mgun_burst3 mgun_burst2

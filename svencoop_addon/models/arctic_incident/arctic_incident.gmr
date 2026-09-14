@@ -1,0 +1,40 @@
+//Weapons
+"models/v_crowbar.mdl" "models/arctic_incident/white_hevarms/v_pickaxe.mdl"
+"models/v_crossbow.mdl" "models/arctic_incident/white_hevarms/v_crossbow.mdl"
+"models/v_grenade.mdl" "models/arctic_incident/white_hevarms/v_grenade.mdl"
+"models/v_medkit.mdl" "models/arctic_incident/white_hevarms/v_medkit.mdl"
+"models/v_rpg.mdl" "models/arctic_incident/white_hevarms/v_rpg_ai.mdl"
+
+"models/p_crowbar.mdl" "models/arctic_incident/p_pickaxe.mdl"
+"models/p_rpg.mdl" "models/arctic_incident/p_rpg.mdl"
+"models/p_grenade.mdl" "models/arctic_incident/p_grenade.mdl"
+"models/p_crossbow.mdl" "models/arctic_incident/p_crossbow.mdl"
+
+"models/w_battery.mdl" "models/arctic_incident/w_battery.mdl"
+"models/w_medkit.mdl" "models/arctic_incident/w_medkit.mdl"
+"models/w_crowbar.mdl" "models/arctic_incident/w_pickaxe.mdl"
+"models/w_crossbow_clip.mdl" "models/arctic_incident/w_crossbow_clip_ai.mdl"
+"models/w_rpg.mdl" "models/arctic_incident/w_rpg.mdl"
+"models/w_rpgammo.mdl" "models/arctic_incident/w_rpgammo.mdl"
+"models/w_grenade.mdl" "models/arctic_incident/w_grenade.mdl"
+
+//NPCs
+"models/hgrunt.mdl" "models/arctic_incident/polar_grunt.mdl"
+"models/agrunt.mdl" "models/arctic_incident/frost_agrunt.mdl"
+"models/agibs.mdl" "models/arctic_incident/agibs.mdl"
+"models/barnacle.mdl" "models/arctic_incident/icebarnacle.mdl"
+"models/bullsquid.mdl" "models/arctic_incident/chillsquid.mdl"
+"models/controller.mdl" "models/arctic_incident/coldtroller.mdl"
+"models/garg.mdl" "models/arctic_incident/garg.mdl"
+"models/headcrab.mdl" "models/arctic_incident/headcrab.mdl"
+"models/islave.mdl" "models/arctic_incident/icelave.mdl"
+"models/islave_gibs1.mdl" "models/arctic_incident/islave_gibs1.mdl"
+"models/w_squeak.mdl" "models/arctic_incident/w_squeak.mdl"
+"models/w_sqknest.mdl" "models/arctic_incident/w_sqknest.mdl"
+
+//Sprites
+"sprites/fire_fx.spr" "sprites/arctic_incident/fire_fx.spr"
+"sprites/gargeye1.spr" "sprites/arctic_incident/gargeye1.spr"
+"sprites/laserdot.spr" "sprites/arctic_incident/laserdot.spr"
+"sprites/xspark4.spr" "sprites/arctic_incident/xspark4.spr"
+"sprites/weapon_crowbar.txt" "sprites/arctic_incident/weapon_crowbar.txt"

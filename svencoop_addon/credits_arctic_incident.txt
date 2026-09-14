@@ -1,0 +1,44 @@
+Original mod by XF-Alien
+
+Sven Co-op conversion by AlexCorruptor, Outerbeast, Tunac
+
+
+Insurgency weapons by Norman The Loli Pirate, D.N.I.O. 071, R4to0, D.G.F. and KernCore.
+https://github.com/KernCore91/-SC-Insurgency-Weapons-Project#insurgency-weapons-project
+
+>FN FAL
+Model: Pete3D
+Textures: Millenia
+Animations: MyZombieKillerz (Edits by D.N.I.O. 071)
+Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format, Edits by R4to0)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: Norman The Loli Pirate (World Model & UVs), D.N.I.O. 071 (World Model UVs, Compile), KernCore (World Model UVs)
+
+>M9 Beretta
+https://gamebanana.com/skins/43535
+Model: SureShot, Twinke Masta
+Textures: Twinke Masta
+Animations: New World Interactive
+Sounds: New World Interactive, D.N.I.O. 071 (Conversion to .ogg format, Edits by R4to0)
+Sprites: D.N.I.O. 071 (Model Render), R4to0 (Vector), KernCore (.spr Compile)
+Misc: flamshmizer (UVs), D.N.I.O. 071 (UV Chop, Compile), Norman The Loli Pirate (World Model)
+
+Miscellaneous (You need to credit no matter what)
+·D.N.I.O. 071: Sven arms rigging;
+	Texture editing to support color remap;
+	Weapon models conversion;
+	Texture edits;
+	Rigging;
+	Minor animation tweaks;
+	Bug fixing and compiles.
+
+·Norman the Loli Pirate: UV Chopping
+	Texture edits;
+	Mesh edits;
+	World models.
+
+
+Model tweaks by Garompa & Tunac
+Texturing by Garompa
+
+Snow sprite by I_ka

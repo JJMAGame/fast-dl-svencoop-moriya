@@ -1,0 +1,15 @@
+The Escape Series
+www.escape-series.com
+Made by: incy247 (incy247@blueyonder.co.uk)
+
+-----------------------
+-: Escape 3 Part C :-
+-----------------------
+
+
+
+Changes by Adambean for SC 4.7:
+
+* Replaced all AAATRIGGER textures to NULL to improve rendering speed
+* Fixed being stuck in a crate by the start
+* Fixed null textures around water brushes in the gas trip-out area (where Barney appears)

@@ -1,0 +1,17 @@
+The Escape Series
+www.escape-series.com
+Made by: incy247 (incy247@blueyonder.co.uk)
+
+-----------------------
+-: Escape 3 Part E :-
+-----------------------
+
+
+
+Changes by Adambean for SC 4.7:
+
+* Replaced all AAATRIGGER textures to NULL to improve rendering speed
+* Fixed rendering glitch through the first door from the start
+* Both batteries are now liftable to stop you getting them stuck
+* Added small crates behind the generator so you can't get stuck there
+* Re-built train so it doesn't segment when blocked, glass attached differently

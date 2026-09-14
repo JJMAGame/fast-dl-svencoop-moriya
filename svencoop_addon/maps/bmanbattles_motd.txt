@@ -1,0 +1,52 @@
+Bomberman Battles... in Sven Co-op!
+Made by Meryilla
+
+=== INFO ===
+
+QRD on how to play:
+
+- Press the "USE" key to place a bomb on the tile you are on. Bombs remain non-solid until you leave the tile.
+- Destroy the crates to advance through the arena and to collect powerups.
+- Kill the other players! The round winner is the last man standing. Points also allocated to 2nd and 3rd places.
+
+There are either 10 or 5 rounds in total, determined by a vote at map start. The map does not currently support >16 players.
+
+Powerups:
+
+- Bomb: Allows you place an extra bomb, up to a maximum of 3 at once.
+- Fire: Extends range of bombs by 1, up to a maximum range of 3 tiles.
+- Heart: Increases your health, allowing you to survive 1 bomb blast.
+- Roller Skate: Increase speed.
+- Kick: Shoves bombs you touch in the direction you are moving in.
+- Pierce: Bombs can pierce through crates. Incompatible with remote.
+- FullFire: Players can place a one-time use bomb using the RELOAD key, which has max range.
+- Bounce: Bombs now bounce against other objects after being kicked.
+- Remote: Bombs can be set off remotely using the ATTACK1 key. Incompatible with pierce.
+- Skull: Recieve a random disease.
+
+Diseases last until you either die, pick up another powerup, or touch another player (which transfers the disease to them).
+
+Current diseases:
+
+- Slow: Makes you slow as fuck.
+- Fast: Makes you extremely fast (not as useful as it sounds!).
+- Constipated: Cannot place bombs.
+- Weak bombs: Reduces bomb range to 1.
+- Diarrhea: Automatically places a bomb on every tile you walk on.
+
+If anyone asks questions that are answered in this motd, tell them to RTFM.
+
+=== CREDITS ===
+
+Map and Script by Meryilla
+
+Loosely based off Byblo's Bman map for Zombie Master
+
+Textures by Byblo and Meryilla
+
+Explosion Sprites by R.C.
+
+Music from Super Bomberman 2
+
+Thanks to the Chan Co-op (RIP) and S/v/en Co-op community for help with testing (too many names to remember and write here, sorry!)
+
